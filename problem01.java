@@ -16,7 +16,7 @@ import stanford.karel.Karel;
 			while(frontIsBlocked()){
 				turnLeft();
 				move();
-				turnleft();
+			
 			}
 	}
 }
