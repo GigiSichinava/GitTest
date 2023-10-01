@@ -6,11 +6,13 @@
 				move();				
 			}
 			for (int i=0; i < 10; i++) {
-				pickBeeper();
+				pickBeeper();	
+			}
+			move();
+			for (int i=0; i < 10; i++) {
+				putBeeper();
 				
 			}
-				
-		
-		
+					
 		}
 }
