@@ -4,24 +4,17 @@ import stanford.karel.Karel;
 		public void run(){
 			
 			while (frontIsClear()){
-			if (beepersPresent()) {
-				move();
-			} else{
-				putBeeper();
-				move();
-			}
-			
 			putBeeper();
+			move();
 			
-			while(frontIsBlocked()){
+			if(frontIsBlocked()){
 				turnLeft();
 				move();
-			
+				turnLeft();
 			}
+			}			
 		}
 	}
-}
-		
 			
 			
 
