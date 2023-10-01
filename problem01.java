@@ -8,10 +8,10 @@ import stanford.karel.Karel;
 			} else{
 				putBeeper();
 				move();
-				}
-			}		
+			}
+		}		
 			putBeeper();
-		}
 	}
+}
 	
 
