@@ -12,6 +12,12 @@ import stanford.karel.Karel;
 			}
 		}		
 			putBeeper();
+			
+			while(frontIsBlocked()){
+				turnLeft();
+				move();
+				turnleft();
+			}
 	}
 }
 	
