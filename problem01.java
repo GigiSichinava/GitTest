@@ -1,10 +1,9 @@
-	import stanford.karel.Karel;
+import stanford.karel.Karel;
 
 	public class problem01 extends Karel {
 		public void run(){
-			while (frontIsClear()) {
-				move();
-			}
+			move();
+			
 		}
 }
 	
