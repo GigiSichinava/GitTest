@@ -6,6 +6,7 @@ import stanford.karel.Karel;
 				putBeeper();
 				move();
 			}
+			putBeeper();
 			
 		}
 }
