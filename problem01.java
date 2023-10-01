@@ -5,5 +5,7 @@
 			while (frontIsClear()) {
 				move();
 			}
-			
+		}
+	}
+	
 
