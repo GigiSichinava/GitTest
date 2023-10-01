@@ -18,7 +18,12 @@ import stanford.karel.Karel;
 				move();
 			
 			}
+		}
 	}
+}
+		
+			
+			
 
 	
 	
