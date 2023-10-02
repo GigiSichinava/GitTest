@@ -1,4 +1,4 @@
-import stanford.karel.SuperKarel; ;
+import stanford.karel.*; ;
 
 public class problem07 extends SuperKarel {
 	
@@ -9,16 +9,18 @@ public class problem07 extends SuperKarel {
 		}
 		while(frontIsClear()){
 			fill();
-		if(frontIsClear()){
+			if(frontIsClear()){
 				move();
-		}
+			}
 			putBeeper();
 			turnRight();
 		}
+	
+	
+	
 	}
-		
 		private void fill() {
-			while(frontIsClear()){
+		while(frontIsClear()){
 			move();
 			if (!beepersPresent()){
 			putBeeper();
@@ -29,8 +31,10 @@ public class problem07 extends SuperKarel {
 		while(frontIsClear()){
 			move();
 		}
-		turnRight();				
-		}
+		turnRight();
 		
+		
+		}
 	}
+
 
