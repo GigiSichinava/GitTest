@@ -1,24 +1,15 @@
-import stanford.karel.*;
+)import stanford.karel.Karel;
 
 	public class problem05 extends Karel {
 		public void run(){
-			while(frontIsClear()){
+			while (frontIsClear()){
+			if (beepersPresent()) {
 				move();
-				if(beepersPresent()){
-					move();
-				}else{
-					putBeeper();
-					move();
-					
-				}
+			} else{
+				putBeeper();
+				move();
 			}
-			
-		}
-		
+		}		
+			putBeeper();
 	}
-		
-			
-			
-		
-			
-		
+}
