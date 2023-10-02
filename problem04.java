@@ -4,6 +4,5 @@ import stanford.karel.*;
 		public void run(){
 			while(frontIsClear());
 			putBeeper();
-			move();
 		}
 }
