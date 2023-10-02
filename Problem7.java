@@ -8,9 +8,11 @@ public class Problem7 extends SuperKarel {
 			putBeeper ();
 		}
 		while(frontIsClear()){
-			move();
-			turnRight();
 			fill();
+			if(frontIsClear()){
+				move();
+			}
+			turnRight();
 		}
 	
 	
