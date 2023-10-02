@@ -4,12 +4,17 @@ public class Problem7 extends SuperKarel {
 	
 	public void run() {
 		
-		while (frontIsClear()){
-			if(!beepersPresent()){
-				putBeeper();}
-				move();
+		if (!beepersPresent()){
+			putBeeper();
 				
 			}
+		while(frontIsClear()){
+			move();
+			if (!beepersPresent()){
+			putBeeper();
+			}
+		}
+		
 		}
 		
 	}
