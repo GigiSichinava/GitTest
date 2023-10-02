@@ -19,7 +19,7 @@ public class problem07 extends Karel{
 			move();
 		}	
 		
-	for (int i=0; i < 2; i++){
+	for (int i=0; i < 3; i++){
 			turnLeft();
 	}
 		move();
