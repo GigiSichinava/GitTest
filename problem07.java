@@ -24,9 +24,8 @@ public class problem07 extends SuperKarel{
 			move();
 		}	
 		
-	for (int i=0; i < 3; i++){
-			turnLeft();
-	}
+		turnRight();
+		
 		if (frontIsClear()){
 		move();
 		turnRight();
