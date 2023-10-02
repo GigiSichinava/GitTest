@@ -6,7 +6,7 @@
 			while(frontIsClear()){
 				Fill();
 			}
-			
+		}	
 		private void Fill(){
 			while(frontIsClear()){
 				if(!beepersPresent()){
@@ -18,7 +18,8 @@
 			}
 	
 		}
-					
+			
+			
 			
 			
 		}
