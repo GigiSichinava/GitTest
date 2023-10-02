@@ -3,6 +3,8 @@ import stanford.karel.*;
 public class problem07 extends SuperKarel{
 	public void run(){
 		
+	}
+	;private void Fill(){
 		while(frontIsClear()){
 			if(!beepersPresent()){
 				putBeeper();
@@ -24,16 +26,9 @@ public class problem07 extends SuperKarel{
 	}
 		move();
 		turnRight();
-		
-		while(frontIsClear()){
-			if(!beepersPresent()){
-				putBeeper();
-				move();
-			}else{
-				move();	
-			}
-		}
-		
-	}			
-}
+	}
+}		
+
+				
+
 	
