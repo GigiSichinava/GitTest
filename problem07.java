@@ -27,10 +27,12 @@ public class problem07 extends SuperKarel{
 	for (int i=0; i < 3; i++){
 			turnLeft();
 	}
+		if (frontIsClear()){
 		move();
 		turnRight();
 		}
-	}		
+	}
+}		
 				
 
 	
