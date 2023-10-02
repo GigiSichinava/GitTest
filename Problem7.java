@@ -5,9 +5,16 @@ public class Problem7 extends SuperKarel {
 	public void run() {
 		
 		if (!beepersPresent()){
-			putBeeper();
-				
-			}
+			putBeeper ();
+		}
+		while(frontIsClear()){
+			fill();
+		}
+	
+	
+	
+	}
+		private void fill() {
 		while(frontIsClear()){
 			move();
 			if (!beepersPresent()){
@@ -21,8 +28,8 @@ public class Problem7 extends SuperKarel {
 		}
 		turnRight();
 		
-		}
 		
+		}
 	}
 
 
