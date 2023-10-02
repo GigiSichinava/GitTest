@@ -2,7 +2,7 @@ import stanford.karel.*;
 
 public class problem07 extends SuperKarel{
 	public void run(){
-		while(noBeepersPresent()){
+		while(frontIsClear()){
 		Fill();
 		}
 	}
@@ -20,7 +20,7 @@ public class problem07 extends SuperKarel{
 	for (int i=0; i < 2; i++){
 		turnLeft();
 	}
-		while(frontIsClear()){
+		while(noBeepersPresent()){
 			move();
 		}	
 		
