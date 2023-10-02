@@ -1,15 +1,17 @@
-import stanford.karel.*;
+import stanford.karel.Karel;
 
-public class problem02 {
+public class problem02 extends Karel{
 	public void run(){
-	for (int i=0; i < 4; i++){
+		for (int i=0; i < 4; i++) {
+			move();				
+		}
+		for (int i=0; i < 10; i++) {
+			pickBeeper();	
+		}
 		move();
-	}
-	for (int i=0; i < 10; i++){
-		pickBeeper();
-	}
-		move();
-	for (int i=0; i < 10; i++){
-		putBeeper();
-	}		
-	}
+		for (int i=0; i < 10; i++) {
+			putBeeper();
+		}	
+	}	
+}				
+	
