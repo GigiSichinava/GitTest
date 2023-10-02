@@ -6,7 +6,7 @@ public class Problem7 extends SuperKarel {
 		
 		while (frontIsClear()){
 			if(!beepersPresent()){
-				putBeeper();
+				putBeeper();}
 				move();
 				
 			}
@@ -14,4 +14,4 @@ public class Problem7 extends SuperKarel {
 		
 	}
 
-}
+
