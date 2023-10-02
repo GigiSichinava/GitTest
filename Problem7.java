@@ -12,6 +12,7 @@ public class Problem7 extends SuperKarel {
 			if(frontIsClear()){
 				move();
 			}
+			putBeeper();
 			turnRight();
 		}
 	
