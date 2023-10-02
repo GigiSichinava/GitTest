@@ -1,6 +1,6 @@
 import stanford.karel.*;
 
-public class problem07 extends Karel{
+public class problem07 extends SuperKarel{
 	public void run(){
 		
 		while(frontIsClear()){
@@ -23,6 +23,8 @@ public class problem07 extends Karel{
 			turnLeft();
 	}
 		move();
+		turnRight();
+		
 		
 		
 	}			
