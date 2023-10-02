@@ -5,6 +5,7 @@ public class problem07 extends SuperKarel{
 		while(frontIsClear()){
 		Fill();
 		}
+		turnRight();
 	}
 	
 		private void Fill(){
