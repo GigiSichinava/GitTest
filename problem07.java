@@ -1,40 +1,24 @@
-import stanford.karel.*; ;
+import stanford.karel.*;
 
-public class problem07 extends SuperKarel {
-	
-	public void run() {
-		
-		if (!beepersPresent()){
-			putBeeper ();
+public class problem07 extends SuperKarel{
+	public void run(){
+		if (noBeepersPresent()){
+			putBeeper();
 		}
 		while(frontIsClear()){
-			fill();
-			if(frontIsClear()){
+			if(!beepersPresent()){
+				putBeeper();
 				move();
-			}
-			putBeeper();
-			turnRight();
-		}
-	
-	
-	
-	}
-		private void fill() {
-		while(frontIsClear()){
-			move();
-			if (!beepersPresent()){
-			putBeeper();
+			}else{
+				move();
+				
 			}
 		}
-			turnLeft();
-			turnLeft();
-		while(frontIsClear()){
-			move();
-		}
-		turnRight();
+	
 		
 		
-		}
-	}
-
-
+		
+		
+	}			
+}
+	
