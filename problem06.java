@@ -5,6 +5,8 @@ import stanford.karel.*;
 			move();
 			while(beepersPresent()){
 				pickBeeper();
+			}
+			move();
 			while(beepersPresent()){
 				pickBeeper();
 			}
