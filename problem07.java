@@ -24,7 +24,7 @@ public class problem07 extends SuperKarel{
 			move();
 		}	
 		
-		turnRight();
+		turnRight();	
 		
 		if (frontIsClear()){
 		move();
