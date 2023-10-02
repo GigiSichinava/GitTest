@@ -2,10 +2,9 @@ import stanford.karel.*;
 
 public class problem07 extends SuperKarel{
 	public void run(){
-		while(frontIsClear()){
+		while(noBeepersPresent()){
 		Fill();
 		}
-		turnRight();
 	}
 	
 		private void Fill(){
