@@ -7,5 +7,5 @@ import stanford.karel.*;
 				move();
 			}
 			putBeeper();
-	 }
- }	
+		}
+	}	
