@@ -10,6 +10,10 @@ import stanford.karel.*;
 			while(beepersPresent()){
 				pickBeeper();
 			}
+			move();
+			while (noBeepersInBag()){
+				putBeeper();
+			}
 				
 			
 			}	 
