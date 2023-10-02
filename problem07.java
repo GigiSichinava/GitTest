@@ -19,6 +19,12 @@ public class problem07 extends Karel{
 			move();
 		}	
 		
+	for (int i=0; i < 2; i++){
+			turnLeft();
+	}
+		move();
+		
+		
 	}			
 }
 	
