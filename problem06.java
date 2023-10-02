@@ -11,7 +11,7 @@ import stanford.karel.*;
 				pickBeeper();
 			}
 			move();
-			while (noBeepersInBag()){
+			while (BeepersInBag()){
 				putBeeper();
 			}
 				
