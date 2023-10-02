@@ -2,9 +2,12 @@ import stanford.karel.*;
 
 public class problem07 extends SuperKarel{
 	public void run(){
-		
+		while(frontIsClear()){
+		Fill();
+		}
 	}
-	;private void Fill(){
+	
+		private void Fill(){
 		while(frontIsClear()){
 			if(!beepersPresent()){
 				putBeeper();
@@ -26,9 +29,8 @@ public class problem07 extends SuperKarel{
 	}
 		move();
 		turnRight();
-	}
-}		
-
+		}
+	}		
 				
 
 	
