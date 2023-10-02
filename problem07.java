@@ -20,7 +20,7 @@ public class problem07 extends SuperKarel{
 	for (int i=0; i < 2; i++){
 		turnLeft();
 	}
-		while(noBeepersPresent()){
+		while(frontIsClear()){
 			move();
 		}	
 		
