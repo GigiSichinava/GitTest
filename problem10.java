@@ -18,9 +18,10 @@ import stanford.karel.*;
 		}
 		move();
 		for (int i=0; i < m / n; i++){
-			putBeeper();
-			
+			putBeeper();	
 		}
+		move();
+		
 	}
 
 }
