@@ -20,5 +20,6 @@
 		 putBeeper();
 		 					
 		}
+		move();
 
 }
