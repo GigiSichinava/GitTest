@@ -3,8 +3,7 @@ import stanford.karel.*;
 	public class problem06 extends Karel {
 		public void run(){
 			int n =0;
-			int m=0;
-			
+			int m=0;			
 			
 			move();
 			while(beepersPresent()){
