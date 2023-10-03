@@ -16,10 +16,10 @@
 			 m++;
 		 }
 		 	move();
-		 for (int i=0; i < m * n; i++);
+		 for (int i=0; i < m * n; i++){
 		 putBeeper();
 		 					
 		}
-		move();
-
+		 	move();
+	}
 }
