@@ -20,9 +20,7 @@ public class problem006 extends SuperKarel{
 			pickBeeper();
 			move();
 			putBeeper();
-			turnAround();
-			move();
-			turnAround();
+			
 			
 		}
 		
