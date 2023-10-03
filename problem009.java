@@ -4,7 +4,7 @@ public class problem009 extends SuperKarel {
 	public void run(){
 		move();
 		while(beepersPresent()){
-			pickBeeper();
+			
 			Fill();
 		}
 	}
