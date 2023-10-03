@@ -30,7 +30,12 @@ public class problem0006 extends SuperKarel{
 				move();	
 				move();
 		while(beepersPresent()){
-			
+			turnAround();
+		for (int i=0; i < 2; i++){
+			move();
+			putBeeper();
+		}
+				 
 		}
 		
 	}
