@@ -15,9 +15,9 @@ public class problem08 extends Karel{
 		while(beepersPresent()){
 			pickBeeper();
 			m++;
-		}
-		
-		move();
+		}	
+			move();
+			
 		for (int i=0; i < n-m; i++ );
 		putBeeper();
 					
