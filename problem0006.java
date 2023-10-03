@@ -14,36 +14,8 @@ public class problem0006 extends SuperKarel{
 			move();
 			move();
 			move();
-			turnAround();						
-		}
-		
-		move();
-		
-		while(beepersPresent()){
-			pickBeeper();
-			move();
-			putBeeper();
-			turnAround();
-			move();
-			turnAround();
-		}
-				move();	
-				move();
-		while(beepersPresent()){
-			turnAround();
-			move();
-			move();
-			putBeeper();
-			move();
-			putBeeper();
-			turnAround();
-			move();
-			move();
-		
-				 
+			
 		}
 		
 	}
 }
-
-
