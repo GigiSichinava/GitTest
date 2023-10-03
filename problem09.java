@@ -10,13 +10,13 @@
 			pickBeeper();
 			n++;
 		}
-		 move();
+		 	move();
 		 while(beepersPresent()){
 			 pickBeeper();
 			 m++;
 		 }
-		 move();
-		 for (int i=0; i < m*n; i++);
+		 	move();
+		 for (int i=0; i < m * n; i++);
 		 putBeeper();
 		 					
 		}
