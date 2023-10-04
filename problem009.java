@@ -40,7 +40,7 @@ public class problem009 extends SuperKarel{
 		move();
 		turnAround();
 	}
-}
+
 	move();
 	move();
 	move();
@@ -52,14 +52,14 @@ public class problem009 extends SuperKarel{
 		putBeeper();
 		turnAround();
 		move();
+		}	
+	turnAround();
+	move();
+	move();
+	turnAround();	
 	}
-	turnAround();
-	move();
-	move();
-	turnAround();
-	}	
 }
-		
+	
 		
 			
 			
