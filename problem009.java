@@ -15,7 +15,10 @@ import stanford.karel.*;
 				putBeeper();
 				move();
 				putBeeper();
-				
+				turnAround();
+				move();
+				move();
+				turnAround();
 				
 			}
 			
