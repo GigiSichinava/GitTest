@@ -3,6 +3,30 @@
 public class problem009 extends SuperKarel {
 	public void run(){
 		move();
+		move();
+		while (beepersPresent()){
+			pickBeeper();
+			turnAround();
+			move();
+			}
+					
+			
+			
+		}
+		
+		
+		
+		
+	}
+
+
+		
+		
+		
+		
+		
+		/*
+		move();
 		
 						
 		while(beepersPresent()){
@@ -57,7 +81,7 @@ public class problem009 extends SuperKarel {
 		}
 		}
 	}		
-
+			*/
 
 
 
