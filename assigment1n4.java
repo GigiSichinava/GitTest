@@ -37,17 +37,5 @@ public class assigment1n4 extends SuperKarel {
 			turnAround();
 		}
 	
-	private void checkBeeper(){
-		move();
-		if(noBeepersPresent()){
-			turnAround();
-			move();
-		}else{
-			pickBeeper();
-			turnAround();
-			move();
-			
-		}
-	}
-
+	
 }
