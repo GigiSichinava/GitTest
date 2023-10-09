@@ -14,7 +14,10 @@ public class assigment1n4 extends SuperKarel {
 	}
 	
 	private void takeBeepersFromSidesToCentre(){
+		pickBeeper();
 		while(frontIsClear()){
+			
+			
 			
 		}
 		
@@ -32,7 +35,19 @@ public class assigment1n4 extends SuperKarel {
 			move();
 		}
 			turnAround();
-		
+		}
+	
+	private void checkBeeper(){
+		move();
+		if(noBeepersPresent()){
+			turnAround();
+			move();
+		}else{
+			pickBeeper();
+			turnAround();
+			move();
+			
+		}
 	}
 
 }
