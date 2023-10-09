@@ -30,7 +30,7 @@ public class assigment1n4 extends SuperKarel {
 			turnAround();
 		while(frontIsClear()){
 			move();
-			
+			turnAround();
 		}
 		
 	}
