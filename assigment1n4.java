@@ -14,18 +14,21 @@ public class assigment1n4 extends SuperKarel {
 	}
 	
 	private void takeBeepersFromSidesToCentre(){
+		
 		while(frontIsClear()){
 			move();
-			pickBeeper();
+		}
+		pickBeeper();
+		turnAround();
+		while(beepersPresent()){
+			move();
 			turnAround();
-		
-		}
-			
-			
-			
+			move();
+			pickBeeper();
 		}
 		
-	
+		
+	}
 	
 	
 	private void fillRow(){
