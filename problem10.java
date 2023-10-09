@@ -1,27 +1,61 @@
-import stanford.karel.*;
-	
-	public class problem10 extends SuperKarel{
-	public void run(){
-		
+
+
+
+import stanford.karel.Karel;
+
+public class problem10 extends Karel {
+	public void run() {
 		move();
-		int m=0;
-		int n=0;
-		
-		while(beepersPresent()){
-			pickBeeper();
-			m++;
+		while (beepersPresent()) {
+			move();
+			subtractAndReturnBeepers();
 		}
-		move();
-		while(beepersPresent()){
-			pickBeeper();
-			n++;
-		}
-		move();
-		for (int i=0; i < m / n; i++){
-			putBeeper();	
-		}
-		move();
-		
 	}
 
+	private void subtractAndReturnBeepers() {
+		subtractBeepers();
+		moveTwice();
+		turnAround();
+		returnBeepers();
+		move();
+		putBeeper();
+		moveTwice();
+		turnAround();
+	}
+
+	private void returnBeepers() {
+		while (beepersPresent()) {
+			pickBeeper();
+			moveTwice();
+			putBeeper();
+			turnAround();
+			moveTwice();
+			turnAround();
+		}
+	}
+
+	private void moveTwice() {
+		move();
+		move();
+	}
+
+	private void subtractBeepers() {
+		while (beepersPresent()) {
+			pickBeeper();
+			moveTwice();
+			putBeeper();
+			turnAround();
+			for (int i = 0; i < 3; i++) {
+				move();
+			}
+			pickBeeper();
+			turnAround();
+			move();
+		}
+	}
+
+	private void turnAround() {
+		turnLeft();
+		turnLeft();
+	}
 }
