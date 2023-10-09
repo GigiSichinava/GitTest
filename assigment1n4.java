@@ -33,7 +33,7 @@ public class assigment1n4 extends SuperKarel {
 		}
 		
 		
-	}
+	
 	
 	
 	private void fillRow(){
