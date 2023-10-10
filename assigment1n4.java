@@ -3,7 +3,7 @@ import stanford.karel.*;
 public class assigment1n4 extends SuperKarel {
 	public void run(){
 		fillRow();
-		FindCentre();
+		
 		
 		
 	}
