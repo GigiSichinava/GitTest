@@ -45,7 +45,7 @@ public class assigment1n2 extends SuperKarel {
 			turnRight();
 		}
 		 
-		 while(frontIsBlocked()){
+		 while(frontIsBlocked()){			//bolo taghize roca gadavalt chamosvlisas front isev blockdaaa!!
 			turnRight();
 			move();
 			turnLeft();
