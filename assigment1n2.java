@@ -53,10 +53,7 @@ public class assigment1n2 extends SuperKarel {
 		 }
 		 
 		 turnRight();
-		 while(frontIsClear()){
-			move(); 
-		 }
-		 turnLeft();
+		
 				
 		
 		
