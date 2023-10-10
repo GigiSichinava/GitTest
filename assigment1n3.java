@@ -5,7 +5,9 @@ public class assigment1n3 extends SuperKarel{
 		while (frontIsClear()){
 			putBeeper();
 			move();
-			move();
+			if(frontIsClear()){
+				move();
+			}
 			
 		}
 		
