@@ -7,11 +7,16 @@ public class assigment1n3 extends SuperKarel{
 			move();
 			if(frontIsClear()){
 				move();
-			}
-			turnAround();
-			
-			
+			}			
 		}
+		turnAround();
+		while(frontIsClear()){
+			move();
+		}
+		turnRight();
+		move();
+		turnRight();
+		
 		
 		
 	}
