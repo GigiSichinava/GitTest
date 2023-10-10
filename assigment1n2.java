@@ -3,9 +3,7 @@ import stanford.karel.SuperKarel;
 public class assigment1n2 extends SuperKarel {
 	public void run() {
 		fillColumn();
-	
-				
-		
+		moveToTheNextColumn();		
 	}
 
 	private void fillColumn() {
@@ -22,5 +20,16 @@ public class assigment1n2 extends SuperKarel {
 			}
 		}
 	}
+	
+	private void moveToTheNextColumn() {
+		
+		
+		
+		
+		
+	}
+	
+	
+	
 
 }
