@@ -28,7 +28,8 @@ public class assigment1n4 extends SuperKarel {
 
 	private void findCentre() {
 		// find centre of the first row
-	while(beepersPresent()){
+	while(beepersInBag()){
+		
 		while(beepersPresent()){
 			move();
 		}
