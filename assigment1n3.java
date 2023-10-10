@@ -10,6 +10,8 @@ public class assigment1n3 extends SuperKarel{
 			}			
 		}
 		turnAround();
+		
+		
 		while(frontIsClear()){
 			move();
 		}
@@ -20,12 +22,12 @@ public class assigment1n3 extends SuperKarel{
 		while(frontIsClear()){
 			move();
 			putBeeper();
-			move();
 			if(frontIsClear()){
 				move();
-				
-			}
+			}		
 		}
+		
+		
 		
 		
 		
