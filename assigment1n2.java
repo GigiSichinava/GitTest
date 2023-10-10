@@ -2,11 +2,12 @@ import stanford.karel.SuperKarel;
 
 public class assigment1n2 extends SuperKarel {
 	public void run() {									
-		startPosition();
+	//	startPosition();
 		fillColumn();
 		moveToTheNextColumn();		
 	}
 
+	/*
 	private void startPosition() {
 		// make karel ready to start
 		turnLeft();
@@ -15,6 +16,7 @@ public class assigment1n2 extends SuperKarel {
 		}
 		turnRight();
 	}
+	*/
 
 	private void fillColumn() {
 		
