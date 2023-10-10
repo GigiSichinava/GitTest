@@ -46,8 +46,8 @@ public class assigment1n2 extends SuperKarel {
 		}
 		 
 		 while(frontIsBlocked()){			//bolo taghize roca gadavalt chamosvlisas front isev blockdaaa!!
-			turnRight();
-			move();
+			turnRight();				 //xelit chawerit tu sheidzleba svetidan svetze gadasvla unda vikixo
+			move();					//tu tagebi yvelgan ertnairia mza private void gavuketot moveToTheNextColums-s
 			turnLeft();
 			move();
 		 }		 
