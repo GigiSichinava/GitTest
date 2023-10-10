@@ -22,6 +22,7 @@ public class assigment1n2 extends SuperKarel {
 	}
 	
 	private void moveToTheNextColumn() {
+		while(beepersInBag()){
 		while(frontIsBlocked()){
 			turnRight();
 			move();
@@ -29,7 +30,7 @@ public class assigment1n2 extends SuperKarel {
 			move();
 		}
 		turnAround();
-		
+		}	
 		
 		
 		
