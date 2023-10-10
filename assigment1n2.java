@@ -31,6 +31,7 @@ public class assigment1n2 extends SuperKarel {
 		}
 	}
 	
+	
 	private void moveToTheNextColumn() {
 		turnRight();
 		while(frontIsClear()){
