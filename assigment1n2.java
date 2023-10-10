@@ -21,7 +21,7 @@ public class assigment1n2 extends SuperKarel {
 	private void fillColumn() {
 		
 		// fill whole column with beepers
-			turnRight();
+			turnLeft();
 			
 		while(frontIsClear()){
 			if(!beepersPresent()){
