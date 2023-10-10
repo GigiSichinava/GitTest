@@ -32,5 +32,5 @@ public class assigment1n1 extends SuperKarel {
 		//to make karel finish job in starting position
 		turnAround();
 		}
-
+	
 }
