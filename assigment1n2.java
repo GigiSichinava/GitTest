@@ -27,8 +27,8 @@ public class assigment1n2 extends SuperKarel {
 			move();
 			turnLeft();
 			move();
-			
 		}
+		turnAround();
 		
 		
 		
