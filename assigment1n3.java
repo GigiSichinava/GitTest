@@ -47,4 +47,4 @@ public class assigment1n3 extends SuperKarel{
 		}
 		
 	}
-}
+
