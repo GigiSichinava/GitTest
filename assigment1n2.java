@@ -51,7 +51,9 @@ public class assigment1n2 extends SuperKarel {
 			turnLeft();
 			move();
 		 }		 
-		 	putBeeper();
+		 	if(!beepersPresent()){
+		 		putBeeper();
+		 	}
 		 	turnRight();		 
 		 while(frontIsClear()){
 			move(); 
