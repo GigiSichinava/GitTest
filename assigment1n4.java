@@ -9,7 +9,7 @@ public class assigment1n4 extends SuperKarel {
 
 
 	private void fillRow() {
-		// fill the first row with beepers except first and last
+		// fill the first row with beepers except first and last corners
 		while(frontIsClear()){
 			move();
 			putBeeper();
@@ -36,8 +36,8 @@ public class assigment1n4 extends SuperKarel {
 		pickBeeper();
 		move();
 		}
-	turnAround();
-	move();
+		turnAround();
+		move();
 	}
 
 }
