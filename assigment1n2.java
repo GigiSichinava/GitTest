@@ -51,10 +51,13 @@ public class assigment1n2 extends SuperKarel {
 			turnLeft();
 			move();
 		 }		 
-		 	if(!beepersPresent()){
+		 	
+		 // back to the bottom of the column
+		 if(!beepersPresent()){
 		 		putBeeper();
+		 		turnRight();
 		 	}
-		 	turnRight();		 
+		 			 
 		 while(frontIsClear()){
 			move(); 
 		 }
