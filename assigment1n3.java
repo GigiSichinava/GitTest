@@ -2,6 +2,9 @@ import stanford.karel.SuperKarel;
 
 public class assigment1n3 extends SuperKarel{
 	public void run (){
+		
+		while(beepersInBag()){
+		
 		while (frontIsClear()){
 			putBeeper();
 			move();
@@ -36,7 +39,7 @@ public class assigment1n3 extends SuperKarel{
 		move();
 		turnRight();
 		
-		
+		}
 		
 	}
 }
