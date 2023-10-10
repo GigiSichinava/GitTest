@@ -22,7 +22,13 @@ public class assigment1n2 extends SuperKarel {
 	}
 	
 	private void moveToTheNextColumn() {
-		
+		while(frontIsBlocked()){
+			turnRight();
+			move();
+			turnLeft();
+			move();
+			
+		}
 		
 		
 		
