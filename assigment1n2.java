@@ -1,19 +1,19 @@
 import stanford.karel.SuperKarel;
 
 public class assigment1n2 extends SuperKarel {
-	public void run() {
-		
-		// gavasworot kareli
+	public void run() {									
+		startPosition();
+		fillColumn();
+		moveToTheNextColumn();		
+	}
+
+	private void startPosition() {
+		// make karel ready to start
 		turnLeft();
 		while(frontIsClear()){
 			move();
 		}
 		turnRight();
-		
-		
-		
-		fillColumn();
-		moveToTheNextColumn();		
 	}
 
 	private void fillColumn() {
