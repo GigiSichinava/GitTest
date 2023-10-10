@@ -10,7 +10,7 @@ public class GraphicPractice extends GraphicsProgram {
 		
 		
 		myOval = new GOval (200, 200);
-		add(myOval, 150, 150);
+		add(myOval, 250, 100);
 		
 	}
 	
