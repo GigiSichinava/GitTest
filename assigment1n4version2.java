@@ -5,13 +5,12 @@ public class assigment1n4version2 extends SuperKarel{
 		while(frontIsClear()){
 			move();
 			turnLeft();
-		if(frontIsClear()){	
 			move();
 			move();
 			turnRight();
 		}
 		
-		}	
+		
 		
 	}
 	
