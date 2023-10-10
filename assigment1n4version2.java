@@ -8,8 +8,8 @@ public class assigment1n4version2 extends SuperKarel{
 			move();
 			turnRight();
 			move();
-			
 		}
+		turnRight();
 		
 		
 	}
