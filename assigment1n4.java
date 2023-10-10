@@ -48,16 +48,10 @@ public class assigment1n4 extends SuperKarel {
 	
 	private void fillRow(){
 		while(frontIsClear()){
-			putBeeper();
 			move();
-		}
 			putBeeper();
-			turnAround();
-		while(frontIsClear()){
-			move();
 		}
-			turnAround();
-		}
+	}
 	
 	
 }
