@@ -8,9 +8,8 @@ public class GraphicPractice extends GraphicsProgram {
 		
 		GOval myOval = new GOval (200, 200);
 		add(myOval, 100, 100);
+		myOval.setFilled(true);
 		myOval.setColor(Color.RED);
-		myOval.setFillColor(Color.red);
-		
 		
 		myOval = new GOval (200, 200);
 		add(myOval, 250, 100);
