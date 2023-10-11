@@ -38,6 +38,7 @@ private void changeLine() {
 		if(frontIsClear()){
 			turnRight();
 		}
+		move();
 	}
 	
 }
