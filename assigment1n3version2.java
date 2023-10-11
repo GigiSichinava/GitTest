@@ -37,11 +37,10 @@ private void changeLine() {
 	}
 		turnRight();
 		if(frontIsClear()){
+		}else{	
 			move();
 		}
-		if(frontIsClear()){
-			turnRight();
-		}
+		
 		
 }
 
@@ -52,9 +51,7 @@ private void fillSecondLine() {
 		move();
 		putBeeper();
 		if(frontIsClear()){
-			move();
-		
-		
+			move();		
 		}
 		
 }
