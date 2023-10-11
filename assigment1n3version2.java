@@ -48,15 +48,12 @@ private void changeLine() {
 
 
 private void fillSecondLine() {
-		move();
 	while(frontIsClear()){
-		
+		move();
 		putBeeper();
 		if(frontIsClear()){
 			move();
-		if(frontIsBlocked()){
-			putBeeper();
-		}
+		
 		
 		}
 		
