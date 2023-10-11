@@ -4,7 +4,7 @@ public class assigment1n3 extends SuperKarel{
 	public void run (){
 		
 		
-	
+	while(frontIsClear()){
 		
 		while (frontIsClear()){
 			putBeeper();
@@ -47,4 +47,4 @@ public class assigment1n3 extends SuperKarel{
 		
 		}	
 	}
-
+}
