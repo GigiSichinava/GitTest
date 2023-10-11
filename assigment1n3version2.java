@@ -48,7 +48,6 @@ private void fillSecondLine() {
 	while(frontIsClear()){
 		move();
 		putBeeper();
-		move();
 		if(frontIsClear()){
 			move();
 		if(frontIsBlocked()){
