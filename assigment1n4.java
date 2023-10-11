@@ -50,7 +50,9 @@ public class assigment1n4 extends SuperKarel {
 		}
 		//make karel ready to put beeper in  the center	
 			turnAround();
-			move();
+			if(frontIsClear()){
+				move();
+			}
 	}
 
 }
