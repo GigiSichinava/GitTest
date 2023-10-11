@@ -59,21 +59,16 @@ private void fillSecondLine() {
 		putBeeper();
 		if(frontIsClear()){
 			move();		
-		}
-		
+		}		
+	}
+	
 }
-	
-	
-	
-	
-	
+
 }
 
 
 
 
-
-}
 
 
 
