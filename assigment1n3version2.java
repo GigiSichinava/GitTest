@@ -5,7 +5,8 @@ public void run(){
 	
 	fillFirstLine();
 	changeLine();
-	fillSecondLine();	
+	fillSecondLine();
+	changeLine();
 	}
 	
 
