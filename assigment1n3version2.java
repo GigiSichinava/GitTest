@@ -5,9 +5,10 @@ public void run(){
 	
 	fillFirstLine();
 	changeLine();
-	//fillSecondLine();	
+	fillSecondLine();	
 	}
 	
+
 
 
 
@@ -39,8 +40,37 @@ private void changeLine() {
 			turnRight();
 		}
 		
-	}
+}
+
+
+
+private void fillSecondLine() {
+	while(frontIsClear()){
+		move();
+		putBeeper();
+		if(frontIsClear()){
+			move();
+		}
+		if(frontIsClear()){
+			move();
+		if(frontIsBlocked()){
+			putBeeper();
+		}
+		
+		}
+		
+}
 	
+	
+	
+	
+	
+}
+
+
+
+
+
 }
 
 
