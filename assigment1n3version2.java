@@ -3,10 +3,12 @@ import stanford.karel.SuperKarel;
 public class assigment1n3version2 extends SuperKarel {
 public void run(){
 	
+	while(frontIsClear()){
 	fillFirstLine();
 	changeLine();
 	fillSecondLine();
 	changeLine();
+	}
 	}
 	
 
