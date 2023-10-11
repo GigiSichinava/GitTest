@@ -4,10 +4,12 @@ public class assigment1n3version2 extends SuperKarel {
 public void run(){
 	
 	fillFirstLine();
-	//changeLine();
+	changeLine();
 	//fillSecondLine();	
 	
 	}
+
+
 
 private void fillFirstLine() {
 	while(frontIsClear()){
@@ -18,8 +20,32 @@ private void fillFirstLine() {
 		if(frontIsBlocked()){
 			putBeeper();
 		}
+		
+		}
+	}
+}
+
+
+private void changeLine() {
+	turnAround();
+	while(frontIsClear()){
+		move();
+		turnRight();
+		if(frontIsClear()){
+			move();
+		}
+		if(frontIsClear()){
+			turnRight();
 		}
 	}
 	
 }
+
+
+
+
+
+
+
+
 }
