@@ -16,7 +16,14 @@ public void run(){
 
 
 private void fillFirstLine() {
-	while(beepersPresent()){
+		putBeeper();
+		if(frontIsClear()){
+			move();
+		}
+		if(frontIsClear()){
+			move();
+		}
+	while(frontIsClear()){
 		putBeeper();
 		move();
 		if(frontIsClear()){
