@@ -3,7 +3,7 @@ import stanford.karel.SuperKarel;
 public class assigment1n3version2 extends SuperKarel {
 public void run(){
 	
-	while(!beepersPresent()){
+	while(notFacingNorth()){
 	fillFirstLine();
 	changeLine();
 	fillSecondLine();
