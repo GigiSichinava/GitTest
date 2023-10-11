@@ -25,7 +25,9 @@ public class assigment1n3 extends SuperKarel{
 		if(frontIsClear()){
 			move();
 		}	
-			turnRight();
+			if(frontIsClear()){
+				turnRight();
+			}
 		
 		
 		
@@ -46,7 +48,9 @@ public class assigment1n3 extends SuperKarel{
 		if(frontIsClear()){
 			move();
 		}	
-			turnRight();
+			if(frontIsClear()){
+				turnRight();
+			}
 		
 		
 		
