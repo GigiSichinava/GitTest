@@ -25,7 +25,9 @@ public class assigment1n4 extends SuperKarel {
 			move();
 		}
 		turnAround();
-		move();
+		if(frontIsClear()){
+			move();
+		}
 	}		
 
 	private void findCentre() {
