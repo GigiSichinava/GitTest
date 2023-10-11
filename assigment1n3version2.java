@@ -30,6 +30,7 @@ private void changeLine() {
 	turnAround();
 	while(frontIsClear()){
 		move();
+	}
 		turnRight();
 		if(frontIsClear()){
 			move();
