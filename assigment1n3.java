@@ -24,20 +24,19 @@ public class assigment1n3 extends SuperKarel{
 		turnRight();
 		if(frontIsClear()){
 			move();
-		}
-		
+		}	
 			turnRight();
 		
 		
 		
-		while(frontIsClear()){
+	/*	while(frontIsClear()){
 			move();
 			putBeeper();
 			if(frontIsClear()){	
 				move();
 			}		
 		}
-		turnAround();
+			turnAround();
 		
 		
 		while(frontIsClear()){
@@ -46,11 +45,10 @@ public class assigment1n3 extends SuperKarel{
 		turnRight();
 		if(frontIsClear()){
 			move();
-		}
-		
+		}	
 			turnRight();
 		
-		
+		*/
 		
 		}	
 	}
