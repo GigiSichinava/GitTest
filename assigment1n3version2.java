@@ -15,7 +15,9 @@ private void fillFirstLine() {
 		move();
 		if(frontIsClear()){
 			move();
+		if(frontIsBlocked()){
 			putBeeper();
+		}
 		}
 	}
 	
