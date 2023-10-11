@@ -9,7 +9,7 @@ public void run(){
 	fillSecondLine();
 	changeLine();
 	}
-	}
+}
 	
 
 
@@ -27,6 +27,7 @@ private void fillFirstLine() {
 		
 		}
 	}
+	
 }
 
 
@@ -39,10 +40,9 @@ private void changeLine() {
 		if(frontIsClear()){
 			move();
 		}		
-			turnRight();
-		
-		
+			turnRight();		
 }
+
 
 
 
