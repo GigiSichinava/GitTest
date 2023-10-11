@@ -26,10 +26,9 @@ public class assigment1n3 extends SuperKarel{
 			move();
 		}	
 			turnRight();
-			move();
 		
 		
-		/*
+		
 		while(frontIsClear()){
 			move();
 			putBeeper();
@@ -49,7 +48,7 @@ public class assigment1n3 extends SuperKarel{
 		}	
 			turnRight();
 		
-		*/
+		
 		
 		}	
 	}
