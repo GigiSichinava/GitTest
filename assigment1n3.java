@@ -12,9 +12,11 @@ public class assigment1n3 extends SuperKarel{
 			move();
 			if(frontIsClear()){
 				move();
+			}else{
+				turnAround();
 			}			
 		}
-			turnAround();
+			
 		
 			
 		
@@ -33,11 +35,13 @@ public class assigment1n3 extends SuperKarel{
 		while(frontIsClear()){
 			move();
 			putBeeper();
-			if(frontIsClear()){
+			if(frontIsClear()){	
 				move();
+			}else{
+				turnAround();
 			}		
 		}
-		turnAround();
+		
 		
 		
 		while(frontIsClear()){
