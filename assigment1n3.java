@@ -4,7 +4,7 @@ public class assigment1n3 extends SuperKarel{
 	public void run (){
 		
 		
-	while(beepersInBag()){
+	while(frontIsClear()){
 		
 		
 		while (frontIsClear()){
