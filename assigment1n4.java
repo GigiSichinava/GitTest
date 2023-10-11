@@ -18,7 +18,9 @@ public class assigment1n4 extends SuperKarel {
 			pickBeeper();
 		}
 		turnAround();
-		move();
+		if(frontIsClear()){
+			move();
+		}
 		while(beepersPresent()){
 			move();
 		}
