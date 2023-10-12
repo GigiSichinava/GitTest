@@ -4,6 +4,7 @@ public class assigment1n2version2 extends SuperKarel {
 	public void run(){
 		
 		fillLastColumn();
+		
 		while(frontIsClear()){
 		getToTheStartingPosition();
 		fillColumn();
@@ -68,8 +69,8 @@ public class assigment1n2version2 extends SuperKarel {
 			move();
 			turnRight();
 		}
-	if(frontIsBlocked()){	
-		while(frontIsBlocked()){			
+		
+		while(leftIsBlocked()){			
 			turnRight();				 
 			if(frontIsClear()){
 				move();					
@@ -78,8 +79,7 @@ public class assigment1n2version2 extends SuperKarel {
 			if(frontIsClear()){
 				move();
 			}
-							
-		}		
+									
 			
 		}
 		
