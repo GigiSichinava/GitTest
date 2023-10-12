@@ -69,15 +69,14 @@ public class assigment1n2version2 extends SuperKarel {
 			move();
 			turnRight();
 		}
-		 while(rightIsClear()){			
+		 while(frontIsBlocked()){			
 				turnRight();				 
-				if(frontIsClear()){
 					move();					
-				}
+				
 				turnLeft();
-				if(frontIsClear()){
+				
 					move();
-				}
+				
 		 }															
 			
 	}
