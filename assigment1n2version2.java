@@ -75,11 +75,10 @@ public class assigment1n2version2 extends SuperKarel {
 					move();					
 				}
 				turnLeft();
-				if(frontIsClear()){
+				
 					move();
-				}
-		 }
-		 move();
+				
+		 }															
 			
 	}
 	
