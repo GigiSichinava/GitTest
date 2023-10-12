@@ -3,7 +3,7 @@ import stanford.karel.SuperKarel;
 public class assigment1n3version2 extends SuperKarel {
 public void run(){
 	
-	while(leftIsClear()){
+	while(frontIsClear()){
 	fillFirstLine();
 	changeLine();
 	fillSecondLine();
@@ -16,7 +16,9 @@ public void run(){
 
 
 private void fillFirstLine() {
+		if(noBeepersPresent()){		
 		putBeeper();
+		}
 		if(frontIsClear()){
 			move();
 		}
@@ -39,11 +41,15 @@ private void fillFirstLine() {
 
 
 private void changeLine() {
-	turnAround();
+	if(frontIsBlocked()){
+		turnAround();
+	}
 	while(frontIsClear()){
 		move();
 	}
-		turnRight();
+		if(frontIsBlocked()){
+			turnRight();
+		}
 		if(frontIsClear()){
 			move();
 		}		
