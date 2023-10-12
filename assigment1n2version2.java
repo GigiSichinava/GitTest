@@ -3,6 +3,7 @@ import stanford.karel.SuperKarel;
 public class assigment1n2version2 extends SuperKarel {
 	public void run(){
 		
+		fillLastColumn();
 		while(frontIsClear()){
 		getToTheStartingPosition();
 		fillColumn();
@@ -10,6 +11,22 @@ public class assigment1n2version2 extends SuperKarel {
 		changeColumn();		
 		}
 		
+	}
+
+
+	private void fillLastColumn() {
+		while(frontIsClear()){
+			move();
+		}
+		getToTheStartingPosition();
+		fillColumn();
+		turnAround();
+		while(frontIsClear()){
+			move();
+		}
+		if(frontIsBlocked()){
+			turnAround();
+		}
 	}
 
 
@@ -54,13 +71,9 @@ public class assigment1n2version2 extends SuperKarel {
 		
 		while(frontIsBlocked()){			
 			turnRight();				 
-			if(frontIsClear()){
-				move();					
-			}
+			move();					
 			turnLeft();
-			if(frontIsClear()){
-				move();
-			}
+			move();
 							
 				
 			
