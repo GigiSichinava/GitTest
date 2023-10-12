@@ -52,11 +52,9 @@ public class assigment1n2version2 extends SuperKarel {
 			turnRight();
 		}
 		
-		while(beepersInBag()){
-			if(frontIsBlocked()){
+		while(frontIsBlocked()){
 			turnRight();
 			move();
-			}
 			if(leftIsClear()){
 			turnLeft();
 			move();
