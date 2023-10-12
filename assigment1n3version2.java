@@ -14,12 +14,11 @@ public void run(){
 		turnLeft();
 		while(frontIsClear()){
 			putBeeper();
+			move();
 			if(frontIsClear()){
 				move();
-			}
-			if(frontIsClear()){
-				move();
-			}
+			if(frontIsBlocked()){
+				putBeeper();
 		}
 	}
 	
