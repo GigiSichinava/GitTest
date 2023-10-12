@@ -16,13 +16,13 @@ public void run(){
 
 
 private void fillFirstLine() {
-//		putBeeper();
-//		if(frontIsClear()){
-//			move();
-//		}
-//		if(frontIsClear()){
-//			move();
-//		}
+		putBeeper();
+		if(frontIsClear()){
+			move();
+		}
+		if(frontIsClear()){
+			move();
+		}
 	while(frontIsClear()){
 		putBeeper();
 		move();
