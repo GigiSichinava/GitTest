@@ -7,8 +7,7 @@ public class assigment1n2version2 extends SuperKarel {
 		getToTheStartingPosition();
 		fillColumn();
 		getToTheStartingPosition();
-		changeColumn();
-		fillColumn();
+		
 		}
 		
 	}
