@@ -17,12 +17,12 @@ public void run(){
 	  while(frontIsClear()){
 		 putBeeper();
 		 move();
-	   if(frontIsClear()){
+		  if(frontIsClear()){
 	   	 move();
 		  if(frontIsBlocked()){
 			putBeeper();
 		  }
-	   }
+		  }
 	  }
 	}
 		
