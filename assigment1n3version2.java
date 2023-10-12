@@ -3,25 +3,26 @@ import stanford.karel.SuperKarel;
 public class assigment1n3version2 extends SuperKarel {
 public void run(){
 	
+	//with if conditional prevent maps like 
 	if(frontIsClear()){
-	while(frontIsClear()){
-	fillFirstLine();
-	changeLine();
-	fillSecondLine();
-	changeLine();
-	}
+	  while(frontIsClear()){
+	  fillFirstLine();
+	  changeLine();
+	  fillSecondLine();
+	  changeLine();
+	  }
 	}else{
-		turnLeft();
-		while(frontIsClear()){
+	  turnLeft();
+	  while(frontIsClear()){
+		 putBeeper();
+		 move();
+	   if(frontIsClear()){
+	   	 move();
+		  if(frontIsBlocked()){
 			putBeeper();
-			move();
-			if(frontIsClear()){
-				move();
-			if(frontIsBlocked()){
-				putBeeper();
-		}
-			}
-		}
+		  }
+	   }
+	  }
 	}
 	
 	
