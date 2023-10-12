@@ -1,7 +1,7 @@
 import stanford.karel.SuperKarel;
 
 public class assigment1n3version2 extends SuperKarel {
-	public void run(){
+public void run(){
 	
 	//with if conditional prevent maps with only one column
 	//otherwise fill rows step-by-step in chess principle 
@@ -26,10 +26,9 @@ public class assigment1n3version2 extends SuperKarel {
 	  }
 	}
 		
-
-	}
+}
 	
-   //make karel to fill the first line of our 'chessboard'
+   //make Karel to fill the first line of our 'chessboard'
 private void fillFirstLine() {
 		if(noBeepersPresent()){		
 		putBeeper();
@@ -40,17 +39,21 @@ private void fillFirstLine() {
 		if(frontIsClear()){
 			move();
 		}
-		while(frontIsClear()){
+	while(frontIsClear()){
+		putBeeper();
+		move();
+		if(frontIsClear()){
 			move();
+		if(frontIsBlocked()){
 			putBeeper();
-			if(frontIsClear()){
-				move();		
-			}		
 		}
+		
+		}
+	}
 	
 }
 
-
+    //make karel to change rows
 private void changeLine() {
 	if(frontIsBlocked()){
 		turnAround();
@@ -70,7 +73,7 @@ private void changeLine() {
 
 
 
-
+	//make Karel to fill the second line of our 'chessboard'
 private void fillSecondLine() {
 	while(frontIsClear()){
 		move();
