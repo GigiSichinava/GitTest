@@ -54,7 +54,6 @@ private void changeLine() {
 
 
 private void fillSecondLine() {
-	while(leftIsClear()){
 	while(frontIsClear()){
 		move();
 		putBeeper();
@@ -62,7 +61,7 @@ private void fillSecondLine() {
 			move();		
 		}		
 	}
-	}
+	
 }
 
 }
