@@ -9,9 +9,7 @@ public class assigment1n2version2 extends SuperKarel {
 		getToTheStartingPosition();
 		fillColumn();
 		getToTheStartingPosition();
-		if(frontIsClear()){
-			changeColumn();		
-		}
+		changeColumn();		
 		}
 		
 	}
@@ -72,15 +70,15 @@ public class assigment1n2version2 extends SuperKarel {
 			turnRight();
 		}
 		 while(frontIsBlocked()){			
-				turnRight();				 
-				if(frontIsClear()){
-					move();					
-				}
-				turnLeft();
-				if(frontIsClear()){
-					move();
-				}
-		 }															
+			turnRight();				 
+			if(frontIsClear()){
+				move();					
+			}
+			turnLeft();
+			if(frontIsClear()){
+				move();
+			}
+		}															
 		
 	}
 }	
