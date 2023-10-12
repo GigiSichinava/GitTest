@@ -8,6 +8,7 @@ public class assigment1n2version2 extends SuperKarel {
 		getToTheStartingPosition();
 		changeColumn();
 		fillColumn();
+		getToTheStartingPosition();
 	
 		
 	}
@@ -36,7 +37,9 @@ public class assigment1n2version2 extends SuperKarel {
 				move();	
 			}
 		}
-		 putBeeper();
+		 if(noBeepersPresent()){
+			 putBeeper();
+		 }
 		 turnLeft();
 	}
 	
