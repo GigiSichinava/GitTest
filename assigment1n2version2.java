@@ -4,12 +4,15 @@ public class assigment1n2version2 extends SuperKarel {
 	public void run(){
 		
 		getToTheStartingPosition();
-//		fillColumn();
+		fillColumn();
+		getToTheStartingPosition();
 //		changeColumn();
 //		fillColumn();
 //	
 		
 	}
+
+	
 
 	private void getToTheStartingPosition() {
 		turnLeft();
@@ -20,5 +23,21 @@ public class assigment1n2version2 extends SuperKarel {
 			turnRight();
 		}
 		
-	}	
+	}
+	
+	
+	
+	private void fillColumn() {
+		turnRight();
+		while(frontIsClear()){
+			if(!beepersPresent()){
+				putBeeper();
+				move();
+			}else{
+				move();	
+			}
+		}
+		 putBeeper();
+	}
+	
 }
