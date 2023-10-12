@@ -5,7 +5,8 @@ public class assigment1n2 extends SuperKarel {
 	//	startPosition();
 	while(beepersInBag()){	
 		fillColumn();
-		moveToTheNextColumn();	
+		moveToTheNextColumn();
+		fillColumn();
 	}
 	}
 
