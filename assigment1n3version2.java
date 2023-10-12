@@ -20,6 +20,8 @@ public void run(){
 			if(frontIsBlocked()){
 				putBeeper();
 		}
+			}
+		}
 	}
 	
 	
