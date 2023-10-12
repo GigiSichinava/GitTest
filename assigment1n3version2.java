@@ -3,12 +3,24 @@ import stanford.karel.SuperKarel;
 public class assigment1n3version2 extends SuperKarel {
 public void run(){
 	
+	if(frontIsClear()){
 	while(frontIsClear()){
 	fillFirstLine();
 	changeLine();
 	fillSecondLine();
 	changeLine();
 	}
+	}else{
+		turnLeft();
+		while(frontIsClear()){
+			putBeeper();
+			move();
+			move();
+		}
+	}
+	
+	
+
 }
 	
 
