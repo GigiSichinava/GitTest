@@ -69,7 +69,7 @@ public class assigment1n2version2 extends SuperKarel {
 			move();
 			turnRight();
 		}
-		 while(leftIsBlocked()){			
+		 while(backIsBlocked()){			
 			turnRight();				 
 			if(frontIsClear()){
 				move();					
@@ -80,6 +80,13 @@ public class assigment1n2version2 extends SuperKarel {
 			}
 		}															
 		
+	}
+
+
+	private boolean backIsBlocked() {
+		turnAround();
+		if(frontIsClear());
+		return false;
 	}
 }	
 	
