@@ -1,4 +1,5 @@
 import acm.graphics.GLine;
+import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 public class problem121314 extends GraphicsProgram {
@@ -21,7 +22,7 @@ public class problem121314 extends GraphicsProgram {
 	private void drawWall() {
 		GRect wall = new GRect (HOUSE_WIDTH, HOUSE_HEIGTH);
 		int x = (int) (getWidth() /2 - HOUSE_WIDTH /2);
-		int y = getHeight() - HOUSE_HEIGHT;
+		double y = getHeight() - HOUSE_HEIGTH;
 		add (wall, x, y);
 		}
 		
@@ -57,5 +58,5 @@ public class problem121314 extends GraphicsProgram {
 //		GLine Line = new GLine(x1, y1, x2, y2);
 //		add (Line);
 //	}
-}	
+	
 	
