@@ -6,8 +6,8 @@ public class assigment1n2version2 extends SuperKarel {
 		while(frontIsClear()){
 		getToTheStartingPosition();
 		fillColumn();
-		getToTheStartingPosition();
-		fillColumn();
+		changeColumn();
+		
 		}
 		
 	}
