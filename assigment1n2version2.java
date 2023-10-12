@@ -52,7 +52,7 @@ public class assigment1n2version2 extends SuperKarel {
 			turnRight();
 		}
 		
-		
+		while(frontIsBlocked()){
 			if(frontIsBlocked()){
 				turnRight();
 				move();
@@ -62,7 +62,7 @@ public class assigment1n2version2 extends SuperKarel {
 				move();
 			
 				
-			
+			}
 		}
 		
 	}
