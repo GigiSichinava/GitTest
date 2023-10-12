@@ -60,8 +60,7 @@ public class assigment1n2version2 extends SuperKarel {
 			if(leftIsClear()){
 				turnLeft();
 				move();
-			}else{
-				putBeeper();
+			
 				
 			}
 		}
@@ -69,4 +68,12 @@ public class assigment1n2version2 extends SuperKarel {
 	}
 
 }
+
+
+
+
+
+
+
+
 
