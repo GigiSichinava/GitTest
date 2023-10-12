@@ -3,7 +3,7 @@ import stanford.karel.SuperKarel;
 public class assigment1n2version2 extends SuperKarel {
 	public void run(){
 		
-		while(rightIsClear()){
+		while(frontIsClear()){
 		getToTheStartingPosition();
 		fillColumn();
 		getToTheStartingPosition();
