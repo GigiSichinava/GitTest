@@ -3,9 +3,11 @@ import stanford.karel.SuperKarel;
 public class assigment1n2 extends SuperKarel{
 	public void run(){
 		
-		while(frontIsClear()){
 		fillColumn();
+		
+		while(frontIsClear()){
 		changeColumn();
+		fillColumn();
 		}
 				
 	}
@@ -31,17 +33,9 @@ public class assigment1n2 extends SuperKarel{
 	}
 	
 	private void changeColumn(){
-		if(frontIsClear()){
-		move();
-		move();
-		move();
-		}
-		if(frontIsClear()){
+		for (int i=0; i < 4; i++){
 			move();
-		}else{
-			fillColumn();
 		}
-		
 		
 	}
 	
