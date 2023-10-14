@@ -27,19 +27,13 @@ public class assigment1n2 extends SuperKarel{
 			if(noBeepersPresent()){
 				 putBeeper();
 			}
-			getToStartingPosition();
 		}
-	}	
-	
-	
-	private void getToStartingPosition(){	
 		turnAround();
 		while(frontIsClear()){
 			move();
 		}
 		turnLeft();
 	}
-	
 	
 	
 	private void changeColumn(){
