@@ -1,82 +1,41 @@
 import stanford.karel.SuperKarel;
 
-public class assigment1n2 extends SuperKarel {
-	public void run() {									
-	//	startPosition();
-	while(beepersInBag()){	
-		fillColumn();
-		moveToTheNextColumn();
-		fillColumn();
-	}
-	}
-
-	/*
-	private void startPosition() {
-		// make karel ready to start
-		turnLeft();
+public class assigment1n2 extends SuperKarel{
+	public void run(){
+		
 		while(frontIsClear()){
-			move();
+		fillColumn();
+		changeColumn();
 		}
-		turnRight();
+				
 	}
-	*/
 
 	private void fillColumn() {
-		
-		// fill whole column with beepers
-			turnLeft();
-			
+		turnLeft();
 		while(frontIsClear()){
-			if(!beepersPresent()){
+			if(noBeepersPresent()){
 				putBeeper();
 				move();
 			}else{
 				move();	
 			}
 		}
+		turnAround();
+		while(frontIsClear()){
+			move();
+		}
+		turnRight();
+	}
+	
+	private void changeColumn(){
+		while(frontIsClear()){
+			for (int i=0; i < 4; i++){
+				move();
+			}
+		}
+		
 	}
 	
 	
-	private void moveToTheNextColumn() {
-		turnRight();
-		while(frontIsClear()){
-			move();
-			turnLeft();
-			move();
-			turnRight();
-		}
-		 
-		 while(frontIsBlocked()){			//bolo taghze roca gadavalt chamosvlisas front isev blockdaaa!!
-			turnRight();				 //xelit chawerit tu sheidzleba svetidan svetze gadasvla unda vikixo
-			move();					//tu tagebi yvelgan ertnairia mza private void gavuketot moveToTheNextColums-s
-			turnLeft();
-			move();
-		 }		 
-		 	
-		 // back to the bottom of the column
-		 if(!beepersPresent()){
-		 		putBeeper();
-		 	}
-		 		turnRight();		 
-		 while(frontIsClear()){
-			move(); 
-		 }
-		 turnLeft();				
 		
-	}	
-	
-
 }
-
-
-
-//while(frontIsBlocked()){			
-//turnRight();				 
-//if(frontIsClear()){
-//	move();					
-//}
-//turnLeft();
-//if(frontIsClear()){
-//	move();
-//}
-
