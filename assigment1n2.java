@@ -35,7 +35,9 @@ public class assigment1n2 extends SuperKarel{
 		move();
 		move();
 		move();
-		move();
+		}
+		if(frontIsClear()){
+			move();
 		}else{
 			fillColumn();
 		}
