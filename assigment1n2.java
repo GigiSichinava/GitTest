@@ -12,7 +12,6 @@ public class assigment1n2 extends SuperKarel{
 		}
 				
 	}
-
 	
 	private void fillColumn() {
 		turnLeft();
@@ -30,26 +29,26 @@ public class assigment1n2 extends SuperKarel{
 				 putBeeper();
 			}
 		}
-		//pre:top of the column, facing north
-		//post:bottom of the column, facing east
 		getToStartingPosition();
 	}
 	
 	
+		//pre:top of the column, facing north
+		//post:bottom of the column, facing east
 	private void getToStartingPosition() {
 		turnAround();
 		while(frontIsClear()){
 			move();
 		}
-		turnLeft();
-		
+		turnLeft();		
 	}
 
+	
 	private void changeColumn(){
 		for (int i=0; i < 4; i++){
 			move();
 		}		
 	}
 	
-		
+	
 }
