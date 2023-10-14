@@ -4,7 +4,6 @@ public class assigment1n2 extends SuperKarel{
 	public void run(){
 		
 		fillColumn();
-		
 		while(frontIsClear()){
 		changeColumn();
 		fillColumn();
@@ -26,7 +25,7 @@ public class assigment1n2 extends SuperKarel{
 			}
 			if(noBeepersPresent()){
 				 putBeeper();
-			 }
+			}
 		}
 		turnAround();
 		while(frontIsClear()){
@@ -35,13 +34,12 @@ public class assigment1n2 extends SuperKarel{
 		turnLeft();
 	}
 	
+	
 	private void changeColumn(){
 		for (int i=0; i < 4; i++){
 			move();
-		}
-		
+		}		
 	}
-	
 	
 		
 }
