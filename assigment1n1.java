@@ -7,6 +7,8 @@ public class assigment1n1 extends SuperKarel {
 		goBackToHome();			
 	}
 
+	// pre: stands on 3x4, facing east
+	// post: stands on 6x3, facing east
 	private void goToNewspaper() {
 		move();
 		move();
@@ -20,6 +22,8 @@ public class assigment1n1 extends SuperKarel {
 		pickBeeper();
 	}
 	
+	// pre: stands on 6x3, facing east
+	// post: stands on 3x4, facing east
 	private void goBackToHome(){
 		turnAround();
 		move();
@@ -28,8 +32,6 @@ public class assigment1n1 extends SuperKarel {
 		turnLeft();
 		move();
 		move();	
-		
-		// make karel to finish job in starting position
 		turnAround();
 		}
 	
