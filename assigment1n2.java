@@ -2,6 +2,8 @@ import stanford.karel.SuperKarel;
 
 public class assigment1n2 extends SuperKarel{
 	public void run(){
+		
+		//fill the first column and then start cycle
 		fillColumn();
 		while(frontIsClear()){
 		changeColumn();
@@ -25,13 +27,19 @@ public class assigment1n2 extends SuperKarel{
 			if(noBeepersPresent()){
 				 putBeeper();
 			}
+			getToStartingPosition();
 		}
+	}	
+	
+	
+	private void getToStartingPosition(){	
 		turnAround();
 		while(frontIsClear()){
 			move();
 		}
 		turnLeft();
 	}
+	
 	
 	
 	private void changeColumn(){
