@@ -31,11 +31,14 @@ public class assigment1n2 extends SuperKarel{
 	}
 	
 	private void changeColumn(){
+		if(frontIsClear()){
 		move();
 		move();
 		move();
 		move();
-		
+		}else{
+			fillColumn();
+		}
 		
 		
 	}
