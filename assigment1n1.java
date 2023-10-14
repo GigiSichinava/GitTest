@@ -4,8 +4,7 @@ public class assigment1n1 extends SuperKarel {
 	public void run(){
 		goToNewspaper();
 		takeNewspaper();
-		goBackToHome();
-		
+		goBackToHome();			
 	}
 
 	private void goToNewspaper() {
@@ -29,7 +28,8 @@ public class assigment1n1 extends SuperKarel {
 		turnLeft();
 		move();
 		move();	
-		//to make karel finish job in starting position
+		
+		// make karel to finish job in starting position
 		turnAround();
 		}
 	
