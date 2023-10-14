@@ -5,6 +5,7 @@ public class assigment1n2 extends SuperKarel{
 		
 		//fill the first column and then start cycle
 		fillColumn();
+		
 		while(frontIsClear()){
 		changeColumn();
 		fillColumn();
@@ -12,6 +13,7 @@ public class assigment1n2 extends SuperKarel{
 				
 	}
 
+	
 	private void fillColumn() {
 		turnLeft();
 		if(noBeepersPresent()){
@@ -28,10 +30,10 @@ public class assigment1n2 extends SuperKarel{
 				 putBeeper();
 			}
 		}
+		//pre:top of the column, facing north
+		//post:bottom of the column, facing east
 		getToStartingPosition();
 	}
-	
-	
 	
 	
 	private void getToStartingPosition() {
