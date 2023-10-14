@@ -28,7 +28,9 @@ public class assigment1n2 extends SuperKarel{
 	}
 	
 	private void changeColumn(){
-		while(frontIsClear()){
+		if(frontIsClear()){
+				move();
+				move();
 				move();
 				move();
 			}
