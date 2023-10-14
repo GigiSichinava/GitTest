@@ -33,8 +33,8 @@ public class assigment1n2 extends SuperKarel{
 	}
 	
 	
-		//pre:top of the column, facing north
-		//post:bottom of the column, facing east
+	// pre: top of the column, facing north
+	// post: bottom of the column, facing east
 	private void getToStartingPosition() {
 		turnAround();
 		while(frontIsClear()){
