@@ -19,6 +19,9 @@ public class assigment1n2 extends SuperKarel{
 			}else{
 				move();	
 			}
+			if(noBeepersPresent()){
+				 putBeeper();
+			 }
 		}
 		turnAround();
 		while(frontIsClear()){
@@ -28,12 +31,11 @@ public class assigment1n2 extends SuperKarel{
 	}
 	
 	private void changeColumn(){
-		if(frontIsClear()){
-				move();
-				move();
-				move();
-				move();
-			}
+		move();
+		move();
+		move();
+		move();
+		
 		
 		
 	}
