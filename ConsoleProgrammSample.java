@@ -10,7 +10,7 @@ import acm.program.*;
 public class ConsoleProgrammSample extends ConsoleProgram {
 
 	public void run() {
-		// You fill this in
+		println("hellow world");
 	}
 
 }
