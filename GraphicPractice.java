@@ -6,8 +6,9 @@ import acm.program.GraphicsProgram;
 public class GraphicPractice extends GraphicsProgram {
 	public void run(){
 		
-		int age = 29;
 		println ("age");
+		int age = 29;
+		
 	}
 	
 }
