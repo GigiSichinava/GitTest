@@ -8,7 +8,8 @@ public class GraphicPractice extends ConsoleProgram {
 	public void run(){
 		
 		int age = 30;
-		print(age);
+		println("Age is:" + age );
+		
 		
 	}
 	
