@@ -11,6 +11,7 @@ public class ConsoleProgrammSample extends ConsoleProgram {
 
 	public void run() {
 		println("hellow world");
+		println("Yeat da best in da buildin");
 	}
 
 }
