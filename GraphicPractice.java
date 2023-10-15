@@ -7,8 +7,8 @@ import acm.program.GraphicsProgram;
 public class GraphicPractice extends ConsoleProgram {
 	public void run(){
 		
-		println ("age");
-		int age = 29;
+		int age = 30;
+		double weight = 180.2;
 		
 	}
 	
