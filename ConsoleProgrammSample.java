@@ -10,11 +10,9 @@ import acm.program.*;
 public class ConsoleProgrammSample extends ConsoleProgram {
 
 	public void run() {
-		int age = 20;
-		println("age");
+	
 		
-	
-	
+			
 	}
 
 }
