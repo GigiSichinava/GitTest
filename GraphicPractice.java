@@ -6,11 +6,10 @@ import acm.program.GraphicsProgram;
 public class GraphicPractice extends GraphicsProgram {
 	public void run(){
 		
-		GRect rect = new GRect (20, 20);
+		GRect rect = new GRect (50, 50);
 		rect.setFilled(true);
-		rect.setColor(Color.BLUE);
-		add(rect, 90, 90);
-		
+		rect.setColor(Color.RED);
+		add(rect, 60, 60);
 	}
 	
 }
