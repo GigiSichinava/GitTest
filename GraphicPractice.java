@@ -8,7 +8,7 @@ public class GraphicPractice extends ConsoleProgram {
 	public void run(){
 		
 		int age = 30;
-		double weight = 180.2;
+		print(age);
 		
 	}
 	
