@@ -10,10 +10,18 @@ public class problem12 extends GraphicsProgram{
 			rect.setFilled(true);
 			add(rect);
 			
-			GRect rect2 = new GRect (120, 120, 40, 70);
+			GRect rect2 = new GRect (120, 140, 40, 70);
 			rect2.setColor(Color.BLACK);
 			add(rect2);
+		
+		
+			GRect rect3 = new GRect (120, 250, 40, 70);
+			rect3.setColor(Color.BLACK);
+			add(rect3);
+			
 		}
+		
+		
 		
 		
 	
