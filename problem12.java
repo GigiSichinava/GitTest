@@ -24,7 +24,7 @@ public class problem12 extends GraphicsProgram{
 			rect4.setColor(Color.BLACK);
 			add(rect4);
 			
-			GLine line = new GLine (100, 100, 125, 50);
+			GLine line = new GLine (100, 100, 225, 50);
 			line.setColor(Color.BLACK);
 			add(line);
 			
