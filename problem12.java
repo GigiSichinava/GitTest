@@ -25,7 +25,10 @@ public class problem12 extends GraphicsProgram{
 			add(rect4);
 			
 			GLine line = new GLine (100, 100, 175, 50);
-			line.setColor(Color.BLACK);
+			line.setColor(Color.RED);
+			add(line);
+			
+			GLine line2 = new GLine (175, 50, 250, 100);
 			add(line);
 			
 		}
