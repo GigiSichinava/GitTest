@@ -19,6 +19,7 @@ public class problem12 extends GraphicsProgram{
 		
 			GRect rect3 = new GRect (190, 130, 40, 60);
 			rect3.setColor(Color.BLACK);
+			rect3.setColor(Color.RED);
 			rect3.setFilled(true);
 			add(rect3);
 			
