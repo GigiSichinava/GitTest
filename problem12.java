@@ -35,7 +35,7 @@ public class problem12 extends GraphicsProgram{
 			line2.setColor(Color.RED);
 			add(line2);
 			
-			GOval oval = new GOval (160, 250, 10, 10);
+			GOval oval = new GOval (160, 250, 8, 8);
 			oval.setColor(Color.BLACK);
 			oval.setFilled(true);
 			add(oval);
