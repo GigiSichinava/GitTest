@@ -9,8 +9,7 @@ public class problem16 extends ConsoleProgram{
 		
 		double d = (1/(double) a) + (1/(double) b) + (1/(double) c);
 		
-		println (1/d);
-		println((a+b+c)/3.0);		
+		println (1/d);		
 		
 	}
 
