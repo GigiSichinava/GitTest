@@ -1,6 +1,7 @@
 import java.awt.Color;
 
 import acm.graphics.GLine;
+import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
@@ -33,6 +34,12 @@ public class problem12 extends GraphicsProgram{
 			GLine line2 = new GLine (175, 50, 250, 100);
 			line2.setColor(Color.RED);
 			add(line2);
+			
+			GOval oval = new GOval (130, 160, 10, 10);
+			oval.setColor(Color.BLACK);
+			oval.setFilled(true);
+			add(oval);
+			
 			
 		}
 		
