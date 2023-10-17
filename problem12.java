@@ -29,7 +29,7 @@ public class problem12 extends GraphicsProgram{
 			add(line);
 			
 			GLine line2 = new GLine (175, 50, 250, 100);
-			add(line);
+			add(line2);
 			
 		}
 		
