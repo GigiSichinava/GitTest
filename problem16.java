@@ -9,6 +9,8 @@ public class problem16 extends ConsoleProgram{
 		
 		double d = (1/a) + (1/b) + (1/c);
 		
+		print (1/d);
+		
 		
 	}
 
