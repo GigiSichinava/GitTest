@@ -19,7 +19,7 @@ public class problem12 extends GraphicsProgram{
 			rect3.setColor(Color.BLACK);
 			add(rect3);
 			
-			GRect rect4 = new GRect (150, 230, 50, 80);
+			GRect rect4 = new GRect (150, 200, 50, 80);
 			rect4.setColor(Color.BLACK);
 			add(rect4);
 			
