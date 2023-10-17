@@ -66,6 +66,5 @@ public class problem12 extends GraphicsProgram{
 		
 		
 		
-	
-}
+
 
