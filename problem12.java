@@ -1,5 +1,6 @@
 import java.awt.Color;
 
+import acm.graphics.GLine;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
@@ -22,6 +23,10 @@ public class problem12 extends GraphicsProgram{
 			GRect rect4 = new GRect (150, 215, 50, 80);
 			rect4.setColor(Color.BLACK);
 			add(rect4);
+			
+			GLine line = new GLine (100, 100, 125, 50);
+			line.setColor(Color.BLACK);
+			add(line);
 			
 		}
 		
