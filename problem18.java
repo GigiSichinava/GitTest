@@ -7,7 +7,7 @@ public class problem18 extends ConsoleProgram {
 		int b = readInt("Enter second number: ");
 		
 		if (a >= b) println(a);
-		if (b >= a) println (b);
+		if (b > a) println (b);
 		
 	}
 }
