@@ -7,9 +7,7 @@ public class problem15 extends ConsoleProgram{
 		int b = readInt ("Enter secont number: ");
 		int c = readInt ("Enter third number: ");
 		
-		double d = (1/(double) a) + (1/(double) b) + (1/(double) c);
 		
-		println (1/d);
 		println((a+b+c)/3.0);		
 		
 	}
