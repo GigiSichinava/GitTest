@@ -5,9 +5,11 @@ public class problem20 extends ConsoleProgram{
 		
 		int n = readInt("Enter your number: ");		
 		
-			int sum = 0;		
+			int sum = 0;
+			
 		for (int i = 0; i < n; i++){
-			int num = readInt ("Enter number" + i+1 + ":");
+			int k = i + 1;
+			int num = readInt ("Enter number" + k + ":");
 			
 			sum += num;	
 		}
