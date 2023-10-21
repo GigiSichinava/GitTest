@@ -6,7 +6,8 @@ public class problem21 extends GraphicsProgram{
 	public void run(){
 		
 		for(int i = 0; i < NUM_LINES; i++);
-		 drawHorisontalLines(i);
+		 int i = 0;
+		drawHorisontalLines(i);
 	}
 	private void drawHorisontalLines(int i) {
 		double y = i * (getHeight() / (NUM_LINES - 1) );
