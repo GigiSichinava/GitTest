@@ -5,10 +5,10 @@ public class problem24 extends ConsoleProgram{
 		
 		int num = readInt ("Enter your number: ");
 		int numDivisiors = numberOfDivisors(num);
-		println(numberOfDivisions);
+		println(numDivisiors);
 	}
 
-	private void numberOfDivisors(int n) {
+	private int numberOfDivisors(int n) {
 		int num = 0;
 		for(int i = 1; i <= n; i++){
 			if (n % i == 0) {  //% - reminder
@@ -16,6 +16,8 @@ public class problem24 extends ConsoleProgram{
 			}
 		
 		}
+		return num;
+	
 	}
 }
 
