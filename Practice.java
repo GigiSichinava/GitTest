@@ -5,7 +5,7 @@ public class Practice extends ConsoleProgram{
 		 
 		int a = readInt ("Enter first number: ");
 		 int b = readInt ("Enter second number: ");
-		 int sum = a + b ;
+		 int sum = (a + b) / 2 ;
 		 print(sum);
 		
 		
