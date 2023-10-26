@@ -7,9 +7,9 @@ public class problem27 extends ConsoleProgram {
 		int a = n;	
 		
 		for(int i=0; i <= m; i++){
-			a = n * n;
+			n *= a;
 		}
-		println(a);
+		println(n);
 		
 	}
 }
