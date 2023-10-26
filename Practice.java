@@ -33,16 +33,16 @@ public class Practice extends GraphicsProgram{
 	// EYES OF THE ROBOT
 		
 		// Left eye of the robot
-		int mainXLeftEye = mainX + 20; 
-		int mainYLeftEye = mainY + 20;	
+		int mainXLeftEye = mainX + 30; 
+		int mainYLeftEye = mainY + 30;	
 		GOval leftEye = new GOval (mainXLeftEye, mainYLeftEye, LEFT_EYE_DIAMETER, LEFT_EYE_DIAMETER);
 		leftEye.setFilled(true);
 		leftEye.setColor(Color.BLACK);
 		add(leftEye);
 		
 		//Right eye of the robot
-		int mainXRightEye = mainX + WIDTH - RIGHT_EYE_DIAMETER - 20;
-		int mainYRightEye = mainY + 20;
+		int mainXRightEye = mainX + WIDTH - RIGHT_EYE_DIAMETER - 30;
+		int mainYRightEye = mainY + 30;
 		GOval rightEye = new GOval ( mainXRightEye, mainYRightEye, RIGHT_EYE_DIAMETER, RIGHT_EYE_DIAMETER);
 		rightEye.setFilled(true);
 		rightEye.setColor(Color.BLACK);
