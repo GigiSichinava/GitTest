@@ -36,6 +36,7 @@ public class RobotFacePractice extends GraphicsProgram{
 		rectContour.setColor(Color.BLACK);
 		add(rectContour);
 		
+		
 	// EYES OF THE ROBOT	
 		// Left eye of the robot
 		int mainXLeftEye = mainX + 35; 
@@ -56,6 +57,7 @@ public class RobotFacePractice extends GraphicsProgram{
 		rightEye.setColor(Color.BLACK);
 		add(rightEye);
 	
+		
 	// MOUTH OF THE ROBOT
 		int mainXMouth = mainX + 40;
 		int mainYMouth = mainY + 140;		
