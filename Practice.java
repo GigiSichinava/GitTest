@@ -7,7 +7,7 @@ public class Practice extends ConsoleProgram{
 		int b = readInt ("Enter second number: ");
 		int c = readInt ("Entwr third number: ");
 		
-		int sum = 1/a + 1/b + 1/c;
+		double sum = 1/a + 1/b + 1/c;
 		
 		 print(1/sum);
 		
