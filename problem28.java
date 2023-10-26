@@ -14,9 +14,9 @@ public class problem28 extends ConsoleProgram{
 			int odd = readInt ("Enter your number: ");
 			if(odd == SENTINEL);
 			break;
-		}
+		} 
 		
-		if (n % 2 == 0){
+		 if (n % 2 == 0){
 			numberOfOdds++;
 			
 		}
