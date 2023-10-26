@@ -1,17 +1,27 @@
 
+import java.awt.Color;
+
 import acm.graphics.GLine;
+import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 public class Practice extends GraphicsProgram{
 	
+	private static final int WIDTH = 70;
+	private static final int HEIGHT = 70;
 	
 	public void run(){
-		int x = getWidth() ;
+		
+		int x = getWidth() / 2 ;
 		int y = getHeight() / 2;
 		
-		GLine a = new GLine (0, y, x, y );
-		add (a);
-	
+		int mainX = x - WIDTH / 2;
+		int mainY =  y - HEIGHT / 2;
+		
+		GRect rect = new GRect (mainX, mainY, WIDTH, HEIGHT);
+		rect.setFilled(true);
+		rect.setColor(Color.RED);
+		add(rect);
 	
 	}
 }
