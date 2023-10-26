@@ -10,8 +10,8 @@ public class Practice extends GraphicsProgram{
 	
 	private static final int WIDTH = 200;
 	private static final int HEIGHT = 200;
-	private static final int LEFT_EYE_DIAMETER = 40;
-	private static final int RIGHT_EYE_DIAMETER = 40;
+	private static final int LEFT_EYE_DIAMETER = 50;
+	private static final int RIGHT_EYE_DIAMETER = 50;
 	
 	public void run(){
 		
@@ -33,16 +33,16 @@ public class Practice extends GraphicsProgram{
 	// EYES OF THE ROBOT
 		
 		// Left eye of the robot
-		int mainXLeftEye = mainX + 30; 
-		int mainYLeftEye = mainY + 30;	
+		int mainXLeftEye = mainX + 40; 
+		int mainYLeftEye = mainY + 40;	
 		GOval leftEye = new GOval (mainXLeftEye, mainYLeftEye, LEFT_EYE_DIAMETER, LEFT_EYE_DIAMETER);
 		leftEye.setFilled(true);
 		leftEye.setColor(Color.BLACK);
 		add(leftEye);
 		
 		//Right eye of the robot
-		int mainXRightEye = mainX + WIDTH - RIGHT_EYE_DIAMETER - 30;
-		int mainYRightEye = mainY + 30;
+		int mainXRightEye = mainX + WIDTH - RIGHT_EYE_DIAMETER - 40;
+		int mainYRightEye = mainY + 40;
 		GOval rightEye = new GOval ( mainXRightEye, mainYRightEye, RIGHT_EYE_DIAMETER, RIGHT_EYE_DIAMETER);
 		rightEye.setFilled(true);
 		rightEye.setColor(Color.BLACK);
