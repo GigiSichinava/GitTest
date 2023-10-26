@@ -6,7 +6,7 @@ public class Practice extends ConsoleProgram{
 		int n = readInt ("Enter your number: ");
 		int sum = 0;
 		
-		for ( int i = 0; i < n; i++ ){
+		for ( int i = 0; i <= n; i++ ){
 			int num = readInt ("Your number: ");
 			sum += num;
 			
