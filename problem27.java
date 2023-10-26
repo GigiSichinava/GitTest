@@ -4,11 +4,12 @@ public class problem27 extends ConsoleProgram {
 	public void run(){
 		int n = readInt ("Enter n: ");
 		int m = readInt ("Enter m: ");
-		 	
-		for(int i=0; i <= m; i++){
-			n = n * n;
+		int a = n;	
+		
+		for(int i=1; i <= m; i++){
+			n = n * a;
 		}
-		println(n);
+		println(a);
 		
 	}
 }
