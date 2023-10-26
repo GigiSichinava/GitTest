@@ -9,7 +9,7 @@ public class Practice extends GraphicsProgram{
 		int x = getWidth() ;
 		int y = getHeight() / 2;
 		
-		GLine a = new GLine (y, 0, x, y );
+		GLine a = new GLine (0, y, x, y );
 		add (a);
 	
 	
