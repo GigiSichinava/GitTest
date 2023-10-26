@@ -11,9 +11,9 @@ public class Practice extends ConsoleProgram{
 			int num = readInt ("Your number" + k + ":");
 			sum += num;
 			
-			
 		}
 		
+		println ("Result: sum");
 		
 		
 		
