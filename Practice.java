@@ -7,8 +7,8 @@ import acm.program.GraphicsProgram;
 
 public class Practice extends GraphicsProgram{
 	
-	private static final int WIDTH = 70;
-	private static final int HEIGHT = 70;
+	private static final int WIDTH = 100;
+	private static final int HEIGHT = 100;
 	
 	public void run(){
 		
