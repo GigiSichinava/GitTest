@@ -30,8 +30,11 @@ public class Practice extends GraphicsProgram{
 		GRect rect = new GRect (mainX, mainY, WIDTH, HEIGHT);
 		rect.setFilled(true);
 		rect.setColor(Color.RED);
+		GRect rectContour = new GRect (mainX, mainY, WIDTH, HEIGHT);
+		rectContour.setColor(Color.BLACK);
 		add(rect);
-	
+		add(rectContour);
+		
 	// EYES OF THE ROBOT	
 		// Left eye of the robot
 		int mainXLeftEye = mainX + 35; 
@@ -40,6 +43,7 @@ public class Practice extends GraphicsProgram{
 		leftEye.setFilled(true);
 		leftEye.setColor(Color.BLACK);
 		add(leftEye);
+		
 		
 		//Right eye of the robot
 			//To make left eye symmetrical of right eye, add 'mainX' width of the
