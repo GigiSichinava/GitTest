@@ -9,7 +9,7 @@ public class Practice extends ConsoleProgram{
 	int b = readInt ("Enter your number: ");
 	int sum = a + b;
 	
-	println("Your result is " + sum);
+	println("Your result is: " + sum);
 	
 	}
 	
