@@ -7,15 +7,9 @@ public class Practice extends ConsoleProgram{
 		int integerPart = (int)a;
 		double nonIntegerPart = a - integerPart;
 		
-		println(nonIntegerPart);
-		println(integerPart);
-		
-		
-		
-		
-		
-		
-		
+		println("Integer part: " + integerPart);
+		println("NonInteger part: " + nonIntegerPart);
+					
 	}
 	
 	
