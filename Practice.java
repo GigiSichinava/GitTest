@@ -12,7 +12,7 @@ public class Practice extends GraphicsProgram{
 //	int sum = a + b;
 	
 	GLabel a = new GLabel ("Hello world", 10 ,40);
-	a.setFont("Hellvetica-24");
+	a.setFont("Helvetica-24");
 	add (a);
 	}
 	
