@@ -30,9 +30,10 @@ public class Practice extends GraphicsProgram{
 		GRect rect = new GRect (mainX, mainY, WIDTH, HEIGHT);
 		rect.setFilled(true);
 		rect.setColor(Color.RED);
+		add(rect);
+			//Add contour to the robot's face
 		GRect rectContour = new GRect (mainX, mainY, WIDTH, HEIGHT);
 		rectContour.setColor(Color.BLACK);
-		add(rect);
 		add(rectContour);
 		
 	// EYES OF THE ROBOT	
