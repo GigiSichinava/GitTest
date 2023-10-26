@@ -3,13 +3,12 @@ import acm.program.ConsoleProgram;
 public class Practice extends ConsoleProgram{
 	public void run(){
 		 
-		double a = readInt ("Enter first number: ");
-		double b = readInt ("Enter second number: ");
-		double c = readInt ("Entwr third number: ");
+		double a = readDouble ("Enter your number: ");
+		int integerPart = (int)a;
+		double nonIntegerPart = a - integerPart;
 		
-		double sum = 1/a + 1/b + 1/c;
-		
-		 println(1/sum);
+		println(nonIntegerPart);
+		println(integerPart);
 		
 		
 		
