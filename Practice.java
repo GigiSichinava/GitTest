@@ -11,7 +11,7 @@ public class Practice extends GraphicsProgram{
 //	int b = readInt ("Enter your number: ");
 //	int sum = a + b;
 	
-	GLabel a = new GLabel ("Hellow world", 10 ,10);
+	GLabel a = new GLabel ("Hello world", 10 ,40);
 	add (a);
 	}
 	
