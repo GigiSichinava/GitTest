@@ -13,7 +13,7 @@ public class Practice extends ConsoleProgram{
 			
 		}
 		
-		println ("Result " + sum + ": ");
+		println ("Result: " + sum );
 		
 		
 		
