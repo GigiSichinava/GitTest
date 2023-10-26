@@ -16,7 +16,7 @@ public class problem28 extends ConsoleProgram{
 			break;
 		}
 		
-		while (n % 2 == 0){
+		if (n % 2 == 0){
 			numberOfOdds++;
 			
 		}
