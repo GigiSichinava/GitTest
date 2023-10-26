@@ -41,7 +41,7 @@ public class Practice extends GraphicsProgram{
 		add(leftEye);
 		
 		//Right eye of the robot
-		int mainXRightEye = mainX - 20;
+		int mainXRightEye = mainX + WIDTH - 20;
 		int mainYRightEye = mainY + 20;
 		GOval rightEye = new GOval ( mainXRightEye, mainYRightEye, RIGHT_EYE_DIAMETER, RIGHT_EYE_DIAMETER);
 		rightEye.setFilled(true);
