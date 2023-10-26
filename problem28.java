@@ -20,5 +20,7 @@ public class problem28 extends ConsoleProgram{
 			numberOfOdds++;
 			
 		}
+		
+		print(numberOfOdds);
 	}
 }
