@@ -8,7 +8,7 @@ public class Practice extends ConsoleProgram{
 		
 		for ( int i = 0; i <= n; i++ ){
 			int k = i + 1;
-			int num = readInt ("Your number" + k + ":");
+			int num = readInt ("Your number: ");
 			sum += num;
 			
 		}
