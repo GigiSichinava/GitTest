@@ -1,6 +1,8 @@
+import acm.graphics.GLabel;
 import acm.program.ConsoleProgram;
+import acm.program.GraphicsProgram;
 
-public class Practice extends ConsoleProgram{
+public class Practice extends GraphicsProgram{
 	public void run(){
 		
 //	println("This program adds two integer numbers! ");	
@@ -9,7 +11,7 @@ public class Practice extends ConsoleProgram{
 //	int b = readInt ("Enter your number: ");
 //	int sum = a + b;
 	
-	println( "HELLO WORLD! ");
+	GLabel a = new GLabel ("Hellow world", 10 ,10);
 	
 	}
 	
