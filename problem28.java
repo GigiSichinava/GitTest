@@ -1,9 +1,7 @@
 import acm.program.ConsoleProgram;
 
 public class problem28 extends ConsoleProgram{
-	
 	private static final int SENTINEL = -1;
-	
 	
 	public void run(){
 		int n = readInt ("Enter positive number: ");
@@ -16,11 +14,15 @@ public class problem28 extends ConsoleProgram{
 			break;
 		} 
 		
+		while(true){
 		 if (n % 2 == 0){
-			numberOfOdds++;
-			
+			numberOfOdds++;		
 		}
 		
+	
+		break;
+	}
+	
 		print(numberOfOdds);
 	}
-}
+}	
