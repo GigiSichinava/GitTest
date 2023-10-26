@@ -12,7 +12,7 @@ public class Practice extends GraphicsProgram{
 //	int sum = a + b;
 	
 	GLabel a = new GLabel ("Hellow world", 10 ,10);
-	
+	add (a);
 	}
 	
 }
