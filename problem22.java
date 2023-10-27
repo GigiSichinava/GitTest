@@ -15,9 +15,9 @@ public class problem22 extends GraphicsProgram{
 				GRect sq = new GRect (x, y, sqSize, sqSize);
 				int c = i + j;
 				if( c % 2 == 0){
-					sq.setFilled(true);
-				}else{
 					sq.setFilled(false);
+				}else{
+					sq.setFilled(true);
 				}
 				add(sq);
 			}
