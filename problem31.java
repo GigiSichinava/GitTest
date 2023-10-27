@@ -23,9 +23,9 @@ public class problem31 extends ConsoleProgram{
 
 	private boolean isPrimeFast(int n) {
 		int result = 0;
-		for (int i = 1 ; i * i <= n; i++){
+		for (int i = 2 ; i * i <= n; i++){
 			if (n % i == 0){
-				return(false);
+				return false;
 			}
 		}
 		
