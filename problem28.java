@@ -22,6 +22,6 @@ public class problem28 extends ConsoleProgram{
 	}
 	
 	
-		print("Number of odds:" + numberOfOdds);
+		print("Number of odds: " + numberOfOdds);
 	}
 }
