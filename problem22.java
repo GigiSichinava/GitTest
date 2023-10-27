@@ -13,7 +13,7 @@ public class problem22 extends GraphicsProgram{
 				double x = j * sqSize;
 				double y = i * sqSize;
 				GRect sq = new GRect (x, y, sqSize, sqSize);
-				int c = i * j;
+				int c = i + j;
 				if( c % 2 == 0){
 					sq.setFilled(true);
 				}else{
