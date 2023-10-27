@@ -6,7 +6,7 @@ public class problem27 extends ConsoleProgram {
 		int m = readInt ("Enter m: ");
 		int a = n;	
 		
-		for(int i=1; i < m; i++){
+		for(int i = 1; i < m; i++){
 			n *= a;
 		}
 		println(n);
