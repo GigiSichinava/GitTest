@@ -29,7 +29,7 @@ public class problem31 extends ConsoleProgram{
 			}
 		}
 		
-		return false;	
+		return true;	
 		
 	}
 }
