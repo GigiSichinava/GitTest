@@ -9,7 +9,7 @@ public class problem27 extends ConsoleProgram {
 		for(int i = 1; i < m; i++){
 			n *= a;
 		}
-		println("Your result is: " + n);
+		println( + n);
 		
 	}
 }
