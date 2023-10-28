@@ -4,8 +4,15 @@ public class Practice extends ConsoleProgram{
 	public void run(){
 	
 	int n = readInt ("Enter your number: ");
-		
-	println (n) ;
+	int m = readInt ("Enter your second number: ");
+	
+	int c = m + n;
+	
+	
+	println(c);
+	
+	
+	
 
 	}
 }
