@@ -15,14 +15,14 @@ public class Practice extends ConsoleProgram {
 			if ( n % 2 == 0){
 				int	nextNumber = n / 2;
 				n = nextNumber;
-				println (n + "is odd" + nextNumber);
+				println (n + "is even so I take half: " + nextNumber);
 			
 			
 					if (nextNumber % 2 != 0){
 						if (nextNumber != SENTINEL){
 						nextNumber = n * 3 + 1;
 						n = nextNumber;
-						println (n + "is odd" + nextNumber);
+						println (n + "is odd, so I make 3n + 1: " + nextNumber);
 						}	
 					}
 			} 
@@ -30,13 +30,13 @@ public class Practice extends ConsoleProgram {
 				if (n % 2 != 0){
 					int nextNumber = n * 3 + 1;
 					n = nextNumber;
-					println (n + "is even" + nextNumber);	
+					println (n + "is odd, so I make 3n + 1: " + nextNumber);	
 				}
 			
 				if ( n % 2 == 0){
 					int	nextNumber = n / 2;
 					n = nextNumber;
-					println (n + "is even" + nextNumber);
+					println (n + "is even so I take half: " + nextNumber);
 
 				}
 			 
