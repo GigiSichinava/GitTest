@@ -19,10 +19,12 @@ public class Practice extends ConsoleProgram {
 			
 			
 					if (nextNumber % 2 != 0){
+						if (nextNumber != SENTINEL){
 						nextNumber = n * 3 + 1;
 						n = nextNumber;
 						println (nextNumber);
-			}
+			}	
+						}
 			}
 //			if ( n == SENTINEL){
 //				break;
