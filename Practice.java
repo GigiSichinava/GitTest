@@ -38,13 +38,10 @@ public class Practice extends ConsoleProgram {
 					n = nextNumber;
 					println (nextNumber);
 
+				}
+			 
 			}
-			
-				
-				
-
 		}
-	}
 	}
 }
 
