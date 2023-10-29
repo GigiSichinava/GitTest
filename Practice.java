@@ -15,7 +15,7 @@ public class Practice extends ConsoleProgram {
 			if ( n % 2 == 0){
 				int	nextNumber = n / 2;
 				n = nextNumber;
-				println (n + "is even so I take half:  " + nextNumber);
+				println (nextNumber);
 			
 			
 					if (nextNumber % 2 != 0){
