@@ -27,6 +27,6 @@ public class Practice extends ConsoleProgram {
 //			if ( n == SENTINEL){
 //				break;
 //			}
-//		}
+		}
 	}
 }
