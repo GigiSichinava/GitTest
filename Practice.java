@@ -25,8 +25,26 @@ public class Practice extends ConsoleProgram {
 						println (nextNumber);
 						}	
 					}
+			} 
+			else {
+				if (n % 2 != 0){
+					int nextNumber = n * 3 + 1;
+					n = nextNumber;
+					println (nextNumber);	
+				}
+			
+				if ( n % 2 == 0){
+					int	nextNumber = n / 2;
+					n = nextNumber;
+					println (nextNumber);
+
 			}
+			
+				
+				
 
 		}
 	}
+	}
 }
+
