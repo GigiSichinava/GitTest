@@ -24,9 +24,9 @@ public class Practice extends ConsoleProgram {
 				println (nextNumber);
 			}
 			
-//			if ( n == SENTINEL){
-//				break;
-//			}
+			if ( n == SENTINEL){
+				break;
+			}
 		}
 	}
 }
