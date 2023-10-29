@@ -23,12 +23,10 @@ public class Practice extends ConsoleProgram {
 						nextNumber = n * 3 + 1;
 						n = nextNumber;
 						println (nextNumber);
-			}	
-						}
+						}	
+					}
 			}
-//			if ( n == SENTINEL){
-//				break;
-//			}
+
 		}
 	}
 }
