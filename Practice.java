@@ -22,7 +22,7 @@ public class Practice extends ConsoleProgram {
 						if (nextNumber != SENTINEL){
 						nextNumber = n * 3 + 1;
 						n = nextNumber;
-						println (nextNumber);
+						println (n + "is odd" + nextNumber);
 						}	
 					}
 			} 
@@ -30,7 +30,7 @@ public class Practice extends ConsoleProgram {
 				if (n % 2 != 0){
 					int nextNumber = n * 3 + 1;
 					n = nextNumber;
-					println (nextNumber);	
+					println (n + "is even" + nextNumber);	
 				}
 			
 				if ( n % 2 == 0){
