@@ -1,10 +1,4 @@
-/*
- * File: Hailstone.java
- * Name: 
- * Section Leader: 
- * --------------------
- * This file is the starter file for the Hailstone problem.
- */
+
 
 import acm.program.*;
 
@@ -19,7 +13,7 @@ public class Practice extends ConsoleProgram {
 		while (n != SENTINEL){			
 			if( n % 2 == 0){
 			int	nextNumber = n / 2;
-				
+			println (nextNumber);
 			}
 		}
 	}
