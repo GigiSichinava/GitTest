@@ -19,7 +19,7 @@ public class Practice extends ConsoleProgram {
 			}
 			
 			if (n % 2 != 0){
-				int nextNumber = n * 3 - 1;
+				int nextNumber = n * 3 + 1;
 				n = nextNumber;
 				println (nextNumber);
 			}
