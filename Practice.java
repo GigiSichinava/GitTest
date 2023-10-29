@@ -15,7 +15,7 @@ public class Practice extends ConsoleProgram {
 			if ( n % 2 == 0){
 				int	nextNumber = n / 2;
 				n = nextNumber;
-				println (nextNumber);
+				println (n + "is odd" + nextNumber);
 			
 			
 					if (nextNumber % 2 != 0){
@@ -36,7 +36,7 @@ public class Practice extends ConsoleProgram {
 				if ( n % 2 == 0){
 					int	nextNumber = n / 2;
 					n = nextNumber;
-					println (nextNumber);
+					println (n + "is even" + nextNumber);
 
 				}
 			 
