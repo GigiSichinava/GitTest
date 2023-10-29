@@ -13,6 +13,7 @@ public class Practice extends ConsoleProgram {
 		while (n != SENTINEL){			
 			if( n % 2 == 0){
 			int	nextNumber = n / 2;
+			n = nextNumber;
 			println (nextNumber);
 			}
 		}
