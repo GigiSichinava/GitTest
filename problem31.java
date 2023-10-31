@@ -14,7 +14,7 @@ public class problem31 extends ConsoleProgram{
 	}
 	private boolean isPrime(int num) {
 			for(int i = 2; i <= Math.sqrt(num); i++){
-				if(num % 2 == 0){
+				if(num % i == 0){
 					return false;
 				}
 			}
