@@ -3,7 +3,7 @@ import acm.program.ConsoleProgram;
 public class problem30 extends ConsoleProgram {
 	public void run() {
 
-		int n = readInt("Ener ur numb: ");
+		int n = readInt("Enter number: ");
 
 		int reversedN = reverse(n);
 	}
@@ -11,9 +11,12 @@ public class problem30 extends ConsoleProgram {
 	private int reverse(int n) {
 
 		while (n != 0) {
+			int reversedN = 0;
 			int lastDigit = n % 10;
 			n /= 10;
 			print(lastDigit);
+		
+			reversedN = reversedN * 10 + lastDigit;
 		}
 
 		return 0;
