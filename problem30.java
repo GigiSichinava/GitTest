@@ -17,7 +17,7 @@ public class problem30 extends ConsoleProgram {
 		while(n != 0){
 			int lastDigit = n % 10;
 			n /= 10;
-			println(lastDigit);
+			print(lastDigit);
  		}
 		
 		return 0;
