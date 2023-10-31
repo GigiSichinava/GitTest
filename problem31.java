@@ -4,7 +4,7 @@ public class problem31 extends ConsoleProgram{
 	
 	private static final int MAX_NUM = 1000; 
 	public void run(){
-		for(int i =1; i < MAX_NUM; i++){
+		for(int i = 2; i < MAX_NUM; i++){
 			if (isPrime(i)){
 				println(i);
 				
