@@ -6,7 +6,7 @@ public class problem30 extends ConsoleProgram {
 		int n = readInt ("Ener ur numb: ");
 		
 		int reversedN = reverse (n);
-		println (reversedN);
+		
 	}
 
 	
