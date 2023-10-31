@@ -15,7 +15,6 @@ public class problem30 extends ConsoleProgram {
 			int lastDigit = n % 10;
 			n /= 10;
 			print(lastDigit);
-		
 			reversedN = reversedN * 10 + lastDigit;
 		}
 
