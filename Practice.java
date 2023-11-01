@@ -22,7 +22,7 @@ public class Practice extends GraphicsProgram {
 		double startingY = getHeight() - BRICK_HEIGHT;
 
 		for (int r = 0; r < BRICKS_IN_BASE; r++) {
-			for (int c = 0; c < BRICKS_IN_BASE; c++) {
+			for (int c = 0; c < BRICKS_IN_BASE / 2; c++) {
 				GRect rect = new GRect(startingX + BRICK_WIDTH * c, startingY - BRICK_HEIGHT * r, BRICK_WIDTH, BRICK_HEIGHT);
 				add(rect);
 			}
