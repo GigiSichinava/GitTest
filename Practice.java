@@ -26,6 +26,7 @@ public class Practice extends GraphicsProgram {
 				GRect rect = new GRect(startingX + BRICK_WIDTH * BRICKS_IN_BASE, startingY, BRICK_WIDTH, BRICK_HEIGHT);
 				add(rect);
 			}
+			bricksLeft--;
 		}
 	}
 }
