@@ -23,10 +23,12 @@ public class Practice extends GraphicsProgram {
 
 		for (int r = 0; r < BRICKS_IN_BASE; r++) {
 			for (int c = 0; c < BRICKS_IN_BASE; c++) {
-				GRect rect = new GRect(startingX + BRICK_WIDTH * c, startingY - BRICK_HEIGHT * BRICKS_IN_BASE, BRICK_WIDTH, BRICK_HEIGHT);
+				GRect rect = new GRect(startingX + BRICK_WIDTH * c, startingY - BRICK_HEIGHT * r, BRICK_WIDTH, BRICK_HEIGHT);
 				add(rect);
 			}
 			bricksLeft--;
+			startingX = getWidth() / 2 - (bricksLeft * BRICK_WIDTH) / 2;
+
 		}
 	}
 }
