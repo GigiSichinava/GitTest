@@ -18,8 +18,8 @@ public class Practice extends GraphicsProgram {
 	private int bricksLeft = BRICKS_IN_BASE;
 	
 	public void run() {
-		double startingY = getWidth() / 2 - BRICKS_IN_BASE * BRICK_WIDTH / 2;
-		double startingX = getHeight() - BRICK_HEIGHT;
+		double startingX = getWidth() / 2 - BRICKS_IN_BASE * BRICK_WIDTH / 2;
+		double startingY = getHeight() - BRICK_HEIGHT;
 
 		for(int i = 0; i < BRICKS_IN_BASE; i++){
 		GRect rect = new GRect (startingX, startingY, BRICK_WIDTH, BRICK_HEIGHT);
