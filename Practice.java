@@ -18,7 +18,7 @@ public class Practice extends GraphicsProgram {
 	private int bricksLeft = BRICKS_IN_BASE;
 
 	public void run() {
-		double startingX = getWidth() / 2 - BRICKS_IN_BASE * BRICK_WIDTH / 2;
+		double startingX = getWidth() / 2 - BRICKS_IN_BASE / 2 * BRICK_WIDTH;
 		double startingY = getHeight() - BRICK_HEIGHT;
 
 		for (int r = 0; r < BRICKS_IN_BASE; r++) {
