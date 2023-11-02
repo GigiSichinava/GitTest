@@ -1,34 +1,58 @@
-import acm.program.GraphicsProgram;
-import acm.graphics.*;
+
+/*
+ * File: Hailstone.java
+ * Name: 
+ * Section Leader: 
+ * --------------------
+ * This file is the starter file for the Hailstone problem.
+ */
+
 import acm.program.*;
 
-public class Practice extends GraphicsProgram {
+public class Practice extends ConsoleProgram {
 
-	/** Width of each brick in pixels */
-	private static final int BRICK_WIDTH = 30;
-
-	/** Width of each brick in pixels */
-	private static final int BRICK_HEIGHT = 12;
-
-	/** Number of bricks in the base of the pyramid */
-	private static final int BRICKS_IN_BASE = 14;
-
-	private double startingX = 0;
-	private double startingY = 0;
-	private int bricksLeft = BRICKS_IN_BASE;
+	private static final int SENTINEL = 1;
 
 	public void run() {
-		double startingX = getWidth() / 2 - BRICKS_IN_BASE / 2 * BRICK_WIDTH;
-		double startingY = getHeight() - BRICK_HEIGHT;
 
-		for (int r = 0; r < BRICKS_IN_BASE; r++) {
-			for (int c = 0; c < bricksLeft; c++) {
-				GRect rect = new GRect(startingX + BRICK_WIDTH * c, startingY - (r * BRICK_HEIGHT), BRICK_WIDTH, BRICK_HEIGHT);
-				add(rect);
+		int n = readInt("Enter a number: ");
+		int steps = 0;
+
+		// use while statement when n doesn't equal to 1
+		while (n != SENTINEL) { 	
+			if (n % 2 == 0) { 		// if first number is even
+				int nextNumber = n / 2; 	// divide even number
+				println(n + " is even so I take half: " + nextNumber);
+				n = nextNumber;
+
+				if (nextNumber % 2 != 0) { 			// when n is odd
+					if (nextNumber != SENTINEL) { 	// check if next number equals to 1
+													
+						nextNumber = n * 3 + 1; 	// while number is odd use n * 3 + 1 formula
+												
+						println(n + " is odd, so I make 3n + 1: " + nextNumber);
+						n = nextNumber;
+					}
+				}
 			}
-			bricksLeft = bricksLeft - 1;
-			startingX = getWidth() / 2 - (bricksLeft * BRICK_WIDTH) / 2;
 
+			else {
+
+				if (n % 2 != 0) { 				// if first number is odd
+					int nextNumber = n * 3 + 1; // while number is odd use n * 3 + 1 formula
+												
+					println(n + " is odd, so I make 3n + 1: " + nextNumber);
+					n = nextNumber;
+				}
+
+				if (n % 2 == 0) { 			// if first number is even
+					int nextNumber = n / 2; // divide even number
+					println(n + " is even so I take half: " + nextNumber);
+					n = nextNumber;
+				}
+			}
+			steps++;
 		}
+		println("This process took " + steps + " steps to reach 1.");
 	}
 }
