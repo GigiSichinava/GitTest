@@ -25,15 +25,15 @@ public class Practice extends ConsoleProgram {
 				println(n + " is even so I take half: " + nextNumber);
 				n = nextNumber;
 
-				if (nextNumber % 2 != 0) { 			// when n is odd
-					if (nextNumber != SENTINEL) { 	// check if next number equals to 1
-													
-						nextNumber = n * 3 + 1; 	// while number is odd use n * 3 + 1 formula
-												
-						println(n + " is odd, so I make 3n + 1: " + nextNumber);
-						n = nextNumber;
-					}
-				}
+//				if (nextNumber % 2 != 0) { 			// when n is odd
+//					if (nextNumber != SENTINEL) { 	// check if next number equals to 1
+//													
+//						nextNumber = n * 3 + 1; 	// while number is odd use n * 3 + 1 formula
+//												
+//						println(n + " is odd, so I make 3n + 1: " + nextNumber);
+//						n = nextNumber;
+//					}
+//				}
 			}
 
 			else {
@@ -45,11 +45,11 @@ public class Practice extends ConsoleProgram {
 					n = nextNumber;
 				}
 
-				if (n % 2 == 0) { 			// if first number is even
-					int nextNumber = n / 2; // divide even number
-					println(n + " is even so I take half: " + nextNumber);
-					n = nextNumber;
-				}
+//				if (n % 2 == 0) { 			// if first number is even
+//					int nextNumber = n / 2; // divide even number
+//					println(n + " is even so I take half: " + nextNumber);
+//					n = nextNumber;
+//				}
 			}
 			steps++;
 		}
