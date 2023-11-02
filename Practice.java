@@ -1,46 +1,48 @@
 
 /*
- * File: Hailstone.java
+- * File: Pyramid.java
  * Name: 
  * Section Leader: 
- * --------------------
- * This file is the starter file for the Hailstone problem.
+ * ------------------
+ * This file is the starter file for the Pyramid problem.
+ * It includes definitions of the constants that match the
+ * sample run in the assignment, but you should make sure
+ * that changing these values causes the generated display
+ * to change accordingly.
  */
 
+import acm.graphics.*;
 import acm.program.*;
+import java.awt.*;
 
-public class Practice extends ConsoleProgram {
+public class Practice extends GraphicsProgram {
 
-	private static final int SENTINEL = 1;
+	/** Width of each brick in pixels */
+	private static final int BRICK_WIDTH = 30;
+
+	/** Width of each brick in pixels */
+	private static final int BRICK_HEIGHT = 12;
+
+	/** Number of bricks in the base of the pyramid */
+	private static final int BRICKS_IN_BASE = 14;
+
+	// create new variables to use in the body of the code
+	private double BeginningX = 0;
+	private double BeginningY = 0;
+	// create private double that we can use in 'for' cycle
+	private double bricksNumber = BRICKS_IN_BASE;
 
 	public void run() {
-
-		int n = readInt("Enter a number: ");
-		int steps = 0;
-
-		// use while statement when n doesn't equal to 1
-		while (n != SENTINEL) {
-
-			if (n % 2 == 0) { // if first number is even
-				int nextNumber = n / 2; // divide even number
-				println(n + " is even so I take half: " + nextNumber);
-				n = nextNumber;
-
-			}
-
-			else {
-
-				if (n % 2 != 0) { // if first number is odd
-					int nextNumber = n * 3 + 1; // while number is odd use n * 3
-												// + 1 formula
-
-					println(n + " is odd, so I make 3n + 1: " + nextNumber);
-					n = nextNumber;
+				for ( int rows = 0; rows < BRICKS_IN_BASE; rows++){
+					for ( int collumns = 0; collumns < BRICKS_IN_BASE; collumns++){
+						
+						GRect rect = new GRect (BeginningX, BeginningY , BRICK_WIDTH, BRICK_HEIGHT);
+						add(rect);
+					}
 				}
-
-			}
-			steps++;
-		}
-		println("This process took " + steps + " steps to reach 1.");
+		bricksNumber--;
+		
+		
 	}
 }
+	
