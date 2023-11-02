@@ -33,6 +33,10 @@ public class Practice extends GraphicsProgram {
 	private double bricksNumber = BRICKS_IN_BASE;
 
 	public void run() {
+		
+		double BeginningX = getWidth() / 2 - (BRICKS_IN_BASE / 2) * BRICK_WIDTH;
+		double BeginningY = getHeight() - BRICK_HEIGHT;
+		
 				for ( int rows = 0; rows < BRICKS_IN_BASE; rows++){
 					for ( int collumns = 0; collumns < BRICKS_IN_BASE; collumns++){
 						
