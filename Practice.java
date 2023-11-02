@@ -6,19 +6,28 @@ import acm.util.RandomGenerator;
 import java.awt.*;
 
 public class Practice extends GraphicsProgram {
- private RandomGenerator random = RandomGenerator.getInstance();
+	
+	
+	
+	
+	
+	
+	private RandomGenerator rgen= RandomGenerator.getInstance();
  
  	public void run(){
- 		random.nextInt();
- 		print(random.nextInt());
- 		
- 		
- 		
+ 		addRandomCircle();	
  	}
+ 		
+ 		private void addRandomCircle(){
+ 			int radius = rgen.nextDouble (0, getWidth() - 2 * radius);
+ 			double x =rge
+ 		}
+ 		
+}
 	
 	
 	
 		
-}
+
 
 	
