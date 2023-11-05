@@ -21,6 +21,6 @@ public class problem33 extends GraphicsProgram{
 		GOval oval = new GOval (radius, radius);
 		oval.setFilled(true);
 		oval.setColor(color);
-		add(oval);
+		add(oval, x ,y);
 	}
 }
