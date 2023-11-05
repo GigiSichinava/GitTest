@@ -7,21 +7,16 @@ import java.awt.*;
 
 public class Practice extends ConsoleProgram {
 	
+	private double metersToCm(double meters){
+		return meters * 100;
+	}
 	
  	public void run(){
- 		int a = 0;
- 		while(true){
- 			for (int j = 0; j < 3; j ++){
- 				a += 1;
- 				println(a);
- 			}
- 		break;
- 		}
+ 		double result = metersToCm( 5.2);
+ 		println(result);
+ 		
  		
  	}
- 		
- 		
- 		
 }
 	
 	
