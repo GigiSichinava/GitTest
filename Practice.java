@@ -5,17 +5,18 @@ import acm.util.RandomGenerator;
 
 import java.awt.*;
 
-public class Practice extends GraphicsProgram {
+public class Practice extends ConsoleProgram {
 	
 	
-	
-	
-	
-	
-	private RandomGenerator rgen= RandomGenerator.getInstance();
- 
  	public void run(){
- 			
+ 		int a = 0;
+ 		for (int i = 0; i < 5; i++){
+ 			for (int j = 0; j < 3; j ++){
+ 				a += 1;
+ 			}
+ 		
+ 		}
+ 		
  	}
  		
  		
