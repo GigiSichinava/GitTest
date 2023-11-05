@@ -13,7 +13,7 @@ public class problem33 extends GraphicsProgram{
 	}
 
 	private void addRandomCircle() {
-		double radius = rg.nextDouble(150, 200);
+		double radius = rg.nextDouble(100, 150);
 		double x = rg.nextDouble(10, getWidth() - radius * 2);
 		double y = rg.nextDouble(20, getHeight() - radius * 2);
 		Color color = rg.nextColor();
