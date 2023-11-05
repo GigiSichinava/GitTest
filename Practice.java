@@ -18,10 +18,7 @@ public class Practice extends GraphicsProgram {
  		addRandomCircle();	
  	}
  		
- 		private void addRandomCircle(){
- 			int radius = rgen.nextDouble (0, getWidth() - 2 * radius);
- 			double x =rge
- 		}
+ 		
  		
 }
 	
