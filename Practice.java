@@ -10,7 +10,7 @@ public class Practice extends ConsoleProgram {
 	
  	public void run(){
  		int a = 0;
- 		for (int i = 0; i < 1; i++){
+ 		while(true){
  			for (int j = 0; j < 3; j ++){
  				a += 1;
  				println(a);
