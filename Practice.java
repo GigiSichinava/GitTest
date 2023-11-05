@@ -15,7 +15,7 @@ public class Practice extends GraphicsProgram {
 	private RandomGenerator rgen= RandomGenerator.getInstance();
  
  	public void run(){
- 		addRandomCircle();	
+ 			
  	}
  		
  		
