@@ -14,8 +14,8 @@ public class problem33 extends GraphicsProgram{
 
 	private void addRandomCircle() {
 		double radius = rg.nextDouble(10, 50);
-		double x = rg.nextDouble(10, 400);
-		double y = rg.nextDouble(20, 400);
+		double x = rg.nextDouble(10, getWidth() - radius * 2);
+		double y = rg.nextDouble(20, getHeight() - radius * 2);
 		Color color = rg.nextColor();
 		
 		GOval oval = new GOval (radius, radius);
