@@ -1,21 +1,15 @@
-
-import acm.graphics.*;
-import acm.program.*;
+import acm.graphics.GRect;
+import acm.program.ConsoleProgram;
 import acm.util.RandomGenerator;
 
-import java.awt.*;
+public class Practice extends ConsoleProgram {	
 
-public class Practice extends ConsoleProgram {
-	
-	private double metersToCm(double meters){
-		return meters * 100;
-	}
-	
- 	public void run(){
- 		double result = metersToCm( 5.2);
- 		println(result);
+	private RandomGenerator rgen = RandomGenerator.getInstance();	
+ 	
+	public void run(){
  		
- 		
+		GRect rect = new GRect (x, y , HEIGHT, WIDTH);
+ 		int x (5, 10);
  	}
 }
 	
