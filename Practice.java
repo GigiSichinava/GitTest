@@ -4,46 +4,36 @@ import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class Practice extends GraphicsProgram {	
-	
+public class Practice extends GraphicsProgram {
+
 	private static final int PAUSE = 10;
 	private static final int D = 100;
-	
-	public void run(){
-		
+
+	public void run() {
+
 		GOval oval = new GOval(D, D);
 		add(oval);
-		oval.setLocation(0,0);
-		
-		
-		while(oval.getY() <= getHeight() - D){
+		oval.setLocation(0, 0);
+
+		while (oval.getY() <= getHeight() - D) {
 			pause(PAUSE);
-			oval.move(5, 5);			
+			oval.move(5, 5);
 		}
-		
-		while(oval.getX() <= getWidth() - D){
+
+		while (oval.getX() <= getWidth() - D) {
 			pause(PAUSE);
-			oval.move(5, -5);			
+			oval.move(5, -5);
 		}
-		
-		while(oval.getX() <= getWidth() - D / 2 ){
+
+		while (oval.getX() <= getWidth() - D / 2) {
 			pause(PAUSE);
 			oval.move(-5, -5);
-//					while(oval.getY() >=  0){
-//						pause(PAUSE);
-//						oval.move(-5, 5);			
-//			}
-		
-		
-		}		
-		
-		
+		}
+
+		while (oval.getY() >= 0) {
+			pause(PAUSE);
+			oval.move(-5, 5);
+		}
+
 	}
 }
-	
-	
-	
-		
-
-
-	
