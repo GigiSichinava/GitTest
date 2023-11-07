@@ -8,6 +8,10 @@ import acm.util.RandomGenerator;
 
 public class Practice extends GraphicsProgram {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3000464261711229080L;
 	private static final int PAUSE = 10;
 	private static final int D = 100;
 
