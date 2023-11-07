@@ -12,7 +12,7 @@ public class Practice extends GraphicsProgram {
 	public void run(){
 		
 		GOval oval = new GOval(R, R);
-		add(oval );
+		add(oval);
 		oval.setLocation(10,10);
 		
 		pause(PAUSE);
@@ -20,11 +20,12 @@ public class Practice extends GraphicsProgram {
 		
 
 		
-//		while(oval.getX() != 200){
-//			oval.move(10, 10);
-//			pause(1000);
-//		}
-//	
+		while(oval.getX() != 200){
+			pause(1000);
+			oval.move(10, 10);
+			
+		}
+	
 			
 	}
 }
