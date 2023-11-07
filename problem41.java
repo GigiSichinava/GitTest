@@ -17,7 +17,7 @@ public class problem41 extends GraphicsProgram{
 	
 	while(oval.getX() >= 0){
 		pause(PAUSE);
-		oval.move(10, 0);
+		oval.move(-10, 0);
 	}
 	
 	}
