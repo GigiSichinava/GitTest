@@ -23,6 +23,7 @@ public class problem40 extends GraphicsProgram {
 		while (oval.getY() <= getHeight() - D) {
 			pause(PAUSE);
 			oval.move(10, 10);
+			oval.setFilled(true);
 			oval.setColor(color);
 		}
 
