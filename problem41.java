@@ -19,7 +19,7 @@ public class problem41 extends GraphicsProgram {
 		
 		while (true) {
 			Color color1 = rgen.nextColor();
-			Color color2 = rgen.nextColor();
+//			Color color2 = rgen.nextColor();
 			while (oval.getX() <= getWidth() - D) {
 				pause(PAUSE);
 				oval.move(10, 0);
@@ -32,7 +32,7 @@ public class problem41 extends GraphicsProgram {
 				pause(PAUSE);
 				oval.move(-10, 0);
 				oval.setFilled(true);
-				oval.setColor(color2);
+				oval.setColor(color1);
 			}
 			
 		}
