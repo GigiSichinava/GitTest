@@ -48,16 +48,18 @@ public class problem40 extends GraphicsProgram {
 			pause(PAUSE);
 			oval.move(-10, 10);
 			oval.setFilled(true);
-			oval.setColor(color3);
+			oval.setColor(color4);
 	
 		}
-		
+		Color color5 = rgen.nextColor();
 		while (oval.getX() >= 0){
 			pause(PAUSE);
 			oval.move(- 10, -10);
+			oval.setFilled(true);
+			oval.setColor(color5);
 		}
 	
-		oval.setFilled(true);
+		oval.setFilled(false);
 		oval.setColor(Color.BLACK);
 		add(oval);
 	}
