@@ -8,7 +8,7 @@ public class problem41 extends GraphicsProgram{
 	public void run(){
 		
 		GOval oval = new GOval (R, R);
-		add(oval, getHeight() / 2, 0);
+		add(oval, 0, getHeight() / 2 - R / 2);
 	
 	while(oval.getX() <= getWidth() - R *2 ){
 		pause(PAUSE);
