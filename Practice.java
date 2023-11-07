@@ -18,12 +18,12 @@ public class Practice extends GraphicsProgram {
 		
 		while(oval.getY() <= getHeight() - D){
 			pause(PAUSE);
-			oval.move(10, 10);			
+			oval.move(5, 5);			
 		}
 		
 		while(oval.getX() <= getWidth() - D){
 			pause(PAUSE);
-			oval.move(10, -10);			
+			oval.move(5, -5);			
 		}
 		
 			
