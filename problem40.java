@@ -60,6 +60,7 @@ public class problem40 extends GraphicsProgram {
 		}
 	
 		oval.setFilled(false);
+		oval.setFilled(true);
 		oval.setColor(Color.BLACK);
 		add(oval);
 	}
