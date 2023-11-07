@@ -46,7 +46,7 @@ public class Practice extends GraphicsProgram {
 		}
 	
 		oval.setFilled(true);
-		oval.setColor(Color.BLACK);
+		oval.setColor(Color.RED);
 		add(oval);
 	}
 	
