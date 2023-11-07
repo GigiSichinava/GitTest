@@ -18,7 +18,7 @@ public class Practice extends GraphicsProgram {
 		oval.move(100, 100);		
 		oval.pause(PAUSE);
 		
-		while()
+	
 			
 	}
 }
