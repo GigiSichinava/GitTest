@@ -35,14 +35,20 @@ public class problem40 extends GraphicsProgram {
 			oval.setColor(color1);
 		}
 
+		Color color3 = rgen.nextColor();
 		while (oval.getY() >= 0 ) {
 			pause(PAUSE);
 			oval.move(-10, -10);
+			oval.setFilled(true);
+			oval.setColor(color3);
 		}
 
+		Color color4 = rgen.nextColor();
 		while (oval.getY() <=  getHeight() - D ) {
 			pause(PAUSE);
 			oval.move(-10, 10);
+			oval.setFilled(true);
+			oval.setColor(color3);
 	
 		}
 		
