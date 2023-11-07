@@ -31,9 +31,9 @@ public class problem41 extends GraphicsProgram {
 				pause(PAUSE);
 				oval.move(-10, 0);
 				oval.setFilled(true);
-				oval.setColor(color1);
+				
 			}
-			
+			oval.setColor(color1);
 		}
 
 	}
