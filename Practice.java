@@ -15,7 +15,7 @@ public class Practice extends GraphicsProgram {
 		add(oval);
 		oval.setLocation(0, 0);
 
-		
+	while(true){	
 		
 		while (oval.getY() <= getHeight() - D) {
 			pause(PAUSE);
@@ -42,7 +42,7 @@ public class Practice extends GraphicsProgram {
 			pause(PAUSE);
 			oval.move(- 10, -10);
 		}
-		
+	}
 	
 	}
 	
