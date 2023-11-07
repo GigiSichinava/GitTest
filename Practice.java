@@ -13,7 +13,7 @@ public class Practice extends GraphicsProgram {
 		
 		GOval oval = new GOval(R, R);
 		add(oval);
-		oval.setLocation(10,10);
+		oval.setLocation(0,0);
 		
 		pause(PAUSE);
 		oval.move(100, 100);
