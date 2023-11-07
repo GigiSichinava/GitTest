@@ -8,6 +8,7 @@ import acm.util.RandomGenerator;
 
 public class problem40 extends GraphicsProgram {
 
+	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int PAUSE = 10;
 	private static final int D = 100;
 
@@ -18,10 +19,11 @@ public class problem40 extends GraphicsProgram {
 		oval.setLocation(0, 0);
 
 	
-		
+		Color color = rgen.nextColor();
 		while (oval.getY() <= getHeight() - D) {
 			pause(PAUSE);
 			oval.move(10, 10);
+			oval.setColor(color);
 		}
 
 		while (oval.getX() <= getWidth() - D) {
