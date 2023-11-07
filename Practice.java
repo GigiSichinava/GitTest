@@ -6,7 +6,7 @@ import acm.util.RandomGenerator;
 
 public class Practice extends GraphicsProgram {	
 	
-	private static final int PAUSE = 1000;
+	private static final int PAUSE = 100;
 	private static final int R = 100;
 	
 	public void run(){
@@ -16,8 +16,8 @@ public class Practice extends GraphicsProgram {
 		oval.setLocation(0,0);
 		
 		
-		while(oval.getX() != 200){
-			pause(1000);
+		while(oval.getX() != getHeight() - R / 2){
+			pause(PAUSE);
 			oval.move(10, 10);
 						
 		}
