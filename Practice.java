@@ -6,7 +6,7 @@ import acm.util.RandomGenerator;
 
 public class Practice extends GraphicsProgram {	
 	
-	private static final int PAUSE = 10000;
+	private static final int PAUSE = 10000000;
 	private static final int R = 100;
 	
 	public void run(){
