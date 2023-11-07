@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.ConsoleProgram;
@@ -43,6 +45,11 @@ public class Practice extends GraphicsProgram {
 			oval.move(- 10, -10);
 		}
 	
+		oval.setFilled(true);
+		oval.setColor(Color.BLACK);
+		add(oval);
 	}
+	
+	
 	
 }
