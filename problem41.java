@@ -17,7 +17,7 @@ public class problem41 extends GraphicsProgram {
 		Color color = rgen.nextColor();
 		oval.setColor(color);
 		
-		while (true) {
+//		while (true) {
 
 			while (oval.getX() <= getWidth() - D) {
 				pause(PAUSE);
@@ -32,7 +32,7 @@ public class problem41 extends GraphicsProgram {
 				oval.setFilled(true);
 			}
 			oval.setColor(color);
-		}
+//		}
 
 	}
 }
