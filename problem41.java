@@ -15,6 +15,7 @@ public class problem41 extends GraphicsProgram {
 		GOval oval = new GOval(D, D);
 		add(oval, 0, getHeight() / 2 - D / 2);
 		Color color = rgen.nextColor();
+
 		while (true) {
 
 			while (oval.getX() <= getWidth() - D) {
@@ -30,7 +31,7 @@ public class problem41 extends GraphicsProgram {
 				oval.setFilled(true);
 
 			}
-			oval.setColor(color);
+			
 		}
 
 	}
