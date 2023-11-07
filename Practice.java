@@ -33,7 +33,7 @@ public class Practice extends GraphicsProgram {
 		
 		while(oval.getY() >=  0){
 			pause(PAUSE);
-			oval.move(-5, 5);			
+			oval.move(5, 5);			
 		}
 	}
 }
