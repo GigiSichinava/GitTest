@@ -12,8 +12,9 @@ public class Practice extends GraphicsProgram {
 	public void run(){
 		
 		GOval oval = new GOval(R, R);
-		add(oval, 10, 10);
-						
+		add(oval );
+		oval.setLocation(10,10);
+		
 		pause(PAUSE);
 		oval.move(100, 100);
 		
