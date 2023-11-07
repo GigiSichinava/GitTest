@@ -14,7 +14,8 @@ public class Practice extends GraphicsProgram {
 		add (oval);
 		
 		oval.setLocation(10 ,10);
- 	}
+		oval.move(10, 10);
+	}
 }
 	
 	
