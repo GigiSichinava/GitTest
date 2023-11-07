@@ -25,7 +25,7 @@ public class problem41 extends GraphicsProgram {
 				oval.setFilled(true);
 			}
 			
-			oval.setColor(color);
+			
 			while (oval.getX() >= 0) {
 				pause(PAUSE);
 				oval.move(-10, 0);
