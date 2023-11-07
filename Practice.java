@@ -15,7 +15,7 @@ public class Practice extends GraphicsProgram {
 		
 		oval.setLocation(100 ,100);	
 		oval.move(10, 10);
-		oval.pause(100000);
+		oval.pause(10);
 	}
 }
 	
