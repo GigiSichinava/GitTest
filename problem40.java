@@ -52,7 +52,7 @@ public class problem40 extends GraphicsProgram {
 	
 		}
 		Color color5 = rgen.nextColor();
-		while (oval.getX() >= 0){
+		while (oval.getX() > 0){
 			pause(PAUSE);
 			oval.move(- 10, -10);
 			oval.setFilled(true);
