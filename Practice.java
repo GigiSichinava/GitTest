@@ -18,12 +18,13 @@ public class Practice extends GraphicsProgram {
 		oval.move(100, 100);		
 		oval.pause(PAUSE);
 		
+		add(oval);
 		while(oval.getX() != 200){
 			oval.move(10, 10);
 			oval.pause(1000);
 		}
 	
-		add(oval);	
+			
 	}
 }
 	
