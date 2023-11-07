@@ -23,7 +23,7 @@ public class Practice extends GraphicsProgram {
 		while(oval.getX() != 200){
 			pause(1000);
 			oval.move(10, 10);
-			
+						
 		}
 	
 			
