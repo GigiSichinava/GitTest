@@ -3,7 +3,7 @@ import acm.program.GraphicsProgram;
 
 public class problem41 extends GraphicsProgram{
 	
-	private final int PAUSE = 200;
+	private final int PAUSE = 30;
 	private final int D = 100;
 	public void run(){
 		
