@@ -1,15 +1,18 @@
+import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.ConsoleProgram;
+import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class Practice extends ConsoleProgram {	
-
-	private RandomGenerator rgen = RandomGenerator.getInstance();	
- 	
+public class Practice extends GraphicsProgram {	
+	
+	private static final int R= 10;
+	
 	public void run(){
- 		
-		GRect rect = new GRect (x, y , HEIGHT, WIDTH);
- 		int x (5, 10);
+		
+		GOval oval = new GOval(0,0, R, R);
+		add (oval);
+		
  	}
 }
 	
