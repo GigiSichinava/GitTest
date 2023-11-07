@@ -15,10 +15,6 @@ public class Practice extends GraphicsProgram {
 		add(oval);
 		oval.setLocation(0,0);
 		
-		pause(PAUSE);
-		oval.move(100, 100);
-		
-
 		
 		while(oval.getX() != 200){
 			pause(1000);
