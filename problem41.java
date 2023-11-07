@@ -32,7 +32,7 @@ public class problem41 extends GraphicsProgram {
 				oval.setFilled(true);
 				
 			}
-			
+			oval.setColor(color);
 		}
 
 	}
