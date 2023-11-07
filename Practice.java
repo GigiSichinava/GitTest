@@ -11,7 +11,7 @@ public class Practice extends GraphicsProgram {
 	public void run(){
 		
 		GOval oval = new GOval(0,0, R, R);
-		
+		add (oval);
 		
 		oval.setLocation(10 ,10);
  	}
