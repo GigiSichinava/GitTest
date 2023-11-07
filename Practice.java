@@ -6,11 +6,11 @@ import acm.util.RandomGenerator;
 
 public class Practice extends GraphicsProgram {	
 	
-	private static final int R= 10;
+	private static final int R = 100;
 	
 	public void run(){
 		
-		GOval oval = new GOval(0, 0, R, R);
+		GOval oval = new GOval(R, R);
 		add (oval);
 		
 		oval.setLocation(10 ,10);
