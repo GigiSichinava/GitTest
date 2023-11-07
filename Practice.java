@@ -25,7 +25,7 @@ public class Practice extends GraphicsProgram {
 			oval.move(5, -5);
 		}
 
-		while (oval.getY() >= 0) {
+		while (oval.getY() >= 0 + D) {
 			pause(PAUSE);
 			oval.move(-5, -5);
 		}
