@@ -15,8 +15,6 @@ import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
 
-import javax.swing.JFrame;
-
 public class Practice extends GraphicsProgram {
 
 /** Width and height of application window in pixels */
@@ -65,11 +63,4 @@ public class Practice extends GraphicsProgram {
 		/* You fill this in, along with any subsidiary methods */
 	}
 
-	
-		
-	
-	}
-	
-	
-	
-
+}
