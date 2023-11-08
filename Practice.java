@@ -64,7 +64,7 @@ public class Practice extends GraphicsProgram {
 		addBricks();
 	}
 
-	double startingX = 10;
+	double startingX = BRICK_SEP;
 	double startingY = 0;
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
