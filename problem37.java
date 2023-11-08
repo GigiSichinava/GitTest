@@ -11,7 +11,7 @@ public class problem37 extends ConsoleProgram {
 
 			int a = readInt("Enter your number here: ");
 			if(a == 36){
-				println("dick");
+				break;
 			}
 			
 			int randomNumber = rgen.nextInt(0, 36);
