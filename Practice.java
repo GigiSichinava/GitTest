@@ -67,7 +67,6 @@ public class Practice extends GraphicsProgram {
 
 	private void applicationSize() {
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-
 	}
 
 	double startingX = BRICK_SEP;
