@@ -19,7 +19,7 @@ import java.awt.event.*;
 public class Practice extends GraphicsProgram {
 
 	/** Width and height of application window in pixels */
-	public static final int APPLICATION_WIDTH = 900;
+	public static final int APPLICATION_WIDTH = 400;
 	public static final int APPLICATION_HEIGHT = 600;
 
 	/** Dimensions of game board (usually the same) */
@@ -66,7 +66,7 @@ public class Practice extends GraphicsProgram {
 	}
 
 	private void applicationSize() {
-		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+		setSize(WIDTH, HEIGHT);
 	}
 
 	double startingX = BRICK_SEP;
