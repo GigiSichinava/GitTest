@@ -7,6 +7,7 @@ public class problem37 extends ConsoleProgram {
 	public void run(){
 		
 		int a = readInt ("Enter your number here: ");
+		println(a);
 		
 		int randomNumber =  rgen.nextInt(0, 36);
 		println(randomNumber);
