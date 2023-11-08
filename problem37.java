@@ -9,7 +9,7 @@ public class problem37 extends ConsoleProgram {
 		int a = readInt ("Enter your number here: ");
 
 		int randomNumber =  rgen.nextInt(0, 36);
-		println(randomNumber);
+		println("Game chose: " + randomNumber);
 	
 		if (randomNumber == a){
 			println("You have won!");
