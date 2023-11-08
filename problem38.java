@@ -1,36 +1,42 @@
+
 import acm.program.ConsoleProgram;
 import acm.util.RandomGenerator;
 
 public class problem38 extends ConsoleProgram {
 	
+	
 	private RandomGenerator random;
 	
-	private static final int SENTINEL = -1;
+	private static final int START_BALANCE = 1000;
 	
 	public void run() {
 		random = RandomGenerator.getInstance();
-		while (true) {
-			int chosenNumber = readInt("enter number 0-36: ");
-			if (chosenNumber == SENTINEL) {
-				break;
+		int balance = START_BALANCE;
+		while (balance > 0) {
+			println("you have " + balance + "$");
+			int bet = readInt("enter bet amount: ");
+			if (bet > balance) {
+				println("not enough money, try again.");
+				continue;
 			}
-			int randomNumber = getRandomNumber();
-			processResult(chosenNumber, randomNumber);
+			int number = readInt("enter number: ");
+			balance += result(number, bet);
 		}
 	}
 	
-	private void processResult(int chosenNumber, int randomNumber) {
-		println(".....");
-		println(randomNumber);
-		if (randomNumber == chosenNumber) {
-			println("you win!");
-		} else {
-			println("you lose!");
+	private int result(int chosenNumber, int bet) {
+		int spinnedNumber = spin();
+		println(".... " + spinnedNumber);
+		if (spinnedNumber == chosenNumber) {
+			println("you won!");
+			return 35 * bet;
 		}
+		println("you lose!");
+		return -bet;
 	}
 	
-	private int getRandomNumber() {
+	private int spin() {
 		return random.nextInt(0, 36);
+		// return random.nextInt(37);
 	}
-	
 }
