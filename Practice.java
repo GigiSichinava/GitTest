@@ -79,7 +79,7 @@ public class Practice extends GraphicsProgram {
 				rect.setFilled(false);
 				add(rect);
 			}
-			startingX = startingX + 
+//			startingX = startingX + 
 			startingY = startingY + BRICK_SEP;
 		}
 	}
