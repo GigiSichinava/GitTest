@@ -69,7 +69,7 @@ public class Practice extends GraphicsProgram {
 		
 	
 	}
-	}
+	
 	
 	
 
