@@ -18,14 +18,11 @@ public class problem37 extends ConsoleProgram {
 
 			if (randomNumber == a) {
 				println("You have won!");
-			} else
+			} else {
 				println("You have lost");
 				println();
+			}
 				
-				if(a > 36 && a < 0){
-					println("Error number!");
-				}	
-
 		}
 	}
 }
