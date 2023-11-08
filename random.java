@@ -244,7 +244,7 @@ public class random extends GraphicsProgram {
 				remove(collider);
 				numberOfBricks--;
 				vy = -vy;
-				bounceClip.play();
+				
 			}
 		}
 	}
