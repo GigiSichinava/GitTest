@@ -26,7 +26,7 @@ public class problem37 extends ConsoleProgram {
 					println();
 				} else {
 					// if our number doesn't equal to game's number we win
-					println("You have lost");
+					println("You have lost...");
 					println();
 				}
 			}
