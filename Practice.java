@@ -67,16 +67,25 @@ public class Practice extends GraphicsProgram {
 
 	
 		
-		 public static void main(String[] args) {
-		        
-		        JFrame frame = new JFrame ();
-		        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		        frame.setLocationRelativeTo(null);
-//		        frame.add(ga);
-//		        frame.setVisible(true);
-//		        ga.start();
-		        
-		    }
+	public class Game extends Canvas{
+	    //FIELDS
+	    public int WIDTH  = 1024;
+	    public int HEIGHT = WIDTH / 16 * 9;
+
+	    //METHODS
+	    public void start(){
+	        Dimension size = new Dimension (WIDTH, HEIGHT);
+	        setPreferredSize(size);
+	        paint(null);
+	    }
+
+	    public void paint(Graphics g){
+	        g.setColor(Color.GREEN);
+	        g.fillRect(0, 0, WIDTH, HEIGHT);
+	        g.setColor(Color.BLACK);
+	        g.fillOval(100, 100, 30, 30);
+	    }
+	}
 	}
 	
 	
