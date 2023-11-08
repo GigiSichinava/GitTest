@@ -16,7 +16,7 @@ public class problem37 extends ConsoleProgram {
 			
 			
 
-			if (randomNumber == a) {
+			if (randomNumber == a && a < 36 && a > 0) {
 				println("You have won :)");
 			} else {
 				println("You have lost :(");
