@@ -82,11 +82,11 @@ public class Practice extends GraphicsProgram {
 					rect.setFilled(true);
 					rect.setColor(Color.RED);
 				}
-				if (rowNumber >2 ){
+				if (rowNumber > 2){
 					rect.setFilled(true);
 					rect.setColor(Color.ORANGE);
 				}
-				if (rowNumber < 6 || rowNumber > 4){
+				if (rowNumber < 6){
 					rect.setFilled(true);
 					rect.setColor(Color.YELLOW);
 				}
@@ -94,7 +94,7 @@ public class Practice extends GraphicsProgram {
 					rect.setFilled(true);
 					rect.setColor(Color.GREEN);
 				}
-				if (rowNumber < 10){
+				if (rowNumber < 10 && rowNumber > 8){
 					rect.setFilled(true);
 					rect.setColor(Color.CYAN);
 				}
