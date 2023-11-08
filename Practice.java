@@ -67,8 +67,8 @@ public class Practice extends GraphicsProgram {
 
 	
 		
-	public class Game extends Canvas{
-	    //FIELDS
+	public class Border extends Canvas{
+	    
 	    public int WIDTH  = 1024;
 	    public int HEIGHT = WIDTH / 16 * 9;
 
@@ -79,12 +79,7 @@ public class Practice extends GraphicsProgram {
 	        paint(null);
 	    }
 
-	    public void paint(Graphics g){
-	        g.setColor(Color.GREEN);
-	        g.fillRect(0, 0, WIDTH, HEIGHT);
-	        g.setColor(Color.BLACK);
-	        g.fillOval(100, 100, 30, 30);
-	    }
+	   
 	}
 	}
 	
