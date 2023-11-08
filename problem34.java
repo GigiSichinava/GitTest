@@ -6,8 +6,8 @@ import acm.util.RandomGenerator;
 
 public class problem34 extends GraphicsProgram {
 	private static final int MIN_RADIUS = 10;
-	private static final int MAX_RADIUS = 30;
-	private static final int NUM_CIRCLES = 800;
+	private static final int MAX_RADIUS = 100;
+	private static final int NUM_CIRCLES = 100;
 
 		private RandomGenerator rgen = RandomGenerator.getInstance();
 		public void run(){
