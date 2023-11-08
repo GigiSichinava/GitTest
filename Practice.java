@@ -66,20 +66,22 @@ public class Practice extends GraphicsProgram {
 	}
 
 	private void applicationSize() {
-		setSize(APPLICATION_WIDTH,APPLICATION_HEIGHT);
-		
+		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+
 	}
 
 	double startingX = BRICK_SEP;
 	double startingY = PADDLE_Y_OFFSET;
+
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
 			for (int bricksNumber = 0; bricksNumber <= NBRICKS_PER_ROW; bricksNumber++) {
-				GRect rect = new GRect(startingX+(bricksNumber*(BRICK_SEP+BRICK_WIDTH)), startingY + BRICK_HEIGHT * rowNumber + BRICK_SEP, BRICK_WIDTH, BRICK_HEIGHT);
+				GRect rect = new GRect(startingX + (bricksNumber * (BRICK_SEP + BRICK_WIDTH)),
+						startingY + BRICK_HEIGHT * rowNumber + BRICK_SEP, BRICK_WIDTH, BRICK_HEIGHT);
 				rect.setFilled(false);
 				add(rect);
 			}
-			
+
 			startingY = startingY + BRICK_SEP;
 		}
 	}
