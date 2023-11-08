@@ -65,11 +65,19 @@ public class Practice extends GraphicsProgram {
 		/* You fill this in, along with any subsidiary methods */
 	}
 
-	public class frame{
+	
 		
-		JFrame frame	 = new JFrame ();
-		frame.setBounds 10, 10, 10, 10,
+		 public static void main(String[] args) {
+		        
+		        JFrame frame = new JFrame ();
+		        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		        frame.setLocationRelativeTo(null);
+//		        frame.add(ga);
+//		        frame.setVisible(true);
+//		        ga.start();
+		        
+		    }
 	}
 	
 	
-}
+
