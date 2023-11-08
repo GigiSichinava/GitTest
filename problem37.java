@@ -14,7 +14,7 @@ public class problem37 extends ConsoleProgram {
 			int randomNumber = rgen.nextInt(0, 36);
 			println("Game has chosen: " + randomNumber);
 
-			if (randomNumber == a) {
+			if (randomNumber > a) {
 				println("You have won!");
 				println();
 			} else {
