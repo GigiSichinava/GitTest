@@ -80,7 +80,7 @@ public class Practice extends GraphicsProgram {
 				add(rect);
 			}
 //			startingX = startingX + BRICK_SEP;
-			startingY = startingY + BRICK_SEP;
+//			startingY = startingY + BRICK_SEP;
 		}
 	}
 }
