@@ -11,7 +11,7 @@ public class problem37 extends ConsoleProgram {
 
 			int a = readInt("Enter your number here: ");
 			
-			if(a > 36 ){
+			if(a > 36 || a < 0){
 				println("Error number!");
 				break;
 			}	
