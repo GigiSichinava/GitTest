@@ -7,9 +7,13 @@ public class problem37 extends ConsoleProgram {
 	public void run(){
 		
 		int a = readInt ("Enter your number here: ");
-		
-		
+
 		int randomNumber =  rgen.nextInt(0, 36);
-		println(randomNumber);
+//		println(randomNumber);
+	
+		if (randomNumber == a){
+			println("You won!");
+		}
+	
 	}
 }
