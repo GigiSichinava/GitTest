@@ -69,10 +69,11 @@ public class Practice extends GraphicsProgram {
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
 			for (int bricksNumber = 0; bricksNumber <= NBRICKS_PER_ROW; bricksNumber++) {
-				GRect rect = new GRect(startingX + BRICK_WIDTH * bricksNumber + BRICK_SEP, startingY + BRICK_HEIGHT * rowNumber + BRICK_SEP, BRICK_WIDTH, BRICK_HEIGHT);
+				GRect rect = new GRect(startingX+(double)(bricksNumber*(BRICK_SEP+BRICK_WIDTH)), startingY + BRICK_HEIGHT * rowNumber + BRICK_SEP, BRICK_WIDTH, BRICK_HEIGHT);
 				rect.setFilled(false);
 				add(rect);
 			}
+			
 			startingY = startingY + BRICK_SEP;
 		}
 	}
