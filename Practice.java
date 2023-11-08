@@ -80,6 +80,16 @@ public class Practice extends GraphicsProgram {
 				add(rect);
 				if (rowNumber < 2){
 					rect.setFilled(true);
+					rect.setColor(Color.RED);
+				}
+				if (rowNumber < 4){
+					rect.setFilled(true);
+				}
+				if (rowNumber < 6){
+					rect.setFilled(true);
+				}
+				if (rowNumber < 8){
+					rect.setFilled(true);
 				}
 			}
 			startingY = startingY + BRICK_SEP;
