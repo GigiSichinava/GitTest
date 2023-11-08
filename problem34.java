@@ -18,8 +18,8 @@ public class problem34 extends GraphicsProgram {
 		
 		private void addRandomCircle() {
 			int radius = rgen.nextInt (MIN_RADIUS, MAX_RADIUS);
-			double x = rgen.nextDouble (50, getWidth() - 2 * radius);
-			double y = rgen.nextDouble (50, getHeight() - 2 * radius);
+			double x = rgen.nextDouble (0, getWidth() - 2 * radius);
+			double y = rgen.nextDouble (0, getHeight() - 2 * radius);
 			Color color = rgen.nextColor();
 			
 			GOval circle = new GOval ( 2 * radius, 2 * radius);
