@@ -12,7 +12,8 @@ public class problem37 extends ConsoleProgram {
 			int a = readInt("Enter your number here: ");
 
 			if(a > 36 && a < 0){
-				println("Error number!");
+//				println("Error number!");
+			break;
 			}	
 			
 //			int randomNumber = rgen.nextInt(0, 36);
