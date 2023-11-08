@@ -15,14 +15,14 @@ public class problem37 extends ConsoleProgram {
 				println("Error number!");
 			}	
 			
-			int randomNumber = rgen.nextInt(0, 36);
-			println("Game has chosen: " + randomNumber);
-			
-			
-
-			if (randomNumber == a) {
-				println("You have won :)");
-			} 
+//			int randomNumber = rgen.nextInt(0, 36);
+//			println("Game has chosen: " + randomNumber);
+//			
+//			
+//
+//			if (randomNumber == a) {
+//				println("You have won :)");
+//			} 
 			
 	
 			
