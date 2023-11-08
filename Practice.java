@@ -69,7 +69,7 @@ public class Practice extends GraphicsProgram {
 		setSize(WIDTH, HEIGHT);
 	}
 
-	double startingX = BRICK_SEP / 1.7 ;
+	double startingX = BRICK_SEP / 2 ;
 	double startingY = PADDLE_Y_OFFSET;
 
 	private void addBricks() {
