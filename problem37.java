@@ -13,6 +13,7 @@ public class problem37 extends ConsoleProgram {
 
 			if (a > 36 || a < 0) {
 				println("Error number!");
+				println();
 			}else{
 
 			int randomNumber = rgen.nextInt(0, 36);
