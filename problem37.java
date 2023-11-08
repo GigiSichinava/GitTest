@@ -10,11 +10,14 @@ public class problem37 extends ConsoleProgram {
 		while (true) {
 
 			int a = readInt("Enter your number here: ");
-
+			if(a == 36){
+				println("dick");
+			}
+			
 			int randomNumber = rgen.nextInt(0, 36);
 			println("Game has chosen: " + randomNumber);
 
-			if (randomNumber > a) {
+			if (randomNumber == a) {
 				println("You have won!");
 				println();
 			} else {
