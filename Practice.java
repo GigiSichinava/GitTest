@@ -67,15 +67,7 @@ public class Practice extends GraphicsProgram {
 
 	
 		
-	public class Border extends Canvas{
-	    
-	    public void start(){
-//	        Dimension size = new Dimension (APPLICATION_WIDTH, APPLICATION_HEIGHT);
-//	        setPreferredSize(size);
-//	        paint(null);
-	    }
-
-	   
+	
 	}
 	}
 	
