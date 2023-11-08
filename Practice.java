@@ -61,7 +61,13 @@ public class Practice extends GraphicsProgram {
 	/** Runs the Practice program. */
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
+		applicationSize();
 		addBricks();
+	}
+
+	private void applicationSize() {
+		setSize(APPLICATION_WIDTH,APPLICATION_HEIGHT);
+		
 	}
 
 	double startingX = BRICK_SEP;
