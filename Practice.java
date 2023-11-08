@@ -19,7 +19,7 @@ import java.awt.event.*;
 public class Practice extends GraphicsProgram {
 
 	/** Width and height of application window in pixels */
-	public static final int APPLICATION_WIDTH = 500;
+	public static final int APPLICATION_WIDTH = 400;
 	public static final int APPLICATION_HEIGHT = 600;
 
 	/** Dimensions of game board (usually the same) */
@@ -75,12 +75,12 @@ public class Practice extends GraphicsProgram {
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
 			for (int bricksNumber = 0; bricksNumber < NBRICKS_PER_ROW; bricksNumber++) {
-				GRect rect = new GRect(startingX+(double)(bricksNumber*(BRICK_SEP+BRICK_WIDTH)),startingY+rowNumber*(BRICK_HEIGHT+BRICK_SEP),BRICK_WIDTH,BRICK_HEIGHT);	
+				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP/2) * bricksNumber, startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);	
 				rect.setFilled(false);
 				add(rect);
 			}
 //			startingX = startingX + BRICK_SEP;
-//			startingY = startingY + BRICK_SEP;
+			startingY = startingY + BRICK_SEP;
 		}
 	}
 }
