@@ -81,6 +81,5 @@ public class Practice extends GraphicsProgram {
 			}
 			startingY = startingY + BRICK_SEP;
 		}
-		
 	}
 }
