@@ -94,7 +94,7 @@ public class Practice extends GraphicsProgram {
 					rect.setFilled(true);
 					rect.setColor(Color.GREEN);
 				}
-				if (rowNumber < 10 && rowNumber > 8){
+				if (rowNumber < 10 && rowNumber > 7){
 					rect.setFilled(true);
 					rect.setColor(Color.CYAN);
 				}
