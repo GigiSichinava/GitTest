@@ -17,7 +17,7 @@ public class problem37 extends ConsoleProgram {
 			
 
 			if (randomNumber == a) {
-				println("You have won!");
+				println("You have won :)");
 			} else {
 				println("You have lost :(");
 				println();
