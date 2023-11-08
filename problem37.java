@@ -13,6 +13,10 @@ public class problem37 extends ConsoleProgram {
 
 			int randomNumber = rgen.nextInt(0, 36);
 			println("Game has chosen: " + randomNumber);
+			
+			if(a > 36 && a < 0){
+				println("Error number!");
+			}
 
 			if (randomNumber == a) {
 				println("You have won!");
