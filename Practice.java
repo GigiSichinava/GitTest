@@ -60,50 +60,60 @@ public class Practice extends GraphicsProgram {
 	/* Method: run() */
 	/** Runs the Practice program. */
 	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
+
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
 		applicationSize();
 		addBricks();
 		addPaddle();
+		addBall();
 	}
 
+	private void addBall() {
+		GOval ball = new GOval(getWidth() / 2  - BALL_RADIUS / 2, getHeight() / 2  - BALL_RADIUS / 2, BALL_RADIUS * 2, BALL_RADIUS * 2);
+		ball.setFilled(true);
+		add(ball);
+	}
+
+
 	private void addPaddle() {
-		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2 ;
-		int paddleY = getHeight() - PADDLE_Y_OFFSET;	
+		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2;
+		int paddleY = getHeight() - PADDLE_Y_OFFSET;
 		paddle.setLocation(paddleX, paddleY);
-		add (paddle);
+		add(paddle);
 	}
 
 	private void applicationSize() {
 		setSize(WIDTH, HEIGHT);
 	}
 
-	double startingX = BRICK_SEP / 2 ;
+	double startingX = BRICK_SEP / 2;
 	double startingY = PADDLE_Y_OFFSET;
 
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
 			for (int bricksNumber = 0; bricksNumber < NBRICKS_PER_ROW; bricksNumber++) {
-				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP / 2 ) * bricksNumber, startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);	
+				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP / 2) * bricksNumber,
+						startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
 				rect.setFilled(false);
 				add(rect);
-				if (rowNumber < 2){
+				if (rowNumber < 2) {
 					rect.setFilled(true);
 					rect.setColor(Color.RED);
 				}
-				if (rowNumber < 4 && rowNumber > 1){
+				if (rowNumber < 4 && rowNumber > 1) {
 					rect.setFilled(true);
 					rect.setColor(Color.ORANGE);
 				}
-				if (rowNumber < 6 && rowNumber > 3){
+				if (rowNumber < 6 && rowNumber > 3) {
 					rect.setFilled(true);
 					rect.setColor(Color.YELLOW);
 				}
-				if (rowNumber < 8 && rowNumber > 5){
+				if (rowNumber < 8 && rowNumber > 5) {
 					rect.setFilled(true);
 					rect.setColor(Color.GREEN);
 				}
-				if (rowNumber < 10 && rowNumber > 7){
+				if (rowNumber < 10 && rowNumber > 7) {
 					rect.setFilled(true);
 					rect.setColor(Color.CYAN);
 				}
@@ -112,11 +122,9 @@ public class Practice extends GraphicsProgram {
 		}
 		addMouseListeners();
 	}
-	
-	
-	public void mouseMoved (MouseEvent e){
-		paddle.setLocation(e.getX()- PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
-		}
-	
-	
+
+	public void mouseMoved(MouseEvent e) {
+		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
+	}
+
 }
