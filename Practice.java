@@ -77,7 +77,7 @@ public class Practice extends GraphicsProgram {
 		double dy = vy;
 
 		while (true) {
-//			oval.move(dx, dy);
+			oval.move(dx, dy);
 			pause(30);
 
 			if (oval.getY() >= getHeight() - BALL_RADIUS * 2) {
