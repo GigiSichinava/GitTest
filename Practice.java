@@ -59,7 +59,7 @@ public class Practice extends GraphicsProgram {
 
 	/* Method: run() */
 	/** Runs the Practice program. */
-	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
+	
 	
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
@@ -102,8 +102,8 @@ public class Practice extends GraphicsProgram {
 		
 	}
 
-
 	private void addPaddle() {
+		GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
 		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2;
 		int paddleY = getHeight() - PADDLE_Y_OFFSET;
 		paddle.setLocation(paddleX, paddleY);
@@ -112,7 +112,7 @@ public class Practice extends GraphicsProgram {
 	}
 
 	private void applicationSize() {
-		setSize(700, HEIGHT);
+		setSize(WIDTH, HEIGHT);
 	}
 
 	double startingX = BRICK_SEP / 2;
@@ -152,6 +152,8 @@ public class Practice extends GraphicsProgram {
 	}
 
 	public void mouseMoved(MouseEvent e) {
+		GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
+
 		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
 	}
 
