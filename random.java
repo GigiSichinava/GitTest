@@ -31,13 +31,13 @@ public class random extends GraphicsProgram {
 				dx = -dx;
 			}
 			
-			if (oval.getY() <= 0){
-				dy = -dy;
-			}
-			 
-			if (oval.getX() <= 0){
-				dx = -dx;
-			}
+//			if (oval.getY() <= 0){
+//				dy = -dy;
+//			}
+//			 
+//			if (oval.getX() <= 0){
+//				dx = -dx;
+//			}
 
 			// if(oval.getY() > getHeight() - D / 2){
 			// pause(PAUSE);
