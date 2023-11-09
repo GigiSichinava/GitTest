@@ -59,6 +59,7 @@ public class Practice extends GraphicsProgram {
 
 	/* Method: run() */
 	/** Runs the Practice program. */
+	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
 		applicationSize();
@@ -114,9 +115,9 @@ public class Practice extends GraphicsProgram {
 	}
 	
 	
-//	public void mouseMoved (MouseEvent e){
-//		
-//		}
+	public void mouseMoved (MouseEvent e){
+		paddle.setLocation(e.getX(), getHeight() - PADDLE_Y_OFFSET);
+		}
 	
 	
 }
