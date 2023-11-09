@@ -19,15 +19,15 @@ public class random extends GraphicsProgram {
 
 		while (true) {
 
-			if(oval.getY() - D / 2 < getHeight()){
+			if(oval.getY() - D / 2 < getHeight() ){
 				pause(PAUSE);
 				oval.move(x, y);
 			}
 			
-			if(oval.getY() - D / 2  getHeight()){
-				pause(PAUSE);
-				oval.move(x, -y);
-			}
+//			if(oval.getY() - D / 2  getHeight()){
+//				pause(PAUSE);
+//				oval.move(x, -y);
+//			}
 				
 //			Color color1 = rgen.nextColor();
 //			while (oval.getX() <= getWidth() - D) {
