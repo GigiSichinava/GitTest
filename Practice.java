@@ -70,7 +70,7 @@ public class Practice extends GraphicsProgram {
 	private double vy = 3.0;
 	private void addBall() {
 		GOval oval = new GOval(BALL_RADIUS * 2, BALL_RADIUS * 2);
-		add(oval, 0, 0);
+		add(oval, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 		double dx = vx;
 		double dy = vy;
 
