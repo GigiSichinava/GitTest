@@ -79,10 +79,10 @@ public class Practice extends GraphicsProgram {
 		int dy = y;
 
 		
-		private final int PAUSE = 30;
+		
 		while (true) {
 			oval.move(dx, dy);
-			pause(PAUSE);
+			pause(30);
 
 			if (oval.getY() >= getHeight() - BALL_RADIUS * 2) {
 				dy = -dy;
