@@ -37,6 +37,7 @@ public class random extends GraphicsProgram {
 
 			if (oval.getX() <= 0) {
 				dx = -dx;
+				break;
 			}
 		}
 	}
