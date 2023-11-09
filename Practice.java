@@ -59,7 +59,7 @@ public class Practice extends GraphicsProgram {
 
 	/* Method: run() */
 	/** Runs the Practice program. */
-	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
+//	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
 		applicationSize();
