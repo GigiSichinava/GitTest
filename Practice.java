@@ -87,10 +87,10 @@ public class Practice extends GraphicsProgram {
 				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP / 2 ) * bricksNumber, startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);	
 				rect.setFilled(false);
 				add(rect);
-				if (rowNumber < 2){
-					rect.setFilled(true);
-					rect.setColor(Color.RED);
-				}
+//				if (rowNumber < 2){
+//					rect.setFilled(true);
+//					rect.setColor(Color.RED);
+//				}
 				if (rowNumber < 4 && rowNumber > 1){
 					rect.setFilled(true);
 					rect.setColor(Color.ORANGE);
