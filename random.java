@@ -15,7 +15,7 @@ public class random extends GraphicsProgram {
 	public void run() {
 
 		GOval oval = new GOval(D, D);
-		add(oval, 0, getHeight() / 2 - D / 2);
+		add(oval, 0, 0);
 
 		while (true) {
 
@@ -48,4 +48,4 @@ public class random extends GraphicsProgram {
 		}
 
 	}
-}
+
