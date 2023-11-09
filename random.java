@@ -9,7 +9,7 @@ public class random extends GraphicsProgram {
 	private final int PAUSE = 30;
 	private final int D = 100;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private static final int x = 10;
+	private final int x = 10;
 	private final int y = 10;
 
 	public void run() {
