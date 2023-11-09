@@ -17,7 +17,7 @@ public class random extends GraphicsProgram {
 		GOval oval = new GOval(D, D);
 		add(oval, 0, 0);
 
-//		while (true) {
+		while (true) {
 
 			if(oval.getY() - D  < getHeight() ){
 				pause(PAUSE);
@@ -47,5 +47,5 @@ public class random extends GraphicsProgram {
 
 		}
 
-//	}
+	}
 
