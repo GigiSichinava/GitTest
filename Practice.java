@@ -63,6 +63,7 @@ public class Practice extends GraphicsProgram {
 		/* You fill this in, along with any subsidiary methods */
 		applicationSize();
 		addBricks();
+//		addPaddle();
 	}
 
 	private void applicationSize() {
@@ -102,4 +103,14 @@ public class Practice extends GraphicsProgram {
 			startingY = startingY + BRICK_SEP;
 		}
 	}
+	
+	
+	public void mouseMoved (MouseEvent e){
+	
+		GRect paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);
+		
+		add(paddle);
+		}
+	
+	
 }
