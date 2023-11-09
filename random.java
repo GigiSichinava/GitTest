@@ -23,8 +23,8 @@ public class random extends GraphicsProgram {
 				pause(PAUSE);
 				oval.move(x, y);
 			} 
-//			oval.setLocation(getHeight() - D, oval.getX());
-//			pause(PAUSE);
+			oval.setLocation(getHeight() - D, oval.getX());
+			pause(PAUSE);
 			
 			if (oval.getY() > getHeight() - D) {
 				pause(PAUSE);
