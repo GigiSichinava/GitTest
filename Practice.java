@@ -109,7 +109,7 @@ public class Practice extends GraphicsProgram {
 	int mouseX = e.getX();
 	int mouseY = e.getY();
 		GRect paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);
-		paddle.setLocation(getWidth() / 2 - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET );
+		paddle.setLocation(50, 50);
 //		move(mouseX, 30);
 		add (paddle);
 		}
