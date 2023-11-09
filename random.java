@@ -16,27 +16,27 @@ public class random extends GraphicsProgram {
 
 		GOval oval = new GOval(D, D);
 		add(oval, 0, 0);
-//		int dx = x;
-//		int dy = y;
+		int dx = x;
+		int dy = y;
 
 		while (true) {
-			oval.move(x, y);
+			oval.move(dx, dy);
 			pause(PAUSE);
 
 			if (oval.getY() >= getHeight() - D) {
-				y = -y;
+				dy = -dy;
 			}
 
-//			if (oval.getX() > getWidth() - D) {
-//				dx = -dx;
-//			}
-//
-//			if (oval.getY() <= 0) {
-//				dy = -dy;
-//			}
-//
-//			if (oval.getX() <= 0) {
-//				dx = -dx;
+			if (oval.getX() > getWidth() - D) {
+				dx = -dx;
+			}
+
+			if (oval.getY() <= 0) {
+				dy = -dy;
+			}
+
+			if (oval.getX() <= 0) {
+				dx = -dx;
 			}
 		}
 	}
