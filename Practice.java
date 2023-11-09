@@ -102,6 +102,8 @@ public class Practice extends GraphicsProgram {
 			}
 			startingY = startingY + BRICK_SEP;
 		}
+		GRect paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);
+		add(paddle, 50 ,50);
 	}
 	
 	
