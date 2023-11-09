@@ -27,9 +27,9 @@ public class random extends GraphicsProgram {
 			dy = -dy;
 			} 
 			
-			if (oval.getX() > getWidth() - D) {
-				dx = -dx;
-			}
+//			if (oval.getX() > getWidth() - D) {
+//				dx = -dx;
+//			}
 			
 //			if (oval.getY() <= 0){
 //				dy = -dy;
