@@ -17,14 +17,14 @@ public class random extends GraphicsProgram {
 		GOval oval = new GOval(D, D);
 		add(oval, 0, 0);
 
-//		while (true) {
+		while (true) {
 
-			while(oval.getY() < getHeight() - D ){
+			if(oval.getY() < getHeight() - D ){
 				pause(PAUSE);
 				oval.move(x, y);
 			}
 			
-			while(oval.getY() > getHeight() - D ) {
+			if(oval.getY() > getHeight() - D ) {
 				pause(PAUSE);
 				oval.move(x, -y);
 				
@@ -53,5 +53,5 @@ public class random extends GraphicsProgram {
 
 		}
 
-//	}
+	}
 
