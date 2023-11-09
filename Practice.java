@@ -80,7 +80,7 @@ public class Practice extends GraphicsProgram {
 		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2;
 		int paddleY = getHeight() - PADDLE_Y_OFFSET;
 		paddle.setLocation(paddleX, paddleY);
-		paddle.setFilled(true);
+		paddle.setFilled(true);	
 		add(paddle);
 	}
 
