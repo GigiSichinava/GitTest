@@ -71,7 +71,7 @@ public class Practice extends GraphicsProgram {
 		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2 ;
 		int paddleY = getHeight() - PADDLE_Y_OFFSET;
 		GRect paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);	
-//		paddle.setLocation(paddleX, paddleY);
+		paddle.setLocation(paddleX, paddleY);
 		add (paddle);
 	}
 
@@ -115,7 +115,7 @@ public class Practice extends GraphicsProgram {
 	}
 	
 	
-	public void mouseMoved (MouseEvent e){
+	public void MouseListeners (MouseEvent e){
 		paddle.setLocation(e.getX(), getHeight() - PADDLE_Y_OFFSET);
 		}
 	
