@@ -24,13 +24,19 @@ public class random extends GraphicsProgram {
 			pause(PAUSE);
 			
 			if (oval.getY() >= getHeight() - D) {	
-			dx = -dx;
+			dy = -dy;
 			} 
 			
-			if (oval.getY() > getHeight() - D) {
-				pause(PAUSE);
-				oval.move(x, -y);
-
+			if (oval.getX() > getWidth() - D) {
+				dx = -dx;
+			}
+			
+			if (oval.getY() <= 0){
+				dy = -dy;
+			}
+			 
+			if (oval.getX() <= 0){
+				dx = -dx;
 			}
 
 			// if(oval.getY() > getHeight() - D / 2){
