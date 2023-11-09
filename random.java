@@ -9,19 +9,22 @@ public class random extends GraphicsProgram {
 	private final int PAUSE = 30;
 	private final int D = 100;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private final int x = 10;
+	private static final int x = 10;
 	private final int y = 10;
 
 	public void run() {
 
 		GOval oval = new GOval(D, D);
 		add(oval, 0, 0);
-
+		int dx = x;
+		int dy = y;
+		
 		while (true) {
-
-			if (oval.getY() < getHeight() - D) {
-				pause(PAUSE);
-				oval.move(x, y);
+			oval.move(x, y);
+			pause(PAUSE);
+			
+			if (oval.getY() >= getHeight() - D) {	
+			dx = -dx;
 			} 
 			
 			if (oval.getY() > getHeight() - D) {
