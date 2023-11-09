@@ -63,7 +63,15 @@ public class Practice extends GraphicsProgram {
 		/* You fill this in, along with any subsidiary methods */
 		applicationSize();
 		addBricks();
-//		addPaddle();
+		addPaddle();
+	}
+
+	private void addPaddle() {
+		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2 ;
+		int paddleY = getHeight() - PADDLE_Y_OFFSET;
+		GRect paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);	
+		paddle.setLocation(paddleX, paddleY);
+		add (paddle);
 	}
 
 	private void applicationSize() {
@@ -106,13 +114,9 @@ public class Practice extends GraphicsProgram {
 	}
 	
 	
-	public void mouseMoved (MouseEvent e){
-	int mouseX = e.getX();
-	int mouseY = getHeight() - PADDLE_Y_OFFSET;
-		GRect paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);
-		paddle.setLocation(mouseX, mouseY);
-		add (paddle);
-		}
+//	public void mouseMoved (MouseEvent e){
+//		
+//		}
 	
 	
 }
