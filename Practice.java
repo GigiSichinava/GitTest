@@ -66,8 +66,9 @@ public class Practice extends GraphicsProgram {
 		addBall();
 	}
 
-	private double vx = rgen.nextDouble(1.0, 3.0);
+	private double vx = rgen.nextDouble(-3.0, 3.0);
 	private double vy = 3.0;
+	
 	private void addBall() {
 		GOval oval = new GOval(BALL_RADIUS * 2, BALL_RADIUS * 2);
 		add(oval, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
