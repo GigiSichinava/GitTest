@@ -60,7 +60,7 @@ public class Practice extends GraphicsProgram {
 	/* Method: run() */
 	/** Runs the Practice program. */
 	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
-
+	
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
 		applicationSize();
@@ -80,6 +80,7 @@ public class Practice extends GraphicsProgram {
 		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2;
 		int paddleY = getHeight() - PADDLE_Y_OFFSET;
 		paddle.setLocation(paddleX, paddleY);
+		paddle.setFilled(true);
 		add(paddle);
 	}
 
