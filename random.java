@@ -16,50 +16,28 @@ public class random extends GraphicsProgram {
 
 		GOval oval = new GOval(D, D);
 		add(oval, 0, 0);
-		int dx = x;
-		int dy = y;
-		
+//		int dx = x;
+//		int dy = y;
+
 		while (true) {
-			oval.move(dx, dy);
+			oval.move(x, y);
 			pause(PAUSE);
-			
-			if (oval.getY() >= getHeight() - D) {	
-			dy = -dy;
-			} 
-			
-			if (oval.getX() > getWidth() - D) {
-				dx = -dx;
-			}
-			
-			if (oval.getY() <= 0){
-				dy = -dy;
-			}
-			 
-			if (oval.getX() <= 0){
-				dx = -dx;
+
+			if (oval.getY() >= getHeight() - D) {
+				y = -y;
 			}
 
-			// if(oval.getY() > getHeight() - D / 2){
-			// pause(PAUSE);
-			// oval.move(x, -y);
-			// }
-
-			// Color color1 = rgen.nextColor();
-			// while (oval.getX() <= getWidth() - D) {
-			// pause(PAUSE);
-			// oval.move(10, 0);
-			// oval.setFilled(true);
-			// oval.setColor(color1);
-			// }
-			//
-			// Color color2 = rgen.nextColor();
-			// while (oval.getX() >= 0) {
-			// pause(PAUSE);
-			// oval.move(-10, 0);
-			// oval.setFilled(true);
-			// oval.setColor(color2);
+//			if (oval.getX() > getWidth() - D) {
+//				dx = -dx;
+//			}
+//
+//			if (oval.getY() <= 0) {
+//				dy = -dy;
+//			}
+//
+//			if (oval.getX() <= 0) {
+//				dx = -dx;
+			}
 		}
-
 	}
-
 }
