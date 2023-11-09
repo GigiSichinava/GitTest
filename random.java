@@ -24,7 +24,7 @@ public class random extends GraphicsProgram {
 				oval.move(x, y);
 			}
 			
-			if(oval.getY() - D / 2 > getHeight()){
+			if(oval.getY() - D / 2  getHeight()){
 				pause(PAUSE);
 				oval.move(x, -y);
 			}
