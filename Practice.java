@@ -69,17 +69,15 @@ public class Practice extends GraphicsProgram {
 		addBall();
 	}
 
-	private static final int x = 10;
-	private static final int y = 10;
-	private void addBall() {
-		
+	private double vx = 10;
+	private double vy = 10;
+	
+	private void addBall() {	
 		GOval oval = new GOval(BALL_RADIUS * 2, BALL_RADIUS * 2);
 		add(oval, 0, 0);
-		int dx = x;
-		int dy = y;
+		double dx = vx;
+		double dy = vy;
 
-		
-		
 		while (true) {
 			oval.move(dx, dy);
 			pause(30);
