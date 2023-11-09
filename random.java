@@ -24,10 +24,16 @@ public class random extends GraphicsProgram {
 				oval.move(x, y);
 			}
 			
-			if(oval.getY() >  getHeight()  - D / 2){
+			while (oval.getX() <= getWidth() - D) {
 				pause(PAUSE);
 				oval.move(x, -y);
+				
 			}
+			
+//			if(oval.getY() >  getHeight()  - D / 2){
+//				pause(PAUSE);
+//				oval.move(x, -y);
+//			}
 				
 //			Color color1 = rgen.nextColor();
 //			while (oval.getX() <= getWidth() - D) {
