@@ -69,10 +69,39 @@ public class Practice extends GraphicsProgram {
 		addBall();
 	}
 
+	private static final int x = 10;
+	private static final int y = 10;
 	private void addBall() {
-		GOval ball = new GOval(getWidth() / 2  - BALL_RADIUS / 2, getHeight() / 2  - BALL_RADIUS / 2, BALL_RADIUS * 2, BALL_RADIUS * 2);
-		ball.setFilled(true);
-		add(ball);
+		
+		GOval oval = new GOval(BALL_RADIUS * 2, BALL_RADIUS * 2);
+		add(oval, 0, 0);
+		int dx = x;
+		int dy = y;
+
+		
+		private final int PAUSE = 30;
+		while (true) {
+			oval.move(dx, dy);
+			pause(PAUSE);
+
+			if (oval.getY() >= getHeight() - BALL_RADIUS * 2) {
+				dy = -dy;
+			}
+
+			if (oval.getX() > getWidth() - BALL_RADIUS * 2) {
+				dx = -dx;
+			}
+
+			if (oval.getY() <= 0) {
+				dy = -dy;
+			}
+
+			if (oval.getX() <= 0) {
+				dx = -dx;
+			}
+		}
+		
+		
 	}
 
 
