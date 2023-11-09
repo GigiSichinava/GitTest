@@ -107,10 +107,9 @@ public class Practice extends GraphicsProgram {
 	
 	public void mouseMoved (MouseEvent e){
 	int mouseX = e.getX();
-	int mouseY = e.getY();
+	int mouseY = getHeight() - PADDLE_Y_OFFSET;
 		GRect paddle = new GRect (PADDLE_WIDTH, PADDLE_HEIGHT);
-		paddle.setLocation(50, 50);
-//		move(mouseX, 30);
+		paddle.setLocation(mouseX, mouseY);
 		add (paddle);
 		}
 	
