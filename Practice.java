@@ -57,8 +57,7 @@ public class Practice extends GraphicsProgram {
 	/** Number of turns */
 	private static final int NTURNS = 3;
 
-	/* Method: run() */
-	/** Runs the Practice program. */
+	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {
 		applicationSize();
@@ -67,8 +66,8 @@ public class Practice extends GraphicsProgram {
 		addBall();
 	}
 
-	private double vx = 10;
-	private double vy = 10;
+	private double vx = rgen.nextDouble(1.0, 3.0);
+	private double vy = 3.0;
 	private void addBall() {
 		GOval oval = new GOval(BALL_RADIUS * 2, BALL_RADIUS * 2);
 		add(oval, 0, 0);
