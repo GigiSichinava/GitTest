@@ -20,7 +20,7 @@ public class random extends GraphicsProgram {
 		int dy = y;
 		
 		while (true) {
-			oval.move(x, y);
+			oval.move(dx, dy);
 			pause(PAUSE);
 			
 			if (oval.getY() <= getHeight() - D) {	
