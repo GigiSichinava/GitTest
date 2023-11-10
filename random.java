@@ -25,7 +25,7 @@ public class random extends GraphicsProgram {
 		while(true){
 		ball.move(dx, dy);
 		pause(PAUSE);
-		if(ball.getY() >= getHeight()){
+		if(ball.getY() >= getHeight() - D){
 			dy = -dy;
 		}
 		}
