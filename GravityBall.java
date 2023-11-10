@@ -12,7 +12,7 @@ public class GravityBall extends GraphicsProgram{
 	public void run(){
 		
 		GOval oval = new GOval (D, D);
-		oval.setFilled(true);
+		oval.setFilled(false);
 		add(oval);
 		
 		double dx = x;
