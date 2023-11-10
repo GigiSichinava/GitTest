@@ -81,15 +81,8 @@ public class Practice extends GraphicsProgram {
 	        else { return null; }
 	}
  
-	private void checkCollisions(){
-        GObject colider = getCollidingObject();
-        if(colider == paddle){
-                yColide();
-        }else if(colider == lives || colider == score){}else if(colider != null){
-                remove(colider);
-                yColide();
-        }
-}	
+	
+
 	
 
 	private double vx = rgen.nextDouble(1.0, 3.0);
