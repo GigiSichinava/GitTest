@@ -5,8 +5,8 @@ public class GravityBall extends GraphicsProgram{
 	
 	final static double D = 50;
 	final static double PAUSE = 10;
-	final static double x = 10;
-	final static double y = 10;
+	final static double x = 1;
+	final static double y = 4;
 	
 			
 	
