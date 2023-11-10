@@ -23,7 +23,7 @@ public class random extends GraphicsProgram {
 		int dy = y;
 		
 		while(true){
-		dy += GRAVITY;
+//		dy += GRAVITY;
 		ball.move(dx, dy);
 		pause(PAUSE);
 		
