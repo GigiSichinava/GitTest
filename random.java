@@ -8,7 +8,7 @@ import acm.util.RandomGenerator;
 public class random extends GraphicsProgram {
 
 	private final int PAUSE = 30;
-	private final int D = 100;
+	private final int D = 50;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private final int x = 10;
 	private final int y = 10;
@@ -16,18 +16,21 @@ public class random extends GraphicsProgram {
 
 	public void run() {
 
-		GOval ball = new GOval (50, 50);
+		GOval ball = new GOval (D, D);
 		ball.setFilled(true);
 		add(ball);		
 		int dx = x;
 		int dy = y;
+		
 		while(true){
-			
+		ball.move(x,  y);
+		pause(PAUSE);
+		if(ball.getY() - D >= getHeight()){
+			dy = -dy;
+		}
 		}
 	}
 	
-	public void mouseMoved(MouseEvent e) {
-		ball.
-	}
+	
 }
 
