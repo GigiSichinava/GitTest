@@ -10,8 +10,8 @@ public class random extends GraphicsProgram {
 	private final int PAUSE = 50;
 	private final int D = 50;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private final int x = 5;
-	private final int y = 0;
+	private final int x = 1;
+	private final int y = 5;
 	private final double GRAVITY = 0.7;
 
 	public void run() {
@@ -23,7 +23,7 @@ public class random extends GraphicsProgram {
 		int dy = y;
 		
 		while(true){
-//		dy += GRAVITY;
+		dy += GRAVITY;
 		ball.move(dx, dy);
 		pause(PAUSE);
 		
