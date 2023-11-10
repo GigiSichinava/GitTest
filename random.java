@@ -14,8 +14,8 @@ public class random extends GraphicsProgram {
 	private final double y = 0.0;
 	private final double GRAVITY = 0.7;
 
-	private double dy;
-	private double dx;
+	private double dy = x;
+	private double dx = y;
 	private GOval ball;
 
 	public void run() {
