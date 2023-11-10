@@ -7,8 +7,7 @@ public class GravityBall extends GraphicsProgram{
 	final static double PAUSE = 10;
 	final static double x = 1;
 	final static double y = 4;
-	
-			
+	final static double GRAVITY = 0.7;
 	
 	public void run(){
 		
@@ -21,11 +20,11 @@ public class GravityBall extends GraphicsProgram{
 		
 		while (true){
 			oval.move(dx, dy);
+			dy =+ GRAVITY;
 			pause(PAUSE);
 			if(oval.getY() > getHeight() - D){
 				dy = -dy;				
 			}
-			dy = dy / 2;
 		}
 	}
 	
