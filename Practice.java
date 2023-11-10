@@ -58,19 +58,31 @@ public class Practice extends GraphicsProgram {
 	private static final int NTURNS = 3;
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-
+	private GOval oval;
+	
 	public void run() {
 		applicationSize();
 		addBricks();
 		addPaddle();
 		addBall();
-		checkTouch();
+//		checkTouch();
 	}
 
-	private void checkTouch() {
-		getElementAt(oval.getX(), ovalGetY()); 
-		
+	
+	private GObject getCollidingObject() {
+	    double x = oval.getX(), y = oval.getY();
+	    if (getElementAt(x, y) != null) { return getElementAt(x, y); }
+	    else if (getElementAt(x, y + BALL_RADIUS * 2) != null) { 
+	        return getElementAt(x, y + BALL_RADIUS * 2); }
+	    else if (getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2) != null) {
+	        return getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2); }
+	    else if (getElementAt(x + BALL_RADIUS * 2, y) != null) {
+	        return getElementAt(x + BALL_RADIUS * 2, y); }
+	        else { return null; }
 	}
+ 
+		
+	
 
 	private double vx = rgen.nextDouble(1.0, 3.0);
 	private double vy = 3.0;
