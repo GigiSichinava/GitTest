@@ -9,7 +9,6 @@ public class random extends GraphicsProgram {
 
 	private final int PAUSE = 50;
 	private final int D = 50;
-	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private final double x = 5.0;
 	private final double y = 0.0;
 	private final double GRAVITY = 0.7;
