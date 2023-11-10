@@ -64,6 +64,12 @@ public class Practice extends GraphicsProgram {
 		addBricks();
 		addPaddle();
 		addBall();
+		checkTouch();
+	}
+
+	private void checkTouch() {
+		getElementAt(oval.getX(), ovalGetY()); 
+		
 	}
 
 	private double vx = rgen.nextDouble(1.0, 3.0);
@@ -98,6 +104,7 @@ public class Practice extends GraphicsProgram {
 		}
 	}
 
+	
 	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
 
 	private void addPaddle() {
@@ -108,10 +115,12 @@ public class Practice extends GraphicsProgram {
 		add(paddle);
 	}
 
+	
 	private void applicationSize() {
 		setSize(WIDTH, HEIGHT);
 	}
 
+	
 	double startingX = BRICK_SEP / 2;
 	double startingY = PADDLE_Y_OFFSET;
 
