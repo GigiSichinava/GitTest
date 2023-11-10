@@ -19,13 +19,13 @@ public class random extends GraphicsProgram {
 	private GOval ball;
 
 	public void run() {
-			setup();
-			while(ball.getX() <= getWidth()){			
+		setup();
+		while (ball.getX() <= getWidth()) {
 			moveBall();
 			checkBall();
-			}
+		}
 	}
-	
+
 	private void setup() {
 		GOval ball = new GOval(D, D);
 		ball.setFilled(true);
@@ -37,14 +37,11 @@ public class random extends GraphicsProgram {
 		ball.move(dx, dy);
 	}
 
-	private void checkBall(){
-		if(ball.getY() >= getHeight() - D){
-		dy = -dy;
-		double diff = ball.getY() - (getHeight() - D);
-		 ball.move(0, -2 * diff);
-	}
-			
+	private void checkBall() {
+		if (ball.getY() >= getHeight() - D) {
+			dy = -dy;
+			double diff = ball.getY() - (getHeight() - D);
+			ball.move(0, -2 * diff);
+		}
 	}
 }
-
-
