@@ -18,7 +18,7 @@ public class random extends GraphicsProgram {
 
 		GOval ball = new GOval (D, D);
 		ball.setFilled(true);
-		add(ball);		
+		add(ball, D / 2, 100);		
 		int dx = x;
 		int dy = y;
 		
@@ -28,7 +28,7 @@ public class random extends GraphicsProgram {
 		
 		if(ball.getY() >= getHeight() - D){
 			dy = -dy;
-			dy += GRAVITY;
+			
 		}
 		}
 	}
