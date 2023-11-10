@@ -147,8 +147,5 @@ public class Practice extends GraphicsProgram {
 		addMouseListeners();
 	}
 
-	public void mouseMoved(MouseEvent e) {
-		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
-	}
-
+	
 }
