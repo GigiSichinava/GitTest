@@ -28,8 +28,7 @@ public class GravityBall extends GraphicsProgram{
 			}
 			if(oval.getX() > getWidth()){
 				break;
-			}
-			
+			}	
 		}
 	}
 	

@@ -151,4 +151,7 @@ public class Practice extends GraphicsProgram {
 		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
 	}
 
+	
+	
+	
 }
