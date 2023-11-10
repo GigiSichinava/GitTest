@@ -24,11 +24,12 @@ public class GravityBall extends GraphicsProgram{
 			pause(PAUSE);
 			if(oval.getY() > getHeight() - D){
 				dy = dy / 2;
-			}
-			
+				dy = -dy;	
 				
 			}
 			
 		}
 	}
 	
+
+}
