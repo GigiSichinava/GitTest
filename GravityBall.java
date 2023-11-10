@@ -20,7 +20,7 @@ public class GravityBall extends GraphicsProgram{
 		
 		while (true){
 			oval.move(dx, dy);
-			dy =+ GRAVITY;
+//			dy =+ GRAVITY;
 			pause(PAUSE);
 			if(oval.getY() > getHeight() - D){
 				dy = -dy;				
