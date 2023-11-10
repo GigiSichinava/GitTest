@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.event.MouseEvent;
 
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
@@ -11,33 +12,22 @@ public class random extends GraphicsProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private final int x = 10;
 	private final int y = 10;
+	private final double GRAVITY = 0.7;
 
 	public void run() {
 
-		GOval oval = new GOval(D, D);
-		add(oval, 0, 0);
+		GOval ball = new GOval (50, 50);
+		ball.setFilled(true);
+		add(ball);		
 		int dx = x;
 		int dy = y;
-
-		while (true) {
-			oval.move(dx, dy);
-			pause(PAUSE);
-
-			if (oval.getY() >= getHeight() - D) {
-				dy = -dy;
-			}
-
-			if (oval.getX() >= getWidth() - D) {
-				dx = -dx;
-			}
-
-			if (oval.getY() <= 0) {
-				dy = -dy;
-			}
-
-			if (oval.getX() <= 0) {
-				dx = -dx;
-			}
+		while(true){
+			
 		}
 	}
+	
+	public void mouseMoved(MouseEvent e) {
+		ball.
+	}
 }
+
