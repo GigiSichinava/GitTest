@@ -20,9 +20,10 @@ public class random extends GraphicsProgram {
 
 	public void run() {
 		setup();
-		while (ball.getX() <= getWidth()) {
+		while (ball.getX() < getWidth()) {
 			moveBall();
 			checkBall();
+			pause(PAUSE);
 		}
 	}
 
@@ -38,8 +39,8 @@ public class random extends GraphicsProgram {
 	}
 
 	private void checkBall() {
-		if (ball.getY() >= getHeight() - D) {
-			dy = -dy;
+		if (ball.getY() > getHeight() - D) {
+			dy = -dy * GRAVITY;
 			double diff = ball.getY() - (getHeight() - D);
 			ball.move(0, -2 * diff);
 		}
