@@ -209,7 +209,7 @@ public class bangbiwo extends GraphicsProgram {
                 bounceClip.play(); 
                 moveBall();
                 remove(collider);
-                bricksRemaining--;
+                bricksRemaining--; 
             }
         }
     }
