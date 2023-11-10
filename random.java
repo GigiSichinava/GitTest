@@ -28,6 +28,7 @@ public class random extends GraphicsProgram {
 		
 		if(ball.getY() >= getHeight() - D){
 			dy = -dy;
+			dy += GRAVITY;
 		}
 		}
 	}
