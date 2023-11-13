@@ -136,7 +136,7 @@ public class Practice extends GraphicsProgram {
 
 	// Add Bricks
 	double startingX = BRICK_SEP / 2;
-	double startingY = PADDLE_Y_OFFSET;
+	double startingY = BRICK_Y_OFFSET;
 
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
