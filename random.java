@@ -58,18 +58,28 @@ public class random extends GraphicsProgram {
 	/** Number of turns */
 	private static final int NTURNS = 3;
 
-	/* Method: run() */
-	/** Runs the Breakout program. */
-
+	/** Privates that we made*/
+	private int points = 0;
+	private static GRect paddle;
+	private GLabel scoretag;
+	private GLabel won = new GLabel("You won");
+	private GLabel lost = new GLabel("You Lost");
+	private static int counter = 0;
+	private static GObject collider;
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+	private double vx, vy;
+	private static GOval ball;
+	private static int xball;
+	private static int yball;
+	
 	public void run() {
-
+			
 		// sets the size of application window.
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 
 		// setting up the game.
 		setupGame();
 
-		//
 		paddle = new GRect(0, APPLICATION_HEIGHT - 3 * PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
 		paddle.setColor(rgen.nextColor());
@@ -85,15 +95,14 @@ public class random extends GraphicsProgram {
 
 	}
 
+	
 	public void mouseMoved(MouseEvent e) {
 
 		double X = e.getX();
 		if (X >= PADDLE_WIDTH / 2) {
-			if (X < APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
-				paddle.setLocation(X - PADDLE_WIDTH / 2,
-						APPLICATION_HEIGHT - PADDLE_HEIGHT - (double) (2.4 * PADDLE_Y_OFFSET));
-
-			}
+		if (X < APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
+			paddle.setLocation(X - PADDLE_WIDTH / 2, APPLICATION_HEIGHT - PADDLE_HEIGHT - (double) (2.4 * PADDLE_Y_OFFSET));
+		}
 		}
 	}
 
@@ -232,16 +241,5 @@ public class random extends GraphicsProgram {
 
 	}
 
-	private int points = 0;
-	private static GRect paddle;
-	private GLabel scoretag;
-	private GLabel won = new GLabel("You won");
-	private GLabel lost = new GLabel("You Lost");
-	private static int counter = 0;
-	private static GObject collider;
-	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private double vx, vy;
-	private static GOval ball;
-	private static int xball;
-	private static int yball;
+
 }
