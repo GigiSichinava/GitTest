@@ -131,7 +131,7 @@ public class Practice extends GraphicsProgram {
 
 	// Application Size
 	private void applicationSize() {
-		setSize(APPLICATION_WIDTH,APPLICATION_HEIGHT);
+		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 	}
 
 	// Add Bricks
