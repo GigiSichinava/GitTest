@@ -69,7 +69,7 @@ public class Practice extends GraphicsProgram {
 
 	// Application Size
 		private void applicationSize() {
-			setSize(APPLICATION_WIDTH, HEIGHT);
+			setSize(WIDTH, HEIGHT);
 		}
 	
 	
