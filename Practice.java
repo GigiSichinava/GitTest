@@ -85,10 +85,11 @@ public class Practice extends GraphicsProgram {
 
 	// Add Ball 
 	
-	private double vx = rgen.nextDouble(1.0, 3.0);
-	private double vy = 3.0;
+	 
 
 	private void addBall() {
+		  vx = rgen.nextDouble(1.0, 3.0);
+		  vy = 3.0;
 		xball = APPLICATION_WIDTH / 2;
 		yball = APPLICATION_HEIGHT / 2;
 		if (rgen.nextBoolean(0.5))
@@ -228,6 +229,7 @@ public class Practice extends GraphicsProgram {
 		}
 	}
 	
+	private double vx, vy;
 	private static GObject oval;
 	private static int counter = 0;
 	private GLabel lost = new GLabel("You Lost");
