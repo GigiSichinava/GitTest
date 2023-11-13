@@ -59,37 +59,39 @@ public class Practice extends GraphicsProgram {
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private GOval oval;
-	
+
 	public void run() {
 		applicationSize();
 		addBricks();
 		addPaddle();
 		addBall();
-//		checkTouch();
+		// checkTouch();
 	}
 
 	
 	private GObject getCollidingObject() {
-	    double x = oval.getX(), y = oval.getY();
-	    if (getElementAt(x, y) != null) { return getElementAt(x, y); }
-	    else if (getElementAt(x, y + BALL_RADIUS * 2) != null) { 
-	        return getElementAt(x, y + BALL_RADIUS * 2); }
-	    else if (getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2) != null) {
-	        return getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2); }
-	    else if (getElementAt(x + BALL_RADIUS * 2, y) != null) {
-	        return getElementAt(x + BALL_RADIUS * 2, y); }
-	        else { return null; }
+		double x = oval.getX();
+		double y = oval.getY();
+		if (getElementAt(x, y) != null) {
+			return getElementAt(x, y);
+		} else if (getElementAt(x, y + BALL_RADIUS * 2) != null) {
+			return getElementAt(x, y + BALL_RADIUS * 2);
+		} else if (getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2) != null) {
+			return getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2);
+		} else if (getElementAt(x + BALL_RADIUS * 2, y) != null) {
+			return getElementAt(x + BALL_RADIUS * 2, y);
+		} else {
+			return null;
+		}
 	}
- 
-	
 
-	
-
+	// Add Ball 
 	private double vx = rgen.nextDouble(1.0, 3.0);
 	private double vy = 3.0;
-	
+
 	private void addBall() {
-		if (rgen.nextBoolean(0.5)) vx = -vx;
+		if (rgen.nextBoolean(0.5))
+			vx = -vx;
 		GOval oval = new GOval(BALL_RADIUS * 2, BALL_RADIUS * 2);
 		add(oval, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 		double dx = vx;
@@ -117,9 +119,8 @@ public class Practice extends GraphicsProgram {
 		}
 	}
 
-	
-	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
-
+	//  Add Paddle
+	GRect paddle = new GRect(0, APPLICATION_HEIGHT - 3 * PADDLE_Y_OFFSET ,PADDLE_WIDTH,PADDLE_HEIGHT);
 	private void addPaddle() {
 		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2;
 		int paddleY = getHeight() - PADDLE_Y_OFFSET;
@@ -128,19 +129,20 @@ public class Practice extends GraphicsProgram {
 		add(paddle);
 	}
 
-	
+	// Application Size
 	private void applicationSize() {
 		setSize(WIDTH, HEIGHT);
 	}
 
-	
+	// Add Bricks
 	double startingX = BRICK_SEP / 2;
 	double startingY = PADDLE_Y_OFFSET;
 
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
 			for (int bricksNumber = 0; bricksNumber < NBRICKS_PER_ROW; bricksNumber++) {
-				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP / 2) * bricksNumber,startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);					
+				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP / 2) * bricksNumber,
+						startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
 				rect.setFilled(false);
 				add(rect);
 				if (rowNumber < 2) {
@@ -169,11 +171,9 @@ public class Practice extends GraphicsProgram {
 		addMouseListeners();
 	}
 
+	// mouseMoved 
 	public void mouseMoved(MouseEvent e) {
 		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
 	}
 
-	
-	
-	
 }
