@@ -17,8 +17,8 @@ public class problem42 extends GraphicsProgram {
 	}
 
 	private void createBall() {
-		int x = rgen.nextInt(0, getWidth());
-		int y = rgen.nextInt(0, getHeight());
+		int x = rgen.nextInt(0, getWidth() - D / 2);
+		int y = rgen.nextInt(0, getHeight() - D / 2);
 		
 		oval.setFilled(true);
 		Color color = rgen.nextColor();
