@@ -159,7 +159,14 @@ public class random extends GraphicsProgram {
 
 			xball += vx;
 			yball += vy;
-			
+			if (counter > 80)
+				pause(15);
+			if (counter > 70 & counter <= 80)
+				pause(12);
+			if (counter > 60 & counter <= 70)
+				pause(8);
+			if (counter <= 60)
+				pause(5);
 			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
 				vx = -vx;
 			}
