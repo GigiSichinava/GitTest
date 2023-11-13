@@ -176,7 +176,7 @@ public class Practice extends GraphicsProgram {
 		double X = e.getX();
 		if (X >= PADDLE_WIDTH / 2) {
 			if (X < APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
-				paddle.setLocation(X - PADDLE_WIDTH,
+				paddle.setLocation(X - PADDLE_WIDTH / 2,
 						APPLICATION_HEIGHT - PADDLE_HEIGHT - (double) (2.4 * PADDLE_Y_OFFSET));
 
 			}
