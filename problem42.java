@@ -28,6 +28,7 @@ public class problem42 extends GraphicsProgram {
 
 	public void mouseClicked (MouseEvent e){
 		oval.setLocation(e.getX() - D / 2, e.getY() - D / 2);
+		Color color1 = rgen.nextColor();
 	}
 
 }
