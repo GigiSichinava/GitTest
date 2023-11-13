@@ -3,7 +3,7 @@ import acm.program.GraphicsProgram;
 public class Test extends GraphicsProgram{
 	public void run(){
 
-		setSize(100,100);
+		setSize(400,400);
 		
 	}
 
