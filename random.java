@@ -177,10 +177,10 @@ private GObject getCollidingObject() {
 		 if(counter<=60) pause(5);
 		 if(xball>=APPLICATION_WIDTH-BALL_RADIUS) {
 			vx = -vx;
-			bounceClip.play();}
+		 }
 		 if(xball<BALL_RADIUS/20) {
 			vx=-vx;
-			bounceClip.play();
+			
 			}
 		
 		if (yball>=APPLICATION_HEIGHT-BALL_RADIUS) {
@@ -192,7 +192,7 @@ private GObject getCollidingObject() {
 		  	}
 		 if(yball<BALL_RADIUS){
 			vy = -vy;
-			bounceClip.play();
+			
 			}
 		ball.setLocation(xball-BALL_RADIUS,yball-BALL_RADIUS);
 		collider = getCollidingObject();
@@ -201,7 +201,7 @@ private GObject getCollidingObject() {
 			vy = -vy;
 			if(xball<=paddle.getX()+paddle.getHeight()) vx=-vx;
 			if(xball>=paddle.getX()+paddle.getHeight()+(paddle.getWidth()/2)) vx=-vx;
-			bounceClip.play();
+			
 		} else {
 			if(collider.getColor()==Color.RED) points+=5;
 			if(collider.getColor()==Color.ORANGE) points+=4;
@@ -209,7 +209,6 @@ private GObject getCollidingObject() {
 			if(collider.getColor()==Color.GREEN) points+=2;
 			if(collider.getColor()==Color.CYAN) points+=1;
 			vy = -vy;
-			bounceClip.play();
 			counter--;
 			remove(collider);
 			
@@ -231,7 +230,6 @@ private GObject getCollidingObject() {
 	private GLabel scoretag;
 	private GLabel won = new GLabel("You won");
 	private GLabel lost = new GLabel("You Lost");
-	private AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 	private static int counter=0;
 	private static GObject collider;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
