@@ -172,8 +172,19 @@ public class Practice extends GraphicsProgram {
 	}
 
 	// mouseMoved 
-	public void mouseMoved(MouseEvent e) {
-		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
-	}
+//	public void mouseMoved(MouseEvent e) {
+//		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
+//	}
 
+public void mouseMoved(MouseEvent e){
+		
+		double X = e.getX();
+		if(X >= PADDLE_WIDTH / 2){
+			if(X < APPLICATION_WIDTH-PADDLE_WIDTH / 2){
+			paddle.setLocation(X-PADDLE_WIDTH/2,APPLICATION_HEIGHT-PADDLE_HEIGHT-(double)(2.4*PADDLE_Y_OFFSET));
+						
+			}
+		}
+	}
+	
 }
