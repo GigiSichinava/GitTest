@@ -69,21 +69,21 @@ public class Practice extends GraphicsProgram {
 	}
 
 	
-	private GObject getCollidingObject() {
-		double x = oval.getX();
-		double y = oval.getY();
-		if (getElementAt(x, y) != null) {
-			return getElementAt(x, y);
-		} else if (getElementAt(x, y + BALL_RADIUS * 2) != null) {
-			return getElementAt(x, y + BALL_RADIUS * 2);
-		} else if (getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2) != null) {
-			return getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2);
-		} else if (getElementAt(x + BALL_RADIUS * 2, y) != null) {
-			return getElementAt(x + BALL_RADIUS * 2, y);
-		} else {
-			return null;
-		}
-	}
+//	private GObject getCollidingObject() {
+//		double x = oval.getX();
+//		double y = oval.getY();
+//		if (getElementAt(x, y) != null) {
+//			return getElementAt(x, y);
+//		} else if (getElementAt(x, y + BALL_RADIUS * 2) != null) {
+//			return getElementAt(x, y + BALL_RADIUS * 2);
+//		} else if (getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2) != null) {
+//			return getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2);
+//		} else if (getElementAt(x + BALL_RADIUS * 2, y) != null) {
+//			return getElementAt(x + BALL_RADIUS * 2, y);
+//		} else {
+//			return null;
+//		}
+//	}
 
 	// Add Ball 
 	private double vx = rgen.nextDouble(1.0, 3.0);
