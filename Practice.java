@@ -57,9 +57,13 @@ public class Practice extends GraphicsProgram {
 	/** Number of turns */
 	private static final int NTURNS = 3;
 
+	
+	private static int counter = 0;
+	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {
+		addMouseListeners();
 		applicationSize();
 		addBricks();
 		addPaddle();
@@ -148,6 +152,7 @@ public class Practice extends GraphicsProgram {
 			for (int bricksNumber = 0; bricksNumber < NBRICKS_PER_ROW; bricksNumber++) {
 				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP / 2) * bricksNumber,
 						startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
+				counter++;
 				rect.setFilled(false);
 				add(rect);
 				if (rowNumber < 2) {
@@ -173,7 +178,6 @@ public class Practice extends GraphicsProgram {
 			}
 			startingY = startingY + BRICK_SEP;
 		}
-		addMouseListeners();
 	}
 
 	
