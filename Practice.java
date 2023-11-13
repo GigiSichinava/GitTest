@@ -172,8 +172,9 @@ public class Practice extends GraphicsProgram {
 		double mouseX = e.getX();
 		if (mouseX >= PADDLE_WIDTH / 2) {
 			if (mouseX < APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
-				paddle.setLocation(mouseX - PADDLE_WIDTH / 2, APPLICATION_HEIGHT - PADDLE_HEIGHT - (double) (2.4 * PADDLE_Y_OFFSET));
-						
+				paddle.setLocation(mouseX - PADDLE_WIDTH / 2,
+						APPLICATION_HEIGHT - PADDLE_HEIGHT - (double) (2.4 * PADDLE_Y_OFFSET));
+
 			}
 		}
 	}
