@@ -58,7 +58,6 @@ public class Practice extends GraphicsProgram {
 	private static final int NTURNS = 3;
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private GOval oval;
 
 	public void run() {
 		applicationSize();
@@ -173,7 +172,15 @@ public class Practice extends GraphicsProgram {
 
 	// mouseMoved 
 	public void mouseMoved(MouseEvent e) {
-		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
+//		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
+		double X = e.getX();
+		if (X >= PADDLE_WIDTH / 2) {
+			if (X < APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
+				paddle.setLocation(X - PADDLE_WIDTH / 2,
+						APPLICATION_HEIGHT - PADDLE_HEIGHT - (double) (2.4 * PADDLE_Y_OFFSET));
+
+			}
+		}
 	}
 
 }
