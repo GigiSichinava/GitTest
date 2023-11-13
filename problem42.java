@@ -27,7 +27,7 @@ public class problem42 extends GraphicsProgram {
 	}
 
 	public void mouseClicked (MouseEvent e){
-		oval.setLocation(e.getX(), e.getY());
+		oval.setLocation(e.getX() - D / 2, e.getY() - D / 2);
 	}
 
 }
