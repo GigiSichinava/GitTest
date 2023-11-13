@@ -19,7 +19,6 @@ public class problem42 extends GraphicsProgram {
 	private void createBall() {
 		int x = rgen.nextInt(0, getWidth() - D / 2);
 		int y = rgen.nextInt(0, getHeight() - D / 2);
-		pause(1000);
 		oval.setFilled(true);
 		Color color = rgen.nextColor();
 		oval.setColor(color);
@@ -27,7 +26,7 @@ public class problem42 extends GraphicsProgram {
 	}
 
 	public void mouseClicked (MouseEvent e){
-		pause(1000);
+		pause(1);
 		oval.setLocation(e.getX() - D / 2, e.getY() - D / 2);
 		Color color1 = rgen.nextColor();
 		oval.setColor(color1);
