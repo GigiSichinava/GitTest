@@ -120,7 +120,7 @@ public class Practice extends GraphicsProgram {
 //			}
 //		}
 		
-		while (counter > 0) {
+		while (true) {
 			oval.move(vx,vy);
 			
 			xball += vx;
