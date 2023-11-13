@@ -65,7 +65,7 @@ public class Practice extends GraphicsProgram {
 		addBricks();
 		addPaddle();
 		addBall();
-		// checkTouch();
+//		getCollindingObject();
 	}
 
 	
