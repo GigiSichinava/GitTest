@@ -58,10 +58,8 @@ public class random extends GraphicsProgram {
 	/** Number of turns */
 	private static final int NTURNS = 3;
 
-	/** Privates that we made*/
-	
+	/** Privates that we made */
 	private static GRect paddle;
-	
 	private GLabel won = new GLabel("You won");
 	private GLabel lost = new GLabel("You Lost");
 	private static int counter = 0;
@@ -71,19 +69,13 @@ public class random extends GraphicsProgram {
 	private static GOval ball;
 	private static int xball;
 	private static int yball;
-	
+
 	public void run() {
-			
-		// sets the size of application window.
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-
-		// setting up the game.
 		setupGame();
-
 		paddle = new GRect(0, APPLICATION_HEIGHT - 3 * PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
 		paddle.setColor(rgen.nextColor());
-		
 		addMouseListeners();
 		add(paddle);
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
@@ -91,17 +83,15 @@ public class random extends GraphicsProgram {
 		ball.setColor(rgen.nextColor());
 		add(ball);
 		ballMovement();
-
 	}
 
-	
 	public void mouseMoved(MouseEvent e) {
-
 		double X = e.getX();
 		if (X >= PADDLE_WIDTH / 2) {
-		if (X < APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
-			paddle.setLocation(X - PADDLE_WIDTH / 2, APPLICATION_HEIGHT - PADDLE_HEIGHT - (double) (2.4 * PADDLE_Y_OFFSET));
-		}
+			if (X < APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
+				paddle.setLocation(X - PADDLE_WIDTH / 2,
+						APPLICATION_HEIGHT - PADDLE_HEIGHT - (double) (2.4 * PADDLE_Y_OFFSET));
+			}
 		}
 	}
 
@@ -147,7 +137,6 @@ public class random extends GraphicsProgram {
 	}
 
 	private GObject getCollidingObject() {
-
 		collider = getElementAt(xball - BALL_RADIUS, yball - BALL_RADIUS);
 		if (collider == null)
 			collider = getElementAt(xball - BALL_RADIUS, yball + BALL_RADIUS);
@@ -165,20 +154,12 @@ public class random extends GraphicsProgram {
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
 		vy = 3.0;
-		
+
 		while (counter > 0) {
 
-			
 			xball += vx;
 			yball += vy;
-			if (counter > 80)
-				pause(15);
-			if (counter > 70 & counter <= 80)
-				pause(12);
-			if (counter > 60 & counter <= 70)
-				pause(8);
-			if (counter <= 60)
-				pause(5);
+			
 			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
 				vx = -vx;
 			}
@@ -209,7 +190,7 @@ public class random extends GraphicsProgram {
 						vx = -vx;
 
 				} else {
-					
+
 					vy = -vy;
 					counter--;
 					remove(collider);
@@ -225,6 +206,5 @@ public class random extends GraphicsProgram {
 		}
 
 	}
-
 
 }
