@@ -65,7 +65,7 @@ public class Practice extends GraphicsProgram {
 		addBricks();
 		addPaddle();
 		addBall();
-		
+		// getCollindingObject();
 	}
 
 	
@@ -141,7 +141,8 @@ public class Practice extends GraphicsProgram {
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
 			for (int bricksNumber = 0; bricksNumber < NBRICKS_PER_ROW; bricksNumber++) {
-				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP / 2) * bricksNumber, startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);						
+				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP / 2) * bricksNumber,
+						startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
 				rect.setFilled(false);
 				add(rect);
 				if (rowNumber < 2) {
@@ -175,6 +176,4 @@ public class Practice extends GraphicsProgram {
 		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
 	}
 
-	
 }
-
