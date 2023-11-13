@@ -67,6 +67,11 @@ public class Practice extends GraphicsProgram {
 		// getCollindingObject();
 	}
 
+	// Application Size
+		private void applicationSize() {
+			setSize(APPLICATION_WIDTH, HEIGHT);
+		}
+	
 	
 //	private GObject getCollidingObject() {
 //		double x = oval.getX();
@@ -128,10 +133,7 @@ public class Practice extends GraphicsProgram {
 		add(paddle);
 	}
 
-	// Application Size
-	private void applicationSize() {
-		setSize(WIDTH, HEIGHT);
-	}
+	
 
 	// Add Bricks
 	double startingX = BRICK_SEP / 2;
