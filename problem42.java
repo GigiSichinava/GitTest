@@ -22,13 +22,14 @@ public class problem42 extends GraphicsProgram {
 		
 		oval.setFilled(true);
 		Color color = rgen.nextColor();
-		oval.setColor(color);
 		add(oval, x, y);
 	}
 
 	public void mouseClicked (MouseEvent e){
 		oval.setLocation(e.getX() - D / 2, e.getY() - D / 2);
 		Color color1 = rgen.nextColor();
+		oval.setColor(color1);
+
 	}
 
 }
