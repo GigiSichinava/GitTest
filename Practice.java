@@ -132,7 +132,15 @@ public class Practice extends GraphicsProgram {
 		paddle.setFilled(true);
 		add(paddle);
 	}
-
+	
+	// mouseMoved 
+	public void mouseMoved(MouseEvent e) {
+		if(e.getX() < WIDTH / 2){
+		paddle.setLocation(e.getX() + PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);	
+	} else if (e.getX() > WIDTH / 2){
+		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);	
+	}
+	}
 	
 
 	// Add Bricks
@@ -172,10 +180,6 @@ public class Practice extends GraphicsProgram {
 		addMouseListeners();
 	}
 
-	// mouseMoved 
-	public void mouseMoved(MouseEvent e) {
-		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
-		
-	}
+	
 
 }
