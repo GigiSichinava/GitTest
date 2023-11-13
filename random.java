@@ -59,9 +59,9 @@ public class random extends GraphicsProgram {
 	private static final int NTURNS = 3;
 
 	/** Privates that we made*/
-	private int points = 0;
+	
 	private static GRect paddle;
-	private GLabel scoretag;
+	
 	private GLabel won = new GLabel("You won");
 	private GLabel lost = new GLabel("You Lost");
 	private static int counter = 0;
@@ -83,13 +83,12 @@ public class random extends GraphicsProgram {
 		paddle = new GRect(0, APPLICATION_HEIGHT - 3 * PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
 		paddle.setColor(rgen.nextColor());
-		scoretag = new GLabel("your score :", 10, 2 * PADDLE_Y_OFFSET - PADDLE_HEIGHT);
+		
 		addMouseListeners();
 		add(paddle);
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
 		ball.setColor(rgen.nextColor());
-		add(scoretag);
 		add(ball);
 		ballMovement();
 
@@ -166,15 +165,10 @@ public class random extends GraphicsProgram {
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
 		vy = 3.0;
-		GLabel score = new GLabel("" + points, scoretag.getX() + scoretag.getAscent() + 50, scoretag.getY());
-		add(score);
-		int point = points;
+		
 		while (counter > 0) {
 
-			if (point != points) {
-				score.setLabel("" + points);
-				point = points;
-			}
+			
 			xball += vx;
 			yball += vy;
 			if (counter > 80)
@@ -215,16 +209,7 @@ public class random extends GraphicsProgram {
 						vx = -vx;
 
 				} else {
-					if (collider.getColor() == Color.RED)
-						points += 5;
-					if (collider.getColor() == Color.ORANGE)
-						points += 4;
-					if (collider.getColor() == Color.YELLOW)
-						points += 3;
-					if (collider.getColor() == Color.GREEN)
-						points += 2;
-					if (collider.getColor() == Color.CYAN)
-						points += 1;
+					
 					vy = -vy;
 					counter--;
 					remove(collider);
