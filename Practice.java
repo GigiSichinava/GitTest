@@ -122,9 +122,9 @@ public class Practice extends GraphicsProgram {
 	//  Add Paddle
 	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
 	private void addPaddle() {
-		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2;
-		int paddleY = getHeight() - PADDLE_Y_OFFSET;
-		paddle.setLocation(paddleX, paddleY);
+//		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2;
+//		int paddleY = getHeight() - PADDLE_Y_OFFSET;
+//		paddle.setLocation(paddleX, paddleY);
 		paddle.setFilled(true);
 		add(paddle);
 	}
@@ -178,10 +178,10 @@ public class Practice extends GraphicsProgram {
 
 public void mouseMoved(MouseEvent e){
 		
-		double X = e.getX();
-		if(X >= PADDLE_WIDTH / 2){
-			if(X < APPLICATION_WIDTH-PADDLE_WIDTH / 2){
-			paddle.setLocation(X-PADDLE_WIDTH/2,APPLICATION_HEIGHT-PADDLE_HEIGHT-(double)(2.4*PADDLE_Y_OFFSET));
+		double x = e.getX();
+		if(x >= PADDLE_WIDTH / 2){
+			if(x < APPLICATION_WIDTH-PADDLE_WIDTH / 2){
+			paddle.setLocation(x - PADDLE_WIDTH / 2, APPLICATION_HEIGHT - PADDLE_Y_OFFSET);
 						
 			}
 		}
