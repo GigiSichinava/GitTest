@@ -85,14 +85,17 @@ public class Practice extends GraphicsProgram {
 //	}
 
 	// Add Ball 
+	
 	private double vx = rgen.nextDouble(1.0, 3.0);
 	private double vy = 3.0;
 
 	private void addBall() {
+		xball = APPLICATION_WIDTH / 2;
+		yball = APPLICATION_HEIGHT / 2;
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
 		GOval oval = new GOval(BALL_RADIUS * 2, BALL_RADIUS * 2);
-		add(oval, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
+		add(oval, xball - BALL_RADIUS, yball - BALL_RADIUS);
 		double dx = vx;
 		double dy = vy;
 
@@ -179,4 +182,10 @@ public class Practice extends GraphicsProgram {
 		}
 	}
 
+	
+	private static GObject collider;
+	private static int xball;
+	private static int yball;
+	
+	
 }
