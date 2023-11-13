@@ -15,13 +15,14 @@ public class problem42 extends GraphicsProgram{
 	}
 
 	private void createBall() {
-		GOval oval = new GOval (D, D);
-		
+		add(oval);
 	}
 
 	
 	public void mouseClicked (MouseEvent e){
-		add(oval);
+		GOval oval = new GOval (D, D);
+		oval.setFilled(true);
+		
 		
 	}
 	
