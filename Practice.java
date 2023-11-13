@@ -64,25 +64,24 @@ public class Practice extends GraphicsProgram {
 		addBricks();
 		addPaddle();
 		addBall();
-		// getCollindingObject();
 	}
 
 	
-//	private GObject getCollidingObject() {
-//		double x = oval.getX();
-//		double y = oval.getY();
-//		if (getElementAt(x, y) != null) {
-//			return getElementAt(x, y);
-//		} else if (getElementAt(x, y + BALL_RADIUS * 2) != null) {
-//			return getElementAt(x, y + BALL_RADIUS * 2);
-//		} else if (getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2) != null) {
-//			return getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2);
-//		} else if (getElementAt(x + BALL_RADIUS * 2, y) != null) {
-//			return getElementAt(x + BALL_RADIUS * 2, y);
-//		} else {
-//			return null;
-//		}
-//	}
+	private GObject getCollidingObject() {
+		double x = oval.getX();
+		double y = oval.getY();
+		if (getElementAt(x, y) != null) {
+			return getElementAt(x, y);
+		} else if (getElementAt(x, y + BALL_RADIUS * 2) != null) {
+			return getElementAt(x, y + BALL_RADIUS * 2);
+		} else if (getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2) != null) {
+			return getElementAt(x + BALL_RADIUS * 2, y + BALL_RADIUS * 2);
+		} else if (getElementAt(x + BALL_RADIUS * 2, y) != null) {
+			return getElementAt(x + BALL_RADIUS * 2, y);
+		} else {
+			return null;
+		}
+	}
 
 	// Add Ball 
 	
@@ -96,28 +95,75 @@ public class Practice extends GraphicsProgram {
 			vx = -vx;
 		GOval oval = new GOval(BALL_RADIUS * 2, BALL_RADIUS * 2);
 		add(oval, xball - BALL_RADIUS, yball - BALL_RADIUS);
-		double dx = vx;
-		double dy = vy;
+//		double dx = vx;
+//		double dy = vy;
+//
+//		while (true) {
+//			oval.move(dx, dy);
+//			pause(30);
+//
+//			if (oval.getY() >= getHeight() - BALL_RADIUS * 2) {
+//				dy = -dy;
+//			}
+//
+//			if (oval.getX() > getWidth() - BALL_RADIUS * 2) {
+//				dx = -dx;
+//			}
+//
+//			if (oval.getY() <= 0) {
+//				dy = -dy;
+//			}
+//
+//			if (oval.getX() <= 0) {
+//				dx = -dx;
+//			}
+//		}
+		
+		while (counter > 0) {
 
-		while (true) {
-			oval.move(dx, dy);
-			pause(30);
+			
+			xball += vx;
+			yball += vy;
+			if (counter > 80)
+				pause(15);
+			if (counter > 70 & counter <= 80)
+				pause(12);
+			if (counter > 60 & counter <= 70)
+				pause(8);
+			if (counter <= 60)
+				pause(5);
+			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
+				vx = -vx;
+			}
+			if (xball < BALL_RADIUS / 20) {
+				vx = -vx;
 
-			if (oval.getY() >= getHeight() - BALL_RADIUS * 2) {
-				dy = -dy;
 			}
 
-			if (oval.getX() > getWidth() - BALL_RADIUS * 2) {
-				dx = -dx;
+			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
+				xball = APPLICATION_WIDTH / 2;
+				remove(oval);
+				lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
+				lost.setColor(Color.red);
+				add(lost);
+			}
+			if (yball < BALL_RADIUS) {
+				vy = -vy;
+
+			}
+			oval.setLocation(xball - BALL_RADIUS, yball - BALL_RADIUS);
+			collider = getCollidingObject();
+			if (collider != null) {
+				if (collider == paddle) {
+					vy = -vy;
+					if (xball <= paddle.getX() + paddle.getHeight())
+						vx = -vx;
+					if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
+						vx = -vx;
+
+				} 
 			}
 
-			if (oval.getY() <= 0) {
-				dy = -dy;
-			}
-
-			if (oval.getX() <= 0) {
-				dx = -dx;
-			}
 		}
 	}
 
@@ -140,8 +186,8 @@ public class Practice extends GraphicsProgram {
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
 			for (int bricksNumber = 0; bricksNumber < NBRICKS_PER_ROW; bricksNumber++) {
-				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP / 2) * bricksNumber,
-						startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
+				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP / 2) * bricksNumber, startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);					
+				counter++;
 				rect.setFilled(false);
 				add(rect);
 				if (rowNumber < 2) {
@@ -181,8 +227,10 @@ public class Practice extends GraphicsProgram {
 			}
 		}
 	}
-
 	
+	private static GObject oval;
+	private static int counter = 0;
+	private GLabel lost = new GLabel("You Lost");
 	private static GObject collider;
 	private static int xball;
 	private static int yball;
