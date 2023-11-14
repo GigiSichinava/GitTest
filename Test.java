@@ -21,7 +21,7 @@ public class Test extends GraphicsProgram {
 	}
 
 	public void mousePressed(MouseEvent e){
-			addBrush(e.getX() + R, e.getY() + R);
+			addBrush(e.getX() + R/2, e.getY() + R/2);
 	}
 	
 	
