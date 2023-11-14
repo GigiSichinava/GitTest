@@ -25,6 +25,6 @@ public class problem46 extends GraphicsProgram{
 	
 	@Override
 	public void mouseClicked(MouseEvent e){
-		
+		add(circle, e.getX() - R, e.getY() - R);
 	}
 }
