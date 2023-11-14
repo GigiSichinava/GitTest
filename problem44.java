@@ -12,6 +12,7 @@ public class problem44 extends GraphicsProgram{
 	@Override
 	public void mousePressed(MouseEvent e){
 		line = new GLine (e.getX(), e.getY(), e.getX(), e.getY());
+		add(line);
 	}
 	
 }
