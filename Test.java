@@ -20,7 +20,7 @@ public class Test extends GraphicsProgram {
 		add(brush, x , y);
 	}
 
-	public void mousePressed(MouseEvent e){
-		
-	}
+//	public void mousePressed(MouseEvent e){
+//		
+//	}
 }
