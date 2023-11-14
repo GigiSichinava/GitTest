@@ -11,7 +11,7 @@ public class problem42 extends GraphicsProgram {
 	private RandomGenerator rgen =  RandomGenerator.getInstance();
 	
 	GOval oval = new GOval (D, D);
-	private static final int vx = 0;
+	private static final int vx = 5;
 	private static final int vy = 5;
 	
 	public void run() {
@@ -20,13 +20,12 @@ public class problem42 extends GraphicsProgram {
 	}
 
 	private void createBall() {
-		pause(10);
 		int x = rgen.nextInt(0, getWidth() - D / 2);
 		int y = rgen.nextInt(0, getHeight() - D / 2);
 		oval.setFilled(true);
 		Color color = rgen.nextColor();
 		oval.setColor(color);
-		
+		add(oval, x, y);
 		
 	}
 
