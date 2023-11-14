@@ -27,6 +27,7 @@ public class problem43 extends GraphicsProgram {
 	
 	private void addBrush(int centerX, int centerY){
 		GOval brush = new GOval (R, R);
+		brush.setFilled(true);
 		int x = centerX- R;
 		int y = centerY - R;
 		add(brush, x,y);
