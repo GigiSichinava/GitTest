@@ -6,15 +6,13 @@ import acm.program.GraphicsProgram;
 
 public class problem45 extends GraphicsProgram {
 
-	private GObject  lastPressed;
+	GOval oval;
 	private static final int D = 50;
 	private int prevX;
 	private int prevY;
 
-	
-	
 	public void run() {
-		GOval oval = new GOval (D, D);
+		oval = new GOval(D, D);
 		oval.setFilled(true);
 		add(oval, getWidth() / 2 - D / 2, getHeight() / 2 - D / 2);
 		addMouseListeners();
@@ -29,13 +27,13 @@ public class problem45 extends GraphicsProgram {
 	}
 
 	public void mouseDragged(MouseEvent e) {
-		GObject lastPressed = getElementAt(e.getX(), e.getY());
-		if (lastPressed != null) {
+		GObject obj = getElementAt(e.getX(), e.getY());
+		if (obj != null) {
 			
 			//move object
-			lastPressed.move(e.getX() - prevX, e.getY() - prevY);
+			obj.move(e.getX() - prevX, e.getY() - prevY);
 			
-			//updated info
+			//updated values 
 			prevX = e.getX();
 			prevY = e.getY();
 		}
