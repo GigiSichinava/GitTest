@@ -14,24 +14,22 @@ public class problem43 extends GraphicsProgram {
 
 	@Override
 	public void mouseDragged(MouseEvent e) {
-		GOval brush = new GOval (R, R);
+		GOval brush = new GOval(R, R);
 		brush.setFilled(true);
 		int x = e.getX() - R;
-		int y = e.getY()- R;
-		add(brush, x , y);
-
+		int y = e.getY() - R;
+		add(brush, x, y);
 	}
 
-	public void mousePressed(MouseEvent e){
-			addBrush(e.getX() + R/2, e.getY() + R/2);
+	public void mousePressed(MouseEvent e) {
+		addBrush(e.getX() + R / 2, e.getY() + R / 2);
 	}
-	
-	
-	private void addBrush(int centerX, int centerY){
-		GOval brush = new GOval (R, R);
+
+	private void addBrush(int centerX, int centerY) {
+		GOval brush = new GOval(R, R);
 		brush.setFilled(true);
-		int x = centerX- R;
+		int x = centerX - R;
 		int y = centerY - R;
-		add(brush, x,y);
+		add(brush, x, y);
 	}
 }
