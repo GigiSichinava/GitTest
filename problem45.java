@@ -29,7 +29,7 @@ public class problem45 extends GraphicsProgram {
 	}
 
 	public void mouseDragged(MouseEvent e) {
-		GObject obj = getElementAt(e.getX(), e.getY());
+		GObject lastPressed = getElementAt(e.getX(), e.getY());
 		if (lastPressed != null) {
 			
 			//move object
