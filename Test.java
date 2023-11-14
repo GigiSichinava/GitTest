@@ -21,6 +21,14 @@ public class Test extends GraphicsProgram {
 	}
 
 	public void mousePressed(MouseEvent e){
-		
+			addBrush(e.getX(), e.getY());
+	}
+	
+	
+	private void addBrush(int centerX, int centerY){
+		GOval brush = new GOval (R, R);
+		int x = centerX- R;
+		int y = centerY - R;
+		add(brush, x,y);
 	}
 }
