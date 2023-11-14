@@ -11,6 +11,9 @@ public class problem42 extends GraphicsProgram {
 	private RandomGenerator rgen =  RandomGenerator.getInstance();
 	
 	GOval oval = new GOval (D, D);
+	private static final int vx = 0;
+	private static final int vy = 5;
+	
 	public void run() {
 		addMouseListeners();
 		createBall();
@@ -23,6 +26,8 @@ public class problem42 extends GraphicsProgram {
 		Color color = rgen.nextColor();
 		oval.setColor(color);
 		add(oval, x, y);
+		oval.move(vx, vy);
+		pause(10);
 	}
 
 	public void mouseClicked (MouseEvent e){
