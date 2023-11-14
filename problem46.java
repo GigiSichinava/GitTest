@@ -6,7 +6,7 @@ import acm.program.GraphicsProgram;
 
 public class problem46 extends GraphicsProgram {
 
-	private static final int V_Y = 10;
+	private static final int V_Y = 5;
 	private GObject circle;
 	private static final int R = 50;
 
