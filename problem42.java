@@ -26,8 +26,7 @@ public class problem42 extends GraphicsProgram {
 		oval.setFilled(true);
 		Color color = rgen.nextColor();
 		oval.setColor(color);
-		add(oval, x, y);
-		oval.move(vx, vy);
+		
 		
 	}
 
