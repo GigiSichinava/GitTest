@@ -12,8 +12,9 @@ public class problem45 extends GraphicsProgram {
 	private int prevY;
 
 	
-	GOval oval = new GOval (D, D);
+	
 	public void run() {
+		GOval oval = new GOval (D, D);
 		oval.setFilled(true);
 		add(oval, getWidth() / 2 - D / 2, getHeight() / 2 - D / 2);
 		addMouseListeners();
