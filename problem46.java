@@ -19,7 +19,7 @@ public class problem46 extends GraphicsProgram {
 
 		while (true) {
 			circle.move(0, V_Y);
-			pause(10);
+			pause(100);
 		}
 
 	}
