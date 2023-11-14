@@ -6,7 +6,7 @@ import acm.program.GraphicsProgram;
 
 public class problem46 extends GraphicsProgram {
 
-	private static final int V_Y = 5;
+	private static final int V_Y = 10;
 	private GObject circle;
 	private static final int R = 50;
 
@@ -19,7 +19,7 @@ public class problem46 extends GraphicsProgram {
 
 		while (true) {
 			circle.move(0, V_Y);
-			pause(100);
+			pause(10);
 		}
 
 	}
