@@ -5,7 +5,7 @@ import acm.program.GraphicsProgram;
 
 public class Test extends GraphicsProgram {
 
-	private static final int R = 20;
+	private static final int R = 10;
 
 	public void run() {
 
@@ -18,7 +18,9 @@ public class Test extends GraphicsProgram {
 		int x = e.getX() - R;
 		int y = e.getY()- R;
 		add(brush, x , y);
-		
 	}
 
+	public void mousePressed(MouseEvent e){
+		
+	}
 }
