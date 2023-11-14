@@ -15,4 +15,7 @@ public class problem44 extends GraphicsProgram{
 		add(line);
 	}
 	
+	public void mouseDragged (MouseEvent e){
+		line.setEndPoint(e.getX(), e.getY());
+	}
 }
