@@ -10,11 +10,7 @@ public class problem46 extends GraphicsProgram {
 	private GObject circle;
 	private static final int R = 50;
 
-	
 	public void run() {
-		
-		int V_Y = 10;
-		
 		circle = new GOval(R, R);
 		((GOval) circle).setFilled(true);
 		add(circle);
@@ -24,8 +20,7 @@ public class problem46 extends GraphicsProgram {
 		while (true) {
 			circle.move(0, V_Y);
 			pause(10);
-			if (circle.getY() - R >= getHeight()){
-			V_Y = -V_Y;
+			if (circle.getY() - R >= getHeight()) {
 			}
 		}
 
