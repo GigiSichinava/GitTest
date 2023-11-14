@@ -10,13 +10,14 @@ public class problem45 extends GraphicsProgram{
 	
 	public void run(){
 		oval = new GOval (D, D);	
+		oval.setFilled(true);
+		add(oval, getWidth()/2 - D/2, getHeight()/2 - D/2);
 		addMouseListeners();
 	}
 
 	
 	public void mousePressed(MouseEvent e){
-		oval.setFilled(true);
-		add(oval, getWidth()/2 - D/2, getHeight()/2 - D/2);
+		
 	}
 
 	public void mouseDragged(MouseEvent e){
