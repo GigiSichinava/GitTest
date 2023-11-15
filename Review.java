@@ -11,21 +11,17 @@ public class Review extends GraphicsProgram {
 
 	public void run() {
 		addMouseListeners();
-		
 
-	
 		GOval oval = new GOval(R * 2, R * 2);
 		oval.setFilled(true);
-	
-
-	
+		add(oval);
 		
 		int vx = 0;
 		int vy = 5;
 
 		while (true) {
 			pause(PAUSE);
-			oval.move(vx,vy);
+			oval.move(vx, vy);
 			if (oval.getY() >= getHeight()) {
 				vy = -vy;
 			}
