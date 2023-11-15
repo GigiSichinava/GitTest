@@ -17,6 +17,8 @@ public class Review extends GraphicsProgram {
 
 	private void addBall() {
 		addMouseListeners();
+		GOval oval = new GOval(R * 2, R * 2);
+		oval.setFilled(true);
 	}
 
 	private void moveBall() {
@@ -29,8 +31,6 @@ public class Review extends GraphicsProgram {
 	}
 	
 	public void MouseClicked(MouseEvent e){
-		GOval oval = new GOval(R * 2, R * 2);
-		oval.setFilled(true);
 		add(oval, e.getX() - R, e.getY() - R);
 	}
 	
