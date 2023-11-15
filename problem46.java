@@ -20,7 +20,7 @@ public class problem46 extends GraphicsProgram {
 		while (true) {
 			circle.move(0, V_Y);
 			pause(10);
-			if (circle.getY() <= getHeight() - 2 * R) {
+			if (circle.getY() >= getHeight() - 2 * R) {
 				v = -v;
 			}
 		}
