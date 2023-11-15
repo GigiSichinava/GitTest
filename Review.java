@@ -5,26 +5,29 @@ import acm.program.GraphicsProgram;
 
 public class Review extends GraphicsProgram {
 
+	
 	private static final int R = 5;
 	private GOval oval;
-	
+
 	public void run() {
 
-		addMouseListeners();
-
+		addBall();
+		moveBall();
 	}
-	
-	public void mouseClicked(MouseEvent e){
-		GOval oval = new GOval (2 * R, 2 * R);
+
+
+	private void addBall() {
+		GOval oval = new GOval(R * 2, R * 2);
 		oval.setFilled(true);
-		add(oval, e.getX() - R, e.getY() - R);
+		add(oval);
 	}
 
-	public void mouseDragged(MouseEvent e){
-		GOval oval = new GOval (2 * R, 2 * R);
-		oval.setFilled(true);
-		add(oval, e.getX() - R, e.getY() - R);
+	private void moveBall() {
+		int vx = 0;
+		int vy = 5;
+		oval.move(vx,vy);
+		if(oval.getY() >= getHeight()){
+			vy = vy;
+		}
 	}
-
 }
-
