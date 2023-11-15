@@ -5,6 +5,8 @@ import acm.program.GraphicsProgram;
 
 public class Review extends GraphicsProgram {
 
+	private static final int R = 10;
+	
 	public void run() {
 
 		addMouseListeners();
@@ -12,7 +14,7 @@ public class Review extends GraphicsProgram {
 	}
 	
 	public void mouseClicked(MouseEvent e){
-		GOval oval = new GOval (10,10);
-		add(oval, e.getX(), e.getY());
+		GOval oval = new GOval (2 * R,2 * R);
+		add(oval, e.getX() - R, e.getY() - R);
 	}
 }
