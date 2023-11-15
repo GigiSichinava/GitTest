@@ -5,22 +5,23 @@ import acm.program.GraphicsProgram;
 
 public class Review extends GraphicsProgram {
 
+	private static final int PAUSE = 100;
 	private static final int R = 5;
 	private GOval oval;
 
 	public void run() {
+		addMouseListeners();
 		addBall();
 		moveBall();
 	}
 
 	private void addBall() {
-		addMouseListeners();
 		GOval oval = new GOval(R * 2, R * 2);
 		oval.setFilled(true);
 	}
 
 	private void moveBall() {
-		pause(10);
+		pause(PAUSE);
 		int vx = 0;
 		int vy = 5;
 
