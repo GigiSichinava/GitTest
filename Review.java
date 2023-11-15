@@ -13,9 +13,15 @@ public class Review extends GraphicsProgram {
 
 	}
 	
-	public void mouseMoved(MouseEvent e){
+	public void mousePressed(MouseEvent e){
 		GOval oval = new GOval (2 * R, 2 * R);
 		oval.setFilled(true);
 		add(oval, e.getX() - R, e.getY() - R);
 	}
+
+	public void mouseDragged(MouseEvent e){
+		
+	}
+
 }
+
