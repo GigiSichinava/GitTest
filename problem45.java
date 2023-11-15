@@ -18,24 +18,24 @@ public class problem45 extends GraphicsProgram {
 		addMouseListeners();
 	}
 
-	public void mousePressed(MouseEvent e) {
+//	public void mousePressed(MouseEvent e) {
+//		GObject obj = getElementAt(e.getX(), e.getY());
+//		if (obj != null) {
+//			prevX = e.getX();
+//			prevY = e.getY();
+//		}
+//	}
+
+	public void mouseDragged(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
 		if (obj != null) {
+			
+			//move object
+			obj.move(e.getX() - prevX, e.getY() - prevY);
+			
+			//updated values 
 			prevX = e.getX();
 			prevY = e.getY();
 		}
 	}
-//
-//	public void mouseDragged(MouseEvent e) {
-//		GObject obj = getElementAt(e.getX(), e.getY());
-//		if (obj != null) {
-//			
-//			//move object
-//			obj.move(e.getX() - prevX, e.getY() - prevY);
-//			
-//			//updated values 
-//			prevX = e.getX();
-//			prevY = e.getY();
-//		}
-	}
-//}
+}
