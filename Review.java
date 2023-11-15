@@ -12,10 +12,9 @@ public class Review extends GraphicsProgram {
 	public void run() {
 		addMouseListeners();
 
-	while(true){	
 		oval = new GOval(R * 2, R * 2);
 		oval.setFilled(true);
-		
+
 		int vx = 0;
 		int vy = 5;
 
@@ -25,16 +24,15 @@ public class Review extends GraphicsProgram {
 			if (oval.getY() + 2 * R >= getHeight()) {
 				vy = -vy;
 			}
-			if(oval.getY() <= 0){
+			if (oval.getY() <= 0) {
 				vy = -vy;
 			}
-			
+
 		}
 	}
 
-	
-	}
 	public void mouseClicked(MouseEvent e) {
 		add(oval, e.getX() - R, e.getY() - R);
 	}
+
 }
