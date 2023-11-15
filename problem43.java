@@ -22,7 +22,7 @@ public class problem43 extends GraphicsProgram {
 	}
 
 	public void mousePressed(MouseEvent e) {
-		addBrush(e.getX() + R / 2, e.getY() + R / 2);
+		addBrush(e.getX() - R / 2, e.getY() - R / 2);
 	}
 
 	private void addBrush(int centerX, int centerY) {
