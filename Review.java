@@ -5,7 +5,7 @@ import acm.program.GraphicsProgram;
 
 public class Review extends GraphicsProgram {
 
-	private static final int R = 10;
+	private static final int R = 5;
 	private GOval oval;
 	
 	public void run() {
