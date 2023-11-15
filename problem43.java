@@ -19,9 +19,9 @@ public class problem43 extends GraphicsProgram {
 		add(brush, e.getX() - R / 2, e.getY() - R / 2);
 	}
 
-	public void mousePressed(MouseEvent e) {
-		addBrush(e.getX() + R / 2, e.getY() + R / 2);
-	}
+//	public void mousePressed(MouseEvent e) {
+//		addBrush(e.getX() + R / 2, e.getY() + R / 2);
+//	}
 
 	private void addBrush(int centerX, int centerY) {
 		GOval brush = new GOval(R, R);
