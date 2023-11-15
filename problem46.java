@@ -11,7 +11,7 @@ public class problem46 extends GraphicsProgram {
 	private static final int R = 50;
 
 	public void run() {
-		GOval circle = new GOval(R, R);
+		circle = new GOval(R, R);
 		((GOval) circle).setFilled(true);
 		add(circle);
 
@@ -21,7 +21,7 @@ public class problem46 extends GraphicsProgram {
 			
 			circle.move(0, V_Y);
 			pause(10);
-			if (circle.getY() + R >= getHeight()) {
+			if (circle.getY() >= getHeight() - 2*R) {
 				v =-v;
 			}
 		}
