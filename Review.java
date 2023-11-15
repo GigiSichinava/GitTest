@@ -10,16 +10,13 @@ public class Review extends GraphicsProgram {
 	private GOval oval;
 
 	public void run() {
-
 		addBall();
 		moveBall();
 	}
 
 
 	private void addBall() {
-		GOval oval = new GOval(R * 2, R * 2);
-		oval.setFilled(true);
-		add(oval);
+		addMouseListeners();
 	}
 
 	private void moveBall() {
@@ -27,7 +24,14 @@ public class Review extends GraphicsProgram {
 		int vy = 5;
 		oval.move(vx,vy);
 		if(oval.getY() >= getHeight()){
-			vy = vy;
+		vy = -vy;
 		}
 	}
+	
+	public void MouseClicked(MouseEvent e){
+		GOval oval = new GOval(R * 2, R * 2);
+		oval.setFilled(true);
+		add(oval, e.getX() - R, e.getY() - R);
+	}
+	
 }
