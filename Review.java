@@ -5,8 +5,8 @@ import acm.program.GraphicsProgram;
 
 public class Review extends GraphicsProgram {
 
-	private static final int PAUSE = 100;
-	private static final int R = 5;
+	private static final int PAUSE = 10;
+	private static final int R = 50;
 	private GOval oval;
 
 	public void run() {
