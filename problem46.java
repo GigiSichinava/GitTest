@@ -16,10 +16,10 @@ public class problem46 extends GraphicsProgram {
 		add(circle);
 
 		addMouseListeners();
-
+		int v = V_Y;
 		while (true) {
-			int v = 10;
-			circle.move(0, 10);
+			
+			circle.move(0, V_Y);
 			pause(10);
 			if (circle.getY() + R >= getHeight()) {
 				v =-v;
