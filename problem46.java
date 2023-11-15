@@ -11,18 +11,17 @@ public class problem46 extends GraphicsProgram {
 	private static final int R = 50;
 
 	public void run() {
+		addMouseListeners();
+		
 		circle = new GOval(R, R);
 		((GOval) circle).setFilled(true);
 		add(circle);
-
-		addMouseListeners();
 		int v = V_Y;
 		while (true) {
-			
 			circle.move(0, V_Y);
 			pause(10);
-			if (circle.getY() >= getHeight() - 2*R) {
-				v =-v;
+			if (circle.getY() >= getHeight() - 2 * R) {
+				v = -v;
 			}
 		}
 
