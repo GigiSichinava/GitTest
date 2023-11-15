@@ -6,6 +6,7 @@ import acm.program.GraphicsProgram;
 public class Review extends GraphicsProgram {
 
 	private static final int R = 10;
+	private GOval oval;
 	
 	public void run() {
 
@@ -20,6 +21,7 @@ public class Review extends GraphicsProgram {
 	}
 
 	public void mouseDragged(MouseEvent e){
+		add(oval, e.getX() - R, e.getY() - R);
 		
 	}
 
