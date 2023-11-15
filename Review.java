@@ -25,6 +25,7 @@ public class Review extends GraphicsProgram {
 			if (oval.getY() + 2 * R >= getHeight()) {
 				vy = -vy;
 			}
+			vy = vy;
 		}
 	}
 
