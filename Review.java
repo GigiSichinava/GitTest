@@ -28,7 +28,7 @@ public class Review extends GraphicsProgram {
 		}
 	}
 
-	public void MouseClicked(MouseEvent e) {
+	public void mouseClicked(MouseEvent e) {
 		add(oval, e.getX() - R, e.getY() - R);
 	}
 
