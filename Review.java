@@ -25,7 +25,7 @@ public class Review extends GraphicsProgram {
 		int vx = 0;
 		int vy = 5;
 
-		while (oval.getY() + 2 * R <= getHeight()) {
+		while (true) {
 			pause(PAUSE);
 			oval.move(vx,vy);
 			if (oval.getY() >= getHeight()) {
