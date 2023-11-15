@@ -21,11 +21,12 @@ public class Review extends GraphicsProgram {
 	}
 
 	private void moveBall() {
-		pause(PAUSE);
+		
 		int vx = 0;
 		int vy = 5;
 
 		while (oval.getY() + 2 * R <= getHeight()) {
+			pause(PAUSE);
 			oval.move(vx,vy);
 			if (oval.getY() >= getHeight()) {
 				vy = -vy;
