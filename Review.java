@@ -14,7 +14,6 @@ public class Review extends GraphicsProgram {
 
 		oval = new GOval(R * 2, R * 2);
 		oval.setFilled(true);
-		add(oval);
 		
 		int vx = 0;
 		int vy = 5;
