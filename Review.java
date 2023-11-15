@@ -22,7 +22,7 @@ public class Review extends GraphicsProgram {
 		while (true) {
 			pause(PAUSE);
 			oval.move(vx, vy);
-			if (oval.getY() + 2 * R >= getHeight()) {
+			if (oval.getY() + 2 * R >= getHeight() && oval.getY() <= getHeight()) {
 				vy = -vy;
 			}
 			
