@@ -67,8 +67,8 @@ public class Test extends GraphicsProgram {
 	GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 	private static int xball;
 	private static int yball;
-	private double vx;
-	private double vy;
+	private double vx = rgen.nextDouble(1.0, 3.0);
+	private double vy = 3.0;
 	GLabel lost = new GLabel("You Lost");
 
 	/* Method: run() */
@@ -149,7 +149,7 @@ public class Test extends GraphicsProgram {
 		while (counter > 0) {
 			xball += vx;
 			yball += vy;
-			ball.move(vx,  vy);
+			ball.move(vx, vy);
 			pause(10);
 
 			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
