@@ -70,6 +70,8 @@ public class Test extends GraphicsProgram {
 	private double vx = rgen.nextDouble(1.0, 3.0);
 	private double vy = 3.0;
 	GLabel lost = new GLabel("You Lost");
+	private GLabel won = new GLabel("You won");
+	private static GObject collider;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -136,7 +138,7 @@ public class Test extends GraphicsProgram {
 		}
 	}
 
-	// add ball
+	// add ball and its movement
 	private void addBall() {
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
@@ -144,7 +146,7 @@ public class Test extends GraphicsProgram {
 		yball = APPLICATION_HEIGHT / 2;
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
-			vy = 3.0;
+		vy = 3.0;
 
 		while (counter > 0) {
 			xball += vx;
@@ -155,11 +157,11 @@ public class Test extends GraphicsProgram {
 			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
 				vx = -vx;
 			}
-			
+
 			if (xball <= 0) {
 				vx = -vx;
 			}
-			
+
 			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
 				xball = APPLICATION_WIDTH / 2;
 				remove(ball);
@@ -167,14 +169,45 @@ public class Test extends GraphicsProgram {
 				lost.setColor(Color.red);
 				add(lost);
 			}
-			
-			if (yball < BALL_RADIUS){
+
+			if (yball < BALL_RADIUS) {
 				vy = -vy;
 			}
-			
-			
 
+			ball.setLocation(xball - BALL_RADIUS, yball - BALL_RADIUS);
+			collider = getCollidingObject();
+			if (collider != null) {
+				if (collider == paddle) {
+					vy = -vy;
+					if (xball <= paddle.getX() + paddle.getHeight())
+						vx = -vx;
+					if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
+						vx = -vx;
+				} else {
+					vy = -vy;
+					counter--;
+					remove(collider);
+
+				}
+			}
 		}
+		if (counter == 0) {
+			won.setLocation((APPLICATION_WIDTH / 2) - (won.getWidth() / 2), APPLICATION_HEIGHT / 2);
+			won.setColor(Color.green);
+			add(won);
+		}
+	}
+
+	// check 4 corners around balls rectangle
+	private GObject getCollidingObject() {
+		collider = getElementAt(xball - BALL_RADIUS, yball - BALL_RADIUS);
+		if (collider == null)
+			collider = getElementAt(xball - BALL_RADIUS, yball + BALL_RADIUS);
+		if (collider == null)
+			collider = getElementAt(xball + BALL_RADIUS, yball + BALL_RADIUS);
+		if (collider == null)
+			collider = getElementAt(xball + BALL_RADIUS, yball - BALL_RADIUS);
+		return collider;
 	}
 
 }
