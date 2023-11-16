@@ -4,7 +4,7 @@ import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
-public class problem46 extends GraphicsProgram {
+public class Problem46 extends GraphicsProgram {
 
 	private static final int V_Y = 10;
 	private GObject circle;
