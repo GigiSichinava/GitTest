@@ -118,15 +118,14 @@ public class Test extends GraphicsProgram {
 		paddle.setFilled(true);
 		add(paddle);
 	}
+
 	public void mouseMoved(MouseEvent e) {
 		double X = e.getX();
 		if (X >= PADDLE_WIDTH / 2) {
 			if (X <= APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
-				paddle.setLocation(X - PADDLE_WIDTH / 2,
-						APPLICATION_HEIGHT - PADDLE_Y_OFFSET);
+				paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
 			}
 		}
 	}
-
 
 }
