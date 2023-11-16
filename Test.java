@@ -64,12 +64,12 @@ public class Test extends GraphicsProgram {
 	private double startingY = BRICK_Y_OFFSET;
 	private static int counter = 0;
 	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
-	GOval oval = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
+	GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 	private static int xball;
 	private static int yball;
 	private double vx;
 	private double vy;
-	
+	GLabel lost = new GLabel("You Lost");
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
@@ -141,19 +141,29 @@ public class Test extends GraphicsProgram {
 		yball = APPLICATION_HEIGHT / 2;
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
-			vy = 3.0;
+		vy = 3.0;
 
 		while (counter > 0) {
 			xball += vx;
 			yball += vy;
 			pause(10);
 
-			if (xball >= APPLICATION_WIDTH - BALL_RADIUS){
+			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
 				vx = -vx;
 			}
-			if(xball <)
+			if (xball < BALL_RADIUS / 20) {
+				vx = -vx;
+			}
+			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
+				xball = APPLICATION_WIDTH / 2;
+				remove(ball);
+				lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
+				lost.setColor(Color.red);
+				add(lost);
+			}
+			
+
 		}
 	}
-	
-	
+
 }
