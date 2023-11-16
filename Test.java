@@ -43,6 +43,7 @@ public class Test extends GraphicsProgram {
 	private static final int BRICK_SEP = 4;
 
 	/** Width of a brick */
+	//** brick_width formula is changed from - 1 to + 3
 	private static final int BRICK_WIDTH = (WIDTH - (NBRICKS_PER_ROW + 3) * BRICK_SEP) / NBRICKS_PER_ROW;
 
 	/** Height of a brick */
