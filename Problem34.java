@@ -4,7 +4,7 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class problem34 extends GraphicsProgram {
+public class Problem34 extends GraphicsProgram {
 	private static final int MIN_RADIUS = 5;
 	private static final int MAX_RADIUS = 5;
 	private static final int NUM_CIRCLES = 10000;
