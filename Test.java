@@ -103,7 +103,7 @@ public class Test extends GraphicsProgram {
 					rect.setColor(Color.CYAN);
 				}
 			}
-//			startingY = startingY + BRICK_SEP;
+
 		}
 
 	}
