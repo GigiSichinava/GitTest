@@ -155,8 +155,8 @@ public class random extends GraphicsProgram {
 			vy = 3.0;
 
 		while (counter > 0) {
-//			xball += vx;
-//			yball += vy;
+			xball += vx;
+			yball += vy;
 			pause(10);
 			
 			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
