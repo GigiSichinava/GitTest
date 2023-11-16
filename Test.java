@@ -72,16 +72,15 @@ public class Test extends GraphicsProgram {
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 	}
 
-	double startingX = BRICK_SEP ;
+	double startingX = BRICK_SEP;
 	double startingY = BRICK_Y_OFFSET;
 
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
 			for (int bricksNumber = 0; bricksNumber < NBRICKS_PER_ROW; bricksNumber++) {
 				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP) * bricksNumber,
-						startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
+						startingY + (BRICK_HEIGHT + BRICK_SEP) * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
 				counter++;
-				rect.setFilled(false);
 				add(rect);
 				if (rowNumber < 2) {
 					rect.setFilled(true);
@@ -104,7 +103,7 @@ public class Test extends GraphicsProgram {
 					rect.setColor(Color.CYAN);
 				}
 			}
-			startingY = startingY + BRICK_SEP;
+//			startingY = startingY + BRICK_SEP;
 		}
 
 	}
