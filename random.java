@@ -20,7 +20,7 @@ import java.awt.font.*;
 public class random extends GraphicsProgram {
 
 	/** Width and height of application window in pixels */
-	public static final int APPLICATION_WIDTH = 430;
+	public static final int APPLICATION_WIDTH = 400;
 	public static final int APPLICATION_HEIGHT = 600;
 
 	/** Dimensions of game board (usually the same) */
@@ -102,8 +102,9 @@ public class random extends GraphicsProgram {
 		for (int i = 0; i < NBRICK_ROWS; i++) {
 
 			for (int j = 0; j < NBRICKS_PER_ROW; j++) {
-				GRect brick = new GRect(x + (double) (j * (BRICK_SEP + BRICK_WIDTH)), y + i * (BRICK_HEIGHT + BRICK_SEP), BRICK_WIDTH, BRICK_HEIGHT);
+				GRect brick = new GRect(x + (double) (j * (BRICK_SEP + BRICK_WIDTH)),y + i * (BRICK_HEIGHT + BRICK_SEP), BRICK_WIDTH, BRICK_HEIGHT);						
 				counter++;
+				
 				switch (i / 2) {
 
 				case 0:
