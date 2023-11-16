@@ -2,7 +2,7 @@
 import acm.program.ConsoleProgram;
 import acm.util.RandomGenerator;
 
-public class problem38 extends ConsoleProgram {
+public class Problem38 extends ConsoleProgram {
 	
 	
 	private RandomGenerator random;
