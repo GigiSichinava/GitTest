@@ -6,7 +6,7 @@ import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class problem40 extends GraphicsProgram {
+public class Problem40 extends GraphicsProgram {
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int PAUSE = 10;
