@@ -7,7 +7,8 @@ public class StingsPractice extends ConsoleProgram{
 		String str2 = "mari";
 		
 		
-		println("1, 2 " + str1);
+		println("1, 2 " + (str1 == str2) + " " +  str1.equals(str2));
+		
 		
 	}
 
