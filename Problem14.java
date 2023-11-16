@@ -5,7 +5,7 @@ import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
-public class problem14 extends GraphicsProgram {
+public class Problem14 extends GraphicsProgram {
 	
 	private static final double HEAD_LENGTH = 350;
 	private static final double EYE_MARGIN = 40;
