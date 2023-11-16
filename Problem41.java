@@ -4,7 +4,7 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class problem41 extends GraphicsProgram {
+public class Problem41 extends GraphicsProgram {
 
 	private final int PAUSE = 30;
 	private final int D = 100;
