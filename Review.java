@@ -1,38 +1,27 @@
-import java.awt.event.MouseEvent;
 
 import acm.graphics.GOval;
+import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
 
-public class Review extends GraphicsProgram {
+public class Review extends ConsoleProgram {
 
 	private static final int PAUSE = 10;
 	private static final int R = 50;
 	private GOval oval;
 
 	public void run() {
-		addMouseListeners();
-
-		oval = new GOval(R * 2, R * 2);
-		oval.setFilled(true);
-
-		int vx = 0;
-		int vy = 5;
-
-		while (true) {
-			pause(PAUSE);
-			oval.move(vx, vy);
-			if (oval.getY() + 2 * R >= getHeight()) {
-				vy = -vy;
+	
+		String text = readLine("Enter you text here");
+		String symbol = readLine("Enter your symbol");
+		
+		char x = symbol.charAt(0);
+		int occurance = 0;
+		
+		for(int i = 0; x < text.length(); i++){
+			if (text.charAt(i) == x) {
+				occurance++;
 			}
-			if (oval.getY() <= 0) {
-				vy = -vy;
-			}
-
 		}
-	}
-
-	public void mouseClicked(MouseEvent e) {
-		add(oval, e.getX() - R, e.getY() - R);
-	}
-
+			println(occurance);
+}
 }
