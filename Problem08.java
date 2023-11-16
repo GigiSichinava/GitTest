@@ -1,6 +1,6 @@
 import stanford.karel.*;
 
-public class problem08 extends Karel{
+public class Problem08 extends Karel{
 	public void run(){
 		int n=0;
 		int m=0;
