@@ -152,12 +152,14 @@ public class Test extends GraphicsProgram {
 			ball.move(vx, vy);
 			pause(10);
 
-			if (xball >= APPLICATION_WIDTH) {
+			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
 				vx = -vx;
 			}
+			
 			if (xball <= 0) {
 				vx = -vx;
 			}
+			
 			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
 				xball = APPLICATION_WIDTH / 2;
 				remove(ball);
@@ -165,6 +167,12 @@ public class Test extends GraphicsProgram {
 				lost.setColor(Color.red);
 				add(lost);
 			}
+			
+			if (yball < BALL_RADIUS){
+				vy = -vy;
+			}
+			
+			
 
 		}
 	}
