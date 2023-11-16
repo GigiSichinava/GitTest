@@ -78,7 +78,6 @@ public class Test extends GraphicsProgram {
 		addBricks();
 		addPaddle();
 		addBall();
-		ballMovement();
 	}
 
 	// applicationSize
@@ -145,30 +144,13 @@ public class Test extends GraphicsProgram {
 			vy = 3.0;
 
 		while (counter > 0) {
+			xball += vx;
+			yball += vy;
+			pause(10);
+
 			
-			oval.move(dx, dy);
-			pause(30);
-
-			if (oval.getY() >= getHeight() - BALL_RADIUS * 2) {
-				dy = -dy;
-			}
-
-			if (oval.getX() > getWidth() - BALL_RADIUS * 2) {
-				dx = -dx;
-			}
-
-			if (oval.getY() <= 0) {
-				dy = -dy;
-			}
-
-			if (oval.getX() <= 0) {
-				dx = -dx;
-			}
 		}
 	}
 	
-	private void ballMovement(){
-		
-		
-	}
+	
 }
