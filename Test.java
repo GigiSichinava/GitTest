@@ -70,6 +70,7 @@ public class Test extends GraphicsProgram {
 	private double vx;
 	private double vy;
 	GLabel lost = new GLabel("You Lost");
+
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
@@ -138,15 +139,17 @@ public class Test extends GraphicsProgram {
 	// add ball
 	private void addBall() {
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
-		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);		xball = APPLICATION_WIDTH / 2;
+		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
+		xball = APPLICATION_WIDTH / 2;
 		yball = APPLICATION_HEIGHT / 2;
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
-		vy = 3.0;
+			vy = 3.0;
 
 		while (counter > 0) {
 			xball += vx;
 			yball += vy;
+			ball.move(vx,  vy);
 			pause(10);
 
 			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
@@ -162,7 +165,6 @@ public class Test extends GraphicsProgram {
 				lost.setColor(Color.red);
 				add(lost);
 			}
-			
 
 		}
 	}
