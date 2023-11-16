@@ -98,11 +98,15 @@ public class random extends GraphicsProgram {
 	private void setupGame() {
 		double x = BRICK_SEP;
 		int y = BRICK_Y_OFFSET;
+		double startingX = BRICK_SEP / 2;
+		double startingY = BRICK_Y_OFFSET;
 
 		for (int i = 0; i < NBRICK_ROWS; i++) {
 
 			for (int j = 0; j < NBRICKS_PER_ROW; j++) {
-				GRect brick = new GRect(x + (double) (j * (BRICK_SEP + BRICK_WIDTH)), y + i * (BRICK_HEIGHT + BRICK_SEP), BRICK_WIDTH, BRICK_HEIGHT);
+//				GRect brick = new GRect(x + (double) (j * (BRICK_SEP + BRICK_WIDTH)), y + i * (BRICK_HEIGHT + BRICK_SEP), BRICK_WIDTH, BRICK_HEIGHT);
+				GRect brick = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP / 2) * j,
+						startingY + BRICK_HEIGHT * i, BRICK_WIDTH, BRICK_HEIGHT);
 				counter++;
 				switch (i / 2) {
 
