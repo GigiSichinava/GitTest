@@ -3,7 +3,7 @@ import java.awt.event.MouseEvent;
 import acm.graphics.GLine;
 import acm.program.GraphicsProgram;
 
-public class problem44 extends GraphicsProgram{
+public class Problem44 extends GraphicsProgram{
 	
 	private GLine line;
 	public void run(){
