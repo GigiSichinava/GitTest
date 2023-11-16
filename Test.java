@@ -146,7 +146,7 @@ public class Test extends GraphicsProgram {
 		yball = APPLICATION_HEIGHT / 2;
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
-		vy = 3.0;
+			vy = 3.0;
 
 		while (counter > 0) {
 			xball += vx;
