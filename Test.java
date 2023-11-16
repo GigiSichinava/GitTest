@@ -152,7 +152,7 @@ public class Test extends GraphicsProgram {
 			ball.move(vx, vy);
 			pause(10);
 
-			if (xball >= APPLICATION_WIDTH - BALL_RADIUS * 2) {
+			if (xball >= 100) {
 				vx = -vx;
 			}
 			if (xball <= 0) {
