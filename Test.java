@@ -155,7 +155,7 @@ public class Test extends GraphicsProgram {
 			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
 				vx = -vx;
 			}
-			if (xball <= 0) {
+			if (xball <= 1) {
 				vx = -vx;
 			}
 			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
