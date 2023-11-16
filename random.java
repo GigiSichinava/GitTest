@@ -150,7 +150,7 @@ public class random extends GraphicsProgram {
 		xball = APPLICATION_WIDTH / 2;
 		yball = APPLICATION_HEIGHT / 2;
 		vx = rgen.nextDouble(1.0, 3.0);
-		if (rgen.nextBoolean(0.5))
+		if (rgen.nextBoolean(0.5));
 			vx = -vx;
 			vy = 3.0;
 
