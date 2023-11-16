@@ -1,7 +1,7 @@
 import acm.graphics.GLine;
 import acm.program.GraphicsProgram;
 
-	public class problem13 extends GraphicsProgram {
+	public class Problem13 extends GraphicsProgram {
 		public void run(){
 		drawMidLine1();
 	
