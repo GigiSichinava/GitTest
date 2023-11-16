@@ -148,7 +148,10 @@ public class Test extends GraphicsProgram {
 			yball += vy;
 			pause(10);
 
-			
+			if (xball >= APPLICATION_WIDTH - BALL_RADIUS){
+				vx = -vx;
+			}
+			if(xball <)
 		}
 	}
 	
