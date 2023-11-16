@@ -137,6 +137,7 @@ public class Test extends GraphicsProgram {
 
 	// add ball
 	private void addBall() {
+		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		xball = APPLICATION_WIDTH / 2;
 		yball = APPLICATION_HEIGHT / 2;
 		if (rgen.nextBoolean(0.5))
