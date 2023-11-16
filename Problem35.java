@@ -1,7 +1,7 @@
 import acm.program.ConsoleProgram;
 import acm.util.RandomGenerator;
 
-public class problem35 extends ConsoleProgram {
+public class Problem35 extends ConsoleProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {
