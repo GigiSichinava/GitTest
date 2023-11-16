@@ -44,7 +44,7 @@ public class Test extends GraphicsProgram {
 
 	/** Width of a brick */
 	// ** brick_width formula is changed from - 1 to + 3
-	private static final int BRICK_WIDTH = (WIDTH - (NBRICKS_PER_ROW + 3) * BRICK_SEP) / NBRICKS_PER_ROW;
+	private static final int BRICK_WIDTH = (WIDTH - (NBRICKS_PER_ROW - 1) * BRICK_SEP) / NBRICKS_PER_ROW;
 
 	/** Height of a brick */
 	private static final int BRICK_HEIGHT = 8;
@@ -123,7 +123,7 @@ public class Test extends GraphicsProgram {
 		if (X >= PADDLE_WIDTH / 2) {
 			if (X <= APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
 				paddle.setLocation(X - PADDLE_WIDTH / 2,
-						APPLICATION_HEIGHT - 2 * PADDLE_Y_OFFSET);
+						APPLICATION_HEIGHT - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
 			}
 		}
 	}
