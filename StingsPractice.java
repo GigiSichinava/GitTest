@@ -3,8 +3,8 @@ import acm.program.ConsoleProgram;
 public class StingsPractice extends ConsoleProgram {
 	public void run() {
 
-		String text = readLine("txt");
-		String symbolText = readLine("Enter symbol");
+		String text = readLine("Enter your text here: "); 
+		String symbolText = readLine("Enter symbol you are searching for: ");
 
 		char symbol = symbolText.charAt(0);
 		
