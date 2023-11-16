@@ -1,6 +1,6 @@
 import acm.program.ConsoleProgram;
 
-public class problem23 extends ConsoleProgram {
+public class Problem23 extends ConsoleProgram {
 	public void run(){
 		int n = readInt ("Enter n: ");
 		int sum = calculateSum(n);		
