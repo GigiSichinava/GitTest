@@ -1,6 +1,6 @@
 import acm.program.ConsoleProgram;
 
-public class problem28 extends ConsoleProgram {
+public class Problem28 extends ConsoleProgram {
 
 	private static final int SENTINEL = -1;
 
