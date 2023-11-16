@@ -1,7 +1,7 @@
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
-public class problem22 extends GraphicsProgram{
+public class Problem22 extends GraphicsProgram{
 	
 	private static final int NUMBER_OF_ROWS = 8;
 	private static final int NUMBER_OF_COLUMNS = 8;
