@@ -3,7 +3,7 @@ import java.awt.event.MouseEvent;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
-public class problem43 extends GraphicsProgram {
+public class Problem43 extends GraphicsProgram {
 
 	private static final int R = 10;
 
