@@ -5,7 +5,7 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class problem42 extends GraphicsProgram {
+public class Problem42 extends GraphicsProgram {
 
 	private static final int D = 100;
 	private RandomGenerator rgen =  RandomGenerator.getInstance();
