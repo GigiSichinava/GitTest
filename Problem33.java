@@ -4,7 +4,7 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class problem33 extends GraphicsProgram{
+public class Problem33 extends GraphicsProgram{
 	
 	private RandomGenerator rg = RandomGenerator.getInstance();
 	
