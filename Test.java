@@ -43,7 +43,7 @@ public class Test extends GraphicsProgram {
 	private static final int BRICK_SEP = 4;
 
 	/** Width of a brick */
-	//** brick_width formula is changed from - 1 to + 3
+	// ** brick_width formula is changed from - 1 to + 3
 	private static final int BRICK_WIDTH = (WIDTH - (NBRICKS_PER_ROW + 3) * BRICK_SEP) / NBRICKS_PER_ROW;
 
 	/** Height of a brick */
@@ -62,14 +62,14 @@ public class Test extends GraphicsProgram {
 	private static int counter = 0;
 	private double startingX = BRICK_SEP;
 	private double startingY = BRICK_Y_OFFSET;
-	
-	
+	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
+
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
 		applicationSize();
 		addBricks();
-
+		addPaddle();
 	}
 
 	// applicationSize
@@ -77,7 +77,6 @@ public class Test extends GraphicsProgram {
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 	}
 
-	
 	// addBricks
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
@@ -107,9 +106,26 @@ public class Test extends GraphicsProgram {
 					rect.setColor(Color.CYAN);
 				}
 			}
-
 		}
-
 	}
+
+	// Add Paddle
+	private void addPaddle() {
+		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2;
+		int paddleY = getHeight() - PADDLE_Y_OFFSET;
+		paddle.setLocation(paddleX, paddleY);
+		paddle.setFilled(true);
+		add(paddle);
+	}
+	public void mouseMoved(MouseEvent e) {
+		double X = e.getX();
+		if (X >= PADDLE_WIDTH / 2) {
+			if (X < APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
+				paddle.setLocation(X - PADDLE_WIDTH / 2,
+						APPLICATION_HEIGHT - PADDLE_HEIGHT - (double) (2.4 * PADDLE_Y_OFFSET));
+			}
+		}
+	}
+
 
 }
