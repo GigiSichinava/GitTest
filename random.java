@@ -20,7 +20,7 @@ import java.awt.font.*;
 public class random extends GraphicsProgram {
 
 	/** Width and height of application window in pixels */
-	public static final int APPLICATION_WIDTH = 400;
+	public static final int APPLICATION_WIDTH = 430;
 	public static final int APPLICATION_HEIGHT = 600;
 
 	/** Dimensions of game board (usually the same) */
