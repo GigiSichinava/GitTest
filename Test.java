@@ -59,7 +59,10 @@ public class Test extends GraphicsProgram {
 
 	// **Privates that we made */
 	private static int counter = 0;
-
+	private double startingX = BRICK_SEP;
+	private double startingY = BRICK_Y_OFFSET;
+	
+	
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
@@ -68,13 +71,13 @@ public class Test extends GraphicsProgram {
 
 	}
 
+	// applicationSize
 	private void applicationSize() {
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 	}
 
-	double startingX = BRICK_SEP;
-	double startingY = BRICK_Y_OFFSET;
-
+	
+	// addBricks
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
 			for (int bricksNumber = 0; bricksNumber < NBRICKS_PER_ROW; bricksNumber++) {
