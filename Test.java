@@ -67,6 +67,7 @@ public class Test extends GraphicsProgram {
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
+		addMouseListeners();
 		applicationSize();
 		addBricks();
 		addPaddle();
