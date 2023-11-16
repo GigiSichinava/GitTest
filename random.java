@@ -99,13 +99,12 @@ public class random extends GraphicsProgram {
 		double x = BRICK_SEP;
 		int y = BRICK_Y_OFFSET;
 
-		for (int rowNum = 0; rowNum < NBRICK_ROWS; rowNum++) {
+		for (int i = 0; i < NBRICK_ROWS; i++) {
 
-			for (int bricksNum = 0; bricksNum < NBRICKS_PER_ROW; bricksNum++) {
-				GRect brick = new GRect(x + (double) (bricksNum * (BRICK_SEP + BRICK_WIDTH)),y + bricksNum * (BRICK_HEIGHT + BRICK_SEP), BRICK_WIDTH, BRICK_HEIGHT);						
+			for (int j = 0; j < NBRICKS_PER_ROW; j++) {
+				GRect brick = new GRect(x + (double) (j * (BRICK_SEP + BRICK_WIDTH)),y + i * (BRICK_HEIGHT + BRICK_SEP), BRICK_WIDTH, BRICK_HEIGHT);						
 				counter++;
-				
-				switch (bricksNum / 2) {
+				switch (i / 2) {
 
 				case 0:
 					brick.setColor(Color.RED);
