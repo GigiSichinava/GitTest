@@ -57,15 +57,56 @@ public class Test extends GraphicsProgram {
 	/** Number of turns */
 	private static final int NTURNS = 3;
 
+	// **Privates that we made */
+	private static int counter = 0;
+
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
 		applicationSize();
+		addBricks();
 
 	}
 
 	private void applicationSize() {
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+	}
+
+	double startingX = BRICK_SEP ;
+	double startingY = BRICK_Y_OFFSET;
+
+	private void addBricks() {
+		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
+			for (int bricksNumber = 0; bricksNumber < NBRICKS_PER_ROW; bricksNumber++) {
+				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP) * bricksNumber,
+						startingY + BRICK_HEIGHT * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
+				counter++;
+				rect.setFilled(false);
+				add(rect);
+				if (rowNumber < 2) {
+					rect.setFilled(true);
+					rect.setColor(Color.RED);
+				}
+				if (rowNumber < 4 && rowNumber > 1) {
+					rect.setFilled(true);
+					rect.setColor(Color.ORANGE);
+				}
+				if (rowNumber < 6 && rowNumber > 3) {
+					rect.setFilled(true);
+					rect.setColor(Color.YELLOW);
+				}
+				if (rowNumber < 8 && rowNumber > 5) {
+					rect.setFilled(true);
+					rect.setColor(Color.GREEN);
+				}
+				if (rowNumber < 10 && rowNumber > 7) {
+					rect.setFilled(true);
+					rect.setColor(Color.CYAN);
+				}
+			}
+			startingY = startingY + BRICK_SEP;
+		}
+
 	}
 
 }
