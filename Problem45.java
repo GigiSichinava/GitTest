@@ -4,7 +4,7 @@ import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
-public class problem45 extends GraphicsProgram {
+public class Problem45 extends GraphicsProgram {
 
 	GOval oval;
 	private static final int D = 50;
