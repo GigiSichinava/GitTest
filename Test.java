@@ -75,7 +75,7 @@ public class Test extends GraphicsProgram {
 
 	// applicationSize
 	private void applicationSize() {
-		setSize(WIDTH, HEIGHT);
+		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 	}
 
 	// addBricks
