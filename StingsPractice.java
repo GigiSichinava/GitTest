@@ -11,6 +11,8 @@ public class StingsPractice extends ConsoleProgram{
 		println("1, 3 " + (str1 == str3) + " " + str1.equals(str3));
 		
 		
+		
+		
 	}
 
 }
