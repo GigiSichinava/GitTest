@@ -5,7 +5,7 @@ import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
-public class problem12 extends GraphicsProgram{
+public class Problem12 extends GraphicsProgram{
 		public void run(){
 			body();
 			window1();
