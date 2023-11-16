@@ -44,7 +44,7 @@ public class Test extends GraphicsProgram {
 
 	/** Width of a brick */
 	// ** brick_width formula is changed from - 1 to + 3
-	private static final int BRICK_WIDTH = (WIDTH - (NBRICKS_PER_ROW + 3) * BRICK_SEP) / NBRICKS_PER_ROW;
+	private static final int BRICK_WIDTH = (WIDTH - (NBRICKS_PER_ROW - 1) * BRICK_SEP) / NBRICKS_PER_ROW;
 
 	/** Height of a brick */
 	private static final int BRICK_HEIGHT = 8;
@@ -59,11 +59,17 @@ public class Test extends GraphicsProgram {
 	private static final int NTURNS = 3;
 
 	// **Privates that we made */
-	private static int counter = 0;
+	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private double startingX = BRICK_SEP;
 	private double startingY = BRICK_Y_OFFSET;
+	private static int counter = 0;
 	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
-
+	GOval oval = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
+	private static int xball;
+	private static int yball;
+	private double vx;
+	private double vy;
+	
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
@@ -71,6 +77,8 @@ public class Test extends GraphicsProgram {
 		applicationSize();
 		addBricks();
 		addPaddle();
+		addBall();
+		ballMovement();
 	}
 
 	// applicationSize
@@ -128,4 +136,39 @@ public class Test extends GraphicsProgram {
 		}
 	}
 
+	// add ball
+	private void addBall() {
+		xball = APPLICATION_WIDTH / 2;
+		yball = APPLICATION_HEIGHT / 2;
+		if (rgen.nextBoolean(0.5))
+			vx = -vx;
+			vy = 3.0;
+
+		while (counter > 0) {
+			
+			oval.move(dx, dy);
+			pause(30);
+
+			if (oval.getY() >= getHeight() - BALL_RADIUS * 2) {
+				dy = -dy;
+			}
+
+			if (oval.getX() > getWidth() - BALL_RADIUS * 2) {
+				dx = -dx;
+			}
+
+			if (oval.getY() <= 0) {
+				dy = -dy;
+			}
+
+			if (oval.getX() <= 0) {
+				dx = -dx;
+			}
+		}
+	}
+	
+	private void ballMovement(){
+		
+		
+	}
 }
