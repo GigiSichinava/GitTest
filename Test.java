@@ -75,7 +75,7 @@ public class Test extends GraphicsProgram {
 
 	// applicationSize
 	private void applicationSize() {
-		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+		setSize(WIDTH, HEIGHT);
 	}
 
 	// addBricks
@@ -123,7 +123,7 @@ public class Test extends GraphicsProgram {
 		if (X >= PADDLE_WIDTH / 2) {
 			if (X <= APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
 				paddle.setLocation(X - PADDLE_WIDTH / 2,
-						APPLICATION_HEIGHT - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
+						APPLICATION_HEIGHT - PADDLE_Y_OFFSET);
 			}
 		}
 	}
