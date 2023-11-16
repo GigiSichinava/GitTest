@@ -1,6 +1,6 @@
 import acm.program.ConsoleProgram;
 
-public class problem31 extends ConsoleProgram{
+public class Rroblem31 extends ConsoleProgram{
 	
 	private static final int MAX_NUM = 1000; 
 	public void run(){
