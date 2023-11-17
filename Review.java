@@ -2,22 +2,29 @@
 import acm.graphics.GOval;
 import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
+import javafx.scene.input.MouseEvent;
 
-public class Review extends ConsoleProgram {
+public class Review extends GraphicsProgram {
 
-	public void run() {
-
-		String text = readLine("Enter your text here: ");
-		String symbol = readLine("Symbol you are looking for: ");
-
-		char x = text.charAt(0);
-		int numberOfOccurances = 0;
-		
-		for(int i = 0; i < text.length(); i++ ){
-			if(text.charAt(i) == x){
-				numberOfOccurances++;
-			}
-		}
-		println(numberOfOccurances);
+	private static final int R = 20;
+	GOval oval = new GOval (R, R);
+	
+	public void run(){
+		addMouseListeners();
+		GOval oval = new GOval (R, R);
+		oval.setFilled(true);
+		add(oval);		
 	}
+
+	public void mouseDragged(MouseEvent e){
+		if(getElementAt(e.getX(), e.getY() == oval){
+		oval.setLocation(e.getX() - x, e.getY() - y)	
+		}
+		
+	}
+	
+	public void mousePressed(MouseEvent e){
+		
+	}
+	
 }

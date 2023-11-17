@@ -3,6 +3,10 @@ import acm.program.ConsoleProgram;
 public class StingsPractice extends ConsoleProgram {
 	public void run() {
 
+		countSymbols();
+	}
+
+	private void countSymbols() {
 		String text = readLine("Enter your text here: ");
 		String symbolText = readLine("Enter symbol you are searching for: ");
 
