@@ -71,7 +71,7 @@ public class Test extends GraphicsProgram {
 	GLabel lost = new GLabel("You Lost");
 	private GLabel won = new GLabel("You won");
 	private static GObject collider;
-
+	
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
