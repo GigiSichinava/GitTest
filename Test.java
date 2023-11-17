@@ -77,16 +77,16 @@ public class Test extends GraphicsProgram {
 	/** Runs the Breakout program. */
 	public void run() {
 		addMouseListeners();
-		applicationSize();
+//		applicationSize();
 		addBricks();
 		addPaddle();
 		addBall();
 	}
 
 	// applicationSize
-	private void applicationSize() {
-		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-	}
+//	private void applicationSize() {
+//		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+//	}
 
 	// addBricks
 	private void addBricks() {
