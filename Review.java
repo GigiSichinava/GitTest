@@ -5,23 +5,19 @@ import acm.program.GraphicsProgram;
 
 public class Review extends ConsoleProgram {
 
-	private static final int PAUSE = 10;
-	private static final int R = 50;
-	private GOval oval;
-
 	public void run() {
-	
-		String text = readLine("Enter you text here");
-		String symbol = readLine("Enter your symbol");
+
+		String text = readLine("Enter your text here: ");
+		String symbol = readLine("Symbol you are looking for ");
+
+		char x = text.charAt(0);
+		int numberOfOccurances = 0;
 		
-		char x = symbol.charAt(0);
-		int occurance = 0;
-		
-		for(int i = 0; x < text.length(); i++){
-			if (text.charAt(i) == x) {
-				occurance++;
+		for(int i = 0; i < text.length(); i++ ){
+			if(text.charAt(i) == x){
+				numberOfOccurances++;
 			}
 		}
-			println(occurance);
-}
+		println(numberOfOccurances);
+	}
 }
