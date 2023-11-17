@@ -1,6 +1,6 @@
 import stanford.karel.*;
 
-public class assigment1n4 extends SuperKarel {
+public class Assigment1n4 extends SuperKarel {
 	public void run(){
 		fillRow();
 		findCentre();
