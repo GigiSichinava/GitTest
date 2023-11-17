@@ -2,7 +2,7 @@
 
 import stanford.karel.Karel;
 
-public class problem0009 extends Karel {
+public class Problem0009 extends Karel {
 	public void run() {
 		move();
 		while (beepersPresent()) {
