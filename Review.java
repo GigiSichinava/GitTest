@@ -3,7 +3,7 @@ import acm.program.ConsoleProgram;
 public class Review extends ConsoleProgram {
 	private int countCharacters(String string, char c) {
 		int count = 0;
-		for (int i = 0; i < string.charAt(i); i++) {
+		for (int i = 0; i < string.length(); i++) {
 			if (string.charAt(i) == c) {
 				count++;
 			}
