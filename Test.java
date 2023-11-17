@@ -43,7 +43,6 @@ public class Test extends GraphicsProgram {
 	private static final int BRICK_SEP = 4;
 
 	/** Width of a brick */
-	// ** brick_width formula is changed from - 1 to + 3
 	private static final int BRICK_WIDTH = (WIDTH - (NBRICKS_PER_ROW - 1) * BRICK_SEP) / NBRICKS_PER_ROW;
 
 	/** Height of a brick */
@@ -77,16 +76,11 @@ public class Test extends GraphicsProgram {
 	/** Runs the Breakout program. */
 	public void run() {
 		addMouseListeners();
-//		applicationSize();
+
 		addBricks();
 		addPaddle();
 		addBall();
 	}
-
-	// applicationSize
-//	private void applicationSize() {
-//		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-//	}
 
 	// addBricks
 	private void addBricks() {
