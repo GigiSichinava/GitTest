@@ -17,7 +17,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.font.*;
 
-public class random extends GraphicsProgram {
+public class Random extends GraphicsProgram {
 
 	/** Width and height of application window in pixels */
 	public static final int APPLICATION_WIDTH = 400;
