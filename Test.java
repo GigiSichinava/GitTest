@@ -164,6 +164,13 @@ public class Test extends GraphicsProgram {
 				lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
 				lost.setColor(Color.red);
 				add(lost);
+				for( int i = 0; i < NTURNS; i++){
+//					ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
+					if (rgen.nextBoolean(0.5))
+						vx = -vx;
+					vy = 3.0;
+					add(ball);
+				}
 			}
 
 			if (yball < BALL_RADIUS) {
