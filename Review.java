@@ -12,7 +12,7 @@ public class Review extends ConsoleProgram {
 	}
 
 	public void run() {
-		String text = readLine("Enter your text here ");
+		String text = readLine("Enter your text here: ");
 		int maxCount = 0;
 		char maxCharcater = 0;
 		for (char c = 'a'; c <= 'z'; c++) {
