@@ -1,6 +1,6 @@
 import stanford.karel.SuperKarel;
 
-public class assigment1n3 extends SuperKarel {
+public class Assigment1n3 extends SuperKarel {
 	public void run(){
 	
 		//firstly, use if conditional to prevent maps with only one column, even 1x1 map
