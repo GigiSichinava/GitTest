@@ -76,7 +76,6 @@ public class Test extends GraphicsProgram {
 	/** Runs the Breakout program. */
 	public void run() {
 		addMouseListeners();
-
 		addBricks();
 		addPaddle();
 		addBall();
@@ -86,9 +85,8 @@ public class Test extends GraphicsProgram {
 	private void addBricks() {
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
 			for (int bricksNumber = 0; bricksNumber < NBRICKS_PER_ROW; bricksNumber++) {
-				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP) * bricksNumber,
+				GRect rect = new GRect(startingX / 2 + (BRICK_WIDTH + BRICK_SEP) * bricksNumber,
 						startingY + (BRICK_HEIGHT + BRICK_SEP) * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
-
 				counter++;
 				add(rect);
 				if (rowNumber < 2) {
