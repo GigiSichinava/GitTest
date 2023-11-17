@@ -8,7 +8,7 @@ public class Review extends ConsoleProgram {
 	public void run() {
 
 		String text = readLine("Enter your text here: ");
-		String symbol = readLine("Symbol you are looking for ");
+		String symbol = readLine("Symbol you are looking for: ");
 
 		char x = text.charAt(0);
 		int numberOfOccurances = 0;
