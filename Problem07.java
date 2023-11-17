@@ -1,6 +1,6 @@
 import stanford.karel.*;
 
-public class problem07 extends SuperKarel{
+public class Problem07 extends SuperKarel{
 	public void run(){
 		while(frontIsClear()){
 		Fill();
