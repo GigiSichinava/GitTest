@@ -119,6 +119,7 @@ public class Test extends GraphicsProgram {
 		int paddleY = getHeight() - PADDLE_Y_OFFSET;
 		paddle.setLocation(paddleX, paddleY);
 		paddle.setFilled(true);
+		paddle.setColor(rgen.nextColor());
 		add(paddle);
 	}
 
