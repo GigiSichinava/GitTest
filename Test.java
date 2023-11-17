@@ -94,6 +94,7 @@ public class Test extends GraphicsProgram {
 			for (int bricksNumber = 0; bricksNumber < NBRICKS_PER_ROW; bricksNumber++) {
 				GRect rect = new GRect(startingX + (BRICK_WIDTH + BRICK_SEP) * bricksNumber,
 						startingY + (BRICK_HEIGHT + BRICK_SEP) * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
+
 				counter++;
 				add(rect);
 				if (rowNumber < 2) {
@@ -146,7 +147,7 @@ public class Test extends GraphicsProgram {
 		yball = APPLICATION_HEIGHT / 2;
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
-			vy = 3.0;
+		vy = 3.0;
 
 		while (counter > 0) {
 			xball += vx;
