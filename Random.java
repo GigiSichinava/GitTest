@@ -71,7 +71,6 @@ public class Random extends GraphicsProgram {
 	private static int yball;
 
 	public void run() {
-		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 		setupGame();
 		paddle = new GRect(0, APPLICATION_HEIGHT - 3 * PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
