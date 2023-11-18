@@ -168,6 +168,7 @@ public class Test extends GraphicsProgram {
 					lost.setColor(Color.red);
 					add(lost);
 				} else {
+					add(ball);
 					resetGame();
 				}
 			}
