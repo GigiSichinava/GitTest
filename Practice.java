@@ -71,10 +71,7 @@ public class Practice extends GraphicsProgram {
 		// getCollindingObject();
 	}
 
-	// Application Size
-		private void applicationSize() {
-			setSize(WIDTH, HEIGHT);
-		}
+	
 	
 	
 //	private GObject getCollidingObject() {
