@@ -156,7 +156,7 @@ public class Test extends GraphicsProgram {
 				vx = -vx;
 			}
 
-			if (xball <= BALL_RADIUS / 20) {
+			if (xball <= BALL_RADIUS / 200) {
 				vx = -vx;
 			}
 
@@ -207,21 +207,21 @@ public class Test extends GraphicsProgram {
 
 	// check 4 corners around balls rectangle
 	private GObject getCollidingObject() {
-		collider = getElementAt(xball - BALL_RADIUS, yball - BALL_RADIUS);
+			collider = getElementAt(xball - BALL_RADIUS, yball - BALL_RADIUS);
 		if (collider == null)
 			collider = getElementAt(xball - BALL_RADIUS, yball + BALL_RADIUS);
 		if (collider == null)
 			collider = getElementAt(xball + BALL_RADIUS, yball + BALL_RADIUS);
 		if (collider == null)
 			collider = getElementAt(xball + BALL_RADIUS, yball - BALL_RADIUS);
-		if (collider == null)
-			collider = getElementAt(xball - BALL_RADIUS, ball.getY());
-		if (collider == null)
-			collider = getElementAt(xball + BALL_RADIUS, ball.getY());
-		if (collider == null)	
-			collider = getElementAt(ball.getX(), yball + BALL_RADIUS);
-		if (collider == null)
-			collider = getElementAt(ball.getX(), yball - BALL_RADIUS);
+//		if (collider == null)
+//			collider = getElementAt(xball - BALL_RADIUS, ball.getY());
+//		if (collider == null)
+//			collider = getElementAt(xball + BALL_RADIUS, ball.getY());
+//		if (collider == null)	
+//			collider = getElementAt(ball.getX(), yball + BALL_RADIUS);
+//		if (collider == null)
+//			collider = getElementAt(ball.getX(), yball - BALL_RADIUS);
 		return collider;
 	}
 
