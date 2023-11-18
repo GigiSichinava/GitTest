@@ -64,7 +64,6 @@ public class Practice extends GraphicsProgram {
 
 	public void run() {
 		addMouseListeners();
-		applicationSize();
 		addBricks();
 		addPaddle();
 		addBall();
