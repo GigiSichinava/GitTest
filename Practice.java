@@ -59,7 +59,7 @@ public class Practice extends GraphicsProgram {
 
 	
 	private static int counter = 0;
-	
+	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {
@@ -124,7 +124,6 @@ public class Practice extends GraphicsProgram {
 	}
 
 	//  Add Paddle
-	GRect paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
 	private void addPaddle() {
 		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2;
 		int paddleY = getHeight() - PADDLE_Y_OFFSET;
@@ -135,6 +134,7 @@ public class Practice extends GraphicsProgram {
 	
 	// mouseMoved 
 	public void mouseMoved(MouseEvent e) {
+		double x = e.getX();
 		paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);	
 	}
 	
