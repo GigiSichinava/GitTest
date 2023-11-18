@@ -1,5 +1,5 @@
 import acm.graphics.GOval;
-import acm.program.ConsoleProgram;
+//import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
