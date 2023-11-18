@@ -6,9 +6,12 @@ import acm.util.RandomGenerator;
 public class Review extends GraphicsProgram {
 	
 	private static final int R = 50;
+	private int width = getWidth();
+	private int height = getHeight();
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private int randomX = rgen.nextInt(R, 300);
-	private int randomY = rgen.nextInt(R, getWidth());
+	private int randomX = rgen.nextInt(R, height);
+	private int randomY = rgen.nextInt(R, width);
+	
 	
 	public void run() {
 		
