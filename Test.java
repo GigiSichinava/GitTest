@@ -168,12 +168,7 @@ public class Test extends GraphicsProgram {
 					lost.setColor(Color.red);
 					add(lost);
 				} else {
-					ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
-					ball.setFilled(true);
-					ball.setColor(rgen.nextColor());
-					add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
-					xball = WIDTH / 2;
-					yball = HEIGHT / 2;
+					resetGame();
 				}
 			}
 
@@ -214,6 +209,15 @@ public class Test extends GraphicsProgram {
 //			vx = -vx;
 //			vy = 3.0;
 //	}
+
+	private void resetGame() {
+		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
+		ball.setFilled(true);
+		ball.setColor(rgen.nextColor());
+		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
+		xball = WIDTH / 2;
+		yball = HEIGHT / 2;
+	}
 
 	// check 4 corners around balls rectangle
 	private GObject getCollidingObject() {
