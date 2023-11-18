@@ -156,7 +156,7 @@ public class Test extends GraphicsProgram {
 				vx = -vx;
 			}
 
-			if (xball <= BALL_RADIUS) {
+			if (xball <= BALL_RADIUS / ) {
 				vx = -vx;
 			}
 
@@ -214,6 +214,14 @@ public class Test extends GraphicsProgram {
 			collider = getElementAt(xball + BALL_RADIUS, yball + BALL_RADIUS);
 		if (collider == null)
 			collider = getElementAt(xball + BALL_RADIUS, yball - BALL_RADIUS);
+		if (collider == null)
+			collider = getElementAt(xball - BALL_RADIUS, yball);
+		if (collider == null)
+			collider = getElementAt(xball + BALL_RADIUS, yball);
+		if (collider == null)	
+			collider = getElementAt(xball, yball + BALL_RADIUS);
+		if (collider == null)
+			collider = getElementAt(xball, yball - BALL_RADIUS);
 		return collider;
 	}
 
