@@ -154,7 +154,7 @@ public class Test extends GraphicsProgram {
 				vx = -vx;
 			}
 
-			if (xball < BALL_RADIUS ) {
+			if (xball < 0) {
 				vx = -vx;
 			}
 
