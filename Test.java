@@ -215,9 +215,9 @@ public class Test extends GraphicsProgram {
 		if (collider == null)
 			collider = getElementAt(xball + BALL_RADIUS, yball - BALL_RADIUS);
 		if (collider == null)
-			collider = getElementAt(xball - BALL_RADIUS + 0.7, yball + BALL_RADIUS * 0.7); 
-		if (collider == null)
-			collider = getElementAt(xball + BALL_RADIUS, yball);
+			collider = getElementAt(xball - BALL_RADIUS + 0.7, ball.getY()); 
+//		if (collider == null)
+//			collider = getElementAt(xball + BALL_RADIUS, yball);
 //		if (collider == null)	
 //			collider = getElementAt(xball, yball + BALL_RADIUS);
 //		if (collider == null)
