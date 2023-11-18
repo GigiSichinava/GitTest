@@ -142,7 +142,7 @@ public class Test extends GraphicsProgram {
 		yball = APPLICATION_HEIGHT / 2;
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
-		vy = 3.0;
+			vy = 3.0;
 
 		while (counter > 0) {
 			xball += vx;
@@ -154,7 +154,7 @@ public class Test extends GraphicsProgram {
 				vx = -vx;
 			}
 
-			if (xball <= BALL_RADIUS) {
+			if (xball < BALL_RADIUS) {
 				vx = -vx;
 			}
 
