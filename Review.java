@@ -1,6 +1,7 @@
 import acm.program.ConsoleProgram;
+import acm.program.GraphicsProgram;
 
-public class Review extends ConsoleProgram {
+public class Review extends GraphicsProgram {
 	private int countCharacters(String string, char c) {
 		int count = 0;
 		for (int i = 0; i < string.length(); i++) {
