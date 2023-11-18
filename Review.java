@@ -13,6 +13,6 @@ public class Review extends GraphicsProgram {
 	public void run() {
 		
 		GOval oval = new GOval(R, R);		
-		add(oval, 250 * 4 - R, 250 - R);
+		add(oval, 250 * 3 - R, 250 - R);
 	}
 }
