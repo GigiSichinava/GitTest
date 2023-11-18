@@ -180,11 +180,11 @@ public class Test extends GraphicsProgram {
 			collider = getCollidingObject();
 			if (collider != null) {
 				if (collider == paddle) {
-					vy = -vy;
-					if (xball < paddle.getX() + paddle.getHeight())
-						vx = -vx;
-					if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
-						vx = -vx;
+//					vy = -vy;
+//					if (xball <= paddle.getX() + paddle.getHeight())
+//						vx = -vx;
+//					if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
+//						vx = -vx;
 				} else {
 					vy = -vy;
 					counter--;
