@@ -168,7 +168,7 @@ public class Test extends GraphicsProgram {
 					lost.setColor(Color.red);
 					add(lost);
 				} else {
-					ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
+//					ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 					ball.setFilled(true);
 					ball.setColor(rgen.nextColor());
 					add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
