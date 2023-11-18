@@ -185,6 +185,7 @@ public class Random extends GraphicsProgram {
 					vy = -vy;
 					if (xball <= paddle.getX() + paddle.getHeight())
 						vx = -vx;
+				}
 					if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
 						vx = -vx;
 
@@ -195,7 +196,7 @@ public class Random extends GraphicsProgram {
 					remove(collider);
 				}
 			}
-		}
+		
 		
 		if (counter == 0) {
 			won.setLocation((APPLICATION_WIDTH / 2) - (won.getWidth() / 2), APPLICATION_HEIGHT / 2);
