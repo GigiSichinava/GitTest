@@ -181,9 +181,9 @@ public class Test extends GraphicsProgram {
 			if (collider != null) {
 				if (collider == paddle) {
 					vy = -vy;
-					if (xball <= paddle.getX() + (paddle.getWidth() * 0.25) + paddle.getHeight())
+					if (xball <= paddle.getX() + (paddle.getWidth() * 0.1) + paddle.getHeight())
 						vx = -vx;
-					if (xball >= paddle.getX() + (paddle.getWidth() * 0.75) + paddle.getHeight())
+					if (xball >= paddle.getX() + (paddle.getWidth() * 0.9) + paddle.getHeight())
 						vx = -vx;
 				} else {
 					vy = -vy;
