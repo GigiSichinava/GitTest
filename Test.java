@@ -209,13 +209,13 @@ public class Test extends GraphicsProgram {
 	private GObject getCollidingObject() {
 		collider = getElementAt(xball - BALL_RADIUS, yball - BALL_RADIUS);
 		if (collider == null)
-			collider = getElementAt(xball - BALL_RADIUS, yball + BALL_RADIUS);
+			collider = getElementAt(xball - BALL_RADIUS, yball );
 		if (collider == null)
 			collider = getElementAt(xball + BALL_RADIUS, yball + BALL_RADIUS);
 		if (collider == null)
 			collider = getElementAt(xball + BALL_RADIUS, yball - BALL_RADIUS);
 		if (collider == null)
-			collider = getElementAt(xball - BALL_RADIUS, yball);
+			collider = getElementAt(xball - BALL_RADIUS, ball.getY());
 		if (collider == null)
 			collider = getElementAt(xball + BALL_RADIUS, ball.getY());
 		if (collider == null)	
