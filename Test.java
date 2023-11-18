@@ -156,7 +156,7 @@ public class Test extends GraphicsProgram {
 				vx = -vx;
 			}
 
-			if (xball < BALL_RADIUS) {
+			if (xball <= BALL_RADIUS) {
 				vx = -vx;
 			}
 
@@ -181,7 +181,7 @@ public class Test extends GraphicsProgram {
 			if (collider != null) {
 				if (collider == paddle) {
 					vy = -vy;
-					if (xball <= paddle.getX() - paddle.getHeight())
+					if (xball <= paddle.getX() + paddle.getHeight())
 						vx = -vx;
 					if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
 						vx = -vx;
