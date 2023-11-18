@@ -162,7 +162,7 @@ public class Test extends GraphicsProgram {
 
 			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
 				attempts--;
-				xball = APPLICATION_WIDTH / 2;
+//				xball = APPLICATION_WIDTH / 2;
 				
 				if(attempts <= 0){
 					remove(ball);
