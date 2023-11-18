@@ -1,28 +1,18 @@
+import acm.graphics.GOval;
 import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
 public class Review extends GraphicsProgram {
-	private int countCharacters(String string, char c) {
-		int count = 0;
-		for (int i = 0; i < string.length(); i++) {
-			if (string.charAt(i) == c) {
-				count++;
-			}
-		}
-		return count;
-	}
-
+	
+	private static final int R = 50;
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+	private int randomX = rgen.nextInt(0, getWidth());
+	private int randomY = rgen.nextInt(0, getHeight());
+	
 	public void run() {
-		String text = readLine("Enter your text here: ");
-		int maxCount = 0;
-		char maxCharcater = 0;
-		for (char c = 'a'; c <= 'z'; c++) {
-			int count = countCharacters(text, c);
-			if (count > maxCount) {
-				maxCount = count;
-				maxCharcater = c;
-			}
-		}
-		println(maxCharcater);
+		
+		GOval oval = new GOval(R, R);		
+		add(oval, randomX - R, randomY - R);
 	}
 }
