@@ -135,15 +135,15 @@ public class Test extends GraphicsProgram {
 
 	// add ball and its movement
 	private void addBall() {
-		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
-		ball.setFilled(true);
-		ball.setColor(rgen.nextColor());
-		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
-		xball = WIDTH / 2;
-		yball = HEIGHT / 2;
-		if (rgen.nextBoolean(0.5))
-			vx = -vx;
-			vy = 3.0;
+//		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
+//		ball.setFilled(true);
+//		ball.setColor(rgen.nextColor());
+//		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
+//		xball = WIDTH / 2;
+//		yball = HEIGHT / 2;
+//		if (rgen.nextBoolean(0.5))
+//			vx = -vx;
+//			vy = 3.0;
 
 		while (counter > 0) {
 			//update ball positions
