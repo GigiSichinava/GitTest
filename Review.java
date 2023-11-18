@@ -7,8 +7,8 @@ public class Review extends GraphicsProgram {
 	
 	private static final int R = 50;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private int randomX = rgen.nextInt(0, getWidth());
-	private int randomY = rgen.nextInt(0, getHeight());
+	private int randomX = rgen.nextInt(R, getWidth());
+	private int randomY = rgen.nextInt(R, getHeight());
 	
 	public void run() {
 		
