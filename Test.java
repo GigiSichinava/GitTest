@@ -161,9 +161,7 @@ public class Test extends GraphicsProgram {
 			}
 
 			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
-				attempts--;
-//				xball = APPLICATION_WIDTH / 2;
-				
+				attempts--;				
 				if(attempts <= 0){
 					remove(ball);
 					lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
