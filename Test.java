@@ -145,8 +145,8 @@ public class Test extends GraphicsProgram {
 			vy = 3.0;
 
 		while (counter > 0) {
-			xball += vx;
-			yball += vy;
+//			xball += vx;
+//			yball += vy;
 			ball.move(vx, vy);
 			pause(10);
 
