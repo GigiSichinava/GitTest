@@ -185,6 +185,7 @@ public class Test extends GraphicsProgram {
 //						vx = -vx;
 //					if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
 //						vx = -vx;
+					vx = -vx;
 				} else {
 					vy = -vy;
 					counter--;
