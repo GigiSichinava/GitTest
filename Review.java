@@ -6,16 +6,13 @@ import acm.util.RandomGenerator;
 public class Review extends GraphicsProgram {
 	
 	private static final int R = 50;
-	private int width = getWidth();
-	private int height = getHeight();
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private int randomX = rgen.nextInt(R, height);
-	private int randomY = rgen.nextInt(R, width);
+	
 	
 	
 	public void run() {
 		
 		GOval oval = new GOval(R, R);		
-		add(oval, randomX - R, randomY - R);
+		add(oval, 250 - R, 250 - R);
 	}
 }
