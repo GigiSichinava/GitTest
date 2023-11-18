@@ -186,10 +186,10 @@ public class Test extends GraphicsProgram {
 //					}
 //					if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
 //						vx = -vx;
-//				} else {
-//					vy = -vy;
-//					counter--;
-//					remove(collider);
+				} else {
+					vy = -vy;
+					counter--;
+					remove(collider);
 
 				}
 			}
