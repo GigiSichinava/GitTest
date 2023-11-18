@@ -172,7 +172,7 @@ public class Test extends GraphicsProgram {
 
 			ball.setLocation(xball - BALL_RADIUS, yball - BALL_RADIUS);
 			collider = getCollidingObject();
-			if (collider != null) {
+//			if (collider != null) {
 				if (collider == paddle) {
 					vy = -vy;
 					if (xball <= paddle.getX() + paddle.getHeight())
@@ -186,7 +186,7 @@ public class Test extends GraphicsProgram {
 
 				}
 			}
-		}
+//		}
 		if (counter == 0) {
 			won.setLocation((APPLICATION_WIDTH / 2) - (won.getWidth() / 2), APPLICATION_HEIGHT / 2);
 			won.setColor(Color.green);
