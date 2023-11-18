@@ -71,6 +71,7 @@ public class Test extends GraphicsProgram {
 	GLabel lost = new GLabel("You Lost");
 	private GLabel won = new GLabel("You won");
 	private static GObject collider;
+	private static int attempts = NTURNS;
 	
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -145,6 +146,7 @@ public class Test extends GraphicsProgram {
 			vy = 3.0;
 
 		while (counter > 0) {
+			//update ball positions
 			xball += vx;
 			yball += vy;
 			ball.move(vx, vy);
@@ -159,11 +161,17 @@ public class Test extends GraphicsProgram {
 			}
 
 			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
+				attempts--;
 				xball = APPLICATION_WIDTH / 2;
-				remove(ball);
-				lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
-				lost.setColor(Color.red);
-				add(lost);
+				
+				if(attempts <= 0){
+					remove(ball);
+					lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
+					lost.setColor(Color.red);
+					add(lost);
+				} else {
+					resetGame();
+				}
 			}
 
 			if (yball < BALL_RADIUS) {
@@ -192,6 +200,16 @@ public class Test extends GraphicsProgram {
 			won.setColor(Color.green);
 			add(won);
 		}
+	}
+
+	private void resetGame() {
+		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
+		ball.setFilled(true);
+		ball.setColor(rgen.nextColor());
+		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
+		if (rgen.nextBoolean(0.5))
+			vx = -vx;
+			vy = 3.0;
 	}
 
 	// check 4 corners around balls rectangle
