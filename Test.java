@@ -196,7 +196,6 @@ public class Test extends GraphicsProgram {
 			if (collider != null) {
 				// when touching object is paddle
 				if (collider == paddle) {
-					bounceClip.play();
 					vy = -vy;
 				if (xball <= paddle.getX() + paddle.getHeight())
 					vx = -vx;
