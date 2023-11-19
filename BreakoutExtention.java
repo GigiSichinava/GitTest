@@ -178,6 +178,7 @@ public class BreakoutExtention extends GraphicsProgram {
 			// and if ball passes through -1 attempt
 			if (ball.getY() >= APPLICATION_HEIGHT - BALL_RADIUS * 2) {
 				attempts--;
+				
 				// finish game after all used attempts
 				if (attempts <= 0) {
 					remove(ball);
@@ -189,12 +190,12 @@ public class BreakoutExtention extends GraphicsProgram {
 					// reset game after new attempt
 					resetGame();
 				}
-			}
-
-			// check top side
-			if (ball.getY() <= 0) {
+			} else if (ball.getY() <= 0) {
 				vy = -vy;
 			}
+
+			
+			
 
 			// check when ball touches the paddle
 			ball.setLocation(xball - BALL_RADIUS, yball - BALL_RADIUS);
