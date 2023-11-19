@@ -155,7 +155,6 @@ public class BreakoutExtention extends GraphicsProgram {
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
 
-
 		// define ball's movement
 		while (counter > 0) {
 			// update ball positions
@@ -167,18 +166,11 @@ public class BreakoutExtention extends GraphicsProgram {
 			// check right side
 			if (ball.getX() >= APPLICATION_WIDTH - BALL_RADIUS * 2) {
 				vx = -vx;
-			}
-
-			// check left side
-			if (ball.getX()  <= 0) {
+			} else if (ball.getX() <= 0) { // check left side
 				vx = -vx;
-			}
-
-			// check bottom side
-			// and if ball passes through -1 attempt
-			if (ball.getY() >= APPLICATION_HEIGHT - BALL_RADIUS * 2) {
+			} else if (ball.getY() >= APPLICATION_HEIGHT - BALL_RADIUS * 2) {
 				attempts--;
-				
+
 				// finish game after all used attempts
 				if (attempts <= 0) {
 					remove(ball);
@@ -190,12 +182,9 @@ public class BreakoutExtention extends GraphicsProgram {
 					// reset game after new attempt
 					resetGame();
 				}
-			} else if (ball.getY() <= 0) {
+			} else if (ball.getY() <= 0) { // check top side
 				vy = -vy;
 			}
-
-			
-			
 
 			// check when ball touches the paddle
 			ball.setLocation(xball - BALL_RADIUS, yball - BALL_RADIUS);
@@ -237,19 +226,19 @@ public class BreakoutExtention extends GraphicsProgram {
 	// check 4 corners around ball's rectangle
 	// remember objects in 'collider' with getElementAt method
 	private GObject getCollidingObject() {
-//		collider = getElementAt(ball.getX(), ball.getY());
-//		if (collider == null)
-//			collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
-//		if (collider == null)
-//			collider = getElementAt(ball.getY() + 2 * BALL_RADIUS, BALL_RADIUS);
-//		if (collider == null)
-//			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
-		
-		collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS); //1
+		// collider = getElementAt(ball.getX(), ball.getY());
+		// if (collider == null)
+		// collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
+		// if (collider == null)
+		// collider = getElementAt(ball.getY() + 2 * BALL_RADIUS, BALL_RADIUS);
+		// if (collider == null)
+		// collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
+
+		collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS); // 1
 		if (collider == null)
-			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1); //4
+			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1); // 4
 		if (collider == null)
-			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS); //3
+			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS); // 3
 		if (collider == null)
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1); // 2
 		return collider;
