@@ -156,6 +156,8 @@ public class Review extends GraphicsProgram {
 		// define ball's movement
 		while (counter > 0) {
 			// update ball positions
+			xball += vx;
+			yball += vy;
 			ball.move(vx, vy);
 			pause(10);
 
