@@ -164,7 +164,7 @@ public class Test extends GraphicsProgram {
 			}
 
 			// check left side	
-			if (xball <= BALL_RADIUS / 20) {
+			if (xball <= BALL_RADIUS) {
 				vx = -vx;
 			}
 
@@ -185,7 +185,7 @@ public class Test extends GraphicsProgram {
 			}
 			
 			// check top side
-			if (yball < BALL_RADIUS) {
+			if (yball <= BALL_RADIUS) {
 				vy = -vy;
 			}
 
@@ -200,10 +200,11 @@ public class Test extends GraphicsProgram {
 					vx = -vx;
 				if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
 					vx = -vx;
-
 				} else {
 					// when touching object is brick
 					vy = -vy;
+					// -1 brick in counter
+					// remove brick
 					counter--;
 					remove(collider);
 
