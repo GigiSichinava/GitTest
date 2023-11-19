@@ -93,22 +93,27 @@ public class Test extends GraphicsProgram {
 				add(rect);
 
 				// define colors of bricks
+				// paint 1 & 2 rows in red
 				if (rowNumber < 2) {
 					rect.setFilled(true);
 					rect.setColor(Color.RED);
 				}
+				// paint 3 & 4 rows in orange
 				if (rowNumber < 4 && rowNumber > 1) {
 					rect.setFilled(true);
 					rect.setColor(Color.ORANGE);
 				}
+				// paint 5 & 6 rows in yellow
 				if (rowNumber < 6 && rowNumber > 3) {
 					rect.setFilled(true);
 					rect.setColor(Color.YELLOW);
 				}
+				// paint 7 & 8 rows in green
 				if (rowNumber < 8 && rowNumber > 5) {
 					rect.setFilled(true);
 					rect.setColor(Color.GREEN);
 				}
+				// paint 9 & 10 rows in red
 				if (rowNumber < 10 && rowNumber > 7) {
 					rect.setFilled(true);
 					rect.setColor(Color.CYAN);
@@ -164,7 +169,7 @@ public class Test extends GraphicsProgram {
 			}
 
 			// check left side
-			// divide ball radius to prevent left side bug
+			// dividing ball radius to prevent left side bug
 			if (xball <= BALL_RADIUS / 20) {
 				vx = -vx;
 			}
@@ -176,6 +181,7 @@ public class Test extends GraphicsProgram {
 				// finish game after all used attempts
 				if (attempts <= 0) {
 					remove(ball);
+					// add text that says we have lost
 					lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
 					lost.setColor(Color.red);
 					add(lost);
@@ -216,6 +222,7 @@ public class Test extends GraphicsProgram {
 		}
 		// if all bricks are gone, we have won the game
 		if (counter == 0) {
+			// add text that says we have won
 			won.setLocation((APPLICATION_WIDTH / 2) - (won.getWidth() / 2), APPLICATION_HEIGHT / 2);
 			won.setColor(Color.green);
 			add(won);
