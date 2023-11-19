@@ -80,80 +80,7 @@ public class Review extends GraphicsProgram {
 		addBricks();
 		addPaddle();
 		addBall();
-		while (counter > 0) {
-			// update ball positions
-			xball += vx;
-			yball += vy;
-			ball.move(vx, vy);
-			pause(10);
-
-			// check right side
-			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
-				vx = -vx;
-			}
-
-			// check left side
-			if (xball <= BALL_RADIUS) {
-				vx = -vx;
-			}
-
-			// check bottom side
-			// and if ball passes through -1 attempt
-			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
-				attempts--;
-				// finish game after all used attempts
-				if (attempts <= 0) {
-					remove(ball);
-					// add text that says we have lost
-					lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
-					lost.setColor(Color.red);
-					add(lost);
-				} else {
-					// reset game after new attempt
-					resetGame();
-				}
-			}
-
-			// check top side
-			if (yball <= BALL_RADIUS) {
-				vy = -vy;
-			}
-
-			// check when ball touches the paddle
-			ball.setLocation(xball - BALL_RADIUS, yball - BALL_RADIUS);
-			collider = getCollidingObject();
-			if (collider != null) {
-				// when touching object is paddle
-				if (collider == paddle) {
-					vy = -vy;
-					// add new trajectories to ball
-					// if ball hits edges of the paddle, change 'vx' oppositely
-					// imagine that these are top corners of the paddle
-					if (xball <= paddle.getX() + (paddle.getWidth() * 0.2) + paddle.getHeight())
-						vx = -vx;
-					if (xball >= paddle.getX() + (paddle.getWidth() * 0.8) + paddle.getHeight())
-						vx = -vx;
-				} else {
-					// when touching object is brick
-					vy = -vy;
-					// -1 brick in counter
-					// remove brick
-					counter--;
-					remove(collider);
-
-				}
-			}
-
-			if (counter == 0) {
-				// add text that says we have won
-				won.setLocation((APPLICATION_WIDTH / 2) - (won.getWidth() / 2), APPLICATION_HEIGHT / 2);
-				won.setColor(Color.green);
-				add(won);
-			}
-		}
 	}
-
-	
 
 	// addBricks
 	private void addBricks() {
@@ -227,9 +154,71 @@ public class Review extends GraphicsProgram {
 		// randomly generate ball's starting direction
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
-	}
 
-	// define ball's movement
+
+		// define ball's movement
+		while (counter > 0) {
+			// update ball positions
+			xball += vx;
+			yball += vy;
+			ball.move(vx, vy);
+			pause(10);
+
+			// check right side
+			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
+				vx = -vx;
+			} else if (xball  <= BALL_RADIUS) {
+				vx = -vx;
+			} else if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
+				attempts--;
+				// finish game after all used attempts
+				if (attempts <= 0) {
+					remove(ball);
+					// add text that says we have lost
+					lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
+					lost.setColor(Color.red);
+					add(lost);
+				} else {
+					// reset game after new attempt
+					resetGame();
+				}
+			}
+
+			
+
+			
+
+			// check top side
+			if (yball <= BALL_RADIUS) {
+				vy = -vy;
+			}
+
+			// check when ball touches the paddle
+			ball.setLocation(xball - BALL_RADIUS, yball - BALL_RADIUS);
+			collider = getCollidingObject();
+			if (collider != null) {
+				// when touching object is paddle
+				if (collider == paddle) {
+					vy = -vy;
+				} else {
+					// when touching object is brick
+					vy = -vy;
+					// -1 brick in counter
+					// remove brick
+					counter--;
+					remove(collider);
+
+				}
+			}
+		}
+		// if all bricks are gone, we have won the game
+		if (counter == 0) {
+			// add text that says we have won
+			won.setLocation((APPLICATION_WIDTH / 2) - (won.getWidth() / 2), APPLICATION_HEIGHT / 2);
+			won.setColor(Color.green);
+			add(won);
+		}
+	}
 
 	// reset the game after ball passes a bottom border
 	private void resetGame() {
