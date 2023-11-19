@@ -161,8 +161,8 @@ public class BreakoutExtention extends GraphicsProgram {
 			// update ball positions
 //			xball += vx;
 //			yball += vy;
-//			ball.move(vx, vy);
-//			pause(10);
+			ball.move(vx, vy);
+			pause(10);
 
 			// check right side
 			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
