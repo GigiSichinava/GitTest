@@ -91,7 +91,7 @@ public class Test extends GraphicsProgram {
 						startingY + (BRICK_HEIGHT + BRICK_SEP) * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
 				counter++;
 				add(rect);
-				
+
 				// define colors of bricks
 				if (rowNumber < 2) {
 					rect.setFilled(true);
@@ -163,13 +163,13 @@ public class Test extends GraphicsProgram {
 				vx = -vx;
 			}
 
-			// check left side	
+			// check left side
 			// divide ball radius to prevent left side bug
 			if (xball <= BALL_RADIUS / 20) {
 				vx = -vx;
 			}
 
-			// check bottom side 
+			// check bottom side
 			// and if ball passes through -1 attempt
 			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
 				attempts--;
@@ -184,7 +184,7 @@ public class Test extends GraphicsProgram {
 					resetGame();
 				}
 			}
-			
+
 			// check top side
 			if (yball <= BALL_RADIUS / 20) {
 				vy = -vy;
@@ -197,6 +197,8 @@ public class Test extends GraphicsProgram {
 				// when touching object is paddle
 				if (collider == paddle) {
 					vy = -vy;
+					// add new trajectories to ball after different sides of
+					// paddle
 					if (xball <= paddle.getX() + paddle.getHeight())
 						vx = -vx;
 					if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
@@ -233,7 +235,7 @@ public class Test extends GraphicsProgram {
 	// check 4 corners around ball's rectangle
 	// remember objects in collider with getElementAt method
 	private GObject getCollidingObject() {
-			collider = getElementAt(xball - BALL_RADIUS, yball - BALL_RADIUS);
+		collider = getElementAt(xball - BALL_RADIUS, yball - BALL_RADIUS);
 		if (collider == null)
 			collider = getElementAt(xball - BALL_RADIUS, yball + BALL_RADIUS);
 		if (collider == null)
