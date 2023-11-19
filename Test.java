@@ -72,7 +72,6 @@ public class Test extends GraphicsProgram {
 	private GLabel won = new GLabel("You won");
 	private static GObject collider;
 	private static int attempts = NTURNS;
-	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 	
 	/* Method: run() */
 	/** Runs the Breakout program. */
