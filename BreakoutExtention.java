@@ -236,13 +236,13 @@ public class BreakoutExtention extends GraphicsProgram {
 	// check 4 corners around ball's rectangle
 	// remember objects in 'collider' with getElementAt method
 	private GObject getCollidingObject() {
-		collider = getElementAt(xball - BALL_RADIUS, yball - BALL_RADIUS);
+		collider = getElementAt(ball.getX(), ball.getY());
 		if (collider == null)
-			collider = getElementAt(xball - BALL_RADIUS, yball + BALL_RADIUS);
+			collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
 		if (collider == null)
-			collider = getElementAt(xball + BALL_RADIUS, yball + BALL_RADIUS);
+			collider = getElementAt(ball.getY() + 2 * BALL_RADIUS, BALL_RADIUS);
 		if (collider == null)
-			collider = getElementAt(xball + BALL_RADIUS, yball - BALL_RADIUS);
+			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
 		return collider;
 	}
 
