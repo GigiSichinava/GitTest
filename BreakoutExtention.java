@@ -205,7 +205,7 @@ public class BreakoutExtention extends GraphicsProgram {
 					vy = -vy;
 				} else {
 					// when touching object is brick
-					vy = -vy;
+//					vy = -vy;
 					// -1 brick in counter
 					// remove brick
 					counter--;
