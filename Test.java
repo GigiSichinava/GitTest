@@ -84,12 +84,15 @@ public class Test extends GraphicsProgram {
 
 	// addBricks
 	private void addBricks() {
+		// create rectangles and count their number in 'counter'
 		for (int rowNumber = 0; rowNumber < NBRICK_ROWS; rowNumber++) {
 			for (int bricksNumber = 0; bricksNumber < NBRICKS_PER_ROW; bricksNumber++) {
 				GRect rect = new GRect(startingX / 2 + (BRICK_WIDTH + BRICK_SEP) * bricksNumber,
 						startingY + (BRICK_HEIGHT + BRICK_SEP) * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
 				counter++;
 				add(rect);
+				
+				// define colors of bricks
 				if (rowNumber < 2) {
 					rect.setFilled(true);
 					rect.setColor(Color.RED);
@@ -114,7 +117,7 @@ public class Test extends GraphicsProgram {
 		}
 	}
 
-	// Add Paddle
+	// add Paddle
 	private void addPaddle() {
 		int paddleX = getWidth() / 2 - PADDLE_WIDTH / 2;
 		int paddleY = getHeight() - PADDLE_Y_OFFSET;
@@ -126,6 +129,7 @@ public class Test extends GraphicsProgram {
 
 	public void mouseMoved(MouseEvent e) {
 		double X = e.getX();
+		// make paddle to not cross right and left side of canvas
 		if (X >= PADDLE_WIDTH / 2) {
 			if (X <= APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
 				paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
@@ -135,6 +139,7 @@ public class Test extends GraphicsProgram {
 
 	// add ball and movement
 	private void addBall() {
+		// create ball
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
 		ball.setColor(rgen.nextColor());
@@ -145,6 +150,7 @@ public class Test extends GraphicsProgram {
 			vx = -vx;
 		vy = 3.0;
 
+		// define ball's movement
 		while (counter > 0) {
 			// update ball positions
 			xball += vx;
@@ -187,17 +193,24 @@ public class Test extends GraphicsProgram {
 			ball.setLocation(xball - BALL_RADIUS, yball - BALL_RADIUS);
 			collider = getCollidingObject();
 			if (collider != null) {
+				// when touching object is paddle
 				if (collider == paddle) {
 					vy = -vy;
-				} else {
-					vy = -vy;
+				if (xball <= paddle.getX() + paddle.getHeight())
 					vx = -vx;
+				if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
+					vx = -vx;
+
+				} else {
+					// when touching object is brick
+					vy = -vy;
 					counter--;
 					remove(collider);
 
 				}
 			}
 		}
+		// if all bricks are gone, we have won the game
 		if (counter == 0) {
 			won.setLocation((APPLICATION_WIDTH / 2) - (won.getWidth() / 2), APPLICATION_HEIGHT / 2);
 			won.setColor(Color.green);
@@ -215,7 +228,8 @@ public class Test extends GraphicsProgram {
 		yball = HEIGHT / 2;
 	}
 
-	// check 4 corners around balls rectangle
+	// check 4 corners around ball's rectangle
+	// remember objects in collider with getElementAt method
 	private GObject getCollidingObject() {
 			collider = getElementAt(xball - BALL_RADIUS, yball - BALL_RADIUS);
 		if (collider == null)
