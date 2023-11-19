@@ -241,7 +241,7 @@ public class BreakoutExtention extends GraphicsProgram {
 	}
 
 	// check 4 corners around ball's rectangle
-	// remember objects in collider with getElementAt method
+	// remember objects in 'collider' with getElementAt method
 	private GObject getCollidingObject() {
 		collider = getElementAt(xball - BALL_RADIUS, yball - BALL_RADIUS);
 		if (collider == null)
