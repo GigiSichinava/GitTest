@@ -142,6 +142,16 @@ public class Test extends GraphicsProgram {
 		}
 	}
 
+	 public void mouseClicked(MouseEvent e) {
+		 ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
+			ball.setFilled(true);
+			ball.setColor(rgen.nextColor());
+			add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
+			xball = WIDTH / 2;
+			yball = HEIGHT / 2;
+	 }
+			
+	
 	// add ball and movement
 	private void addBall() {
 		// create ball
