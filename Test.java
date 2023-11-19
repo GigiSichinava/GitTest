@@ -199,9 +199,9 @@ public class Test extends GraphicsProgram {
 					vy = -vy;
 					// add new trajectories to ball after different sides of
 					// paddle
-					if (xball <= paddle.getX() + paddle.getHeight())
+					if (xball <= paddle.getX() + (paddle.getWidth() / 5) + paddle.getHeight())
 						vx = -vx;
-					if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
+					if (xball >= paddle.getX() + (paddle.getWidth() / 0.8) + paddle.getHeight())
 						vx = -vx;
 				} else {
 					// when touching object is brick
