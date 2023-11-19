@@ -193,7 +193,7 @@ public class BreakoutExtention extends GraphicsProgram {
 			}
 
 			// check top side
-			if (yball <= BALL_RADIUS / 20) {
+			if (yball <= BALL_RADIUS) {
 				vy = -vy;
 			}
 
