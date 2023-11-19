@@ -171,7 +171,7 @@ public class BreakoutExtention extends GraphicsProgram {
 
 			// check left side
 			// dividing ball radius to prevent left side bug
-			if (xball + BALL_RADIUS <= 0) {
+			if (xball <= BALL_RADIUS) {
 				vx = -vx;
 			}
 
