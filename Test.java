@@ -72,7 +72,7 @@ public class Test extends GraphicsProgram {
 	private GLabel won = new GLabel("You won");
 	private static GObject collider;
 	private static int attempts = NTURNS;
-	
+
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
@@ -185,7 +185,7 @@ public class Test extends GraphicsProgram {
 			}
 			
 			// check top side
-			if (yball <= BALL_RADIUS) {
+			if (yball <= BALL_RADIUS / 20) {
 				vy = -vy;
 			}
 
