@@ -165,7 +165,7 @@ public class Test extends GraphicsProgram {
 
 			// check left side	
 			// divide ball radius to prevent left side bug
-			if (xball <= 0) {
+			if (xball <= BALL_RADIUS) {
 				vx = -vx;
 			}
 
@@ -197,9 +197,9 @@ public class Test extends GraphicsProgram {
 				// when touching object is paddle
 				if (collider == paddle) {
 					vy = -vy;
-				if (xball <= paddle.getX() + paddle.getHeight())
+				if (xball <= paddle.getX()+ (paddle.getWidth() / 4) + paddle.getHeight())
 					vx = -vx;
-				if (xball >= paddle.getX() + paddle.getHeight() + paddle.getWidth())
+				if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() * 3/4))
 					vx = -vx;
 				} else {
 					// when touching object is brick
