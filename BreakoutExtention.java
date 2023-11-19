@@ -200,12 +200,13 @@ public class BreakoutExtention extends GraphicsProgram {
 			ball.setLocation(xball - BALL_RADIUS, yball - BALL_RADIUS);
 			collider = getCollidingObject();
 			if (collider != null) {
+				vy = -vy;
 				// when touching object is paddle
-				if (collider == paddle) {
-					vy = -vy;
-				} else {
+//				if (collider == paddle || collider) {
+//					vy = -vy;
+			} else {
 					// when touching object is brick
-					vy = -vy;
+					
 					// -1 brick in counter
 					// remove brick
 					counter--;
@@ -213,7 +214,7 @@ public class BreakoutExtention extends GraphicsProgram {
 
 				}
 			}
-		}
+//		}
 		// if all bricks are gone, we have won the game
 		if (counter == 0) {
 			// add text that says we have won
