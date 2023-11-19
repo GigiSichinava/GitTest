@@ -201,7 +201,7 @@ public class Test extends GraphicsProgram {
 					// paddle
 					if (xball <= paddle.getX() + (paddle.getWidth() / 5) + paddle.getHeight())
 						vx = -vx;
-					if (xball >= paddle.getX() + (paddle.getWidth() / 0.8) + paddle.getHeight())
+					if (xball >= paddle.getX() + (paddle.getWidth() * 0.8) + paddle.getHeight())
 						vx = -vx;
 				} else {
 					// when touching object is brick
