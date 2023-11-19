@@ -72,7 +72,8 @@ public class Test extends GraphicsProgram {
 	private GLabel won = new GLabel("You won");
 	private static GObject collider;
 	private static int attempts = NTURNS;
-
+	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
+	
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
@@ -173,7 +174,7 @@ public class Test extends GraphicsProgram {
 			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
 				attempts--;
 				// finish game after all used attempts
-				if (attempts < 0) {
+				if (attempts <= 0) {
 					remove(ball);
 					lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
 					lost.setColor(Color.red);
@@ -195,6 +196,7 @@ public class Test extends GraphicsProgram {
 			if (collider != null) {
 				// when touching object is paddle
 				if (collider == paddle) {
+					bounceClip.play();
 					vy = -vy;
 				if (xball <= paddle.getX() + paddle.getHeight())
 					vx = -vx;
