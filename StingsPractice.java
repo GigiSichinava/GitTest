@@ -1,8 +1,8 @@
 import acm.program.ConsoleProgram;
 
 public class StingsPractice extends ConsoleProgram {
+	
 	public void run() {
-
 		countSymbols();
 	}
 
