@@ -199,7 +199,7 @@ public class Test extends GraphicsProgram {
 					vy = -vy;
 					// add new trajectories to ball after different sides of
 					// paddle
-					if (xball <= paddle.getX() + (paddle.getWidth() / 5) + paddle.getHeight())
+					if (xball <= paddle.getX() + (paddle.getWidth() * 0.2) + paddle.getHeight())
 						vx = -vx;
 					if (xball >= paddle.getX() + (paddle.getWidth() * 0.8) + paddle.getHeight())
 						vx = -vx;
