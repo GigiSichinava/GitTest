@@ -235,3 +235,7 @@ public class Review extends GraphicsProgram {
 	}
 
 }
+
+
+//check bottom side
+			// and if ball passes through -1 attempt
