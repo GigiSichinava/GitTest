@@ -129,7 +129,7 @@ public class Test extends GraphicsProgram {
 
 	public void mouseMoved(MouseEvent e) {
 		double X = e.getX();
-		// make paddle to not cross right and left side of canvas
+		// make paddle to not cross right and left sides of canvas
 		if (X >= PADDLE_WIDTH / 2) {
 			if (X <= APPLICATION_WIDTH - PADDLE_WIDTH / 2) {
 				paddle.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
@@ -196,10 +196,10 @@ public class Test extends GraphicsProgram {
 				// when touching object is paddle
 				if (collider == paddle) {
 					vy = -vy;
-				if (xball <= paddle.getX() + paddle.getHeight())
-					vx = -vx;
-				if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
-					vx = -vx;
+					if (xball <= paddle.getX() + paddle.getHeight())
+						vx = -vx;
+					if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
+						vx = -vx;
 				} else {
 					// when touching object is brick
 					vy = -vy;
