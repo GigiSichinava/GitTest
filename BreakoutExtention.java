@@ -152,15 +152,15 @@ public class BreakoutExtention extends GraphicsProgram {
 		xball = WIDTH / 2;
 		yball = HEIGHT / 2;
 		// randomly generate ball's starting direction
-		if (rgen.nextBoolean(0.5))
-			vx = -vx;
+//		if (rgen.nextBoolean(0.5))
+//			vx = -vx;
 
 
 		// define ball's movement
 		while (counter > 0) {
 			// update ball positions
-//			xball += vx;
-//			yball += vy;
+			xball += vx;
+			yball += vy;
 			ball.move(vx, vy);
 			pause(10);
 
@@ -170,7 +170,6 @@ public class BreakoutExtention extends GraphicsProgram {
 			}
 
 			// check left side
-			// dividing ball radius to prevent left side bug
 			if (xball  <= BALL_RADIUS) {
 				vx = -vx;
 			}
