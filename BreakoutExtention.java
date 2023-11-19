@@ -168,7 +168,11 @@ public class BreakoutExtention extends GraphicsProgram {
 				vx = -vx;
 			} else if (ball.getX() <= 0) { // check left side
 				vx = -vx;
-			} else if (ball.getY() >= APPLICATION_HEIGHT - BALL_RADIUS * 2) {
+			}
+
+			// check bottom side
+			// and if ball passes through -1 attempt
+			if (ball.getY() >= APPLICATION_HEIGHT - BALL_RADIUS * 2) {
 				attempts--;
 
 				// finish game after all used attempts
