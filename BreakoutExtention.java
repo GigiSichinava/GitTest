@@ -243,6 +243,14 @@ public class BreakoutExtention extends GraphicsProgram {
 			collider = getElementAt(ball.getY() + 2 * BALL_RADIUS, BALL_RADIUS);
 		if (collider == null)
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
+		
+		collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS); //1
+		if (collider == null)
+			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1); //4
+		if (collider == null)
+			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS); //3
+		if (collider == null)
+			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1); // 2
 		return collider;
 	}
 
