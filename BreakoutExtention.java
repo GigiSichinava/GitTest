@@ -151,6 +151,7 @@ public class BreakoutExtention extends GraphicsProgram {
 		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 		xball = WIDTH / 2;
 		yball = HEIGHT / 2;
+		// randomly generate ball's starting direction
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
 		vy = 3.0;
