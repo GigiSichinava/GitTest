@@ -1,6 +1,6 @@
 import acm.program.ConsoleProgram;
 
-public class Problem46String extends ConsoleProgram {
+public class Problem46Strings extends ConsoleProgram {
 	private int countCharacters(String string, char c) {
 		int count = 0;
 		for (int i = 0; i < string.length(); i++) {
