@@ -206,6 +206,7 @@ public class BreakoutExtention extends GraphicsProgram {
 					vy = -vy;
 					// add new trajectories to ball
 					// if ball hits edges of the paddle, change 'vx' oppositely
+					// imagine that these are top corners of the paddle
 					if (xball <= paddle.getX() + (paddle.getWidth() * 0.2) + paddle.getHeight())
 						vx = -vx;
 					if (xball >= paddle.getX() + (paddle.getWidth() * 0.8) + paddle.getHeight())
