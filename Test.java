@@ -164,7 +164,7 @@ public class Test extends GraphicsProgram {
 			}
 
 			// check left side	
-			if (xball <= BALL_RADIUS) {
+			if (xball <= BALL_RADIUS ) {
 				vx = -vx;
 			}
 
@@ -185,7 +185,7 @@ public class Test extends GraphicsProgram {
 			}
 			
 			// check top side
-			if (yball <= BALL_RADIUS / 20) {
+			if (yball <= BALL_RADIUS) {
 				vy = -vy;
 			}
 
@@ -198,7 +198,7 @@ public class Test extends GraphicsProgram {
 					vy = -vy;
 				if (xball <= paddle.getX() + paddle.getHeight())
 					vx = -vx;
-				if (xball >= paddle.getX() + paddle.getHeight() + (paddle.getWidth() / 2))
+				if (xball >= paddle.getX() + paddle.getHeight() + paddle.getWidth())
 					vx = -vx;
 				} else {
 					// when touching object is brick
