@@ -186,7 +186,7 @@ public class Test extends GraphicsProgram {
 			}
 			
 			// check top side
-			if (yball <= BALL_RADIUS) {
+			if (yball <= BALL_RADIUS / 20) {
 				vy = -vy;
 			}
 
