@@ -133,7 +133,7 @@ public class Test extends GraphicsProgram {
 		}
 	}
 
-	// add ball and its movement
+	// add ball and movement
 	private void addBall() {
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
@@ -152,30 +152,38 @@ public class Test extends GraphicsProgram {
 			ball.move(vx, vy);
 			pause(10);
 
+			// check right side
 			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
 				vx = -vx;
 			}
 
-			if (xball <= BALL_RADIUS / 200) {
+			// check left side	
+			if (xball <= BALL_RADIUS / 20) {
 				vx = -vx;
 			}
 
+			// check bottom side 
+			// and if ball passes through -1 attempt
 			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
 				attempts--;
+				// finish game after all used attempts
 				if (attempts <= 0) {
 					remove(ball);
 					lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
 					lost.setColor(Color.red);
 					add(lost);
 				} else {
+					// reset game after new attempt
 					resetGame();
 				}
 			}
-
+			
+			// check top side
 			if (yball < BALL_RADIUS) {
 				vy = -vy;
 			}
 
+			// check when ball touches the paddle
 			ball.setLocation(xball - BALL_RADIUS, yball - BALL_RADIUS);
 			collider = getCollidingObject();
 			if (collider != null) {
@@ -183,6 +191,7 @@ public class Test extends GraphicsProgram {
 					vy = -vy;
 				} else {
 					vy = -vy;
+					vx = -vx;
 					counter--;
 					remove(collider);
 
@@ -196,6 +205,7 @@ public class Test extends GraphicsProgram {
 		}
 	}
 
+	// reset the game after ball passes a bottom border
 	private void resetGame() {
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
@@ -214,14 +224,6 @@ public class Test extends GraphicsProgram {
 			collider = getElementAt(xball + BALL_RADIUS, yball + BALL_RADIUS);
 		if (collider == null)
 			collider = getElementAt(xball + BALL_RADIUS, yball - BALL_RADIUS);
-//		if (collider == null)
-//			collider = getElementAt(xball - BALL_RADIUS, ball.getY());
-//		if (collider == null)
-//			collider = getElementAt(xball + BALL_RADIUS, ball.getY());
-//		if (collider == null)	
-//			collider = getElementAt(ball.getX(), yball + BALL_RADIUS);
-//		if (collider == null)
-//			collider = getElementAt(ball.getX(), yball - BALL_RADIUS);
 		return collider;
 	}
 
