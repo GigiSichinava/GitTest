@@ -164,7 +164,7 @@ public class Test extends GraphicsProgram {
 			}
 
 			// check left side	
-			if (xball <= BALL_RADIUS / 200) {
+			if (xball <= BALL_RADIUS / 40) {
 				vx = -vx;
 			}
 
