@@ -21,11 +21,11 @@ public class Practice extends GraphicsProgram {
 		addMouseListeners();
 	}
 
-	private void addRect() {
-		add(rect, rectX, rectY);
-		rect.setFilled(true);
-		rect.setColor(rgen.nextColor());
-	}
+//	private void addRect() {
+//		add(rect, rectX, rectY);
+//		rect.setFilled(true);
+//		rect.setColor(rgen.nextColor());
+//	}
 
 	public void mouseClicked(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
