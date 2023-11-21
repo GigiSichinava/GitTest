@@ -11,7 +11,7 @@ public class Practice extends GraphicsProgram {
 	public void run() {
 
 		GRect rect = new GRect(100, 100, 100, 100);
-		rect.setFilled(true);
+//		rect.setFilled(true);
 		add(rect);
 		addMouseListeners();
 	}
