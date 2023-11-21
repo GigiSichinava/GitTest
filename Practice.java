@@ -10,8 +10,8 @@ public class Practice extends GraphicsProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int X = 100;
 	private GRect rect = new GRect(X, X);
-	int rectX = rgen.nextInt(0, getWidth() - X / 2);
-	int rectY = rgen.nextInt(0, getHeight() - X / 2);
+	int rectX = rgen.nextInt(0, getWidth());
+	int rectY = rgen.nextInt(0, getHeight());
 
 	public void run() {
 
