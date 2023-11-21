@@ -12,6 +12,7 @@ public class Practice extends GraphicsProgram {
 	}
 
 	public void mousePressed(MouseEvent e) {
+		GOval brush = new GOval(R, R);
 		add(brush, e.getX(), e.getY());
 	}
 
