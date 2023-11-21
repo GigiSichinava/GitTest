@@ -3,7 +3,7 @@ import java.awt.event.MouseEvent;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
-class Practice extends GraphicsProgram {
+public class Practice extends GraphicsProgram {
 
 	private GRect rect = new GRect(100, 100, 100, 100);
 
