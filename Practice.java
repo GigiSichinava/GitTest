@@ -32,6 +32,6 @@ public class Practice extends GraphicsProgram {
 		if (obj == rect) {
 			remove(rect);
 		}
-
+		addRect();
 	}
 }
