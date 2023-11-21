@@ -13,8 +13,8 @@ public class Practice extends GraphicsProgram {
 
 	public void run() {
 
-		int rectX = rgen.nextInt(0, getWidth());
-		int rectY = rgen.nextInt(0, getHeight());
+		int rectX = rgen.nextInt(0, getWidth() - X/2);
+		int rectY = rgen.nextInt(0, getHeight() - X/2);
 		add(rect, rectX, rectY);
 		rect.setFilled(true);
 		rect.setColor(rgen.nextColor());
