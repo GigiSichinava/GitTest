@@ -11,7 +11,7 @@ public class Practice extends GraphicsProgram {
 	private static final int X = 100;
 	private GRect rect = new GRect(X, X);
 	private int rectX = rgen.nextInt(0, getWidth());
-	private int rectY = rgen.nextInt(0, getHeight());
+	private int rectY = rgen.nextInt(0, getHeight()/2);
 
 	public void run() {
 
