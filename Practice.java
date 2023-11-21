@@ -35,5 +35,6 @@ public class Practice extends GraphicsProgram {
 		int rectX2 = rgen.nextInt(0, 550);
 		int rectY2 = rgen.nextInt(0, 550);
 		add(rect, rectX2, rectY2);
+		rect.setColor(rgen.nextColor());
 	}
 }
