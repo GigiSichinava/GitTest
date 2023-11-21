@@ -1,19 +1,25 @@
-import java.awt.event.MouseEvent;
-
-import acm.graphics.GRect;
+import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
+import javafx.scene.input.MouseEvent;
 
 public class Practice extends GraphicsProgram {
-
-	private GRect rect = new GRect(10, 10, 10, 10);
-
+	
+	private static final int R = 50;
+	private GOval brush = new GOval (R, R);
+	
 	public void run() {
-
 		addMouseListeners();
 	}
 
-	public void mouseMoved(MouseEvent e) {
-		add(rect, e.getX(), e.getY());
+	public void mousePressed(MouseEvent e){
+		add(brush, e.getX(), e.getY());
+		
 	}
 
+	private void addBrush(){
+		GOval brush = new GOval (R, R);
+		
+				
+	}
+	
 }
