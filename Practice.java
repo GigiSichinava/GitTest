@@ -17,9 +17,7 @@ public class Practice extends GraphicsProgram {
 	}
 
 	private void addBrush(){
-		GOval brush = new GOval (R, R);
-		
-				
+		GOval brush = new GOval (R, R);				
 	}
 	
 }
