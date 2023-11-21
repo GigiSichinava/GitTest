@@ -6,7 +6,7 @@ import acm.program.GraphicsProgram;
 
 public class Practice extends GraphicsProgram {
 
-	private static final int X = 100; 
+	private static final int X = 100;
 	private GRect rect = new GRect(100, 100, 100, 100);
 
 	public void run() {
@@ -18,7 +18,7 @@ public class Practice extends GraphicsProgram {
 
 	public void mouseClicked(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
-		if(obj == rect){
+		if (obj == rect) {
 			remove(rect);
 		}
 
