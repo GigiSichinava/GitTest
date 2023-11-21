@@ -13,8 +13,11 @@ public class Practice extends GraphicsProgram {
 
 	public void run() {
 
-		add(rect);
+		int rectX = rgen.nextInt(0, getWidth());
+		int rectY = rgen.nextInt(0, getHeight());
+		add(rect, rectX, rectY);
 		rect.setFilled(true);
+		rect.setColor(rgen.nextColor());
 		addMouseListeners();
 	}
 
