@@ -32,6 +32,8 @@ public class Practice extends GraphicsProgram {
 		if (obj == rect) {
 			remove(rect);
 		}
-		addRect();
+		int rectX2 = rgen.nextInt(0, 550);
+		int rectY2 = rgen.nextInt(0, 550);
+		add(rect, rectX2, rectY2);
 	}
 }
