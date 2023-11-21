@@ -10,12 +10,12 @@ public class Practice extends GraphicsProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int X = 100;
 	private GRect rect = new GRect(X, X);
-	private int rectX = rgen.nextInt(0, 550);
-	private int rectY = rgen.nextInt(0, 550);
+	private int rectX = rgen.nextInt(0, getWidth());
+	private int rectY = rgen.nextInt(0, getHeight());
 
 	public void run() {
 
-		add(rect, rectX, rectY);
+		add(rect, rectX - X, rectY - X);
 		rect.setFilled(true);
 		rect.setColor(rgen.nextColor());
 		addMouseListeners();
