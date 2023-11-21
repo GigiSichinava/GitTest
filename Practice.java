@@ -12,7 +12,7 @@ public class Practice extends GraphicsProgram {
 		addMouseListeners();
 	}
 
-	public void mouseClicked(MouseEvent e) {
+	public void mouseMoved(MouseEvent e) {
 		add(rect, e.getX(), e.getY());
 	}
 
