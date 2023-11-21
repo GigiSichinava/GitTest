@@ -1,5 +1,6 @@
 import java.awt.event.MouseEvent;
 
+import acm.graphics.GObject;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
@@ -16,7 +17,8 @@ public class Practice extends GraphicsProgram {
 	}
 
 	public void mouseClicked(MouseEvent e){
-		if (getElementAt(e.getX(), e.getY()) == rect){
+		GObject obj = getElementAt (e.getX(), e.getY());
+		if(obj == rect){
 			remove(rect);
 		}
 		
