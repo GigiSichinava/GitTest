@@ -128,6 +128,7 @@ public class Review extends GraphicsProgram {
 		int paddleY = getHeight() - PADDLE_Y_OFFSET;
 		paddle.setLocation(paddleX, paddleY);
 		paddle.setFilled(true);
+		paddle.setColor(rgen.nextColor());
 		add(paddle);
 	}
 
@@ -146,12 +147,13 @@ public class Review extends GraphicsProgram {
 		// create ball
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
+		ball.setColor(rgen.nextColor());
 		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 		xball = WIDTH / 2;
 		yball = HEIGHT / 2;
+		// randomly generate ball's starting direction
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
-		vy = 3.0;
 
 		// define ball's movement
 		while (counter > 0) {
@@ -162,22 +164,26 @@ public class Review extends GraphicsProgram {
 			pause(10);
 
 			// check right side
-			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
+			if (ball.getX() >= APPLICATION_WIDTH - BALL_RADIUS * 2) {
 				vx = -vx;
 			}
 
 			// check left side
-			if (xball <= BALL_RADIUS) {
+			if (ball.getX() <= 0) {
 				vx = -vx;
 			}
 
 			// check bottom side
 			// and if ball passes through -1 attempt
-			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
+			if (ball.getY() >= APPLICATION_HEIGHT - BALL_RADIUS * 2) {
 				attempts--;
 				// finish game after all used attempts
 				if (attempts <= 0) {
 					remove(ball);
+					// add text that says we have lost
+					lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
+					lost.setColor(Color.red);
+					add(lost);
 				} else {
 					// reset game after new attempt
 					resetGame();
@@ -185,7 +191,7 @@ public class Review extends GraphicsProgram {
 			}
 
 			// check top side
-			if (yball < BALL_RADIUS) {
+			if (ball.getY() <= 0) {
 				vy = -vy;
 			}
 
@@ -209,6 +215,10 @@ public class Review extends GraphicsProgram {
 		}
 		// if all bricks are gone, we have won the game
 		if (counter == 0) {
+			// add text that says we have won
+			won.setLocation((APPLICATION_WIDTH / 2) - (won.getWidth() / 2), APPLICATION_HEIGHT / 2);
+			won.setColor(Color.green);
+			add(won);
 		}
 	}
 
@@ -216,26 +226,31 @@ public class Review extends GraphicsProgram {
 	private void resetGame() {
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
+		ball.setColor(rgen.nextColor());
 		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 		xball = WIDTH / 2;
 		yball = HEIGHT / 2;
 	}
 
 	// check 4 corners around ball's rectangle
-	// remember objects in collider with getElementAt method
+	// remember objects in 'collider' with getElementAt method
 	private GObject getCollidingObject() {
-		collider = getElementAt(ball.getX(), ball.getY());
+		 collider = getElementAt(ball.getX(), ball.getY());
+		 if (collider == null)
+		 collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
+		 if (collider == null)
+		 collider = getElementAt(ball.getY() + 2 * BALL_RADIUS, BALL_RADIUS);
+		 if (collider == null)
+		 collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
+
+		collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS); // 1
 		if (collider == null)
-			collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
+			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1); // 4
 		if (collider == null)
-			collider = getElementAt(ball.getY() + 2 * BALL_RADIUS, BALL_RADIUS);
+			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS); // 3
 		if (collider == null)
-			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
+			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1); // 2
 		return collider;
 	}
 
 }
-
-
-//check bottom side
-			// and if ball passes through -1 attempt
