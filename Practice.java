@@ -9,11 +9,10 @@ public class Practice extends GraphicsProgram {
 
 	public void run() {
 
-		GRect rect = new GRect(10, 10, 10, 10);
 		addMouseListeners();
 	}
 
-	public void mouseClicked(MouseEvent e){
+	public void mouseClicked(MouseEvent e) {
 		add(rect, e.getX(), e.getY());
 	}
 
