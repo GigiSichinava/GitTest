@@ -91,24 +91,29 @@ public class Test extends GraphicsProgram {
 						startingY + (BRICK_HEIGHT + BRICK_SEP) * rowNumber, BRICK_WIDTH, BRICK_HEIGHT);
 				counter++;
 				add(rect);
-				
-			
+
+				// define colors of bricks
+				// paint 1 & 2 rows in red
 				if (rowNumber < 2) {
 					rect.setFilled(true);
 					rect.setColor(Color.RED);
 				}
+				// paint 3 & 4 rows in orange
 				if (rowNumber < 4 && rowNumber > 1) {
 					rect.setFilled(true);
 					rect.setColor(Color.ORANGE);
 				}
+				// paint 5 & 6 rows in yellow
 				if (rowNumber < 6 && rowNumber > 3) {
 					rect.setFilled(true);
 					rect.setColor(Color.YELLOW);
 				}
+				// paint 7 & 8 rows in green
 				if (rowNumber < 8 && rowNumber > 5) {
 					rect.setFilled(true);
 					rect.setColor(Color.GREEN);
 				}
+				// paint 9 & 10 rows in red
 				if (rowNumber < 10 && rowNumber > 7) {
 					rect.setFilled(true);
 					rect.setColor(Color.CYAN);
@@ -146,9 +151,9 @@ public class Test extends GraphicsProgram {
 		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 		xball = WIDTH / 2;
 		yball = HEIGHT / 2;
+		// randomly generate ball's starting direction
 		if (rgen.nextBoolean(0.5))
 			vx = -vx;
-		vy = 3.0;
 
 		// define ball's movement
 		while (counter > 0) {
@@ -159,22 +164,23 @@ public class Test extends GraphicsProgram {
 			pause(10);
 
 			// check right side
-			if (xball >= APPLICATION_WIDTH - BALL_RADIUS) {
+			if (ball.getX() >= APPLICATION_WIDTH - BALL_RADIUS * 2) {
 				vx = -vx;
 			}
 
-			// check left side	
-			if (xball <= BALL_RADIUS / 20) {
+			// check left side
+			if (ball.getX() <= 0) {
 				vx = -vx;
 			}
 
-			// check bottom side 
+			// check bottom side
 			// and if ball passes through -1 attempt
-			if (yball >= APPLICATION_HEIGHT - BALL_RADIUS) {
+			if (ball.getY() >= APPLICATION_HEIGHT - BALL_RADIUS * 2) {
 				attempts--;
 				// finish game after all used attempts
 				if (attempts <= 0) {
 					remove(ball);
+					// add text that says we have lost
 					lost.setLocation((APPLICATION_WIDTH / 2) - (lost.getWidth() / 2), APPLICATION_HEIGHT / 2);
 					lost.setColor(Color.red);
 					add(lost);
@@ -183,9 +189,9 @@ public class Test extends GraphicsProgram {
 					resetGame();
 				}
 			}
-			
+
 			// check top side
-			if (yball < BALL_RADIUS) {
+			if (ball.getY() <= 0) {
 				vy = -vy;
 			}
 
@@ -199,6 +205,8 @@ public class Test extends GraphicsProgram {
 				} else {
 					// when touching object is brick
 					vy = -vy;
+					// -1 brick in counter
+					// remove brick
 					counter--;
 					remove(collider);
 
@@ -207,6 +215,7 @@ public class Test extends GraphicsProgram {
 		}
 		// if all bricks are gone, we have won the game
 		if (counter == 0) {
+			// add text that says we have won
 			won.setLocation((APPLICATION_WIDTH / 2) - (won.getWidth() / 2), APPLICATION_HEIGHT / 2);
 			won.setColor(Color.green);
 			add(won);
@@ -224,16 +233,17 @@ public class Test extends GraphicsProgram {
 	}
 
 	// check 4 corners around ball's rectangle
-	// remember objects in collider with getElementAt method
+	// remember objects in 'collider' with getElementAt method
 	private GObject getCollidingObject() {
-			collider = getElementAt(xball - BALL_RADIUS, yball - BALL_RADIUS);
-		if (collider == null)
-			collider = getElementAt(xball - BALL_RADIUS, yball + BALL_RADIUS);
-		if (collider == null)
-			collider = getElementAt(xball + BALL_RADIUS, yball + BALL_RADIUS);
-		if (collider == null)
-			collider = getElementAt(xball + BALL_RADIUS, yball - BALL_RADIUS);
-		return collider;
+		 collider = getElementAt(ball.getX(), ball.getY());
+		 if (collider == null)
+		 collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
+		 if (collider == null)
+		 collider = getElementAt(ball.getY() + 2 * BALL_RADIUS, BALL_RADIUS);
+		 if (collider == null)
+		 collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
+			return collider;
 	}
+
 
 }
