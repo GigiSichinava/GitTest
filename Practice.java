@@ -18,7 +18,8 @@ public class Practice extends GraphicsProgram {
 	}
 
 	public void mouseClicked(MouseEvent e) {
-		if(getElementAt(100, 100) == rect){
+		GObject obj = getElementAt(e.getX(), e.getY());
+		if(obj == rect){
 			remove(rect);
 		}
 
