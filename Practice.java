@@ -9,7 +9,7 @@ public class Practice extends GraphicsProgram {
 	}
 
 	public void mouseClicked(MouseEvent e){
-		GOval oval = new GOval (10,10,10,10);
-		add(oval);
+		GOval oval = new GOval (100, 100);
+		add(oval, e.getX(), e.getY());
 	}
 }
