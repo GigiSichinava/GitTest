@@ -13,6 +13,6 @@ public class Practice extends GraphicsProgram {
 	}
 
 	public void mouseClicked(MouseEvent e) {
-		add(oval, e.getX() - R, e.getY() - R);
+		oval.setLocation(e.getX() - R, e.getY() - R);
 	}
 }
