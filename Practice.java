@@ -1,15 +1,15 @@
-import acm.program.ConsoleProgram;
+import java.awt.event.MouseEvent;
 
-public class Practice extends ConsoleProgram{
-	public void  run(){
-		int x = 10;
-		int b = readInt("Enter your text");
-		
-		if (b > x){
-			println("Biggest num between this two is: " + b);
-		}else {
-			println(x);
-		}
-			
+import acm.graphics.GOval;
+import acm.program.GraphicsProgram;
+
+public class Practice extends GraphicsProgram {
+	public void run() {
+		addMouseListeners();
+	}
+
+	public void mouseClicked(MouseEvent e){
+		GOval oval = new GOval (10,10,10,10);
+		add(oval);
 	}
 }
