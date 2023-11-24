@@ -1,18 +1,23 @@
-import java.awt.event.MouseEvent;
+import acm.program.ConsoleProgram;
 
-import acm.graphics.GOval;
-import acm.program.GraphicsProgram;
-
-public class Practice extends GraphicsProgram {
-
-	private static final int R = 100;
-	GOval oval = new GOval(2 * R, 2 * R);
-
+public class Practice extends ConsoleProgram {
 	public void run() {
-		addMouseListeners();
+
+		String str = readLine();
+		String a = readLine();
+		String b = readLine();
 	}
 
-	public void mouseClicked(MouseEvent e) {
-		add(oval, e.getX() - R, e.getY() - R);
+	private void contains(String a, String b) {
+		String result = " ";
+
+		for (int i = 0; i < a.length(); i++) {
+			char ch = a.charAt(i);
+			if(ch == b.charAt(0)){
+				result = result + 1;
+			}
+		}
+		
 	}
+
 }
