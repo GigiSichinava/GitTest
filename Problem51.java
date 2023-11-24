@@ -27,5 +27,17 @@ public class Problem51 extends ConsoleProgram {
 		}
 		return false;
 	}
-
 }
+
+//	private boolean contains(String a, String b) {
+//		int prevIndex = 0;
+//		for (int i = 0; i < b.length(); i++) {
+//			prevIndex = a.indexOf(b.charAt(i), prevIndex + 1);
+//			if (prevIndex == -1) {
+//				return false;
+//			}
+//		}
+//		return true;
+//	}
+//
+//}
