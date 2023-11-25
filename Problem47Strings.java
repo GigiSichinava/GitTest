@@ -25,3 +25,20 @@ public class Problem47Strings extends ConsoleProgram{
 		return false;
 	}
 }
+
+
+//	public class Review extends ConsoleProgram {
+//	    public void run() {
+//	        String s = readLine("Enter your text here: ");
+//	        for (int i = 0; i < s.length(); i++) {
+//	            char left = s.charAt(i);
+//	            char right = s.charAt(s.length() - i - 1);
+//	            if (left != right) {
+//	                println("Negative");
+//	                return;
+//	            }
+//	        }
+//	        println("Positive");
+//	    }
+//	}
+
