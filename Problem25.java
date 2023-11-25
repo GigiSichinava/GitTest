@@ -12,7 +12,7 @@ public class Problem25 extends ConsoleProgram{
 
 	private int gcd(int n, int m) {
 		for (int i = Math.min(n, m); i >= 1; i--) {
-			if(n % i == 0 && m % i == 0)  //&& - and
+			if(n % i == 0 && m % i == 0)
 			return i;
 		}
 		return -1;
