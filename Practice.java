@@ -11,8 +11,8 @@ public class Practice extends GraphicsProgram {
 		int rectSize = getHeight() / NUMBER_OF_ROWS;
 		for(int i = 0; i < NUMBER_OF_ROWS; i++){
 			for(int j = 0; j < NUMBER_OF_ROWS; j++){
-				double x = i * NUMBER_OF_ROWS;
-				double y = j * NUMBER_OF_COLUMNS;
+				double x = i * rectSize;
+				double y = j * rectSize;
 				GRect rect = new GRect (x, y, rectSize, rectSize);
 				add(rect);
 				
