@@ -10,8 +10,9 @@ public class Practice extends ConsoleProgram{
 		int numberOfSymbols = 0;
 		
 		for(int i = 0; i < text.length(); i++){
-			if(text.charAt(i) == ch);
+			if(text.charAt(i) == ch){
 			numberOfSymbols++;
+			}
 		}
 		println(numberOfSymbols);
 		
