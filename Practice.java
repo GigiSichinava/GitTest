@@ -3,16 +3,19 @@ import acm.program.ConsoleProgram;
 // strings 101
 
 public class Practice extends ConsoleProgram {
-	public void run() {
-		String str = "beng biwo";
-	}
-		
+    public void run() {
+        String str = "beng biwo";
+        println(str);
 
-	private String reveresdString(String str) {
-		String result = " ";
-		for (int i = 0; i < str.length(); i++) {
-			result = str.charAt(i) + result;
-		}
-		return result;
-	}
+        String reversedStr = reversedString(str);
+        println("Reversed: " + reversedStr);
+    }
+
+    private String reversedString(String str) {
+        String result = " ";
+        for (int i = 0; i < str.length(); i++) {
+            result = str.charAt(i) + result;
+        }
+        return result;
+    }
 }
