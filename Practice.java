@@ -1,23 +1,22 @@
 import acm.program.ConsoleProgram;
 
-//GCD
-
 public class Practice extends ConsoleProgram {
-    public void run() {
-        int num1 = readInt("Enter the first number: ");
-        int num2 = readInt("Enter the second number: ");
+	public void run() {
+		int num1 = readInt("Enter the first number: ");
+		int num2 = readInt("Enter the second number: ");
 
-        int a = num1;
-        int b = num2;
+		int a = num1;
+		int b = num2;
 
-        while (b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
-        }
+		while (b != 0) {
+			int temp = b;
+			b = a % b;
+			a = temp;
+		}
 
-        int gcd = a;
+		int gcd = a;
 
-        println("GCD is: " + gcd);
-    }
+		println("GCD is: " + gcd);
+	}
+
 }
