@@ -5,7 +5,7 @@ public class Practice extends ConsoleProgram{
 		
 		double a = readDouble();
 		int result = 0;
-		for(int i = 0; i < a; i++){
+		for(int i = 1; i < a; i++){
 			result += i;
 			
 		}
