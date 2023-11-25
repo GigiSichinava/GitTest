@@ -2,7 +2,8 @@ import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram {
 	public void run() {
-		String text = readLine("Enter text: ");
+
+		String text = readLine("Enter your text here: ");
 		String used = "";
 
 		for (int i = 0; i < text.length(); i++) {
@@ -10,15 +11,4 @@ public class Practice extends ConsoleProgram {
 
 			if (!used.contains("" + ch)) {
 				int amount = 0;
-				
-				for(int j = 0; j < text.length(); j++){
-					if(ch == text.charAt(j)){
-						amount++;
-					}
-				}
-				println(ch + " : " + amount);
-				used = used + ch;
-			}
-		}
-	}
 }

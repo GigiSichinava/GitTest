@@ -16,3 +16,20 @@ public class Review extends ConsoleProgram{
 		return res;
 	}
 }
+
+
+
+
+//		public class Problem49 extends ConsoleProgram {
+//		    public void run()St {
+//		        String num = readLine("Enter Number: ");
+//		        int res = 0;
+//		
+//		        for (int i = 0; i < num.length(); i++) {
+//		            int n = num.charAt(i) - '0';
+//		            res = res * 10 + n;
+//		        }
+//		
+//		        print(res);
+//		    }
+//		}
