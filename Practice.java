@@ -8,10 +8,10 @@ public class Practice extends ConsoleProgram {
 
 		if (n % m == 0 || m % n == 0) {
 			if (n >= m) {
-				println(n);
+				println(m);
 			}
 			if (n <= m) {
-				println(m);
+				println(n);
 			}
 		} else {
 			println(1);
