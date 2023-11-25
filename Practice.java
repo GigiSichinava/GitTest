@@ -1,14 +1,16 @@
 import acm.program.ConsoleProgram;
 
-public class Practice extends ConsoleProgram {
-	public void run() {
-
-		double a = readDouble();
-		int b = (int) a;
-		double c = a - b;
-
-		println(a);
-		println(c);
-
+public class Practice extends ConsoleProgram{
+	public void run(){
+	
+		double a = readDouble("Enter your first number here: ");
+		double b = readDouble("Second number");
+		
+		if (a > b){
+			println(a);
+		} else {
+			println(b);
+		}
+		
 	}
 }
