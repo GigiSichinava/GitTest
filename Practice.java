@@ -1,20 +1,20 @@
 import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram {
-    public void run() {
-        int n = readInt("Enter n: ");
-        int m = readInt("Enter m: ");
+	public void run() {
 
-        int gcd = gcd(n, m);
-        println("GCD is: " + gcd);
-    }
+		int n = readInt("Enter n: ");
+		int m = readInt("Enter m: ");
 
-    private int gcd(int n, int m) {
-        while (m != 0) {
-            int temp = m;
-            m = n % m;
-            n = temp;
-        }
-        return n;
-    }
+		if (n % m == 0 || m % n == 0) {
+			if (n >= m) {
+				println(n);
+			}
+			if (n <= m) {
+				println(m);
+			}
+		} else {
+			println(1);
+		}
+	}
 }
