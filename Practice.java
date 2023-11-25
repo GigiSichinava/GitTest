@@ -8,7 +8,7 @@ public class Practice extends ConsoleProgram {
         println(str);
 
         String reversedStr = reversedString(str);
-        println("Reversed: " + reversedStr);
+        println(reversedStr);
     }
 
     private String reversedString(String str) {
