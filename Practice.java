@@ -10,13 +10,10 @@ public class Practice extends ConsoleProgram {
 
 		while (b != 0) {
 			int temp = b;
-			b = a % b;
+			b = b % a;
 			a = temp;
 		}
-
 		int gcd = a;
-
-		println("GCD is: " + gcd);
+		println(gcd);
 	}
-
 }
