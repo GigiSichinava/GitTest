@@ -2,15 +2,21 @@ import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram {
     public void run() {
-        String s = readLine("Enter your text here: ");
-        for (int i = 0; i < s.length(); i++) {
-            char left = s.charAt(i);
-            char right = s.charAt(s.length() - i - 1);
-            if (left != right) {
-                println("Negative");
-                return;
+        String text = readLine("Enter Text: ");
+        String used = "";
+        
+        for (int i = 0; i < text.length(); i++) {
+            char ch = text.charAt(i);
+            if (!used.contains("" + ch)) {
+                int amount = 0;
+                for (int j = 0; j < text.length(); j++) {
+                    if (ch == text.charAt(j)) {
+                        amount++;
+                    }
+                }
+                println(ch + " : " + amount);
+                used += ch;
             }
         }
-        println("Positive");
     }
 }
