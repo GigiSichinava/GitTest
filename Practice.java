@@ -3,16 +3,18 @@ import acm.program.ConsoleProgram;
 public class Practice extends ConsoleProgram{
 	public void run(){
 		
-		String s = readLine("enter your text");
-		for(int i = 0; i < s.length(); i++){
-			char left = s.charAt(i);
-			char right = s.charAt(s.length() - 1 - i);
-			if( left != right){
-				println("negative");
-				return;
+		String text = readLine("Enter your text here: ");
+		String symbolInText = readLine("Symbol you are looking for: ");
+		
+		char symbol = symbolInText.charAt(0);
+		int numberofOccurance = 0;
+		
+		for(int i = 0; i < text.length(); i++){
+			if(text.charAt(i) == symbol){
+				numberofOccurance++;
 				
 			}
 		}
-		println("positive");
+		println(numberofOccurance);
 	}
 }
