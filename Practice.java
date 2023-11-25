@@ -1,20 +1,21 @@
 import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram {
-	public void run() {
+    public void run() {
+        int num1 = readInt("Enter the first number: ");
+        int num2 = readInt("Enter the second number: ");
 
-		int n = readInt("Enter n: ");
-		int m = readInt("Enter m: ");
+        int a = num1, b = num2;
 
-		if (n % m == 0 || m % n == 0) {
-			if (n >= m) {
-				println(m);
-			}
-			if (n <= m) {
-				println(n);
-			}
-		} else {
-			println(i);
-		}
-	}
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+
+        int gcd = a;
+        int lcm = (num1 * num2) / gcd;
+
+        println("LCM is: " + lcm);
+    }
 }
