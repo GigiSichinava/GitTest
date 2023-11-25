@@ -25,3 +25,24 @@ public class Problem46Strings extends ConsoleProgram {
 		println(maxCharcater);
 	}
 }
+
+
+	//	public void run(){
+	//		String text = readLine("Enter your text here: ");
+	//		int maxCharacter = 0;
+	//		int maxCount = 0;
+	//	
+	//		for(char x = 'a'; x <= 'z'; x++){
+	//			int count = 0;
+	//			for(int i = 0; i < text.length(); i++){
+	//				if(text.charAt(i) == x){
+	//					count++;
+	//				}
+	//			}
+	//			if(count > maxCount){
+	//			maxCount = count;
+	//			maxCharacter = x;
+	//			}
+	//		}
+	//		println(maxCharacter);
+	//	}
