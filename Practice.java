@@ -6,7 +6,7 @@ public class Practice extends ConsoleProgram{
 		double a = readDouble();
 		int result = 0;
 		for(int i = 0; i < a; i++){
-			result += i;
+			result += i + 1;
 			
 		}
 		println(result);
