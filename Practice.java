@@ -1,15 +1,20 @@
 import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram {
-	public void run(){
-		
-		double n = readDouble();
-		int result = 0;
-		for(int i = 0; i <= n; i++){
-			if(n % i == 0){
-				result++;
-			}
-		}
-	println(result);	
-	}
+    public void run() {
+        int n = readInt("Enter n: ");
+        int m = readInt("Enter m: ");
+
+        int gcd = gcd(n, m);
+        println("GCD is: " + gcd);
+    }
+
+    private int gcd(int n, int m) {
+        while (m != 0) {
+            int temp = m;
+            m = n % m;
+            n = temp;
+        }
+        return n;
+    }
 }
