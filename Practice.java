@@ -9,11 +9,10 @@ public class Practice extends ConsoleProgram{
 			char right = text.charAt(text.length() - i - 1);
 			if(left != right){
 				println("Negative");
-			}else{
-				println("positive");
+//				return;
 			}
-		
 		}
+		println("Positive");
+		
 	}
 }
-
