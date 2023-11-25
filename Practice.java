@@ -14,7 +14,7 @@ public class Practice extends ConsoleProgram {
 				println(n);
 			}
 		} else {
-			println(1);
+			println(i);
 		}
 	}
 }
