@@ -8,15 +8,12 @@ public class Practice extends ConsoleProgram {
 		int a = num1;
 		int b = num2;
 
-		while (b != 0) {
+		while ( b != 0){
 			int temp = b;
-			b = a % b;
+			b = b % a;
 			a = temp;
 		}
-
 		int gcd = a;
-
-		println("GCD is: " + gcd);
+		println(a);
 	}
-
 }
