@@ -6,7 +6,7 @@ public class Problem49 extends ConsoleProgram {
 		int res = 0;
 
 		for (int i = 0; i < num.length(); i++) {
-			int n = num.charAt(i);
+			int n = num.charAt(i) - '0';
 			res = res * 10 + n;
 		}
 
