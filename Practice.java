@@ -1,12 +1,16 @@
 import acm.program.ConsoleProgram;
 
-public class Practice extends ConsoleProgram{
+public class Practice extends ConsoleProgram {
 	public void run(){
 		
 		double a = readDouble();
-		double b = readDouble();
-		double c = readDouble();
+		int b = (int) a;
+		double c = a - b;
 		
-		println( (a + b + c) / 3);
+		println(a);
+		println(c);
+		
+		
+		
+		
 	}
-}
