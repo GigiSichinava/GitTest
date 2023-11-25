@@ -1,21 +1,25 @@
 import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram {
-	public void run() {
 
-		String text = readLine();
-		String symbolintext = readLine();
+	private static final int MAX_NUM = 1000;
 
-		char ch = symbolintext.charAt(0);
-		int result = 0;
-
-		
-		
-		for (int i = 0; i < text.length(); i++) {
-			if (text.charAt(i) == ch) {
-				result++;
+	public void run(){
+		for(int i = 1; i <= MAX_NUM; i++){
+			if(isPrime(i)){
+				println(i);
 			}
 		}
-		println(result);
+		
+		
+	}
+
+	private boolean isPrime(int num) {
+		for(int i = 2; i <= Math.sqrt(num); i++){
+			if(num % i == 0){
+				return false;
+			}
+		}
+		return true;
 	}
 }
