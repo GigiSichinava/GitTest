@@ -2,16 +2,23 @@ import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 public class Practice extends GraphicsProgram {
-	public void run() {
+	
+	private static final int NUMBER_OF_ROWS = 8;
+	private static final int NUMBER_OF_COLUMNS = 8;
 
-		int x = getWidth() / 8;
-		int y = getHeight() / 8;
-		GRect rect = new GRect(x, y);
-		
-		for (int rows = 0; rows < 8; rows++){
-			for(int colls = 0; colls < 8; colls++){
-				add(rect, x * rows, y);
+	
+	public void run() {
+		int rectSize = getHeight() / NUMBER_OF_ROWS;
+		for(int i = 0; i < NUMBER_OF_ROWS; i++){
+			for(int j = 0; j < NUMBER_OF_ROWS; j++){
+				double x = i * NUMBER_OF_ROWS;
+				double y = j * NUMBER_OF_COLUMNS;
+				GRect rect = new GRect (x, y, rectSize, rectSize);
+				add(rect);
+				
 			}
 		}
+
+		
 	}
 }
