@@ -2,18 +2,19 @@ import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram {
 	public void run() {
-		int num1 = readInt("Enter the first number: ");
-		int num2 = readInt("Enter the second number: ");
 
-		int a = num1;
-		int b = num2;
+		String text = readLine();
+		String symbolintext = readLine();
 
-		while ( b != 0){
-			int temp = b;
-			b = a % b;
-			a = temp;
+		char ch = symbolintext.charAt(0);
+		int result = 0;
+
+		
+		for (int i = 0; i < text.length(); i++) {
+			if (text.charAt(i) == ch) {
+				result++;
+			}
 		}
-		int gcd = a;
-		println(a);
+		println(result);
 	}
 }
