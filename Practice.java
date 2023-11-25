@@ -14,8 +14,14 @@ public class Practice extends GraphicsProgram {
 				double x = i * rectSize;
 				double y = j * rectSize;
 				GRect rect = new GRect (x, y, rectSize, rectSize);
+				int c = i + j;
+				if (c % 2 == 0){
+					rect.setFilled(true);
+				} else {
+					rect.setFilled(false);
+					
+				}
 				add(rect);
-				
 			}
 		}
 
