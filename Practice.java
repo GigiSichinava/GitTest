@@ -1,18 +1,18 @@
 import acm.program.ConsoleProgram;
 
-public class Practice extends ConsoleProgram{
+public class Practice extends ConsoleProgram {
 	public void run(){
 		
-		String text = readLine("Enter your text here: ");
-		for(int i = 0; i < text.length(); i++){
-			char left = text.charAt(i);
-			char right = text.charAt(text.length() - i - 1);
-			if(left != right){
-				println("Negative");
-//				return;
-			}
+	String string = readLine("ur txt: ");
+	for(int i = 0; i < string.length(); i++){
+		char left = string.charAt(i);
+		char right = string.charAt(string.length() - 1 - i);
+		if(left != right){
+			println("negative");
+			return;
 		}
-		println("Positive");
 		
+	}
+	println("positive");
 	}
 }
