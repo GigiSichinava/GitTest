@@ -13,7 +13,7 @@ public class Practice extends ConsoleProgram{
 	private String reveredstring(String str){
 		String result = " ";
 		for(int i = 0; i < str.length(); i++){
-			result = result + str.charAt(i);
+			result = str.charAt(i) + result;
 		}
 		return result;
 	}
