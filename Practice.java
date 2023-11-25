@@ -6,7 +6,7 @@ public class Practice extends ConsoleProgram {
 		String text = readLine();
 		String symbolintext = readLine();
 
-		char symbol = text.charAt(0);
+		char symbol = symbolintext.charAt(0);
 
 		int numberofoccurances = 0;
 
