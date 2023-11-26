@@ -1,25 +1,16 @@
 import acm.program.ConsoleProgram;
 
-public class Practice extends ConsoleProgram {
-
-	private static final int MAX_NUM = 1000;
-
+public class Practice extends ConsoleProgram{
 	public void run(){
-		for(int i = 1; i <= MAX_NUM; i++){
-			if(isPrime(i)){
-				println(i);
+		
+		int a = readInt("enter your number: ");
+		double sqrtA = Math.sqrt(a);
+		int result = 0;
+		for(int i = 0; i < sqrtA; i++){
+			if( a % i == 0){
+				result++;
 			}
 		}
-		
-		
-	}
-
-	private boolean isPrime(int num) {
-		for(int i = 2; i <= Math.sqrt(num); i++){
-			if(num % i == 0){
-				return false;
-			}
-		}
-		return true;
+		println(result);
 	}
 }
