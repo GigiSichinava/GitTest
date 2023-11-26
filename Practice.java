@@ -3,27 +3,20 @@ import acm.program.GraphicsProgram;
 import java.awt.event.MouseEvent;
 
 public class Practice extends GraphicsProgram {
-
-	private int xs;
-	private int ys;
+	
 	private GLine line;
-
-	public void run() {
-		xs = ys = 0;
+	private static final int x0 = 0;
+	private static final int y0 = 0;
+	
+	public void run(){
+		
 		addMouseListeners();
 	}
-
-	public void mousePressed(javafx.scene.input.MouseEvent e) {
-		line = new GLine(xs, ys, e.getX(), e.getY());
+	
+	public void mousePressed(MouseEvent e){
+		line = new GLine (x0, y0, e.getX(), e.getY());
 		add(line);
+		
 	}
-
-	public void mouseDragged(MouseEvent e) {
-		line.setEndPoint(e.getX(), e.getY());
-	}
-
-	public void mouseRelease(MouseEvent e) {
-		xs = e.getX();
-		ys = e.getY();
-	}
+	
 }
