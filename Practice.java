@@ -8,9 +8,9 @@ public class Practice extends ConsoleProgram {
 
 		for (int i = 2; i <= Math.sqrt(number); i++) {
 			if (number % i == 0) {
-				isPrime = true;
-			} else {
 				isPrime = false;
+			} else {
+				isPrime = true;
 			}
 		}
 
