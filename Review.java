@@ -1,35 +1,28 @@
 import acm.program.ConsoleProgram;
 
-public class Review extends ConsoleProgram{
-	public void run(){
-		String num = readLine("Enter Number: ");
-		int ans = stringToInteger(num);
-		print(ans);
-	}
+public class Review extends ConsoleProgram {
+    public void run() {
+        int number = readInt("Enter a number: ");
 
-	private int stringToInteger(String num) {
-		int res = 0;
-		for(int i = 0; i < num.length(); i++){
-			int n = num.charAt(i) - '0';
-			res = res * 10 + n;
-		}
-		return res;
-	}
+        boolean isPrime = true;
+
+        if (number <= 1) {
+            isPrime = false; // Numbers less than or equal to 1 are not prime
+        } else {
+            for (int i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    isPrime = false; // If there is a divisor, the number is not prime
+                    break;
+                }
+            }
+        }
+
+        if (isPrime) {
+            println(number + " is a prime number.");
+        } else {
+            println(number + " is not a prime number.");
+        }
+    }
+
+    
 }
-
-
-
-
-//		public class Problem49 extends ConsoleProgram {
-//		    public void run()St {
-//		        String num = readLine("Enter Number: ");
-//		        int res = 0;
-//		
-//		        for (int i = 0; i < num.length(); i++) {
-//		            int n = num.charAt(i) - '0';
-//		            res = res * 10 + n;
-//		        }
-//		
-//		        print(res);
-//		    }
-//		}
