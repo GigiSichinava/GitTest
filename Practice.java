@@ -1,18 +1,21 @@
 import acm.program.ConsoleProgram;
 
-public class Practice extends ConsoleProgram{
-	public void run(){
-		
-		boolean isPrime = true;
-		
-		for(int i = 1; i < Math.sqrt(number); i++){
+public class Practice extends ConsoleProgram {
+	public void run() {
+
+		while (true) {
+
+			boolean isPrime = true;
 			int number = readInt("Ur number");
-			if(number % i == 0){
-				isPrime = false;
-			} else {
-				isPrime = true;
+
+			for (int i = 1; i < Math.sqrt(number); i++) {
+				if (number % i == 0) {
+					isPrime = false;
+				} else {
+					isPrime = true;
+				}
 			}
+			println(isPrime);
 		}
-		println(isPrime);
 	}
 }
