@@ -1,28 +1,28 @@
-import acm.program.ConsoleProgram;
+import acm.graphics.GLine;
+import acm.program.GraphicsProgram;
+import java.awt.event.MouseEvent;
 
-public class Review extends ConsoleProgram {
-    public void run() {
-        int number = readInt("Enter a number: ");
+public class Review extends GraphicsProgram {
 
-        boolean isPrime = true;
+    private int xs, ys;
+    private GLine line;
 
-        if (number <= 1) {
-            isPrime = false; // Numbers less than or equal to 1 are not prime
-        } else {
-            for (int i = 2; i <= Math.sqrt(number); i++) {
-                if (number % i == 0) {
-                    isPrime = false; // If there is a divisor, the number is not prime
-                    break;
-                }
-            }
-        }
-
-        if (isPrime) {
-            println(number + " is a prime number.");
-        } else {
-            println(number + " is not a prime number.");
-        }
+    public void init() {
+        xs = ys = 0;
+        addMouseListeners();
     }
 
-    
+    public void mousePressed(MouseEvent e) {
+        line = new GLine(xs, ys, e.getX(), e.getY());
+        add(line);
+    }
+
+    public void mouseDragged(MouseEvent e) {
+        line.setEndPoint(e.getX(), e.getY());
+    }
+
+    public void mouseReleased(MouseEvent e) {
+        xs = e.getX();
+        ys = e.getY();
+    }
 }
