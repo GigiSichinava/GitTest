@@ -8,13 +8,13 @@ public class Practice extends GraphicsProgram {
 	private int x0;
 	private int y0;
 	
-	public void innit(){
+	public void run(){
 		x0 = 0;
 		y0 = 0;
 		addMouseListeners();
 	}
 	
-	public void mouseClicked(MouseEvent e){
+	public void mousePressed(MouseEvent e){
 		line = new GLine (x0, y0, e.getX(), e.getY());
 		add(line);	
 		}
