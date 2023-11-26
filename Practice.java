@@ -8,7 +8,7 @@ public class Practice extends GraphicsProgram {
 	private int ys;
 	private GLine line;
 
-	public void init() {
+	public void run() {
 		xs = ys = 0;
 		addMouseListeners();
 	}
