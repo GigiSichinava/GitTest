@@ -6,7 +6,7 @@ public class Practice extends ConsoleProgram{
 		boolean isPrime = true;
 		int number = readInt();
 		
-		for(int i = 1; i < Math.sqrt(number); i ++){
+		for(int i = 1; i <= Math.sqrt(number); i ++){
 			if(number % i == 0){
 				isPrime = true;
 			} else {
