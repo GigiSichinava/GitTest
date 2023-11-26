@@ -5,11 +5,11 @@ import java.awt.event.MouseEvent;
 public class Practice extends GraphicsProgram {
 	
 	private GLine line;
-	private int x0 = 0;
-	private int y0 = 0;
+	private int x0;
+	private int y0;
 	
 	public void run(){
-		
+		x0 = y0 = 0;
 		addMouseListeners();
 	}
 	
