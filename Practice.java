@@ -24,10 +24,10 @@ public class Practice extends GraphicsProgram {
 //	}
 //	
 	
-//	public void mouseReleased(MouseEvent e){
-//		x0 = e.getX();
-//		y0 = e.getY();
-//		
-//	}
+	public void mouseReleased(MouseEvent e){
+		x0 = e.getX();
+		y0 = e.getY();
+		
+	}
 
 }
