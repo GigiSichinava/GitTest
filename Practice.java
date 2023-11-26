@@ -17,10 +17,10 @@ public class Practice extends GraphicsProgram {
 		line = new GLine (x0, y0, e.getX(), e.getY());
 		add(line);
 	}
-//	
-//	public void mouseDragged(MouseEvent e){
-//		line.setEndPoint(e.getX(), e.getY());
-//	}
+	
+	public void mouseDragged(MouseEvent e){
+		line.setEndPoint(e.getX(), e.getY());
+	}
 	
 	public void mouseRelease(MouseEvent e){
 		x0 = e.getX();
