@@ -5,8 +5,8 @@ import java.awt.event.MouseEvent;
 public class Practice extends GraphicsProgram {
 	
 	private GLine line;
-	private static final int x0 = 0;
-	private static final int y0 = 0;
+	private int x0 = 0;
+	private int y0 = 0;
 	
 	public void run(){
 		
@@ -22,4 +22,8 @@ public class Practice extends GraphicsProgram {
 		line.setEndPoint(e.getX(), e.getY());
 	}
 	
+	public void mouseRelease(MouseEvent e){
+		x0 = e.getX();
+		y0 = e.getY();
+	}
 }
