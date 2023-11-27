@@ -26,7 +26,7 @@ public class Practice extends GraphicsProgram {
 		}
 	}
 
-	private void mouseDreagged(MouseEvent e) {
+	private void mouseDragged(MouseEvent e) {
 		GObject object = getElementAt(e.getX(), e.getY());
 		if (object != null) {
 			object.move(e.getX() - prevX, e.getY() - prevY);
