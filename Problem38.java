@@ -17,7 +17,7 @@ public class Problem38 extends ConsoleProgram {
 			int bet = readInt("enter bet amount: ");
 			if (bet > balance) {
 				println("not enough money, try again.");
-				continue;
+//				continue;
 			}
 			int number = readInt("enter number: ");
 			balance += result(number, bet);
