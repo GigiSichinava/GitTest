@@ -18,7 +18,7 @@ public class Practice extends GraphicsProgram {
 		addMouseListeners();
 	}
 
-	private void mousePressed(MouseEvent e) {
+	public void mousePressed(MouseEvent e) {
 		GObject object = getElementAt(e.getX(), e.getY());
 		if (object != null) {
 			prevX = e.getX();
@@ -26,7 +26,7 @@ public class Practice extends GraphicsProgram {
 		}
 	}
 
-	private void mouseDragged(MouseEvent e) {
+	public void mouseDragged(MouseEvent e) {
 		GObject object = getElementAt(e.getX(), e.getY());
 		if (object != null) {
 			object.move(e.getX() - prevX, e.getY() - prevY);
