@@ -1,39 +1,17 @@
-import acm.graphics.GObject;
-import acm.graphics.GOval;
-import acm.program.GraphicsProgram;
-import javafx.scene.input.MouseEvent;
+import acm.program.ConsoleProgram;
 
-public class Practice extends GraphicsProgram {
-
-	private static final int D = 50;
-	private GOval oval;
-	private double prevX;
-	private double prevY;
-
-	public void run() {
-
-		oval = new GOval(D, D);
-		oval.setFilled(true);
-		add(oval, getWidth() / 2 - D / 2, getHeight() / 2 - D / 2);
-		addMouseListeners();
-	}
-
-	public void mousePressed(MouseEvent e) {
-		GObject object = getElementAt(e.getX(), e.getY());
-		if (object != null) {
-			prevX = e.getX();
-			prevY = e.getY();
-		}
-	}
-
-	public void mouseDragged(MouseEvent e) {
-		GObject object = getElementAt(e.getX(), e.getY());
-		if (object != null) {
-			object.move(e.getX() - prevX, e.getY() - prevY);
-			prevX = e.getX();
-			prevY = e.getY();
+public class Practice extends ConsoleProgram{
+	public void run(){
 		
-		}
 	}
-
+	
+	private boolean find(String a, String b){
+		int index = 0;
+		for(int i = 0; i < a.length(); i++){
+			if(a.charAt(i) == b.charAt(index)){
+				index++;
+			}
+		}
+		return index == b.length();
+	}
 }
