@@ -6,9 +6,8 @@ public class Practice extends ConsoleProgram{
 	public void run(){
 		
 		String text = readLine();
-		
-		StringTokenizer tokenizer = new StringTokenizer(text);
-		println(tokenizer.countTokens());
+		StringTokenizer tk = new StringTokenizer(text);
+		println(tk.countTokens());
 		
 	
 	}
