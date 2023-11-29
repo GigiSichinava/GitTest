@@ -12,7 +12,7 @@ public class Practice extends ConsoleProgram{
 		String result = "";
 		for(int i = 0 ; i < text.length(); i++){
 			char ch = text.charAt(i);
-			if(!result.contains("" + ch)){
+			if(text.charAt(i) != text.charAt(i - 1)){
 				result = result + ch;
 			}	
 		}
