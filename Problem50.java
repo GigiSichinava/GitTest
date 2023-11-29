@@ -2,20 +2,16 @@ import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
 
-public class Problem50 extends ConsoleProgram{
-	public void run(){
-	
-		String text = readLine("Enter your text here: ");
-		StringTokenizer tokenizer = new StringTokenizer(text, ",.?!");
-		int count = 0;
+public class Problem50 extends ConsoleProgram {
+	public void run() {
+		String str = readLine();
+		StringTokenizer tokenizer  = new StringTokenizer(str);
+		println(tokenizer.countTokens());
 		
 		while(tokenizer.hasMoreTokens()){
 			String currToken = tokenizer.nextToken();
-			count++;
+			println(currToken);
 		}
-		println("Count:" + count);
-		
 	}
 
 }
-
