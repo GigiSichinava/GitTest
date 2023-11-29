@@ -5,14 +5,22 @@ public class Practice extends ConsoleProgram {
 
 		String text = readLine("Text: ");
 
+		if (isPalidrom(text)) {
+			println("true");
+		} else {
+			println("false");
+		}
+	}
+
+	private boolean isPalidrom(String text) {
 		for (int i = 0; i < text.length(); i++) {
 			char left = text.charAt(i);
 			char right = text.charAt(text.length() - i - 1);
-			if (left == right) {
-				println(true);
-			} else {
-				println(false);
+			if (left != right) {
+				return false;
 			}
 		}
+		return true;
 	}
+
 }
