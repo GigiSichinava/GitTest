@@ -21,6 +21,6 @@ public class Practice extends ConsoleProgram{
 			}
 			
 		}
-		println();
+		println(maxCharacter);
 	}
 }
