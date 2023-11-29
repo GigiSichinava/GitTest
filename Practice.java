@@ -11,7 +11,9 @@ public class Practice extends ConsoleProgram {
 			if (i == 0 || text.charAt(i) != text.charAt(i - 1)) {
 				result += ch;
 			}
-			println(result);
+
 		}
+		println(result);
+
 	}
 }
