@@ -1,19 +1,20 @@
 import acm.program.ConsoleProgram;
 
-public class Practice extends ConsoleProgram {
-	public void run() {
-
+public class Practice extends ConsoleProgram{
+	public void run(){
+		
 		String text = readLine("Text: ");
-		String result = "";
-
-		for (int i = 0; i < text.length(); i++) {
-			char ch = text.charAt(i);
-			if (i == 0 || text.charAt(i) != text.charAt(i - 1)) {
-				result += ch;
+		String symbol = readLine("Symbol: ");
+		
+		char ch = symbol.charAt(0);
+		
+		int result = 0;
+		
+		for( int i = 0; i < text.length(); i++){
+			if(text.charAt(i) == ch){
+				result++;
 			}
-
 		}
 		println(result);
-
 	}
 }
