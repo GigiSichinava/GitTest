@@ -7,7 +7,7 @@ public class Practice extends ConsoleProgram{
 		
 		for(int i = 0; i < text.length(); i++){
 			char left = text.charAt(i);
-			char right = text.charAt(text.length() - i);
+			char right = text.charAt(text.length() - i - 1);
 			if(left == right){
 				println(true);
 			} else {
