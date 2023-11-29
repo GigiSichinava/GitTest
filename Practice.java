@@ -5,7 +5,7 @@ public class Practice extends ConsoleProgram{
 		
 		String text = readLine("text: ");
 		
-		char maxCharacter = 3;
+		char maxCharacter = 0;
 		int maxCount = 0;
 		
 		for(char x = 'a'; x <= 'z'; x++){
