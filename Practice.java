@@ -2,16 +2,19 @@ import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram{
 	public void run(){
-	
+		
 		String text = readLine("Text: ");
-		String result = "";
 		
 		for(int i = 0; i < text.length(); i++){
-			if(i == 0 || text.charAt(i) != text.charAt(i - 1)){
-				result = result + text.charAt(i);
+			char left = text.charAt(i);
+			char right = text.charAt(text.length() - i);
+			if(left == right){
+				println(true);
+			} else {
+				println(false);
 			}
 		}
-		println(result);
+		
 		
 	}
 }
