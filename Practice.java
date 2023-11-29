@@ -7,10 +7,10 @@ public class Practice extends ConsoleProgram {
 		int result = 0;
 		
 		for(int i = 0; i < num.length(); i++){
-			int n = num.charAt(i);
-			println(n);
+			int n = num.charAt(i) - '0';
+			result = result * 10 + n;
 		}
 		
-		
+		println(result);
 	}
 }
