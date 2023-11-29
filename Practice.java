@@ -13,13 +13,15 @@ public class Practice extends ConsoleProgram {
 	}
 
 	private boolean isPalidrom(String text) {
+
 		for (int i = 0; i < text.length(); i++) {
 			char left = text.charAt(i);
 			char right = text.charAt(text.length() - i - 1);
-			if (left != right) {
+			if (right != left) {
 				return false;
 			}
 		}
+
 		return true;
 	}
 
