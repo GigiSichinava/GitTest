@@ -15,7 +15,7 @@ public class Practice extends ConsoleProgram{
 					count++;
 				}
 			}
-			if(count > maxCount){
+			if(count >= maxCount){
 				maxCount = count;
 				maxCharacter = x;
 			}
