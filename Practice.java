@@ -13,7 +13,7 @@ public class Practice extends ConsoleProgram {
 				}
 			}
 			if(count > 0){
-			println(x + ": " + count);
+			println(x + count);
 			}
 		}
 	}
