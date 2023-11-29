@@ -1,14 +1,17 @@
-import java.util.StringTokenizer;
-
 import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram{
 	public void run(){
 		
-		String text = readLine();
-		StringTokenizer tk = new StringTokenizer(text);
-		println(tk.countTokens());
+		String text = readLine("Text: ");
 		
-	
+		int result = 0;
+		
+		for(int i = 0; i < text.length(); i++){
+			char ch = text.charAt(i);
+			int n = ch - '0';
+			result = ch * 10 + n;
+		}
+		println(result);
 	}
 }
