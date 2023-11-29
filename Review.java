@@ -4,7 +4,7 @@ public class Review extends ConsoleProgram{
 	public void run(){
 	String str = readLine();
 	
-	String newstr = str.substring(3, 4);
+	String newstr = str.toUpperCase();
 	println(newstr);
 	}
 }
