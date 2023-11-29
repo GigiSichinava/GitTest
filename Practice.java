@@ -10,9 +10,9 @@ public class Practice extends ConsoleProgram{
 
 	private void printNewString(String text) {
 		String result = "";
-		for(int i = 0 ; i < text.length(); i++){
+		for(int i = 1 ; i < text.length(); i++){
 			char ch = text.charAt(i);
-			if(i == 0 || text.charAt(i) != text.charAt(i - 1)){
+			if( text.charAt(i) != text.charAt(i - 1)){
 				result = result + ch;
 			}	
 		}
