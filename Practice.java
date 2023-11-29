@@ -5,9 +5,22 @@ public class Practice extends ConsoleProgram{
 		
 		String text = readLine("text");
 		
+		int maxCharacter = 0;
+		int maxCount = 0;
 		
-		for(int i = 0; i < text.length(); i++){
+		for(char x = 'a'; x <= 'z'; x++){
+			int count = 0;
+			for(int i = 0; i < text.length(); i++){
+				if(text.charAt(i) == x){
+					count++;
+				}
+			}
+			if(count > maxCount){
+				maxCount = count;
+				maxCharacter = x;
+			}
 			
 		}
+		println(maxCharacter);
 	}
 }
