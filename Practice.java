@@ -11,8 +11,9 @@ public class Practice extends ConsoleProgram{
 				if(text.charAt(i) == x){
 					count++;
 				}
+				println(x + ":" + count);
+
 			}
-			println(x + ":" + count);
 
 		}
 	}
