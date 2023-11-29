@@ -7,7 +7,7 @@ public class Practice extends ConsoleProgram {
 		int result = 0;
 		
 		for(int i = 0; i < num.length(); i++){
-			int n = num.charAt(i);
+			int n = num.charAt(i) - '0';
 			println(n);
 		}
 		
