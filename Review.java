@@ -4,15 +4,14 @@ public class Review extends ConsoleProgram {
     public void run() {
         String text = readLine("Text: ");
 
-        for (char x = 'a'; x <= 'z'; x++) {
-            int count = 0;
-            for (int i = 0; i < text.length(); i++) {
-                if (text.charAt(i) == x) {
-                    count++;
-                }
-            }
-            if (count > 0) {
-                println(x + ": " + count);  // Concatenate the character and count as strings
+        for (int i = 0; i < text.length() / 2; i++) {
+            char left = text.charAt(i);
+            char right = text.charAt(text.length() - i - 1);
+
+            if (left == right) {
+                println(true);
+            } else {
+                println(false);
             }
         }
     }
