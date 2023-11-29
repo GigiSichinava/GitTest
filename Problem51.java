@@ -18,16 +18,17 @@ public class Problem51 extends ConsoleProgram {
 		}
 		return result;
 	}
-
-	private boolean contains(String a, String b) {
-		for (int i = 0; i < a.length() - b.length(); i++) {
-			if (b.equals(a.substring(i, i + b.length()))) {
-				return true;
-			}
-		}
-		return false;
-	}
 }
+
+//	private boolean contains(String a, String b) {
+//		for (int i = 0; i < a.length() - b.length(); i++) {
+//			if (b.equals(a.substring(i, i + b.length()))) {
+//				return true;
+//			}
+//		}
+//		return false;
+//	}
+//}
 
 //	private boolean contains(String a, String b) {
 //		int prevIndex = 0;
