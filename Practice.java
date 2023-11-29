@@ -2,16 +2,16 @@ import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
 
-public class Practice extends ConsoleProgram{
-	public void run(){
-		
-		String text = readLine("Text: ");
-		StringTokenizer tokenizer = new StringTokenizer (text, " ");
-		int count = 0;
+public class Practice extends ConsoleProgram {
+	public void run() {
+		String str = readLine();
+		StringTokenizer tokenizer  = new StringTokenizer(str);
+		println(tokenizer.countTokens());
 		
 		while(tokenizer.hasMoreTokens()){
-			count++;
+			String currToken = tokenizer.nextToken();
+			println(currToken);
 		}
-		println(count);
 	}
+
 }
