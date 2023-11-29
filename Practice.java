@@ -4,14 +4,14 @@ import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram {
 	public void run() {
-		String str = readLine();
-		StringTokenizer tokenizer  = new StringTokenizer(str);
+		String text = readLine("Text: ");
+		StringTokenizer tokenizer  = new StringTokenizer(text);
 		println(tokenizer.countTokens());
 		
-		while(tokenizer.hasMoreTokens()){
-			String currToken = tokenizer.nextToken();
-			println(currToken);
-		}
+//		while(tokenizer.hasMoreTokens()){
+//			String currToken = tokenizer.nextToken();
+//			println(currToken);
+//		}
 	}
 
 }
