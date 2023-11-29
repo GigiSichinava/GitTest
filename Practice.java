@@ -3,9 +3,9 @@ import acm.program.ConsoleProgram;
 public class Practice extends ConsoleProgram{
 	public void run(){
 		
-		String text = readLine("text");
+		String text = readLine("text: ");
 		
-		char maxCharacter = 0;
+		char maxCharacter = 3;
 		int maxCount = 0;
 		
 		for(char x = 'a'; x <= 'z'; x++){
