@@ -10,7 +10,6 @@ public class Practice extends ConsoleProgram{
 		int count = 0;
 		
 		while(tokenizer.hasMoreTokens()){
-			String currtoken = tokenizer.nextToken();
 			count++;
 		}
 		println(count);
