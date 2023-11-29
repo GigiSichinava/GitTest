@@ -9,7 +9,7 @@ public class  Practice extends ConsoleProgram{
 		char ch = symbol.charAt(0);
 		int count = 0;
 		
-		for(int i = 0; i < text.charAt(i); i++){
+		for(int i = 0; i < text.length(); i++){
 			if(text.charAt(i) == ch){
 				count++;
 			}
