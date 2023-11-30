@@ -24,7 +24,7 @@ public class Practice extends GraphicsProgram{
 		oval = new GOval(R, R);
 		oval.setFilled(true);
 		oval.setColor(rgen.nextColor());
-		add(oval, getWidth() - R, getHeight() - R);
+		add(oval, getWidth() / 2 - R, getHeight() / 2 - R);
 		
 	}
 	
