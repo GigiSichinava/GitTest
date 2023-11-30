@@ -29,13 +29,15 @@ public class Review extends GraphicsProgram{
 			
 			if(circle.getX() < 0){
 				vx = -vx;
-			} else if (circle.getX() > getWidth() - circle.getWidth()){
+			} 
+			if (circle.getX() > getWidth() - circle.getWidth()){
 				vx = -vx;
 			}
 
 			if(circle.getY() < 0){
 				vy = -vy;
-			} else if (circle.getY() > getWidth() - circle.getHeight()){
+			} 
+			if (circle.getY() > getWidth() - circle.getHeight()){
 				vy = -vy;
 			}
 			
