@@ -5,76 +5,77 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class Review extends GraphicsProgram{
-	
-	private RandomGenerator rgen =  RandomGenerator.getInstance();
-	
-	private GOval circle = null;
-	
-	private static final double c = 10;
-	private static final double RADISU_MIN = 50;
-	private static final double V_MIN = 1;
-	private static final double V_MAX = 5;
-	
-	private static final int DELAY = 50;
-	
-	private double vx = 0;
-	private double vy = 0;
-	
-	public void run(){
+public class Review extends GraphicsProgram {
+
+	private GOval oval;
+
+	private static final int VXMAX = 5;
+	private static final int VXMIN = 1;
+
+	private static final int VYMAX = 5;
+	private static final int VYMIN = 1;
+
+	private static final int MAX_RADIUS = 50;
+	private static final int MIN_RADIUS = 10;
+
+	private int vx = 0;
+	private int vy = 0;
+
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+
+	public void run() {
+
 		addMouseListeners();
 		addRandomCircle();
 		
-		while(true){
+		int R = rgen.nextInt(MIN_RADIUS, MAX_RADIUS);
+		
+		while (true) {
 			
-			if(circle.getX() < 0){
-				vx = -vx;
-			} 
-			if (circle.getX() > getWidth() - circle.getWidth()){
+			if(oval.getX() < 0){
 				vx = -vx;
 			}
+			if(oval.getX() + 2 * R > getWidth()){
+				vx = -vx;
+			}
+			if(oval.getY() < 0){
+				vy = -vy;
+			}
+			if(oval.getY() + 2 * R > getHeight()){
+				vy = -vy;
+			}
+			
+			oval.move(vx, vy);
+			pause(50);
 
-			if(circle.getY() < 0){
-				vy = -vy;
-			} 
-			if (circle.getY() > getHeight() - circle.getHeight()){
-				vy = -vy;
-			}
-			
-			
-			circle.move(vx,  vy);
-			pause(DELAY);
 		}
-		
 	}
-	
-	private void addRandomCircle(){
-		double radius = rgen.nextDouble(RADISU_MIN, RADISU_MIN);
-		circle = new GOval(2  * radius, 2 * radius);
-		circle.setFilled(true);
-		circle.setColor(rgen.nextColor());
-		
-		double x = rgen.nextDouble(0, getWidth() - 2 * radius);
-		double y = rgen.nextDouble(0, getHeight() - 2 * radius);
-		add(circle, x, y);
-		
+
+	private void addRandomCircle() {
+		int R = rgen.nextInt(MIN_RADIUS, MAX_RADIUS);
+
+		oval = new GOval(2 * R, 2 * R);
+		oval.setFilled(true);
+		oval.setColor(rgen.nextColor());
+		add(oval, getWidth() / 2 - R, getHeight() / 2 - R);
 	}
-	
-	public void mouseClicked(MouseEvent e){
-		
+
+	public void mouseClicked(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
-		if(obj == circle){
-			vx = rgen.nextDouble(V_MIN, V_MAX);
+		if (obj == oval) {
+			oval.setColor(rgen.nextColor());
+
+			vx = rgen.nextInt(VXMIN, VXMAX);
 			if(rgen.nextBoolean(0.5)){
 				vx = -vx;
 			}
-			vy = rgen.nextDouble(V_MIN, V_MAX);
 			if(rgen.nextBoolean(0.5)){
 				vy = -vy;
+				
 			}
-			circle.setColor(rgen.nextColor());
-		}	
+			vy = rgen.nextInt(VYMIN, VYMAX);
+		}
+
 	}
-	
 
 }
