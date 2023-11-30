@@ -1,38 +1,19 @@
-import java.awt.event.MouseEvent;
-
-import acm.graphics.GObject;
-import acm.graphics.GRect;
-import acm.program.ConsoleProgram;
+import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
-
-public class Review extends GraphicsProgram {
-
-	private GObject rect;
-	private GObject obj;
+public class Review extends GraphicsProgram{
+	
+	private static final int R = 50;
+	private RandomGenerator rgen = new RandomGenerator();
 	
 	public void run(){
 		
 		
-		GRect rect = new GRect (10, 10);
-		add(rect);
-		GObject obj = getElementAt(10, 10);
-		if(rect == obj){
-			remove(obj);
-		}
-		addMouseListeners();
-	}
-	
-	
-	public void mousePressed (MouseEvent e){		
 		
-		if (e.getX() >= rect.getX() && e.getY() >= rect.getY()){
-			remove(obj);
-		}
+		GOval oval = new GOval(2 * R, 2 * R);
+		oval.setFilled(true);
+		add(oval, getWidth() / 2 - R, getHeight() / 2 - R);
 		
 	}
-	
-	}
-	
-	
-	
+}
