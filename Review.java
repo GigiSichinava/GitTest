@@ -56,6 +56,7 @@ public class Review extends GraphicsProgram{
 			if(rgen.nextBoolean(0.5)){
 				vy = -vy;
 			}
+			circle.setColor(rgen.nextColor());
 		}	
 	}
 	
