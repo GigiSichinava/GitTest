@@ -21,7 +21,7 @@ public class Practice extends GraphicsProgram{
 	private void addRandomCircle(){
 		int R = rgen.nextInt(MIN_RADIUS, MAX_RADIUS);
 		
-		oval = new GOval(MIN_RADIUS, MAX_RADIUS);
+		oval = new GOval(R, R);
 		oval.setFilled(true);
 		oval.setColor(rgen.nextColor());
 		add(oval, getWidth() - R, getHeight() - R);
