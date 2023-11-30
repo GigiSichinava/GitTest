@@ -12,11 +12,11 @@ public class Practice extends GraphicsProgram {
 	
 	private GOval oval;
 	
-	private static final double V_MIN = 1;
-	private static final double V_MAX = 5;
+	private static final int V_MIN = 1;
+	private static final int V_MAX = 5;
 
-	private static final double RADISU_MIN = 10;
-	private static final double RADIUS_MAX = 50;
+	private static final int RADISU_MIN = 10;
+	private static final int RADIUS_MAX = 50;
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
@@ -31,7 +31,10 @@ public class Practice extends GraphicsProgram {
 		
 		int  R = rgen.nextInt(RADISU_MIN, RADIUS_MAX);
 		
-		oval = new GOval ()
+		oval = new GOval (R, R);
+		oval.setFilled(true);
+		oval.setColor(rgen.nextColor());
+		add(oval);
 		
 		
 	}
