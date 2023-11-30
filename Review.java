@@ -50,7 +50,13 @@ public class Review extends GraphicsProgram{
 		GObject obj = getElementAt(e.getX(), e.getY());
 		if(obj == circle){
 			vx = rgen.nextDouble(V_MIN, V_MAX);
+			if(rgen.nextBoolean(0.5)){
+				vx = -vx;
+			}
 			vy = rgen.nextDouble(V_MIN, V_MAX);
+			if(rgen.nextBoolean(0.5)){
+				vy = -vy;
+			}
 		}	
 	}
 	
