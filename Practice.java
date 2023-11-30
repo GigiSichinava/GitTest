@@ -9,11 +9,11 @@ public class Practice extends GraphicsProgram {
 
 	private GOval oval;
 
-	private static final int VXMAX = 40;
-	private static final int VXMIN = 20;
+	private static final int VXMAX = 20;
+	private static final int VXMIN = 10;
 
-	private static final int VYMAX = 60;
-	private static final int VYMIN = 30;
+	private static final int VYMAX = 20;
+	private static final int VYMIN = 10;
 
 	private static final int MAX_RADIUS = 50;
 	private static final int MIN_RADIUS = 10;
