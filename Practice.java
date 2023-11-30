@@ -48,10 +48,11 @@ public class Practice extends GraphicsProgram {
 		GObject obj = getElementAt(e.getX(), e.getY());
 		if (obj == oval) {
 			oval.setColor(rgen.nextColor());
+
+			vx = rgen.nextInt(VXMIN, VXMAX);
+			vy = rgen.nextInt(VYMIN, VYMAX);
 		}
 
-		vx = rgen.nextInt(VXMIN, VXMAX);
-		vy = rgen.nextInt(VYMIN, VYMAX);
 	}
 
 }
