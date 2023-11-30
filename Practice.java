@@ -44,7 +44,7 @@ public class Practice extends GraphicsProgram {
 			}
 			
 			oval.move(vx, vy);
-			pause(1000);
+			pause(50);
 
 		}
 	}
