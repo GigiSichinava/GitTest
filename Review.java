@@ -8,6 +8,7 @@ public class Review extends GraphicsProgram{
 		
 		
 		GRect rect = new GRect (10, 10);
+		add(rect);
 		GObject obj = getElementAt(10, 10);
 		if(rect == obj){
 			remove(obj);
