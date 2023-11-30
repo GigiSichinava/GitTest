@@ -6,7 +6,7 @@ public class Practice extends ConsoleProgram {
 		String text = readLine("Text: ");
 
 		int maxCount = 0;
-		int maxChar = 0;
+		char maxChar = 0;
 
 		for (char x = 'a'; x < 'z'; x++) {
 			int count = 0;
