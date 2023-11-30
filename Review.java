@@ -24,9 +24,9 @@ public class Review extends GraphicsProgram {
 	}
 	
 	
-	public void mouseClicked (MouseEvent e){		
+	public void mousePressed (MouseEvent e){		
 		
-		if (e.getX() == rect.getX() && e.getY() == rect.getY()){
+		if (e.getX() >= rect.getX() && e.getY() >= rect.getY()){
 			remove(obj);
 		}
 		
