@@ -22,10 +22,10 @@ public class Review extends GraphicsProgram{
 		double radius = rgen.nextDouble(RADISU_MIN, RADISU_MIN);
 		GOval circle = new GOval(radius, radius);
 		circle.setFilled(true);
-		circle.setColor(rgen.nextColor)());
+		circle.setColor(rgen.nextColor());
 		
 		double x = rgen.nextDouble(0, getWidth() - 2 * radius);
-		double y = rgen.nextDouble(0, getHeight() - radius * 2)
+		double y = rgen.nextDouble(0, getHeight() - radius * 2);
 		add(circle, x, y);
 		
 	}
