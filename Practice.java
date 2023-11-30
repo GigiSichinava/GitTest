@@ -9,7 +9,7 @@ public class Practice extends GraphicsProgram{
 	
 	private GOval oval;
 	
-	private static final int MAX_RADIUS = 100;
+	private static final int MAX_RADIUS = 50;
 	private static final int MIN_RADIUS = 10;
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
