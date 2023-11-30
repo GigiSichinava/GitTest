@@ -48,7 +48,7 @@ public class Review extends GraphicsProgram{
 	public void mouseclicked(MouseEvent e){
 		
 		GObject obj = getElementAt(e.getX(), e.getY());
-		if(obj == circle){
+		if(obj != null ){
 			vx = rgen.nextDouble(V_MIN, V_MAX);
 			if(rgen.nextBoolean(0.5)){
 				vx = -vx;
