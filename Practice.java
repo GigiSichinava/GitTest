@@ -8,7 +8,8 @@ public class Practice extends GraphicsProgram{
 		
 		GOval oval = new GOval (100, 100, 100, 100);
 		oval.setFilled(true);
-		oval.setColor(Color.RED);
+		oval.setColor(Color.RED
+				);
 		add(oval);
 	}
 }
