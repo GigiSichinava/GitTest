@@ -5,6 +5,7 @@ public class Practice extends GraphicsProgram{
 	public void run(){
 		
 		GOval oval = new GOval (100, 100, 100, 100);
+		oval.setFilled(true);
 		add(oval);
 	}
 }
