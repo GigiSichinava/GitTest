@@ -16,7 +16,7 @@ public class Review extends GraphicsProgram{
 	private static final double V_MIN = 1;
 	private static final double V_MAX = 5;
 	
-	private static final int DELAY = 100;
+	private static final int DELAY = 50;
 	
 	private double vx = 0;
 	private double vy = 0;
@@ -26,6 +26,20 @@ public class Review extends GraphicsProgram{
 		addRandomCircle();
 		
 		while(true){
+			
+			if(circle.getX() < 0){
+				vx = -vx;
+			} else if (circle.getX() > getWidth() - circle.getWidth()){
+				vx = -vx;
+			}
+
+			if(circle.getY() < 0){
+				vy = -vy;
+			} else if (circle.getY() > getWidth() - circle.getHeight()){
+				vy = -vy;
+			}
+			
+			
 			circle.move(vx,  vy);
 			pause(DELAY);
 		}
