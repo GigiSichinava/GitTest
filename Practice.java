@@ -50,6 +50,12 @@ public class Practice extends GraphicsProgram {
 			oval.setColor(rgen.nextColor());
 
 			vx = rgen.nextInt(VXMIN, VXMAX);
+			if(rgen.nextBoolean(0.5)){
+				vx = -vx;
+			}
+			if(rgen.nextBoolean(0.5)){
+				vy = -vy;
+			}
 			vy = rgen.nextInt(VYMIN, VYMAX);
 		}
 
