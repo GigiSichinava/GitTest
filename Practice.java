@@ -4,28 +4,35 @@ import java.awt.event.MouseEvent;
 import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
-public class Practice extends GraphicsProgram{
+
+
+public class Practice extends GraphicsProgram {
 	
 	private GOval oval;
 	
-	public void run(){
+	private static final double V_MIN = 1;
+	private static final double V_MAX = 5;
 
-		
+	private static final double RADISU_MIN = 10;
+	private static final double RADIUS_MAX = 50;
+	
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+	
+	public void run() {
+
 		addMouseListeners();
-		oval = new GOval (100, 100, 100, 100);
-		oval.setFilled(true);
-		oval.setColor(Color.RED);
-		add(oval);
-		
-		
-		
+		addRandomCircle();
+
 	}
 	
-	public void mouseClicked(MouseEvent e){
-		GObject obj = getElementAt(e.getX(), e.getY());
-		if(obj == oval){
-			remove(oval);
-		}
+	private void addRandomCircle(){
+		
+		int  R = rgen.nextInt(RADISU_MIN, RADIUS_MAX);
+		
+		oval = new GOval ()
+		
+		
 	}
 }
