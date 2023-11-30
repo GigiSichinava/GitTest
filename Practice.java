@@ -9,11 +9,11 @@ public class Practice extends GraphicsProgram {
 
 	private GOval oval;
 
-	private static final int VXMAX = 20;
-	private static final int VXMIN = 10;
+	private static final int VXMAX = 5;
+	private static final int VXMIN = 1;
 
-	private static final int VYMAX = 20;
-	private static final int VYMIN = 10;
+	private static final int VYMAX = 5;
+	private static final int VYMIN = 1;
 
 	private static final int MAX_RADIUS = 50;
 	private static final int MIN_RADIUS = 10;
@@ -27,7 +27,9 @@ public class Practice extends GraphicsProgram {
 
 		addMouseListeners();
 		addRandomCircle();
-
+		
+		int R = rgen.nextInt(MIN_RADIUS, MAX_RADIUS);
+		
 		while (true) {
 			
 			if(oval.getX() < 0){
