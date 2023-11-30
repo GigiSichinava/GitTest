@@ -39,7 +39,7 @@ public class Review extends GraphicsProgram{
 			} 
 			if (circle.getY() > getHeight() - circle.getHeight()){
 				vy = -vy;
-			}publiv
+			}
 			
 			
 			circle.move(vx,  vy);
