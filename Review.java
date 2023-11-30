@@ -37,7 +37,7 @@ public class Review extends GraphicsProgram{
 			if(circle.getY() < 0){
 				vy = -vy;
 			} 
-			if (circle.getY() > getWidth() - circle.getHeight()){
+			if (circle.getY() > getHeight() - circle.getHeight()){
 				vy = -vy;
 			}
 			
