@@ -1,28 +1,9 @@
-import acm.program.ConsoleProgram;
+import acm.program.GraphicsProgram;
 
-public class Practice extends ConsoleProgram {
-	public void run() {
-
-		String text = readLine("Text: ");
-
-		if (isPalidrom(text)) {
-			println("true");
-		} else {
-			println("false");
-		}
+public class Practice extends GraphicsProgram{
+	public void run(){
+		
+		
+		
 	}
-
-	private boolean isPalidrom(String text) {
-
-		for (int i = 0; i < text.length(); i++) {
-			char left = text.charAt(i);
-			char right = text.charAt(text.length() - i - 1);
-			if (right != left) {
-				return false;
-			}
-		}
-
-		return true;
-	}
-
 }
