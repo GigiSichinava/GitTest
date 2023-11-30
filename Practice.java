@@ -31,7 +31,7 @@ public class Practice extends GraphicsProgram{
 	}
 	
 	public void mouseClicked(MouseEvent e){
-		GObject obj = getElementAt(e.getX(), e.getX());
+		GObject obj = getElementAt(e.getX(), e.getY());
 		if(obj == oval){
 			oval.setColor(rgen.nextColor());
 		}
