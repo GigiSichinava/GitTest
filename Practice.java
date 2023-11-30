@@ -29,6 +29,20 @@ public class Practice extends GraphicsProgram {
 		addRandomCircle();
 
 		while (true) {
+			
+			if(oval.getX() < 0){
+				vx = -vx;
+			}
+			if(oval.getX() + 2 * R > getWidth()){
+				vx = -vx;
+			}
+			if(oval.getY() < 0){
+				vy = -vy;
+			}
+			if(oval.getY() + 2 * R > getHeight()){
+				vy = -vy;
+			}
+			
 			oval.move(vx, vy);
 			pause(1000);
 
