@@ -30,7 +30,7 @@ public class Practice extends GraphicsProgram {
 
 		while (true) {
 			oval.move(vx, vy);
-			pause(10);
+			pause(100);
 
 		}
 	}
