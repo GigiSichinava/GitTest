@@ -55,6 +55,7 @@ public class Practice extends GraphicsProgram {
 			}
 			if(rgen.nextBoolean(0.5)){
 				vy = -vy;
+				
 			}
 			vy = rgen.nextInt(VYMIN, VYMAX);
 		}
