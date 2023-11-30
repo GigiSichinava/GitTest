@@ -4,16 +4,29 @@ import acm.util.RandomGenerator;
 
 public class Review extends GraphicsProgram{
 	
-	private static final int R = 50;
-	private RandomGenerator rgen = new RandomGenerator();
+	private RandomGenerator rgen =  RandomGenerator.getInstance();
+	
+	private static final double c = 10;
+	private static final double RADISU_MIN = 50;
+	private static final double V_MIN = 1;
+	private static final double V_MAX = 5;
+	
 	
 	public void run(){
+		addMouseListeners();
+		addRandomCircle();
 		
+	}
+	
+	private void addRandomCircle(){
+		double radius = rgen.nextDouble(RADISU_MIN, RADISU_MIN);
+		GOval circle = new GOval(radius, radius);
+		circle.setFilled(true);
+		circle.setColor(rgen.nextColor)());
 		
-		
-		GOval oval = new GOval(2 * R, 2 * R);
-		oval.setFilled(true);
-		add(oval, getWidth() / 2 - R, getHeight() / 2 - R);
+		double x = rgen.nextDouble(0, getWidth() - 2 * radius);
+		double y = rgen.nextDouble(0, getHeight() - radius * 2)
+		add(circle, x, y);
 		
 	}
 }
