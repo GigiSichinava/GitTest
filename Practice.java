@@ -35,7 +35,12 @@ public class Practice extends GraphicsProgram {
 		oval.setFilled(true);
 		oval.setColor(rgen.nextColor());
 		add(oval, getWidth() / 2 - R, getHeight());
-		
-		
+	}
+	
+	public void mouseClicked(MouseEvent e){
+		GObject obj = getElementAt(e.getX(), e.getY());
+		if(obj == oval){
+			oval.setColor(rgen.nextColor());
+		}
 	}
 }
