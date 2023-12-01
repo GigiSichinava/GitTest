@@ -32,15 +32,16 @@ public class Practice extends GraphicsProgram {
 
 	private void addRandomCircle(){
 
-	
-
 	double R = rgen.nextDouble(MIN_R, MAX_R);
 	
 	oval = new GOval(2 * R, 2 * R);
 	oval.setFilled(true);
 	oval.setColor(rgen.nextColor());
 	
-	add(oval, getWidth() / 2 - R, getHeight() / 2 - R);
+	double randomX = rgen.nextDouble(0, getWidth() - oval.getWidth());
+	double randomY = rgen.nextDouble(0, getHeight() - oval.getHeight());
+	
+	add(oval, randomX, randomY);
 	
 	}
 	
