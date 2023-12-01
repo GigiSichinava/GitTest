@@ -4,18 +4,14 @@ import acm.program.GraphicsProgram;
 
 public class Practice extends GraphicsProgram {
 
-    private GLine line;
-
     public void run() {
         addMouseListeners();
-        line = new GLine(0, 0, 0, 0); 
     }
 
     public void mousePressed(MouseEvent e) {
-        double x2 = e.getX();
-        double y2 = e.getY();
-        line.setEndPoint(x2, y2); 
+        double x = e.getX();
+        double y = e.getY();
+        GLine line = new GLine(0, 0, x, y); // Create a new line for each click
         add(line);
     }
 }
-
