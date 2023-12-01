@@ -39,7 +39,7 @@ public class Practice extends GraphicsProgram {
 	
 	}
 	
-	public void mouseclicked(MouseEvent e){
+	public void mouseClicked(MouseEvent e){
 		
 		GObject obj = getElementAt(e.getX(), e.getY());
 		if(obj == oval){
