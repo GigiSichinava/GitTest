@@ -14,10 +14,6 @@ public class Practice extends GraphicsProgram {
 
 	private GOval oval;
 
-	private double vx = rgen.nextDouble(MIN_VX, MAX_VX);
-	private double vy = rgen.nextDouble(MIN_VY, MAX_VY);
-	
-	
 	private static final double MIN_VX = 1;
 	private static final double MAX_VX = 5;
 	private static final double MIN_VY = 1;
@@ -26,32 +22,35 @@ public class Practice extends GraphicsProgram {
 	public void run() {
 		addMouseListeners();
 		addRandomCircle();
-		
-		
-		
+
+		double vx = rgen.nextDouble(MIN_VX, MAX_VX);
+		double vy = rgen.nextDouble(MIN_VY, MAX_VY);
+
+		while(true){
 		oval.move(vx, vy);
 		pause(10);
+		}
 	}
 
-	private void addRandomCircle(){
+	private void addRandomCircle() {
 
-	double R = rgen.nextDouble(MIN_R, MAX_R);
-	
-	oval = new GOval(2 * R, 2 * R);
-	oval.setFilled(true);
-	oval.setColor(rgen.nextColor());
-	
-	double randomX = rgen.nextDouble(0, getWidth() - oval.getWidth());
-	double randomY = rgen.nextDouble(0, getHeight() - oval.getHeight());
-	
-	add(oval, randomX, randomY);
-	
+		double R = rgen.nextDouble(MIN_R, MAX_R);
+
+		oval = new GOval(2 * R, 2 * R);
+		oval.setFilled(true);
+		oval.setColor(rgen.nextColor());
+
+		double randomX = rgen.nextDouble(0, getWidth() - oval.getWidth());
+		double randomY = rgen.nextDouble(0, getHeight() - oval.getHeight());
+
+		add(oval, randomX, randomY);
+
 	}
-	
-	public void mouseClicked(MouseEvent e){
-		
+
+	public void mouseClicked(MouseEvent e) {
+
 		GObject obj = getElementAt(e.getX(), e.getY());
-		if(obj == oval){
+		if (obj == oval) {
 			oval.setColor(rgen.nextColor());
 		}
 	}
