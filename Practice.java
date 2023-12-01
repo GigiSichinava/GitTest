@@ -1,28 +1,24 @@
-import acm.graphics.GLine;
-import acm.program.GraphicsProgram;
-import java.awt.event.MouseEvent;  // Correct import statement
+import acm.program.ConsoleProgram;
 
-public class Practice extends GraphicsProgram{
-	
-	private GLine line;
-	private double x1 = 0;
-	private double y1 = 0;
-	
-	public void run(){
-		addMouseListeners();
+public class Practice extends ConsoleProgram {
+	public void run() {
+
+		String mama = readLine("Mama: ");
+		String shvili = readLine("Shvili: ");
 		
 	}
+
+	private boolean amIYourFatherLuke(String mama, String shvili){
+			
+		for(int i = 0; i < shvili.length(); i++){
+			for(int j = i + 1; j <= shvili.length(); j++){
+				if(mama.contains(shvili.substring(i, j)) && shvili.substring(i, j).length() > mama.length() / 2){
+					return true;
+				}
+			}
+		}
 	
-	public void mouseClicked(MouseEvent e){
-		
-		double x2 = e.getX();
-		double y2 = e.getY();
-		
-		
-		line = new GLine (x1, y1, x2, y2);
-		add(line);
-		
-		x1 = x2;
-		y1 = y2;
-	}
+		return false;
+		}
+
 }
