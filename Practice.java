@@ -1,6 +1,6 @@
 import acm.graphics.GLine;
 import acm.program.GraphicsProgram;
-import javafx.scene.input.MouseEvent;
+import java.awt.event.MouseEvent;  // Correct import statement
 
 public class Practice extends GraphicsProgram{
 	
