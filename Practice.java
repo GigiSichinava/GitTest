@@ -32,4 +32,8 @@ public class Practice extends GraphicsProgram {
 	public void mouseDragged(MouseEvent e){
 		line.setEndPoint(e.getX(), e.getY());
 	}
+	public void mouseRelease(MouseEvent e){
+		x1 = e.getX();
+		y1 = e.getY();
+	}
 }
