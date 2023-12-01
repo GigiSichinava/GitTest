@@ -18,7 +18,6 @@ public class Practice extends GraphicsProgram {
         GLine line = new GLine(x1, y1, x2, y2);
         add(line);
 
-        // Update starting point for the next line
         x1 = x2;
         y1 = y2;
     }
