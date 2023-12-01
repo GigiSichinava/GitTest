@@ -14,6 +14,10 @@ public class Practice extends GraphicsProgram {
 
 	private GOval oval;
 
+	private double vx = rgen.nextDouble(MIN_VX, MAX_VX);
+	private double vy = rgen.nextDouble(MIN_VY, MAX_VY);
+	
+	
 	private static final double MIN_VX = 1;
 	private static final double MAX_VX = 5;
 	private static final double MIN_VY = 1;
@@ -23,8 +27,7 @@ public class Practice extends GraphicsProgram {
 		addMouseListeners();
 		addRandomCircle();
 		
-		double vx = rgen.nextDouble(MIN_VX, MAX_VX);
-		double vy = rgen.nextDouble(MIN_VY, MAX_VY);
+		
 		
 		oval.move(vx, vy);
 		pause(10);
