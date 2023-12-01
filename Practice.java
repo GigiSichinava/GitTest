@@ -21,7 +21,7 @@ public class Practice extends GraphicsProgram {
 	
 	}
 
-	public void mouseClicked(MouseEvent e) {
+	public void mousePressed(MouseEvent e) {
 		x2 = e.getX();
 		y2 = e.getY();
 		add(line);
