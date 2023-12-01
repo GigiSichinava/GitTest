@@ -21,5 +21,7 @@ public class Practice extends GraphicsProgram{
 		
 		line = new GLine (x1, y1, x2, y2);
 		add(line);
+		
+		
 	}
 }
