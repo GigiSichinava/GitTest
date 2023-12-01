@@ -22,12 +22,17 @@ public class Practice extends GraphicsProgram {
 	public void run() {
 		addMouseListeners();
 		addRandomCircle();
+		
+		double vx = rgen.nextDouble(MIN_VX, MAX_VX);
+		double vy = rgen.nextDouble(MIN_VY, MAX_VY);
+		
+		oval.move(vx, vy);
+		pause(10);
 	}
 
 	private void addRandomCircle(){
 
-	double x = rgen.nextDouble(MIN_VX, MAX_VX);
-	double y = rgen.nextDouble(MIN_VY, MAX_VY);
+	
 
 	double R = rgen.nextDouble(MIN_R, MAX_R);
 	
