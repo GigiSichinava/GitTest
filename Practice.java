@@ -22,8 +22,9 @@ public class Practice extends GraphicsProgram {
 	}
 
 	public void mouseClicked(MouseEvent e) {
-		
-		line.setLocation(e.getX(), e.getY());
+		x2 = e.getX();
+		y2 = e.getY();
+		add(line,  x2, y2);
 	
 	}
 }
