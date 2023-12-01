@@ -14,10 +14,10 @@ public class Practice extends GraphicsProgram {
 
 	private GOval oval;
 
-	private static final double MIN_VX = 10;
-	private static final double MAX_VX = 50;
-	private static final double MIN_VY = 10;
-	private static final double MAX_VY = 50;
+	private static final double MIN_VX = 1;
+	private static final double MAX_VX = 5;
+	private static final double MIN_VY = 1;
+	private static final double MAX_VY = 5;
 
 	public void run() {
 		addMouseListeners();
