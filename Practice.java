@@ -18,13 +18,12 @@ public class Practice extends GraphicsProgram {
 		
 		addMouseListeners();
 		GLine line = new GLine (x1, y1, x2, y2);
-		add(line);
+	
 	}
 
 	public void mouseClicked(MouseEvent e) {
 		x2 = e.getX();
 		y2 = e.getY();
-		add(line, , x2, y2);
-	
+		add(line);
 	}
 }
