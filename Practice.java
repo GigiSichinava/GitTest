@@ -17,11 +17,11 @@ public class Practice extends GraphicsProgram {
 	public void run(){
 		
 		addMouseListeners();
+		GLine line = new GLine (x1, y1, x2, y2);
 		add(line);
 	}
 
 	public void mouseClicked(MouseEvent e) {
-		
 		
 		line.setLocation(e.getX(), e.getY());
 	
