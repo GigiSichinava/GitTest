@@ -11,7 +11,7 @@ public class Practice extends GraphicsProgram {
         addMouseListeners();
     }
 
-    public void mousePressed(MouseEvent e) {
+    public void mouseClicked(MouseEvent e) {
         double x2 = e.getX();
         double y2 = e.getY();
 
