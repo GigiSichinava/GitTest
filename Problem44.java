@@ -10,7 +10,7 @@ public class Problem44 extends GraphicsProgram{
 			addMouseListeners();
 	}
 	@Override
-	public void mouseClicked(MouseEvent e){
+	public void mousePressed(MouseEvent e){
 		line = new GLine (e.getX(), e.getY(), e.getX(), e.getY());
 		add(line);
 	}
