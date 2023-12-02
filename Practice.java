@@ -8,7 +8,7 @@ public class Practice extends ConsoleProgram{
 		
 		
 		for(int i = 0; i < text.length(); i++){
-			int prevNumber = text.charAt(i);
+			int prevNumber = text.charAt(i) - '0';
 			result = result * 10 + prevNumber;
 			
 		}
