@@ -18,7 +18,7 @@ public class Practice extends GraphicsProgram{
 			for(int j = 0; j < numColl; j++){
 				rect = new GRect(R, R);
 				add(rect, R * i, R * j);
-				if((R * i + R * j) % 2 == 1){
+				if((i + j) % 2 == 1){
 					rect.setFilled(true);
 			}
 			
