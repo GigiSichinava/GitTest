@@ -14,9 +14,9 @@ public class Practice extends GraphicsProgram{
 		
 		
 		int R = getHeight() / numRows;
-		rect = new GRect(R, R);
 		for(int i = 0; i < numRows; i++){
 			for(int j = 0; j < numColl; j++){
+				rect = new GRect(R, R);
 				add(rect, R * i, R * j);
 			}
 		}
