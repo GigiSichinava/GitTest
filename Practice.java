@@ -1,17 +1,29 @@
+import java.util.StringTokenizer;
 import acm.program.ConsoleProgram;
 
-public class Practice extends ConsoleProgram{
-	public void run(){
-	
-	String text = readLine("Text: ");
-	String result = "";
-	
-	for(int i = text.length() - 1; i >= 0 ; i--){
-	result += text.charAt(i);
-	} 
+public class Practice extends ConsoleProgram {
+	public void run() {
+		while (true) {
+			String s = readLine("Enter text: ");
+			println(beautify(s));
+		}
+	}
 
+	private String beautify(String s) {
+		StringTokenizer tokenizer = new StringTokenizer(s, " ,.", true);
+		String beautifulS = "";
+		while (tokenizer.hasMoreTokens()) {
+			String currentWord = tokenizer.nextToken();
+			beautifulS += reversed(currentWord);
+		}
+		return beautifulS;
+	}
 
-	println(result);
-
+	private String reversed(String word) {
+		String reversed = "";
+		for(int i = word.length() -1; i >= 0; i--){
+			reversed += word.charAt(i);
+		}
+		return reversed;
 	}
 }
