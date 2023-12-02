@@ -6,7 +6,7 @@ public class Practice extends ConsoleProgram{
 		String text = readLine("Text :");
 		String result = "";
 		
-		for(int i = 0; i < text.length() - 1; i++){
+		for(int i = 0; i < text.length() ; i++){
 			if(text.charAt(i) != text.charAt(i + 1)){
 				result = result + text.charAt(i);				
 			}
