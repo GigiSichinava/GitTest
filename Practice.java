@@ -1,17 +1,26 @@
-import acm.program.ConsoleProgram;
+import acm.graphics.GRect;
+import acm.program.GraphicsProgram;
 
-public class Practice extends ConsoleProgram {
-
-	public void run() {
-		
-		String num = readLine("Text: ");
-		int result = 0;
-		
-		for(int i = 0; i < num.length(); i++){
-			int nextNum = num.charAt(i) - '0';
-			result = nextNum * 10 + num.charAt(i) - '0';
-		}
-		println(result);
-	}
+public class Practice extends GraphicsProgram{
 	
+	private static final int numRows = 8;
+	private static final int numColl = 8;
+	private GRect rect;
+	private int R;
+	
+	public void run(){
+		createBoard();
+	}
+	private void createBoard(){
+		
+		
+		int R = getWidth() / numRows;
+		rect = new GRect(R, R);
+		for(int i = 0; i < numRows; i++){
+			for(int j = 0; j < numColl; j++){
+				add(rect, R * i, R * j);
+			}
+		}
+		
+	}
 }
