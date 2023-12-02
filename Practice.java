@@ -1,42 +1,17 @@
-import java.awt.event.MouseEvent;
+import acm.program.ConsoleProgram;
 
-import acm.graphics.GObject;
-import acm.graphics.GOval;
-import acm.program.GraphicsProgram;
-
-public class Practice extends GraphicsProgram{
-	
-	private double prevX;
-	private double prevY;
-	private static final int R = 50;
-	private GOval oval;
-	
+public class Practice extends ConsoleProgram{
 	public void run(){
-		
-		oval = new GOval(2 * R, 2 * R);
-		oval.setFilled(true);
-		add(oval);
-		addMouseListeners();
-	}
 	
-	public void mousePressed(MouseEvent e){
-		GObject obj = getElementAt(e.getX(), e.getY());
-		if (obj != null){
-			prevX = e.getX();
-			prevY = e.getY();
-		}
-	}
+	String text = readLine("Text: ");
+	String result = "";
 	
-	
-	public void mouseDragged(MouseEvent e){
-		GObject obj = getElementAt(e.getX(), e.getY());
-		if(obj != null){
-			
-			oval.move(e.getX() - prevX, e.getY() - prevY);
-//		
-//			prevX = e.getX();
-//			prevY = e.getY();
-//		
-		}
+	for(int i = text.length() - 1; i >= 0 ; i--){
+	result += i;
+	} 
+
+
+	println(result);
+
 	}
 }
