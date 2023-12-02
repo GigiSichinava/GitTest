@@ -26,9 +26,9 @@ public class Practice extends GraphicsProgram {
 		double vx = rgen.nextDouble(MIN_VX, MAX_VX);
 		double vy = rgen.nextDouble(MIN_VY, MAX_VY);
 
-		while(true){
-		oval.move(vx, vy);
-		pause(100);
+		while (true) {
+			oval.move(vx, vy);
+			pause(100);
 		}
 	}
 
