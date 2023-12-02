@@ -33,7 +33,7 @@ public class Practice extends GraphicsProgram{
 			prevX = e.getX();
 			prevY = e.getY();
 		
-			oval.move(e.getX() - prevX, e.getY() - prevY);
+			obj.move(e.getX() - prevX, e.getY() - prevY);
 		
 		}
 	}
