@@ -9,7 +9,7 @@ public class Review extends ConsoleProgram {
 	}
 	
 		private String beautify(String text){
-			StringTokenizer tokenizer = new StringTokenizer(text);
+			StringTokenizer tokenizer = new StringTokenizer(text, " ");
 			String beautifuls = "";
 			
 			while(tokenizer.hasMoreTokens()){
