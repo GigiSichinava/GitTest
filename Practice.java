@@ -1,30 +1,30 @@
-import java.awt.event.MouseEvent;
+import java.util.StringTokenizer;
+import acm.program.ConsoleProgram;
 
-import acm.graphics.GLine;
-import acm.program.GraphicsProgram;
 
-public class Practice extends GraphicsProgram {
-
-	private double x1 = 0;
-	private double y1 = 0;
-	private double x2;
-	private double y2;
-
-	private GLine line;
-
+public class Practice extends ConsoleProgram {
 	public void run() {
-		addMouseListeners();
+		while (true) {
+			String s = readLine("Enter text: ");
+			println(beautify(s));
+		}
 	}
 
-	public void mouseClicked(MouseEvent e) {
-		x2 = e.getX();
-		y2 = e.getY();
+	private String beautify(String s) {
+		StringTokenizer tokenizer = new StringTokenizer(s, " ,.", true);
+		String beautifulS = "";
+		while (tokenizer.hasMoreTokens()) {
+			String currentWord = tokenizer.nextToken();
+			beautifulS += reversed(currentWord);
+		}
+		return beautifulS;
+	}
 
-		line = new GLine (x1, y1, x2, y2);
-		
-		add(line);
-		
-		x1 = x2;
-		y1 = y2;
+	private String reversed(String word) {
+		String reversed = "";
+		for(int i = word.length() -1; i >= 0; i--){
+			reversed += word.charAt(i);
+		}
+		return reversed;
 	}
 }
