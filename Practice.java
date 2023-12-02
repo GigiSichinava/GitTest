@@ -9,6 +9,7 @@ public class Practice extends GraphicsProgram{
 	private GRect dzveli;
 	private GRect obj;
 	public void run(){
+		addMouseListeners();
 		grid();
 	}
 	private void grid(){
