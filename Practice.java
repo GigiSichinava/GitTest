@@ -5,37 +5,53 @@ import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 public class Practice extends GraphicsProgram{
-	
-	private static final int numRows = 8;
-	private static final int numColl = 8;
-	private GRect rect;
-	
+	private GRect axali;
+	private GRect dzveli;
+	private GRect obj;
 	public void run(){
-		createBoard();
-		addMouseListeners();
+		grid();
 	}
-	private void createBoard(){
-		
-		
-		int R = getHeight() / numRows;
-		for(int i = 0; i < numRows; i++){
-			for(int j = 0; j < numColl; j++){
-				rect = new GRect(R, R);
-				add(rect, R * i, R * j);
-				if((i + j) % 2 == 1){
-					rect.setFilled(true);
-			}
-			
+	private void grid(){
+		for(int i = 0; i < 10; i ++){
+			for(int j = 0; j < 10; j++){
+				GRect rect = new GRect(50, 50);
+				add(rect, i * 50, j * 50);
 			}
 		}
-		
 	}
-	
 	public void mouseClicked(MouseEvent e){
-		GObject obj = getElementAt(e.getX(), e.getY());
-		if(obj == rect){
-			remove(rect);
+		obj = (GRect)getElementAt(e.getX(), e.getY());
+		if(obj == null)return;
+		if(obj != null && axali == null && dzveli == null){
+			axali = obj;
+			axali.setFilled(true);
+			return;
 		}
-				
+		if(axali != null && obj != null && dzveli == null){
+			dzveli = axali;
+			axali =  obj;
+			axali.setFilled(true);
+			return;
+		}
+		if(obj == dzveli){
+			dzveli.setFilled(false);
+			//dzveli = axali;
+			return;
+		}
+		if(obj == axali){
+			axali.setFilled(false);
+			axali = dzveli;
+			return;
+		}
+		if (axali != null && dzveli != null && obj != null){
+			dzveli.setFilled(false);
+			dzveli = axali;
+			axali = obj;
+			axali.setFilled(true);
+			return;
+		}
+		
+
 	}
+
 }
