@@ -7,7 +7,7 @@ public class Practice extends ConsoleProgram{
 	String result = "";
 	
 	for(int i = text.length() - 1; i >= 0 ; i--){
-	result += i;
+		result += text.charAt(i);
 	} 
 
 
