@@ -6,7 +6,6 @@ public class Practice extends GraphicsProgram{
 	private static final int numRows = 8;
 	private static final int numColl = 8;
 	private GRect rect;
-	private int R;
 	
 	public void run(){
 		createBoard();
@@ -14,7 +13,7 @@ public class Practice extends GraphicsProgram{
 	private void createBoard(){
 		
 		
-		int R = getWidth() / numRows;
+		int R = getHeight() / numRows;
 		rect = new GRect(R, R);
 		for(int i = 0; i < numRows; i++){
 			for(int j = 0; j < numColl; j++){
