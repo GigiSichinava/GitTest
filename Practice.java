@@ -1,7 +1,8 @@
+import java.awt.event.MouseEvent;
+
 import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
-import javafx.scene.input.MouseEvent;
 
 public class Practice extends GraphicsProgram{
 	
