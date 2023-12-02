@@ -27,11 +27,14 @@ public class Practice extends GraphicsProgram{
 	}
 	
 	
-//	public void mouseDragged(MouseEvent e){
-//		GObject obj = getElementAt(e.getX(), e.getY());
-//		if(obj != null){
-//			prevX = e.getX();
-//			prevY = e.getY();
-//		}
-//	}
+	public void mouseDragged(MouseEvent e){
+		GObject obj = getElementAt(e.getX(), e.getY());
+		if(obj != null){
+			prevX = e.getX();
+			prevY = e.getY();
+		
+			oval.move(e.getX() - prevX, e.getY() - prevY);
+		
+		}
+	}
 }
