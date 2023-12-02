@@ -1,23 +1,17 @@
 import acm.program.ConsoleProgram;
 
-public class Practice extends ConsoleProgram{
-	private int count = 0;
-	
-	public void run(){
+public class Practice extends ConsoleProgram {
+
+	public void run() {
 		
-		String text = readLine("Text: ");
-		String symbol = readLine("Symbo: ");
+		String num = readLine("Text: ");
+		int result = 0;
 		
-		char ch = symbol.charAt(0);
-		
-		for(int i = 0; i < text.length(); i++){
-			if(ch == text.charAt(i)){
-				count++;
-			}
+		for(int i = 0; i < num.length(); i++){
+			int nextNum = result + num.charAt(i) - '0';
+			result = nextNum * 10 + num.charAt(i);
 		}
-		println(count);
-		
+		println(result);
 	}
 	
-			
 }
