@@ -11,7 +11,7 @@ public class Review extends ConsoleProgram{
 		masivi[2] = 2;
 		masivi[3] = 3;
 		masivi[4] = 4;
-		println(masivi.toString());
+		println(masivi.toString();
 		
 	}
 }
