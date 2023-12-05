@@ -23,7 +23,14 @@ public class Practice extends ConsoleProgram{
 		
 		println(myArr2); // ase misamarts dabewdavs 
 		
-		println(Arrays.toString(myArr2));
+		println(Arrays.toString(myArr2));  // ase chve ro gvinda ise teslad
+	
+		
+		int[] myArr3 = {0, 5, 6, 7, 8};
+		 
+		if(Arrays.equals(myArr2, myArr3)){
+			println("Equals");
+		}
 		
 	}
 }
