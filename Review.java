@@ -12,5 +12,8 @@ public class Review extends ConsoleProgram {
 		
 		int[] copy = Arrays.copyOf(array,  4); // <-- 4 ro weria, nishnavs ramdeni wevri minda wamovigo dasakopireblad
 		println(Arrays.toString(copy));  
+		
+		
+		println(array.length);
 	}
 }
