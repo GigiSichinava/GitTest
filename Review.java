@@ -10,6 +10,9 @@ public class Review extends ConsoleProgram {
 		try {
 			BufferedReader reader = new BufferedReader(
 					new FileReader("ConsoleProgrammSample.java"));
+		
+			System.out.println("read file");
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
