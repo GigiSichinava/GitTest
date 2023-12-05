@@ -1,17 +1,26 @@
+
+//Problem 52
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
 import acm.program.ConsoleProgram;
 
-public class Practice extends ConsoleProgram{
-	public void run(){
-		
-		String text = readLine();
-		int result = 0;
-		
-		
-		for(int i = 0; i < text.length(); i++){
-			int prevNumber = text.charAt(i) - '0';
-			result = result * 10 + prevNumber;
+public class Practice extends ConsoleProgram {
+	private static final String FILENAME = "tst.txt";
+
+	public void run() {
+		try {   // aq iwereba kodi da tu daerorda gadmava catchshi
+			BufferedReader reader = new BufferedReader(new FileReader("FILENAME"));
 			
+		
+		} catch (FileNotFoundException e) {  // tu try shi kodi daerorda gadmova aq
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+			println("Mistake");
 		}
-		println(result);
+
 	}
 }
