@@ -9,7 +9,7 @@ public class Problem52 extends ConsoleProgram {
 	public void run() {
 
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader("PaintBrush.java"));
+			BufferedReader reader = new BufferedReader(new FileReader("Problem52.java"));
 			while (true) {
 				String line = reader.readLine();
 				if (line == null) {
