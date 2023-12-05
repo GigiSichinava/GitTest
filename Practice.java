@@ -12,24 +12,24 @@ public class Practice extends ConsoleProgram {
 	private static final String FILENAME = "Practice.java";
 
 	public void run() {
-		try {   // aq iwereba kodi da tu daerorda gadmava catchshi
+		try {
 			BufferedReader reader = new BufferedReader(new FileReader(FILENAME));
-			
+
 			println("Correct");
-			while(true){
+			while (true) {
 				try {
 					String newLine = reader.readLine();
+					reader.close();
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
-			
-		
-		} catch (FileNotFoundException e) {  // tu try shi kodi daerorda gadmova aq
+
+		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			
+
 			println("Mistake");
 		}
 
