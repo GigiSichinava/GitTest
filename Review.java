@@ -15,5 +15,6 @@ public class Review extends ConsoleProgram {
 		
 		
 		println(array.length);
+		println(copy.length);
 	}
 }
