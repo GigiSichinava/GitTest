@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram{
@@ -19,6 +21,9 @@ public class Practice extends ConsoleProgram{
 		}
 		
 		
-		println(myArr2);
+		println(myArr2); // ase misamarts dabewdavs 
+		
+		println(Arrays.toString(myArr2));
+		
 	}
 }
