@@ -12,6 +12,8 @@ public class Practice extends ConsoleProgram {
 		}
 		println(Arrays.toString(arr));
 		println(isSorted(arr));
+		println(isSorted2(arr));
+
 	}
 
 	boolean isSorted(int[] arr) {
@@ -31,5 +33,7 @@ public class Practice extends ConsoleProgram {
 		
 		Arrays.sort(arrCopy);
 		return(Arrays.equals(arr, arrCopy));
+
 	}
+
 }
