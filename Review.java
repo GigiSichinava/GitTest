@@ -9,7 +9,7 @@ public class Review extends ConsoleProgram {
 	public void run() {
 
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader("PaintBrush.java"));
+			BufferedReader reader = new BufferedReader(new FileReader("PaintBrush.java")); // <-- type your file's name here
 
 			while (true) {
 				String line = reader.readLine();
