@@ -10,7 +10,7 @@ public class Review extends ConsoleProgram {
 		int[] a = array;
 		println(Arrays.toString(array));  // es printavs masivs stringad
 		
-		int[] copy = Arrays.copyOf(array,  4);
+		int[] copy = Arrays.copyOf(array,  4); // <-- 4 ro weria, nishnavs ramdeni wevri minda wamovigo dasakopireblad
 		println(Arrays.toString(copy));  
 	}
 }
