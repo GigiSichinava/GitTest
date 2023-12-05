@@ -17,7 +17,7 @@ public class Problem52 extends ConsoleProgram {
 				}
 				println(line);
 			}
-
+			reader.colse();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
