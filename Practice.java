@@ -23,4 +23,13 @@ public class Practice extends ConsoleProgram {
 		return true;
 	}
 	
+	boolean isSorted2(int[] arr){
+		int[] arrCopy = new int[arr.length];
+		for(int i = 0 ; i < arr.length; i++){
+			arrCopy[i] = arr[i];	
+		}
+		
+		Arrays.sort(arrCopy);
+		return(Arrays.equals(arr, arrCopy));
+	}
 }
