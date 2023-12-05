@@ -11,5 +11,16 @@ public class Practice extends ConsoleProgram {
 			arr[i] = readInt();
 		}
 		println(Arrays.toString(arr));
+		println(isSorted(arr));
 	}
+
+	boolean isSorted(int[] arr) {
+		for(int i = 1; i < arr.length; i++){
+			if(arr[i] < arr[i - 1]){
+				return false;
+			}
+		}
+		return true;
+	}
+	
 }
