@@ -10,8 +10,14 @@ public class Practice extends ConsoleProgram{
 		println(myArr[2]);
 		println(myArr2[2]);
 		
-		myArr2[2] = 100;
+		myArr2[2] = 100;  // masivshi ragac adgilze sxva inti chavawerinet
 		println(myArr2[2]);
+		
+		
+		for(int i = 0 ; i < myArr.length; i++){
+			println(myArr[i]);
+			println(myArr2[i]);
+		}
 		
 	}
 }
