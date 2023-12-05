@@ -13,7 +13,7 @@ public class Practice extends ConsoleProgram {
 
 	public void run() {
 		try {   // aq iwereba kodi da tu daerorda gadmava catchshi
-			BufferedReader reader = new BufferedReader(new FileReader("FILENAME"));
+			BufferedReader reader = new BufferedReader(new FileReader(FILENAME));
 			
 			println("Correct");
 			while(true){
