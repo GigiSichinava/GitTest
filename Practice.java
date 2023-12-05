@@ -14,10 +14,11 @@ public class Practice extends ConsoleProgram{
 		println(myArr2[2]);
 		
 		
-		for(int i = 0 ; i < myArr.length; i++){
-			println(myArr[i]);
-			println(myArr2[i]);
+		for(int i = 0 ; i < myArr.length; i++){  // masivis daprintva
+			println(myArr[i]);			
 		}
 		
+		
+		println(myArr2);
 	}
 }
