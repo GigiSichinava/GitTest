@@ -35,5 +35,9 @@ public class Practice extends ConsoleProgram{
 			println("false");
 		}
 		
-	}
+		
+		Arrays.fill(myArr3, 7);
+		println(Arrays.toString(myArr3));
+		
+	}	
 }
