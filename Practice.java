@@ -17,20 +17,21 @@ public class Practice extends ConsoleProgram {
 
 			println("Correct");
 			while (true) {
-				try {
-					String newLine = reader.readLine();
-					reader.close();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+				String newLine = reader.readLine();
+				if (newLine == null) {
+					break;
 				}
+				println(newLine);
 			}
-
+			reader.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 
 			println("Mistake");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 	}
