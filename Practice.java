@@ -39,5 +39,10 @@ public class Practice extends ConsoleProgram{
 		Arrays.fill(myArr3, 7);
 		println(Arrays.toString(myArr3));
 		
+		
+		
+		int[] toSort = {10, 5, 61, 7, 10, -2, 8, 9};
+		Arrays.sort(toSort);
+		println(Arrays.toString(toSort));
 	}	
 }
