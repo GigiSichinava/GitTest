@@ -26,10 +26,13 @@ public class Practice extends ConsoleProgram{
 		println(Arrays.toString(myArr2));  // ase chve ro gvinda ise teslad
 	
 		
-		int[] myArr3 = {0, 5, 6, 7, 8};
+		int[] myArr3 = {0, 5, 6, 7, 8}
+		;
 		 
 		if(Arrays.equals(myArr2, myArr3)){
 			println("Equals");
+		}else{
+			println("false");
 		}
 		
 	}
