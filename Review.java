@@ -1,27 +1,14 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.util.Arrays;
 
 import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram {
 	public void run() {
 
-		try {
-			BufferedReader reader = new BufferedReader(new FileReader("PaintBrush.java")); // <-- type your file's name here
-
-			while (true) {
-				String line = reader.readLine();
-				if(line == null){
-					break;
-				}
-				println(line);
-			}
-			// System.out.println("read file");
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		int[] array = new int[10];
+//		int[] array2 = {10, 20, 30, 40};
+		int[] a = array;
+		println(Arrays.toString(array));
+		
 	}
 }
