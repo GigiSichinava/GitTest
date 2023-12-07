@@ -1,10 +1,26 @@
-import acm.program.GraphicsProgram;
+import acm.program.ConsoleProgram;
 
-public class Review extends GraphicsProgram{
+public class Review extends ConsoleProgram{
+	
+	private int minNum;
+	
 	public void run(){
-		addMouseListeners();
-		addBall();
 		
+		int n = readInt();
+		int[] array = new int[n];
+		for(int i = 0; i < n; i++){
+			array[i] = readInt("Enter your number: ");
+		}
+		min(array);
 	}
-	private void 
+	private void min(int[] array){
+		minNum = array[0];
+		for(int i = 1; i < array.length; i++){
+			if(array[i] <= minNum){
+				minNum = array[i];
+			}
+		}
+		println(minNum);
+	}
+	
 }
