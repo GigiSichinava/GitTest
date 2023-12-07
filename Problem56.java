@@ -9,7 +9,7 @@ public class Problem56 extends ConsoleProgram{
 		
 		int n = readInt();
 		int[] array = new int[n];
-		for(int i = 0; i < n - 1; i++){
+		for(int i = 0; i <= n; i++){
 			array[i] = readInt("Enter your number: ");
 		}
 		min(array);
