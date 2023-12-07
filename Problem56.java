@@ -11,7 +11,7 @@ public class Problem56 extends ConsoleProgram{
 		
 		for( int i = 1; i < Array.length; i++){
 			Array[i] = readInt();
-			if(Array[i] > maxNum){
+			if(Array[i] >= maxNum){
 				maxNum = Array[i];
 			}
 		}
