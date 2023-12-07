@@ -2,26 +2,20 @@ import acm.program.ConsoleProgram;
 
 public class Problem56 extends ConsoleProgram{
 	
-	private int n;
-	private int minNum;
+	private int maxNum;
 	
 	public void run(){
+		int n = readInt("Enter your number: ");
+		int[] Array = new int[n];
 		
-		int n = readInt();
-		int[] array = new int[n];
-		for(int i = 0; i < n; i++){
-			array[i] = readInt("Enter your number: ");
-		}
-		min(array);
-	}
-	private void min(int[] array){
-		minNum = array[0];
-		for(int i = 1; i < array.length; i++){
-			if(array[i] <= minNum){
-				minNum = array[i];
+		for( int i = 0; i < n; i++){
+			int Start = Array[0];
+			Array[i] = readInt();
+			if(Array[i] < Start){
+				int maxNum = Start;
 			}
 		}
-		println(minNum);
+		int result = maxNum;
+		println(maxNum);
 	}
-	
 }
