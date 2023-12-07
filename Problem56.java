@@ -3,7 +3,7 @@ import acm.program.ConsoleProgram;
 public class Problem56 extends ConsoleProgram{
 	
 	private int n;
-	private int minNum;
+	//private int minNum;
 	
 	public void run(){
 		
@@ -15,7 +15,7 @@ public class Problem56 extends ConsoleProgram{
 		min(array);
 	}
 	private void min(int[] array){
-		//minNum = array[0];
+		int minNum = array[0];
 		for(int i = 1; i < n; i++){
 			if(array[i] <= minNum){
 				minNum = array[i];
