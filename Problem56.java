@@ -9,12 +9,12 @@ public class Problem56 extends ConsoleProgram{
 		
 		int n = readInt();
 		int[] array = new int[n];
-		for(int i = 0; i < n; i++){
+		for(int i = 0; i < n - 1; i++){
 			array[i] = readInt("Enter your number: ");
 		}
-		swap(array);
+		min(array);
 	}
-	private void swap(int[] array){
+	private void min(int[] array){
 		int minNum = 0;
 		for(int i = 0; i < n; i++){
 			if(array[i] < array[i + 1]){
