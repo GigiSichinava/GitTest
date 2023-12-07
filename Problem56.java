@@ -12,16 +12,18 @@ public class Problem56 extends ConsoleProgram{
 		for(int i = 0; i < n; i++){
 			array[i] = readInt("Enter your number: ");
 		}
-		min(array);
+		int b = min(array);
+		println(b);
 	}
-	private void min(int[] array){
+	private int min(int[] array){
 		minNum = array[0];
-		for(int i = 0; i < n; i++){
-			if(array[i] < minNum){
+		for(int i = 1; i < n; i++){
+			if(array[i] <= minNum){
 				minNum = array[i];
 			}
 		}
-		println(minNum);
+		return minNum;
+		//println(minNum);
 	}
 	
 }
