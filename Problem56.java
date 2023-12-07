@@ -17,10 +17,8 @@ public class Problem56 extends ConsoleProgram{
 	private void min(int[] array){
 		minNum = array[0];
 		for(int i = 0; i < n; i++){
-			if(array[i] < array[i + 1]){
+			if(array[i] < array[0]){
 				minNum = array[i];
-			}else{
-				minNum = array[i + 1];
 			}
 		}
 		int result = minNum;
