@@ -9,13 +9,12 @@ public class Problem56 extends ConsoleProgram{
 		int[] Array = new int[n];
 		
 		for( int i = 0; i < n; i++){
-			int Start = Array[0];
+			maxNum = Array[0];
 			Array[i] = readInt();
-			if(Array[i] < Start){
-				int maxNum = Start;
+			if(Array[i] > maxNum){
+				maxNum = Array[i];
 			}
 		}
-		int result = maxNum;
 		println(maxNum);
 	}
 }
