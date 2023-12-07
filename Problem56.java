@@ -12,6 +12,7 @@ public class Problem56 extends ConsoleProgram{
 			array[i] = readInt("Enter your number: ");
 		}
 		min(array);
+		println(minNum);
 	}
 	
 	
