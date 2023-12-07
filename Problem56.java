@@ -8,8 +8,8 @@ public class Problem56 extends ConsoleProgram{
 		int n = readInt("Enter your number: ");
 		int[] Array = new int[n];
 		
-		for( int i = 0; i < n; i++){
-			maxNum = Array[0];
+		maxNum = Array[0];
+		for( int i = 1; i < n; i++){
 			Array[i] = readInt();
 			if(Array[i] > maxNum){
 				maxNum = Array[i];
