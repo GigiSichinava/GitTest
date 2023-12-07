@@ -9,13 +9,13 @@ public class Problem56 extends ConsoleProgram{
 		
 		int n = readInt();
 		int[] array = new int[n];
-		for(int i = 0; i <= n; i++){
+		for(int i = 0; i < n; i++){
 			array[i] = readInt("Enter your number: ");
 		}
 		min(array);
 	}
 	private void min(int[] array){
-		int minNum = 0;
+		minNum = array[0];
 		for(int i = 0; i < n; i++){
 			if(array[i] < array[i + 1]){
 				minNum = array[i];
