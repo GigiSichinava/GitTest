@@ -9,7 +9,7 @@ public class Problem56 extends ConsoleProgram{
 		int[] Array = new int[n];
 		
 		maxNum = Array[0];
-		for( int i = 1; i < Array.length; i++){
+		for( int i = 0; i < Array.length; i++){
 			Array[i] = readInt();
 			if(Array[i] >= maxNum){
 				maxNum = Array[i];
