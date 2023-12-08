@@ -8,7 +8,7 @@ public class Practice extends GraphicsProgram{
 		
 		GRect rect = new GRect (100, 100);
 		rect.setFilled(true);
-		rect.setColor(Color.RED);
+		rect.setFillColor(Color.RED);
 		add(rect, getWidth() / 2 - 50, getHeight() / 2 - 50);
 	}
 }
