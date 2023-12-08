@@ -13,12 +13,13 @@ public class Review extends ConsoleProgram{
 			 Array[i] = readInt();
 		 }
 		 
-		 int FirstNum = Array[0];
+		 int maxNum = Array[0];
+		 
 		 for (int i = 1; i < Array.length - 1; i++){
 			 if(Array[i + 1] > FirstNum){
 				 FirstNum = Array[i + 1];
 			 }
 		 }
-		 println(FirstNum);
+		 println(maxNum);
 	}
 }
