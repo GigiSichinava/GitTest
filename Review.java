@@ -2,8 +2,11 @@ import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram{
 	public void run(){
-		int a = 5;
-		double  b = a / 2;
-		println(b);
+		boolean p = (2 > 1);
+		if (p == true){
+			println("True");
+		}else{
+			println("wuwu");
+		}
 	}
 }
