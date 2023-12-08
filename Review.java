@@ -2,25 +2,19 @@ import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram{
 	
-	private int minNum;
+	private int FirstNum;
 	
 	public void run(){
-		
-		int n = readInt();
-		int[] array = new int[n];
-		for(int i = 0; i < n; i++){
-			array[i] = readInt("Enter your number: ");
-		}
-		min(array);
+		 
+		 int n = readInt("Enter your number: ");
+		 int[] Array = new int[n];
+		 
+		 int FirstNum = Array[0];
+		 for (int i = 1; i < Array.length; i++){
+			 if(Array[i + 1] > FirstNum){
+				 FirstNum = Array[i + 1];
+			 }
+		 }
+		 println(FirstNum);
 	}
-	private void min(int[] array){
-		minNum = array[0];
-		for(int i = 1; i < array.length; i++){
-			if(array[i] <= minNum){
-				minNum = array[i];
-			}
-		}
-		println(minNum);
-	}
-	
 }
