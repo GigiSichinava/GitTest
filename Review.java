@@ -10,7 +10,7 @@ public class Review extends ConsoleProgram{
 		 int[] Array = new int[n];
 		 
 		 int FirstNum = Array[0];
-		 for (int i = 1; i < Array.length; i++){
+		 for (int i = 1; i < Array.length - 1; i++){
 			 if(Array[i + 1] > FirstNum){
 				 FirstNum = Array[i + 1];
 			 }
