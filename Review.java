@@ -4,7 +4,7 @@ public class Review extends ConsoleProgram{
 	public void run(){
 		boolean p = (2 > 1);
 		if (p == true){
-			println("True");
+			println("Truwe");
 		}else{
 			println("wuwu");
 		}
