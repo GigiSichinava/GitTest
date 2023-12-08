@@ -9,6 +9,10 @@ public class Review extends ConsoleProgram{
 		 int n = readInt("Enter your number: ");
 		 int[] Array = new int[n];
 		 
+		 for(int i = 0; i < n; i++){
+			 Array[i] = readInt();
+		 }
+		 
 		 int FirstNum = Array[0];
 		 for (int i = 1; i < Array.length - 1; i++){
 			 if(Array[i + 1] > FirstNum){
