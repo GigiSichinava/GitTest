@@ -16,8 +16,8 @@ public class Review extends ConsoleProgram{
 		 int maxNum = Array[0];
 		 
 		 for (int i = 1; i < Array.length - 1; i++){
-			 if(Array[i + 1] > FirstNum){
-				 FirstNum = Array[i + 1];
+			 if(Array[i] > FirstNum){
+				 FirstNum = Array[i];
 			 }
 		 }
 		 println(maxNum);
