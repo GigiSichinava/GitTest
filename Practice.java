@@ -28,7 +28,7 @@ public class Practice extends GraphicsProgram {
 	}
 
 	private void sayHi() {
-			GLabel label = new GLabel ("PLAYBOI DROP!", getWidth() / 2, getHeight() / 2);
+			GLabel label = new GLabel ("PLAYBOI DROP!", getWidth() / 4, getHeight() / 2);
 			add(label);
 	}
 }
