@@ -10,7 +10,7 @@ public class Practice extends GraphicsProgram{
 	
 	private GObject ball;
 	private GObject rect;
-	private static final double  R = 100;
+	private static final double D = 100;
 	private static final double x = 200;
 	private static final double y = 100;
 	
@@ -19,14 +19,14 @@ public class Practice extends GraphicsProgram{
 		addRect();
 	}
 	private void addBall(){
-		ball = new GOval(R, R);
+		ball = new GOval(D, D);
 		((GOval) ball).setFilled(true);
-		add(ball, rgen.nextDouble(R, getWidth() - 2 * R), rgen.nextDouble(R, getHeight() - 2 * R));
+		add(ball, rgen.nextDouble(0, getWidth() - D), rgen.nextDouble(0, getHeight() - D));
 	}
 	private void addRect(){
 		rect = new GRect (x, y);
 		((GRect)rect).setFilled(true);
-		add(rect, rgen.nextDouble(x, getWidth() - x), rgen.nextDouble(y, getHeight() - y));
+		add(rect, rgen.nextDouble(0, getWidth() - x), rgen.nextDouble(0, getHeight() - y));
 
 	}
 	
