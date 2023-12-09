@@ -38,9 +38,9 @@ public class Practice extends GraphicsProgram {
 	public void mouseDragged(MouseEvent e){
 		GObject obj = getElementAt(e.getX(), e.getY());
 		if(obj == rect){
-			double x = e.getX();
-			double y = e.getY();;
-			rect.move(x, y);
+			double x = e.getX() - rect.getX();
+			double y = e.getY() - rect.getY();
+			rect.setLocation(x, y);
 		}
 		
 	}
