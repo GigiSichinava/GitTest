@@ -44,7 +44,6 @@ public class Review extends GraphicsProgram {
         draggableObject.move(dx, dy);
     }
 
-    public static void main(String[] args) {
-        new DragObjects().start();
+   
     }
 }
