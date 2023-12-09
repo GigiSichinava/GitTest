@@ -13,12 +13,12 @@ public class Practice extends GraphicsProgram{
 		while(true){
 			double dx = 10;
 			double dy = 10;
-			if(ball.getX() + D > getWidth()){
-				dx = -dx;
-			}
-//			if(ball.getY() + D > getHeight()){
-//				dy = -dy;
-//			} 
+//			if(ball.getX() + D > getWidth()){
+//				dx = -dx;
+//			}
+			if(ball.getY() + D > getHeight()){
+				dy = -dy;
+			} 
 //			if(ball.getX() > 0){
 //				dx = dx;
 //			}
