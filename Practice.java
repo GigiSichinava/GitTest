@@ -2,7 +2,9 @@ import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram{
 	public void run(){
-		double mid = average(5.0, 2.0);
+		double a = readDouble();
+		double b = readDouble();
+		double mid = average(a, b);
 		println(mid);
 	}
 	private double average(double a, double b){
