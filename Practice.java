@@ -12,7 +12,8 @@ public class Practice extends GraphicsProgram {
 	private static final double PAUSE = 50;
 	private static final double R = 30;
 	private static final double D = 2 * R;
-	private GOval ball;
+	private GOval ball1;
+	private GOval ball2;
 
 	public void run() {
 		addMouseListeners();
@@ -22,19 +23,19 @@ public class Practice extends GraphicsProgram {
 		double dy = 10;
 		while (true) {
 
-			if (ball.getX() + D > getWidth()) {
+			if (ball1.getX() + D > getWidth()) {
 				dx = -dx;
-				ball.setColor(rgen.nextColor());
+				ball1.setColor(rgen.nextColor());
 			}
-			if (ball.getY() + D > getHeight()) {
+			if (ball1.getY() + D > getHeight()) {
 				dy = -dy;
-				ball.setColor(rgen.nextColor());
+				ball1.setColor(rgen.nextColor());
 			}
-			if (ball.getX() < 0) {
+			if (ball1.getX() < 0) {
 				dx = -dx;
-				ball.setColor(rgen.nextColor());
+				ball1.setColor(rgen.nextColor());
 			}
-			if (ball.getY() < 0) {
+			if (ball1.getY() < 0) {
 				dy = -dy;
 				ball.setColor(rgen.nextColor());
 			}
@@ -45,25 +46,25 @@ public class Practice extends GraphicsProgram {
 	}
 
 	private void addBall1() {
-		ball = new GOval(2 * R, 2 * R);
-		ball.setFilled(true);
-		ball.setColor(rgen.nextColor());
-		add(ball, 0, 0);
+		ball1 = new GOval(2 * R, 2 * R);
+		ball1.setFilled(true);
+		ball1.setColor(rgen.nextColor());
+		add(ball1, 0, 0);
 	}
 	private void addBall2(){
-		ball = new GOval(2 * R, 2 * R);
-		ball.setFilled(true);
-		ball.setColor(rgen.nextColor());
-		add(ball, getWidth() - D, getHeight() - D);
+		ball2 = new GOval(2 * R, 2 * R);
+		ball2.setFilled(true);
+		ball2.setColor(rgen.nextColor());
+		add(ball2, getWidth() - D, getHeight() - D);
 	}
 
 	public void mouseClicked(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
 		if (obj == null) {
-			ball.setColor(rgen.nextColor());
+			ball1.setColor(rgen.nextColor());
 		}
-		if (obj == ball) {
-			remove(ball);
+		if (obj == ball1) {
+			remove(ball1);
 		}
 
 	}
