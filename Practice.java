@@ -23,7 +23,7 @@ public class Practice extends GraphicsProgram{
 //			if(ball.getX() > 0){
 //				dx = dx;
 //			}
-			if(ball.getY() < getHeight()){
+			if(ball.getY() < 0){
 				dy = -dy;
 			}
 			ball.move(dx, dy);
