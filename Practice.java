@@ -20,9 +20,9 @@ public class Practice extends GraphicsProgram{
 			if(ball.getY() + D > getHeight()){
 				dy = -dy;
 			} 
-//			if(ball.getX() > 0){
-//				dx = dx;
-//			}
+			if(ball.getX() < 0){
+				dx = dx;
+			}
 //			if(ball.getY() < getHeight()){
 //				dy = dy;
 //			}
