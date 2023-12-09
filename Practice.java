@@ -9,8 +9,8 @@ public class Practice extends ConsoleProgram{
 		   }
 		}
 
-		private boolean isSquare(int x) {
-			double root = Math.sqrt(x);
+		private boolean isSquare(int i) {
+			double root = Math.sqrt(i);
 			return root == (int)root;
 		}
 
