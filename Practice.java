@@ -53,7 +53,9 @@ public class Practice extends GraphicsProgram{
 		if(obj == null){
 			ball.setColor(rgen.nextColor());
 		}
-			
+		if(obj == ball)	{
+			remove(ball);
+		}
 		
 	}
 }
