@@ -23,12 +23,15 @@ public class Practice extends GraphicsProgram{
 			}
 			if(ball.getY() + D > getHeight()){
 				dy = -dy;
+				ball.setColor(rgen.nextColor());
 			} 
 			if(ball.getX() < 0){
 				dx = -dx;
+				ball.setColor(rgen.nextColor());
 			}
 			if(ball.getY() < 0){
 				dy = -dy;
+				ball.setColor(rgen.nextColor());
 			}
 			ball.move(dx, dy);
 			pause(PAUSE);
@@ -38,6 +41,7 @@ public class Practice extends GraphicsProgram{
 	private void addBall(){
 		ball = new GOval(2 * R, 2 * R);
 		ball.setFilled(true);
+		ball.setColor(rgen.nextColor());
 		add(ball);
 	}
 }
