@@ -11,8 +11,8 @@ public class Practice extends GraphicsProgram{
 	public void run(){
 		addBall();
 		while(true){
-			double dx = 50;
-			double dy = 50;
+			double dx = 10;
+			double dy = 10;
 			if(ball.getX() + D > getWidth()){
 				dx = -dx;
 			}
