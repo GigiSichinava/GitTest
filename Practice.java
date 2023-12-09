@@ -1,14 +1,13 @@
-import java.awt.Color;
+import acm.program.ConsoleProgram;
 
-import acm.graphics.GRect;
-import acm.program.GraphicsProgram;
-
-public class Practice extends GraphicsProgram{
+public class Practice extends ConsoleProgram{
 	public void run(){
+		double mid = average(5.0, 2.0);
+		println(mid);
+	}
+	private double average(double a, double b){
+		double sum = a + b;
+		return sum / 2;
 		
-		GRect rect = new GRect (100, 50);
-		rect.setFilled(true);
-		rect.setColor(Color.RED);
-		add(rect, getWidth() / 2 - 50, getHeight() / 2 - 50);
 	}
 }
