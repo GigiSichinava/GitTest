@@ -10,7 +10,6 @@ public class Practice extends GraphicsProgram {
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
-//	private GObject obj = null;
 	private GObject ball;
 	private GObject rect;
 	private static final double D = 100;
@@ -20,7 +19,6 @@ public class Practice extends GraphicsProgram {
 	private double prevX;
 	private double prevY;
 
-	
 	public void run() {
 		addMouseListeners();
 		addBall();
@@ -51,12 +49,8 @@ public class Practice extends GraphicsProgram {
 	public void mouseDragged(MouseEvent e) {
 		double x = e.getX() - prevX;
 		double y = e.getY() - prevY;
-		if(obj == rect){
 		rect.move(x, y);
-		}
-		if(obj == ball){
 		ball.move(x, y);
-		}
 		prevX = e.getX();
 		prevY = e.getY();
 
