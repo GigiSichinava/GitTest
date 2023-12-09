@@ -50,7 +50,6 @@ public class Practice extends GraphicsProgram {
 		double x = e.getX() - prevX;
 		double y = e.getY() - prevY;
 		rect.move(x, y);
-		ball.move(x, y);
 		prevX = e.getX();
 		prevY = e.getY();
 
