@@ -10,9 +10,10 @@ public class Practice extends GraphicsProgram{
 	
 	public void run(){
 		addBall();
+		double dx = 10;
+		double dy = 10;
 		while(true){
-			double dx = 10;
-			double dy = 10;
+			
 //			if(ball.getX() + D > getWidth()){
 //				dx = -dx;
 //			}
