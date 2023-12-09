@@ -41,8 +41,8 @@ public class Practice extends GraphicsProgram {
 	public void mousePressed(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
 		if (obj == rect) {
-			double prevX = e.getX();
-			double prevY = e.getY();
+			prevX = e.getX();
+			prevY = e.getY();
 		}
 	}
 
