@@ -40,7 +40,7 @@ public class Practice extends GraphicsProgram {
 
 	public void mousePressed(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
-		if (obj == rect) {
+		if (obj == rect || obj == ball) {
 			prevX = e.getX();
 			prevY = e.getY();
 		}
@@ -49,7 +49,13 @@ public class Practice extends GraphicsProgram {
 	public void mouseDragged(MouseEvent e) {
 		double x = e.getX() - prevX;
 		double y = e.getY() - prevY;
-		rect.move(x, y);
+		GObject obj = getElementAt(e.getX(), e.getY());
+		if (obj == rect) {
+			rect.move(x, y);
+		}
+		if (obj == ball) {
+			ball.move(x, y);
+		}
 		prevX = e.getX();
 		prevY = e.getY();
 
