@@ -16,6 +16,9 @@ public class Practice extends GraphicsProgram {
 	private static final double x = 200;
 	private static final double y = 100;
 
+	private double prevX;
+	private double prevY;
+
 	public void run() {
 		addMouseListeners();
 		addBall();
@@ -34,15 +37,20 @@ public class Practice extends GraphicsProgram {
 		add(rect, rgen.nextDouble(0, getWidth() - x), rgen.nextDouble(0, getHeight() - y));
 
 	}
-	
-	public void mouseDragged(MouseEvent e){
+
+	public void mousePressed(MouseEvent e) {
+		double prevX = e.getX();
+		double prevY = e.getY();
+	}
+
+	public void mouseDragged(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
-		if(obj == rect){
-			double x = e.getX() - rect.getX();
-			double y = e.getY() - rect.getY();
-			rect.setLocation(x, y);
+		if (obj == rect) {
+			double x = e.getX() - prevX;
+			double y = e.getY() - prevY;
+			rect.move(x, y);
 		}
-		
+
 	}
 
 }
