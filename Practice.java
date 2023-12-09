@@ -14,9 +14,9 @@ public class Practice extends GraphicsProgram{
 		double dy = 10;
 		while(true){
 			
-//			if(ball.getX() + D > getWidth()){
-//				dx = -dx;
-//			}
+			if(ball.getX() + D > getWidth()){
+				dx = -dx;
+			}
 			if(ball.getY() + D > getHeight()){
 				dy = -dy;
 			} 
