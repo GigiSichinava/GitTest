@@ -6,7 +6,7 @@ import acm.util.RandomGenerator;
 
 public class Practice extends GraphicsProgram{
 
-	private RandomGenerator rgen = RandomGenrator.getInstance();
+	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	private GObject ball;
 	private GObject rect;
