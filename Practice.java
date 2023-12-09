@@ -4,13 +4,15 @@ import acm.program.GraphicsProgram;
 public class Practice extends GraphicsProgram{
 	
 	private static final double PAUSE = 50;
-	private static final double R = 30;
+	private static final double R = 200;
 	private GOval ball;
 	
 	public void run(){
 		addBall();
 		while(true){
-			//ball.move(dx, dy);
+			double dx = 10;
+			double dy = 10;
+			ball.move(dx, dy);
 			pause(PAUSE);
 			
 		}
