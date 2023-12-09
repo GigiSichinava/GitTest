@@ -1,7 +1,10 @@
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
 public class Practice extends GraphicsProgram{
+	
+	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	private static final double PAUSE = 50;
 	private static final double R = 30;
@@ -16,6 +19,7 @@ public class Practice extends GraphicsProgram{
 			
 			if(ball.getX() + D > getWidth()){
 				dx = -dx;
+				ball.setColor(rgen.nextColor());
 			}
 			if(ball.getY() + D > getHeight()){
 				dy = -dy;
