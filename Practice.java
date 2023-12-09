@@ -21,7 +21,7 @@ public class Practice extends GraphicsProgram{
 				dy = -dy;
 			} 
 			if(ball.getX() < 0){
-				dx = dx;
+				dx = -dx;
 			}
 //			if(ball.getY() < getHeight()){
 //				dy = dy;
