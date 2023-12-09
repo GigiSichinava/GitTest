@@ -48,6 +48,9 @@ public class Practice extends GraphicsProgram {
 		if (obj == rect) {
 			double x = e.getX() - prevX;
 			double y = e.getY() - prevY;
+			
+			prevX= e.getX();
+			prevY = e.getY();
 			rect.move(x, y);
 		}
 
