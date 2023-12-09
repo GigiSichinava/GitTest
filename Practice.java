@@ -37,9 +37,9 @@ public class Practice extends GraphicsProgram {
 			}
 			if (ball1.getY() < 0) {
 				dy = -dy;
-				ball.setColor(rgen.nextColor());
+				ball1.setColor(rgen.nextColor());
 			}
-			ball.move(dx, dy);
+			ball1.move(dx, dy);
 			pause(PAUSE);
 
 		}
