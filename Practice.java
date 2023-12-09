@@ -1,15 +1,17 @@
 import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram{
-	public void run(){
-		double a = readDouble();
-		println(factorial(a));
-	}
-	private double factorial(double a){
-		double result = 1;
-		for(int i = 1; i <= a; i++){
-			result *= i;
+	public void run() {
+		   for(int i = 1; i <= 100; i++) {
+		      if(isSquare(i)) {
+		         println(i);
+		      }
+		   }
 		}
-		return result;
-	}
+
+		private boolean isSquare(int x) {
+			double root = Math.sqrt(x);
+			return root == (int)root;
+		}
+
 }
