@@ -1,5 +1,4 @@
 import java.awt.event.MouseEvent;
-
 import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
@@ -7,65 +6,62 @@ import acm.util.RandomGenerator;
 
 public class Practice extends GraphicsProgram {
 
-	private RandomGenerator rgen = RandomGenerator.getInstance();
+    private RandomGenerator rgen = RandomGenerator.getInstance();
+    private static final double PAUSE = 50;
+    private static final double R = 30;
+    private static final double D = 2 * R;
+    private static final int NUM_BALLS = 3; // Set the number of balls
+    private GOval[] balls;
 
-	private static final double PAUSE = 50;
-	private static final double R = 30;
-	private static final double D = 2 * R;
-	private GOval ball1;
-	private GOval ball2;
+    public void run() {
+        addMouseListeners();
+        createBalls();
+        while (true) {
+            moveBalls();
+            pause(PAUSE);
+        }
+    }
 
-	public void run() {
-		addMouseListeners();
-		addBall1();
-		addBall2();
-		double dx = 10;
-		double dy = 10;
-		while (true) {
+    private void createBalls() {
+        balls = new GOval[NUM_BALLS];
+        for (int i = 0; i < NUM_BALLS; i++) {
+            GOval ball = new GOval(2 * R, 2 * R);
+            ball.setFilled(true);
+            ball.setColor(rgen.nextColor());
+            balls[i] = ball;
+            add(ball, rgen.nextDouble(0, getWidth() - D), rgen.nextDouble(0, getHeight() - D));
+        }
+    }
 
-			if (ball1.getX() + D > getWidth()) {
-				dx = -dx;
-				ball1.setColor(rgen.nextColor());
-			}
-			if (ball1.getY() + D > getHeight()) {
-				dy = -dy;
-				ball1.setColor(rgen.nextColor());
-			}
-			if (ball1.getX() < 0) {
-				dx = -dx;
-				ball1.setColor(rgen.nextColor());
-			}
-			if (ball1.getY() < 0) {
-				dy = -dy;
-				ball1.setColor(rgen.nextColor());
-			}
-			ball1.move(dx, dy);
-			pause(PAUSE);
+    private void moveBalls() {
+        for (GOval ball : balls) {
+            double dx = rgen.nextDouble(-5, 5); // Adjust the speed of balls
+            double dy = rgen.nextDouble(-5, 5);
+            
+            if (ball.getX() + D > getWidth() || ball.getX() < 0) {
+                dx = -dx;
+                ball.setColor(rgen.nextColor());
+            }
+            if (ball.getY() + D > getHeight() || ball.getY() < 0) {
+                dy = -dy;
+                ball.setColor(rgen.nextColor());
+            }
+            
+            ball.move(dx, dy);
+        }
+    }
 
-		}
-	}
-
-	private void addBall1() {
-		ball1 = new GOval(2 * R, 2 * R);
-		ball1.setFilled(true);
-		ball1.setColor(rgen.nextColor());
-		add(ball1, 0, 0);
-	}
-	private void addBall2(){
-		ball2 = new GOval(2 * R, 2 * R);
-		ball2.setFilled(true);
-		ball2.setColor(rgen.nextColor());
-		add(ball2, getWidth() - D, getHeight() - D);
-	}
-
-	public void mouseClicked(MouseEvent e) {
-		GObject obj = getElementAt(e.getX(), e.getY());
-		if (obj == null) {
-			ball1.setColor(rgen.nextColor());
-		}
-		if (obj == ball1) {
-			remove(ball1);
-		}
-
-	}
+    public void mouseClicked(MouseEvent e) {
+        GObject obj = getElementAt(e.getX(), e.getY());
+        if (obj == null) {
+            for (GOval ball : balls) {
+                ball.setColor(rgen.nextColor());
+            }
+        }
+        for (GOval ball : balls) {
+            if (obj == ball) {
+                remove(ball);
+            }
+        }
+    }
 }
