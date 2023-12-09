@@ -11,8 +11,8 @@ public class Practice extends GraphicsProgram{
 	private GObject ball;
 	private GObject rect;
 	private static final double  R = 100;
-	private static final double x = 100;
-	private static final double y = 200;
+	private static final double x = 200;
+	private static final double y = 100;
 	
 	public void run(){
 		addBall();
