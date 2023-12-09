@@ -1,17 +1,34 @@
-import acm.program.ConsoleProgram;
+import acm.graphics.GLabel;
+import acm.graphics.GRect;
+import acm.program.GraphicsProgram;
 
-public class Practice extends ConsoleProgram{
+public class Practice extends GraphicsProgram {
+
+	private static final int NROWS = 8;
+	private static final int NCOLS = 8;
+
 	public void run() {
-		   for(int i = 1; i <= 100; i++) {
-		      if(isSquare(i)) {
-		         println(i);
-		      }
-		   }
-		}
+		createBoard();
+		sayHi();
+	}
 
-		private boolean isSquare(int i) {
-			double root = Math.sqrt(i);
-			return root == (int)root;
+	private void createBoard() {
+		int sqSize = getHeight() / NROWS;
+		for (int i = 0; i < NROWS; i++) {
+			for (int j = 0; j < NCOLS; j++) {
+				int x = sqSize * j;
+				int y = sqSize * i;
+				GRect rect = new GRect(sqSize, sqSize);
+				add(rect, x, y);
+				if((j + i) % 2 != 0){
+					rect.setFilled(true);
+				}
+			}
 		}
+	}
 
+	private void sayHi() {
+			GLabel label = new GLabel ("PLAYBOI DROP!", getWidth() / 2, getHeight() / 2);
+			add(label);
+	}
 }
