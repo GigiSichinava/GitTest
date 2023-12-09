@@ -13,8 +13,8 @@ public class Practice extends GraphicsProgram {
 		int Y = getHeight() - (8 * sqSize);
 		for(int i = 0; i < NROWS; i++){
 			for(int j = 0; j < NCOLS; j++){
-				int x = X - sqSize / 2 ;
-				int y = Y + sqSize;
+				int x = j * (X - sqSize / 2) ;
+				int y = i * (Y + sqSize);
 				GRect rect = new GRect (sqSize, sqSize);
 				add(rect, x, y);
 			}
