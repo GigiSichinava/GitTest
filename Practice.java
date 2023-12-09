@@ -47,8 +47,8 @@ public class Practice extends GraphicsProgram {
 	}
 
 	public void mouseDragged(MouseEvent e) {
-		double x = e.getX() + prevX;
-		double y = e.getY() + prevY;
+		double x = e.getX() - prevX;
+		double y = e.getY() - prevY;
 		rect.move(x, y);
 		prevX = e.getX();
 		prevY = e.getY();
