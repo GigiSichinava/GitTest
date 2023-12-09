@@ -3,13 +3,13 @@ import acm.program.ConsoleProgram;
 public class Practice extends ConsoleProgram{
 	public void run(){
 		double a = readDouble();
-		double b = readDouble();
-		double mid = average(a, b);
-		println(mid);
+		println(factorial(a));
 	}
-	private double average(double a, double b){
-		double sum = a + b;
-		return sum / 2;
-		
+	private double factorial(double a){
+		double result = 1;
+		for(int i = 1; i <= a; i++){
+			result *= i;
+		}
+		return result;
 	}
 }
