@@ -1,23 +1,23 @@
-import acm.graphics.GLabel;
-import acm.graphics.GRect;
+import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
-public class Practice extends GraphicsProgram {
-
-	private static final int NROWS = 8;
-	private static final int NCOLS = 8;
-
+public class Practice extends GraphicsProgram{
+	
+	private static final double PAUSE = 50;
+	private static final double R = 30;
+	private GOval ball;
+	
 	public void run(){
-		int sqSize = getHeight() / NROWS;
-		int X = ( getWidth() - sqSize ) / 2;
-		int Y = getHeight() - (8 * sqSize);
-		for(int i = 0; i < NROWS; i++){
-			for(int j = 0; j < NCOLS; j++){
-				int x = j * (X - sqSize / 2) ;
-				int y = i * (Y + sqSize);
-				GRect rect = new GRect (sqSize, sqSize);
-				add(rect, x, y);
-			}
+		addBall();
+		while(true){
+			//ball.move(dx, dy);
+			pause(PAUSE);
+			
 		}
+	}
+	private void addBall(){
+		ball = new GOval(R, R);
+		ball.setFilled(true);
+		add(ball);
 	}
 }
