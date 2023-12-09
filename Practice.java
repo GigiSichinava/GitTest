@@ -41,7 +41,7 @@ public class Practice extends GraphicsProgram{
 	private void addBall(){
 		ball = new GOval(2 * R, 2 * R);
 		ball.setFilled(true);
-		ball.setFillColor(rgen.nextColor());
+		ball.setColor(rgen.nextColor());
 		add(ball);
 	}
 }
