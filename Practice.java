@@ -10,7 +10,7 @@ public class Practice extends GraphicsProgram {
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
-	private GObject obj = null;
+//	private GObject obj = null;
 	private GObject ball;
 	private GObject rect;
 	private static final double D = 100;
