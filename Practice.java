@@ -8,7 +8,7 @@ public class Practice extends GraphicsProgram{
 	
 	public void run(){
 		head = new GOval (50, 50);
-		body = new GOval (20, 150);
+		body = new GOval (40, 150);
 		add(head, getWidth() / 2 - 25, -50);
 		add(body, -20, getHeight() / 2 - 75);
 		while(head.getY() < 50){
