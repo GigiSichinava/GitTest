@@ -17,6 +17,7 @@ public class Practice extends GraphicsProgram{
 		}
 		while(body.getX() < getWidth() / 2 - 10){
 			body.move(5, 0);
+			pause(50);
 		}
 	}
 }
