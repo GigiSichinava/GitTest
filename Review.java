@@ -2,20 +2,15 @@ import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram {
 	public void run() {
-		while (2 > 1) {
-
-			int x = readInt();
-			switch (x) {
-			case 0:
-				println("nuli");
-				break;
-			case 2:
-				println("ori");
-				break;
-			default:
-				println("racxa sxva");
-				break;
-
+		String str = readLine();
+		String result = "";
+		for(int i = 0; i < str.length(); i++){
+			if(Character.isLowerCase(str.charAt(i))){
+				Character.toUpperCase(str.charAt(i));
+				result += str.charAt(i);
+			}else if(Character.isUpperCase(str.charAt(i))){
+				Character.toLowerCase(str.charAt(i));
+				result += str.charAt(i);
 			}
 		}
 	}
