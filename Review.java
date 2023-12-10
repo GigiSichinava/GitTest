@@ -13,6 +13,7 @@ public class Review extends ConsoleProgram {
 				result += str.charAt(i);
 			}
 		}
+		println(result);
 	}
 }
 
