@@ -6,11 +6,11 @@ public class Review extends ConsoleProgram {
 		String result = "";
 		for(int i = 0; i < str.length(); i++){
 			if(Character.isLowerCase(str.charAt(i))){
-				Character.toUpperCase(str.charAt(i));
-				result += str.charAt(i);
+				
+				result += Character.toUpperCase(str.charAt(i));
 			}else if(Character.isUpperCase(str.charAt(i))){
-				Character.toLowerCase(str.charAt(i));
-				result += str.charAt(i);
+				
+				result += Character.toLowerCase(str.charAt(i));
 			}
 		}
 		println(result);
