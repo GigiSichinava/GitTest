@@ -6,7 +6,7 @@ public class Review extends ConsoleProgram{
 	public void run(){
 		
 		String srt = readLine();
-		StringTokenizer tokenizer = new StringTokenizer(" !,.");
+		StringTokenizer tokenizer = new StringTokenizer(srt, " !,.");
 		tokenizer.countTokens();
 	}
 }
