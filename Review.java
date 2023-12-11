@@ -22,8 +22,8 @@ public class Review extends ConsoleProgram {
             }
         }
 
-        // Trim the result array to the actual size
-        result = Arrays.copyOf(result, index);
+//         // Trim the result array to the actual size
+//       result = Arrays.copyOf(result, index);
 
         println(Arrays.toString(result));
     }
