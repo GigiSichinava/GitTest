@@ -21,6 +21,8 @@ public class Review extends ConsoleProgram {
 			}
 		}
 
+        result = Arrays.copyOf(result, numOccurance);
+
 		println(Arrays.toString(result));
 
 	}
