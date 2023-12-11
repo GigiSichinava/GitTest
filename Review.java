@@ -21,6 +21,7 @@ public class Review extends ConsoleProgram {
 			}
 		}
 
+		result = Arrays.copyOf(result, maxLength);
 		println(Arrays.toString(result));
 
 	}
