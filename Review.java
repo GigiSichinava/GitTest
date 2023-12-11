@@ -5,10 +5,10 @@ import acm.program.ConsoleProgram;
 public class Review extends ConsoleProgram {
 	public void run(){
 		
-		int[] Array1 = {1, 3, 5, 7};
+		int[] Array1 = {1, 3, 5, 7, 9};
 		int[] Array2 = {2, 4, 6, 8};
 		
-		int maxLength = Math.max(Array1.length, Array2.length);
+		int maxLength = 2 * Math.max(Array1.length, Array2.length);
 
 		int[] result = new int[maxLength];
 		
