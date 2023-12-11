@@ -21,7 +21,7 @@ public class Review extends ConsoleProgram {
 			}
 		}
 
-		println(result.toString());
+		println(Arrays.toString(result));
 
 	}
 }
