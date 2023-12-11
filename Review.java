@@ -1,21 +1,26 @@
+import java.util.Arrays;
+
 import acm.program.ConsoleProgram;
 
-public class Review extends ConsoleProgram{
+public class Review extends ConsoleProgram {
 	public void run(){
 		
-		String str1 = readLine("Enter your first string here: ");
-		String str2 = readLine("Enter your second string here: ");
-		String result = "";
+		int[] Array1 = {1, 3, 5, 7, 9};
+		int[] Array2 = {2, 4, 6, 8};
 		
-		int maxLength = Math.max(str1.length(), str2.length());
+		int maxLength = Math.max(Array1.length, Array2.length);
+
+		int[] result = new int[maxLength];
+		
 		for(int i = 0; i < maxLength; i++){
-			if(i < str1.length()){
-				result += str1.charAt(i);
+			if( i < maxLength){
+				result[i] = Array1[i];
 			}
-			if(i < str2.length()){
-				result += str2.charAt(i);
+			if( i < maxLength){
+				result[i] = Array2[i];
 			}
 		}
-		println(result);
+		println(Arrays.toString(result));
+		
 	}
 }
