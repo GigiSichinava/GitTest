@@ -15,6 +15,9 @@ public class Problem54 extends ConsoleProgram{
 				maxNum = Array[i];
 			}
 		}
+		for ( int j = 0; j < Array.length; j++){
+			if(Array[j] )
+		}
 		println(maxNum);
 	}
 }
