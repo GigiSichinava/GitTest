@@ -2,9 +2,9 @@ import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram{
 	public void run(){
-		int x = readInt();
-		double xToDouble = (double)x;
-		println(xToDouble);
+		double x = readDouble();
+		int xToInt = (int)x;
+		println(xToInt);
 		
 	}
 }
