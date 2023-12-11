@@ -9,10 +9,10 @@ public class Review extends ConsoleProgram{
 		
 		int maxLength = Math.max(str1.length(), str2.length());
 		for(int i = 0; i < maxLength; i++){
-			if(str1.indexOf(i) % 2 == 0){
+			if(i < str1.length()){
 				result += str1.charAt(i);
 			}
-			if(str2.indexOf(i) % 2 != 0){
+			if(i < str2.length()){
 				result += str2.charAt(i);
 			}
 		}
