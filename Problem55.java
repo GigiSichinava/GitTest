@@ -25,7 +25,6 @@ public class Problem55 extends ConsoleProgram {
 
 	boolean isSorted2(int[] Array) {
 		int[] ArrayCopy = Arrays.copyOf(Array, Array.length);
-
 		Arrays.sort(ArrayCopy);
 		return Arrays.equals(Array, ArrayCopy);
 	}
