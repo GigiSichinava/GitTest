@@ -3,7 +3,7 @@ import acm.program.ConsoleProgram;
 public class Review extends ConsoleProgram{
 	public void run(){
 		
-		int lengthOfArray = readInt("Length");
+		int lengthOfArray = readInt("Enter length: ");
 		int[] Array = new int[lengthOfArray];
 			for(int j = 0; j < lengthOfArray; j++){
 				Array[j] = readInt();
