@@ -2,7 +2,12 @@ import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram{
 	public void run(){
-		int[] Array = {2, 6, 3, 10, -2, 7};
+		
+		int lengthOfArray = readInt("Length");
+		int[] Array = new int[lengthOfArray];
+			for(int j = 0; j < lengthOfArray; j++){
+				Array[j] = readInt();
+			}
 		int result = Array[0];
 		for(int i = 0; i < Array.length; i++){
 			if(result < Array[i]){
