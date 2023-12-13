@@ -8,6 +8,7 @@ public class Problem54 extends ConsoleProgram{
 		for(int i = 0; i < n; i++){
 			myArray[i] = readInt();
 		}
+		
 		int maxNum1 = myArray[0];
 		int maxNum2 = myArray[0];
 		
@@ -18,7 +19,7 @@ public class Problem54 extends ConsoleProgram{
 				
 			}
 		}
-		println(maxNum1);
-		println(maxNum2);
+		println("First biggest number is: " + maxNum1);
+		println("Second biggest number is: " + maxNum2);
 	}
 }
