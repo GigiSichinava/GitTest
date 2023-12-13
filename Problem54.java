@@ -12,18 +12,18 @@ public class Problem54 extends ConsoleProgram{
 		int[] myArray = new int[n];
 		
 		int maxNum = myArray[0];
-		int maxNum2 = myArray[1];
+		int maxNum2 = myArray[0];
 		
 		
 		for(int i = 0; i < myArray.length; i++){
 			myArray[i] = readInt();
 			if(myArray[i] > maxNum){
+				maxNum2 = maxNum;
 				maxNum = myArray[i];
+				
 			}
-			
-			
 		}
 		println(maxNum);
-		
+		println(maxNum2);
 	}
 }
