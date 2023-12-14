@@ -1,23 +1,15 @@
-import acm.graphics.GOval;
-import acm.program.GraphicsProgram;
+import java.util.HashMap;
+import java.util.Map;
 
-public class Practice extends GraphicsProgram{
-	
-	private GOval head;
-	private GOval body;
-	
+import acm.program.ConsoleProgram;
+
+public class Practice extends ConsoleProgram{
 	public void run(){
-		head = new GOval (50, 50);
-		body = new GOval (40, 150);
-		add(head, getWidth() / 2 - 25, -50);
-		add(body, -20, getHeight() / 2 - 75);
-		while(head.getY() < 50){
-			head.move(0, 5);
-			pause(50);
-		}
-		while(body.getX() < getWidth() / 2 - 20){
-			body.move(5, 0);
-			pause(50);
-		}
+		
+		Map<String, Double> midtermScore = new HashMap<String,Double>();
+		
 	}
 }
+
+
+// for( key:)
