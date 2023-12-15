@@ -24,7 +24,7 @@ public class Practice extends ConsoleProgram {
 			println(Arrays.toString(row));
 		}
 	}
-	private int k = 0;
+
 	
 	private boolean magicM(int[][] Matrix){
 		
@@ -35,6 +35,7 @@ public class Practice extends ConsoleProgram {
 		
 	}
 		int result = 0;
+		int k = 0;
 		int[] myarray = new int[n*n];
 		for(int i = 0; i < n; i++){
 			for(int j = 0; j < m; j++){
