@@ -34,7 +34,7 @@ public class Practice extends ConsoleProgram {
 			return false;
 		
 	}
-		int result = 0;
+		
 		int k = 0;
 		int[] myarray = new int[n*n];
 		for(int i = 0; i < n; i++){
@@ -47,11 +47,11 @@ public class Practice extends ConsoleProgram {
 		}
 		Arrays.sort(myarray);
 		for(int i = 0; i < myarray.length; i++){
-			if (myarray[i + 1] - myarray[i] == 1) {
-				result++;
+			if (myarray[i + 1] - myarray[i] != 1) {
+				return false;
 			}
 		}
-		return result == n * n;
+		return true;
 	}
 	
 //	
