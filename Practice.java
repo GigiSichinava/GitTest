@@ -12,6 +12,6 @@ public class Practice extends ConsoleProgram{
 				myMatrix[i][j] = readInt();
 			}
 		}
-		println(myMatrix);
+		println(myMatrix.toString());
 	}
 }
