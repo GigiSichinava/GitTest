@@ -15,7 +15,8 @@ public class Practice extends ConsoleProgram {
 				myMatrix[i][j] = readInt();
 			}
 		}
-		printMatrix(myMatrix);
+		println(magicM(myMatrix));
+//		printMatrix(myMatrix);
 	}
 
 	private void printMatrix(int[][] matrix) {
