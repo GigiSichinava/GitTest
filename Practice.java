@@ -26,31 +26,61 @@ public class Practice extends ConsoleProgram {
 	}
 
 	
-	private boolean magicM(int[][] Matrix){
-		
-		int n = Matrix.length;
-		int m = Matrix[0].length;
-		if ( n != m){
-			return false;
-		
+//	private boolean magicM(int[][] Matrix){
+//		
+//		int n = Matrix.length;
+//		int m = Matrix[0].length;
+//		if ( n != m){
+//			return false;
+//		
+//	}
+//		int result = 0;
+//		int k = 0;
+//		int[] myarray = new int[n*n];
+//		for(int i = 0; i < n; i++){
+//			for(int j = 0; j < m; j++){
+//				while(k < n*n){
+//				myarray[k] = Matrix[i][j];
+//				k++;
+//				}
+//			}
+//		}
+//		Arrays.sort(myarray);
+//		for(int i = 0; i < myarray.length; i++){
+//			if(myarray[i] - i == 1){
+//				result++;
+//			}
+//		}
+//		return result == n * n;
+//	}
+	
+	
+	private boolean magicM(int[][] Matrix) {
+	    int n = Matrix.length;
+	    int m = Matrix[0].length;
+
+	    if (n != m) {
+	        return false;
+	    }
+
+	    int[] myarray = new int[n * n];
+	    int k = 0;
+
+	    for (int i = 0; i < n; i++) {
+	        for (int j = 0; j < m; j++) {
+	            myarray[k++] = Matrix[i][j];
+	        }
+	    }
+
+	    Arrays.sort(myarray);
+
+	    for (int i = 0; i < myarray.length - 1; i++) {
+	        if (myarray[i + 1] - myarray[i] != 1) {
+	            return false;
+	        }
+	    }
+
+	    return true;
 	}
-		int result = 0;
-		int k = 0;
-		int[] myarray = new int[n*n];
-		for(int i = 0; i < n; i++){
-			for(int j = 0; j < m; j++){
-				while(k < n*n){
-				myarray[k] = Matrix[i][j];
-				k++;
-				}
-			}
-		}
-		Arrays.sort(myarray);
-		for(int i = 0; i < myarray.length; i++){
-			if(myarray[i] - i == 1){
-				result++;
-			}
-		}
-		return result == n * n;
-	}
+
 }
