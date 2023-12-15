@@ -13,7 +13,7 @@ public class Review extends ConsoleProgram{
 				myMatrix[i][j] = readInt();
 			}
 		}
-		isMatrixMagic(myMatrix);
+		println(isMatrixMagic(myMatrix));
 		
 	}
 
