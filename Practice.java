@@ -39,14 +39,14 @@ public class Practice extends ConsoleProgram {
 		int[] myarray = new int[n*n];
 		for(int i = 0; i < n; i++){
 			for(int j = 0; j < m; j++){
-				while(k < n*n){
+			
 				myarray[k] = Matrix[i][j];
 				k++;
-				}
+				
 			}
 		}
 		Arrays.sort(myarray);
-		for(int i = 0; i < myarray.length - 1; i++){
+		for(int i = 0; i < myarray.length; i++){
 			if (myarray[i + 1] - myarray[i] != 1) {
 				return false;
 			}
