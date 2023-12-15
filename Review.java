@@ -8,6 +8,11 @@ public class Review extends ConsoleProgram{
 		int x = readInt();
 		int y = readInt();
 		int[][] myMatrix = new int[x][y];
+		for(int i = 0; i < x; i++){
+			for(int j = 0; j < y; j++){
+				myMatrix[i][j] = readInt();
+			}
+		}
 		isMatrixMagic(myMatrix);
 		
 	}
