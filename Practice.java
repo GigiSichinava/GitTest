@@ -47,7 +47,7 @@ public class Practice extends ConsoleProgram {
 		}
 		Arrays.sort(myarray);
 		for(int i = 0; i < myarray.length; i++){
-			if (myarray[i + 1] - myarray[i] != 1) {
+			if (myarray[i + 1] - myarray[i] == 1) {
 				result++;
 			}
 		}
