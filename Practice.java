@@ -4,7 +4,7 @@ import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram {
 
-    private static final String SENTINEL = null;
+    private static final String SENTINEL = "";
 
     public void run() {
 
