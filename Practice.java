@@ -20,7 +20,7 @@ public class Practice extends ConsoleProgram{
 
 	private String reversedOrder(ArrayList<Integer> myList) {
 		String result = "";
-		for(int i = myList.size() - 1; i > 0; i--){
+		for(int i = myList.size() - 1; i >= 0; i--){
 			result += myList.get(i);
 		}
 		
