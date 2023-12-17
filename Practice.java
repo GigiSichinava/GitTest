@@ -11,7 +11,7 @@ public class Practice extends ConsoleProgram {
         ArrayList<String> myList = new ArrayList<String>();
 
         while (true) {
-            String x = readLine();
+            String x = readLine("Enter name: ");
             if (x.equals(SENTINEL)) {
                 break;
             }
