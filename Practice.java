@@ -19,7 +19,7 @@ public class Practice extends ConsoleProgram{
 				int a = myList.get(i);
 				int b = myList.get(j);
 				if(a + b == m){
-					println("Right couple is : " + a + "and " + b);
+					println("Right couple is : " + a + " and " + b);
 				}
 			}
 		}
