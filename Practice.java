@@ -20,7 +20,7 @@ public class Practice extends ConsoleProgram{
 		
 		for(int i = 0; i < myList.size(); i++){
 			int result = 0;
-			if(myList.get(i) == 0){
+			if(myList.get(i) == i){
 				result++;
 			}
 			println("Occurance of " + i + " is : " + result);
