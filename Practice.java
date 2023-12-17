@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import acm.program.ConsoleProgram;
 
@@ -18,16 +20,20 @@ public class Practice extends ConsoleProgram {
             myList.add(x);
         }
 
-        for (int i = 0; i < myList.size(); i++) {
-            String a = myList.get(i);
-            int result = 0;
-            for (int j = 0; j < myList.size(); j++) {
-                String b = myList.get(j);
-                if (a.equals(b)) { // Use .equals() for string comparison
-                    result++;
-                }
+        Map<String, Integer> occurrencesMap = new HashMap<>();
+
+        for (String str : myList) {
+            if (occurrencesMap.containsKey(str)) {
+                occurrencesMap.put(str, occurrencesMap.get(str) + 1);
+            } else {
+                occurrencesMap.put(str, 1);
             }
-            println("Occurrence of " + a + " is : " + result);
+        }
+
+        for (Map.Entry<String, Integer> entry : occurrencesMap.entrySet()) {
+            String str = entry.getKey();
+            int count = entry.getValue();
+            println("Occurrence of " + str + " is : " + count);
         }
     }
 }
