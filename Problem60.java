@@ -2,29 +2,27 @@ import java.util.ArrayList;
 
 import acm.program.ConsoleProgram;
 
-public class Problem60 extends ConsoleProgram{
+public class Problem60 extends ConsoleProgram {
 	
 	private static final int SENTINEL = -1;
 	
-	public void run(){
-		
+	public void run() {
 		ArrayList<Integer> myList = new ArrayList<Integer>();
-		while(true){
-			int Num = readInt();
-			myList.add(Num);
-			if(Num == SENTINEL)
+		
+		while (true) {
+			int n = readInt("Enter your number: ");
+			if (n == SENTINEL) {
 				break;
 			}
-		println(reversedOrder(myList));
+			myList.add(n);
 		}
+		
+		printReversedOrder(myList);
+	}
 
-	private String reversedOrder(ArrayList<Integer> myList) {
-		String result = "";
-		for(int i = myList.size() - 1; i >= 0; i--){
-			result += myList.get(i);
+	private void printReversedOrder(ArrayList<Integer> list) {
+		for (int i = list.size() - 1; i >= 0; i--) {
+			println(list.get(i));
 		}
-		
-		
-		return result;
 	}
 }
