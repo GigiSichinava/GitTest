@@ -9,12 +9,12 @@ public class Practice extends ConsoleProgram{
 	public void run(){
 		
 		ArrayList<Integer> myList = new ArrayList<Integer>();
-		int Num = readInt();
 		while(true){
+			int Num = readInt();
 			if(Num == SENTINEL)
 				break;
+			myList.add(Num);
 			}
-		myList.add(Num);
 		println(reversedOrder(myList));
 		}
 
