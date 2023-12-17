@@ -5,8 +5,6 @@ import acm.program.ConsoleProgram;
 public class Practice extends ConsoleProgram{
 	
 	private static final int SENTINEL = -1;
-	private int a;
-	private int b;
 	
 	public void run(){
 		
@@ -20,17 +18,17 @@ public class Practice extends ConsoleProgram{
 			myList.add(x);
 		}
 		
-		int result = 0;
 		for(int i = 0; i < myList.size(); i++){
+			int a = myList.get(i);
+			int result = 0;
 			for(int j = 0; j < myList.size(); j++){
-				int a = myList.get(i);
 				int b = myList.get(j);
 				if(a == b){
 					result++;
 
 				}
 			}
-			println("Occurance of " + a + " is : " + b);
+			println("Occurance of " + a + " is : " + result);
 		}
 	}
 }
