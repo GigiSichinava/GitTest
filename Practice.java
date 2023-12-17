@@ -4,7 +4,7 @@ import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram {
 
-    private static final String SENTINEL = "";
+    private static final String SENTINEL = null;
 
     public void run() {
 
@@ -12,7 +12,7 @@ public class Practice extends ConsoleProgram {
 
         while (true) {
             String x = readLine();
-            if (x == SENTINEL) {
+            if (x.equals(SENTINEL)) {
                 break;
             }
             myList.add(x);
