@@ -3,28 +3,25 @@ import java.util.ArrayList;
 import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram{
-	
-	private static final int SENTINEL = -1;
-	
 	public void run(){
 		
+		int m = readInt();
+		int n = readInt();
+		
 		ArrayList<Integer> myList = new ArrayList<Integer>();
-		while(true){
-			int Num = readInt();
-			if(Num == SENTINEL)
-				break;
-			myList.add(Num);
+		for(int i = 0; i < n; i++){
+			int x = readInt();
+			myList.add(x);
+		}
+		
+		for(int i = 0; i < myList.size(); i++){
+			for(int j = 0; j < myList.size(); j++){
+				int a = myList.get(i);
+				int b = myList.get(j);
+				if(a + b == m){
+					println("Right couple is : " + a + "and " + b);
+				}
 			}
-		println(reversedOrder(myList));
 		}
-
-	private String reversedOrder(ArrayList<Integer> myList) {
-		String result = "";
-		for(int i = myList.size() - 1; i >= 0; i--){
-			result += myList.get(i);
-		}
-		
-		
-		return result;
 	}
 }
