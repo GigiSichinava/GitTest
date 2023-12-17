@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 import acm.program.ConsoleProgram;
 
@@ -13,27 +11,23 @@ public class Practice extends ConsoleProgram {
         ArrayList<String> myList = new ArrayList<String>();
 
         while (true) {
-            String x = readLine("Enter a string (or press Enter to stop): ");
-            if (x.equals(SENTINEL)) {
+            String x = readLine();
+            if (x == SENTINEL) {
                 break;
             }
             myList.add(x);
         }
 
-        Map<String, Integer> occurrencesMap = new HashMap<>();
-
-        for (String str : myList) {
-            if (occurrencesMap.containsKey(str)) {
-                occurrencesMap.put(str, occurrencesMap.get(str) + 1);
-            } else {
-                occurrencesMap.put(str, 1);
+        for (int i = 0; i < myList.size(); i++) {
+            String a = myList.get(i);
+            int result = 0;
+            for (int j = 0; j < myList.size(); j++) {
+                String b = myList.get(j);
+                if (a == b) {
+                    result++;
+                }
             }
-        }
-
-        for (Map.Entry<String, Integer> entry : occurrencesMap.entrySet()) {
-            String str = entry.getKey();
-            int count = entry.getValue();
-            println("Occurrence of " + str + " is : " + count);
+            println("Occurrence of " + a + " is : " + result);
         }
     }
 }
