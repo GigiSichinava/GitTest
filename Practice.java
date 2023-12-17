@@ -11,7 +11,7 @@ public class Practice extends ConsoleProgram {
         ArrayList<String> myList = new ArrayList<String>();
 
         while (true) {
-            String x = readLine();
+            String x = readLine("Enter a string (or press Enter to stop): ");
             if (x.equals(SENTINEL)) {
                 break;
             }
@@ -23,7 +23,7 @@ public class Practice extends ConsoleProgram {
             int result = 0;
             for (int j = 0; j < myList.size(); j++) {
                 String b = myList.get(j);
-                if (a == b) {
+                if (a.equals(b)) { // Use .equals() for string comparison
                     result++;
                 }
             }
