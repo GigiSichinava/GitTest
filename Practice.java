@@ -18,13 +18,17 @@ public class Practice extends ConsoleProgram{
 			myList.add(x);
 		}
 		
+		int result = 0;
 		for(int i = 0; i < myList.size(); i++){
-			int result = 0;
-			if(myList.get(i) == i){
-				result++;
+			for(int j = 0; j < myList.size(); j++){
+				int a = myList.get(i);
+				int b = myList.get(j);
+				if(a == b){
+					result++;
+					println("Occurance of " + a + " is : " + b);
+
+				}
 			}
-			println("Occurance of " + i + " is : " + result);
 		}
-		
 	}
 }
