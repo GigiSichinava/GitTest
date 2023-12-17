@@ -4,14 +4,14 @@ import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram {
 
-    private static final int SENTINEL = -1;
+    private static final String SENTINEL = null;
 
     public void run() {
 
-        ArrayList<Integer> myList = new ArrayList<Integer>();
+        ArrayList<String> myList = new ArrayList<String>();
 
         while (true) {
-            int x = readInt("Enter an integer (or -1 to stop): ");
+            String x = readLine();
             if (x == SENTINEL) {
                 break;
             }
@@ -19,10 +19,10 @@ public class Practice extends ConsoleProgram {
         }
 
         for (int i = 0; i < myList.size(); i++) {
-            int a = myList.get(i);
+            String a = myList.get(i);
             int result = 0;
             for (int j = 0; j < myList.size(); j++) {
-                int b = myList.get(j);
+                String b = myList.get(j);
                 if (a == b) {
                     result++;
                 }
