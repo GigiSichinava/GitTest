@@ -23,7 +23,7 @@ public class Practice extends ConsoleProgram {
             int result = 0;
             for (int j = 0; j < myList.size(); j++) {
                 String b = myList.get(j);
-                if (a == b) {
+                if (a.equals(b)) {
                     result++;
                 }
             }
