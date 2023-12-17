@@ -12,7 +12,7 @@ public class Practice extends ConsoleProgram {
 
         while (true) {
             String x = readLine();
-            if (x == SENTINEL) {
+            if (x.equals(SENTINEL)) {
                 break;
             }
             myList.add(x);
