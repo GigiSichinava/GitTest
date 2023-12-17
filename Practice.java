@@ -16,7 +16,7 @@ public class Practice extends ConsoleProgram{
 			if(name.equals(SENTINEL)){
 				break;
 			}
-			myMap.put(name, myMap.getOrDefault(name, 0));
+			myMap.put(name, myMap.getOrDefault(name, 0) + 1);
 		}
 		
 		for(Map.Entry<String, Integer> entry : myMap.entrySet()){
