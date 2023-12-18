@@ -10,10 +10,10 @@ public class Review extends ConsoleProgram{
 		for(int i = 0; i < line.length(); i++){
 			if(maxChar == line.charAt(i)){
 				maxChar = line.charAt(i);
-				maxOccur++;
+//				maxOccur++;
 			}
 		}
 		println(maxChar);
-		println(maxOccur);
+//		println(maxOccur);
 	}
 }
