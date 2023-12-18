@@ -2,17 +2,18 @@ import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram{
 	public void run(){
+		
 		String line = readLine();
-		String symbol = readLine();
+		char maxChar = line.charAt(0);
+		int maxOccur = 0;
 		
-		char ch = symbol.charAt(0);
-		
-		int result = 0;
 		for(int i = 0; i < line.length(); i++){
-			if(ch == line.charAt(i)){
-				result++;
+			if(maxChar == line.charAt(i)){
+				maxChar = line.charAt(i);
+				maxOccur++;
 			}
 		}
-		println(result);
+		println(maxChar);
+		println(maxOccur);
 	}
 }
