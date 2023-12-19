@@ -6,6 +6,8 @@ public class Review extends ConsoleProgram{
 	String b = readLine();
 	if(a.equals(b)){
 		println(true);
+	}else{
+		println("tleo");
 	}
 	}
 }
