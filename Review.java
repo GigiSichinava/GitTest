@@ -5,7 +5,7 @@ public class Review extends ConsoleProgram{
 		String number = readLine();
 		int result = 0;
 		
-		for(int i = 0; i < number.length(); i++){
+		for(int i = 0; i <= number.length(); i++){
 			int n = number.charAt(i) - '0';
 			result = n * 10 + n;
 		}
