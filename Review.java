@@ -15,7 +15,7 @@ public class Review extends ConsoleProgram{
 		JLabel label = new JLabel("Hello!");
 		add(label, SOUTH);
 		
-		JTextField field= new JTextField(10);
+		field= new JTextField(10);
 		add(field, SOUTH);
 		
 		JButton button = new JButton("Press me!");
