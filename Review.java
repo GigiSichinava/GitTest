@@ -26,7 +26,7 @@ public class Review extends ConsoleProgram {
 
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("Press me!")) {
-			if (e.getActionCommand().equals("")) {
+			if (e.getActionCommand().equals(null)) {
 				println("_");
 			} else {
 				println(field.getText());
