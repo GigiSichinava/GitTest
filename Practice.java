@@ -37,11 +37,11 @@ public class Practice extends ConsoleProgram {
     		println("<");
     	}
     	
-    	if(a > b){
-    		println(">");
-    	}else if(a > c){
-    		println("a beze meti araa mara c ze metia");
-    	}
+//    	if(a > b){
+//    		println(">");
+//    	}else if(a > c){
+//    		println("a beze meti araa mara c ze metia");
+//    	}
     	
     	
     }
