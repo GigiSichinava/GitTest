@@ -24,9 +24,13 @@ public class Review extends ConsoleProgram{
 		addActionListeners();
 	}
 	
-	public void actionPerformed(ActionEvent e){
+	public void actionPerformed(ActionEvent e){		
 		if(e.getActionCommand().equals("Press me!")){
-			println(field.getText());
+			if(e.getActionCommand().equals(""){
+				break;
+			}else{
+				println(field.getText());
+			}
 		}
 	}
 }
