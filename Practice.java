@@ -31,17 +31,17 @@ public class Practice extends ConsoleProgram {
     	int b = readInt();
     	int c = readInt();
     	
-    	if(a > b){
-    		println(">");
-    	}else{
-    		println("<");
-    	}
-    	
 //    	if(a > b){
 //    		println(">");
-//    	}else if(a > c){
-//    		println("a beze meti araa mara c ze metia");
+//    	}else{
+//    		println("<");
 //    	}
+    	
+    	if(a > b){
+    		println(">");
+    	}else if(a > c){
+    		println("a beze meti araa mara c ze metia");
+    	}
     	
     	
     }
