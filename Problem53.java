@@ -13,7 +13,7 @@ public class Problem53 extends ConsoleProgram{
 			String text = "";
 			while(true) {
 				String line = reader.readLine();
-				if (line == null) {
+				if (line.equals("")) {
 					break;
 				}
 				text += line + "\n";
