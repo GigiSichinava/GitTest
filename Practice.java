@@ -17,11 +17,11 @@ public class Practice extends ConsoleProgram {
             return true;
         }
 
-        for (int j = 0; j < array.length - 1; j++) {
-            if (array[j] > array[j + 1]) {
-                return false;
-            }
-        }
+//        for (int j = 0; j < array.length - 1; j++) {
+//            if (array[j] > array[j + 1]) {
+//                return false;
+//            }
+//        }
         return true;
     }
 }
