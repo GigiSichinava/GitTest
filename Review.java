@@ -9,7 +9,7 @@ public class Review extends ConsoleProgram{
 		for(int i = 0; i < Array.length; i++){
 			Array[i] = readInt();
 		}
-		isSorted(Array);
+		println(isSorted(Array));
 	}
 	
 	private boolean isSorted (int[] Array){
