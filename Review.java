@@ -17,6 +17,11 @@ public class Review extends ConsoleProgram {
 			if (Array[j] > maxNum1) {
 				maNum2 = maxNum1;
 				maxNum1 = Array[j];
+			}else{
+				maxNum1 = Array[j];
+				if(Array[j] > Array[1]){
+					maNum2 = Array[j];
+				}
 			}
 		}
 		println("First biggest number is: " + maxNum1);
