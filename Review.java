@@ -1,19 +1,18 @@
 
 
+import java.util.StringTokenizer;
+
 import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram{
 	public void run(){
-	
-		int a = readInt();
-		int b = readInt();
-		int[][] matrix = new int[a][b];
 		
+		String line = readLine();
 		
-		for(int i = 0; i < matrix.length; i++){
-			for(int j = 0; j < matrix.length; j++){
-				
-			}
+		StringTokenizer tokenizer = new StringTokenizer(line, ",");
+		while(tokenizer.hasMoreTokens()){
+			String token = tokenizer.nextToken();
+			println(token);
 		}
 	}
 }
