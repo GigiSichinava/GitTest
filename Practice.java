@@ -2,38 +2,26 @@ import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram {
     public void run() {
-        int n = readInt("Enter size of the Array: ");
-        if (n < 2) {
-            println("Array must contain at least two elements.");
-            return;
+        int n = readInt("Size of the Array: ");
+        int[] array = new int[n];
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = readInt("Enter element " + (i + 1) + ": ");
+        }
+        println("Array is sorted: " + isSorted(array));
+    }
+
+    private boolean isSorted(int[] array) {
+        // Check if the array has less than 2 elements
+        if (array.length < 2) {
+            return true;
         }
 
-        int[] myArray = new int[n];
-        for (int i = 0; i < n; i++) {
-            myArray[i] = readInt("Enter number " + (i + 1) + ": ");
-        }
-
-        int maxNum1, maxNum2;
-
-        // Initialize maxNum1 and maxNum2 to the first two elements
-        if (myArray[0] > myArray[1]) {
-            maxNum1 = myArray[0];
-            maxNum2 = myArray[1];
-        } else {
-            maxNum1 = myArray[1];
-            maxNum2 = myArray[0];
-        }
-
-        for (int j = 2; j < n; j++) {
-            if (myArray[j] > maxNum1) {
-                maxNum2 = maxNum1;
-                maxNum1 = myArray[j];
-            } else if (myArray[j] > maxNum2 && myArray[j] != maxNum1) {
-                maxNum2 = myArray[j];
+        for (int j = 0; j < array.length - 1; j++) {
+            if (array[j] > array[j + 1]) {
+                return false;
             }
         }
-
-        println("First biggest number is: " + maxNum1);
-        println("Second biggest number is: " + maxNum2);
+        return true;
     }
 }
