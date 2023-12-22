@@ -13,7 +13,7 @@ public class Review extends ConsoleProgram {
 		int maxNum1 = Array[0];
 		int maNum2 = Array[0];
 
-		for (int j = 2; j < Array.length; j++) {
+		for (int j = 0; j < Array.length; j++) {
 			if (Array[j] > maxNum1) {
 				maNum2 = maxNum1;
 				maxNum1 = Array[j];
