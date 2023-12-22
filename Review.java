@@ -1,36 +1,18 @@
-import java.awt.event.ActionEvent;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
 
 import acm.program.ConsoleProgram;
 
-public class Review extends ConsoleProgram {
-
-	private JTextField field;
-
-	public void run() {
-
-		JLabel label = new JLabel("Hello!");
-		add(label, SOUTH);
-
-		field = new JTextField(10);
-		add(field, SOUTH);
-
-		JButton button = new JButton("Press me!");
-		add(button, SOUTH);
-
-		addActionListeners();
-	}
-
-	public void actionPerformed(ActionEvent e) {
-		if (e.getActionCommand().equals("Press me!")) {
-			if (e.getActionCommand().equals(null)) {
-				println("_");
-			} else {
-				println(field.getText());
-
+public class Review extends ConsoleProgram{
+	public void run(){
+	
+		int a = readInt();
+		int b = readInt();
+		int[][] matrix = new int[a][b];
+		
+		
+		for(int i = 0; i < matrix.length; i++){
+			for(int j = 0; j < matrix.length; j++){
+				
 			}
 		}
 	}
