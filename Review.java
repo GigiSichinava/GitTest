@@ -18,10 +18,10 @@ public class Review extends ConsoleProgram{
 		}
 		
 		for(int j = 0; j < Array.length - 1; j++){
-			if(Array[j] < Array[j + 1]){
-				return true;
+			if(Array[j] > Array[j + 1]){
+				return false;
 			}
 		}
-		return false;
+		return true;
 	}
 }
