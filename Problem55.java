@@ -1,32 +1,27 @@
-import java.util.Arrays;
 import acm.program.ConsoleProgram;
 
-public class Problem55 extends ConsoleProgram {
-	public void run() {
-		int n = readInt("Enter n: ");
+public class Problem55 extends ConsoleProgram{
+	public void run(){
+		
+		int n = readInt("Size of the Array: ");
 		int[] Array = new int[n];
-		for (int i = 0; i < n; i++) {
-			Array[i] = readInt("Enter number: ");
+		
+		for(int i = 0; i < Array.length; i++){
+			Array[i] = readInt("Enter element " + (i + 1) + " : ");
 		}
-
-		println(Arrays.toString(Array));
-		println(isSorted2(Array));
-		println(isSorted(Array));
+		println("Answer: " + isSorted(Array));
 	}
-
-	boolean isSorted(int[] Array) {
-		for (int i = 1; i < Array.length; i++) {
-			if (Array[i] < Array[i - 1]) {
+	
+	private boolean isSorted (int[] Array){
+		if(Array.length < 2){
+			return true;
+		}
+		
+		for(int j = 0; j < Array.length - 1; j++){
+			if(Array[j] > Array[j + 1]){
 				return false;
 			}
 		}
 		return true;
 	}
-
-	boolean isSorted2(int[] Array) {
-		int[] ArrayCopy = Arrays.copyOf(Array, Array.length);
-		Arrays.sort(ArrayCopy);
-		return Arrays.equals(Array, ArrayCopy);
-	}
-
 }
