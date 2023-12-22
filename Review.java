@@ -10,6 +10,7 @@ public class Review extends ConsoleProgram{
 	
 		if(Array.length < 2){
 			println("Array size must be greater than 1");
+			
 		}
 		
 		for(int i = 0; i < Array.length; i++){
