@@ -13,7 +13,7 @@ public class Review extends ConsoleProgram{
 	}
 	
 	private boolean isSorted (int[] Array){
-		for(int j = 0; j < Array.length - 1; j++){
+		for(int j = 0; j < Array.length; j++){
 			if(Array[j] < Array[j + 1]){
 				return true;
 			}else{
