@@ -1,18 +1,14 @@
-
-
-import java.util.StringTokenizer;
-
 import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram{
 	public void run(){
 		
-		String line = readLine();
+		int n = readInt("Enter size of the Array: ");
+		int[] Array = new int[n];
 		
-		StringTokenizer tokenizer = new StringTokenizer(line, ",");
-		while(tokenizer.hasMoreTokens()){
-			String token = tokenizer.nextToken();
-			println(token);
+		for(int i = 0; i < Array.length; i++){
+			Array[i] = readInt();
+			println(Array);
 		}
 	}
 }
