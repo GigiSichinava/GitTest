@@ -7,12 +7,16 @@ public class Review extends ConsoleProgram{
 		int[] Array = new int[n];
 		
 		for(int i = 0; i < Array.length; i++){
-			Array[i] = readInt();
+			Array[i] = readInt("Enter element " + (i + 1) + " : ");
 		}
-		println(isSorted(Array));
+		println("Answer: " + isSorted(Array));
 	}
 	
 	private boolean isSorted (int[] Array){
+		if(Array.length < 2){
+			return true;
+		}
+		
 		for(int j = 0; j < Array.length - 1; j++){
 			if(Array[j] < Array[j + 1]){
 				return true;
