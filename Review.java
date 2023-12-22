@@ -20,6 +20,6 @@ public class Review extends ConsoleProgram {
 			}
 		}
 		println("First biggest number is: " + maxNum1);
-		println("Second biggest number is: " + maxNum2);
+		println("Second biggest number is: " + maNum2);
 	}
 }
