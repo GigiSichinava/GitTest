@@ -6,13 +6,20 @@ public class Review extends ConsoleProgram{
 		int n = readInt("Size of the Array: ");
 		int[] Array = new int[n];
 		
-		for(int i = 0; i < Array.length - 1; i++){
+		for(int i = 0; i < Array.length; i++){
 			Array[i] = readInt();
-			if(Array[i] > Array[i + 1]){
-				println("Sorted");
+		}
+		isSorted(Array);
+	}
+	
+	private boolean isSorted (int[] Array){
+		for(int j = 0; j < Array.length - 1; j++){
+			if(Array[j] > Array[j + 1]){
+				return true;
 			}else{
-				println("Not Sorted");
+				return false;
 			}
 		}
+		return true;
 	}
 }
