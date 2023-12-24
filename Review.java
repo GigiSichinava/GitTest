@@ -33,7 +33,7 @@ public class Review extends ConsoleProgram{
 
 	private int findMinIndex(int[] array, int i) {
 		int minIndexSofar = i;
-		for(int a = 0; a < array.length; a++){
+		for(int a = i; a < array.length; a++){
 			if(array[a] < array[minIndexSofar]){
 				minIndexSofar = a;
 			}
