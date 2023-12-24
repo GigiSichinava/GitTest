@@ -13,14 +13,14 @@ public class Review extends ConsoleProgram{
 		}
 		
 		sort(Array);
-		println(Array);
+		println(Arrays.toString(Array));
+
 	}
 
 	private void sort(int[] array) {
 		for(int i = 0; i < array.length; i++){
 			int j = findMinIndex(array , i);
 			swap(array, i, j);
-			println(Arrays.toString(array));
 		}
 		
 	}
