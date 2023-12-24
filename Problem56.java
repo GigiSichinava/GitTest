@@ -5,33 +5,33 @@ import acm.program.ConsoleProgram;
 public class Problem56 extends ConsoleProgram {
 	public void run() {
 		int n = readInt("Enter  n: ");
-		int[] nums = new int[n];
+		int[] Array = new int[n];
 		for (int i = 0; i < n; i++) {
-			nums[i] = readInt("Enter  nums[" + i + "]: ");
+			Array[i] = readInt("Enter  nums[" + i + "]: ");
 		}
 
-		println(Arrays.toString(nums));
-		sort(nums);
-		println(Arrays.toString(nums));
+		println(Arrays.toString(Array));
+		sort(Array);
+		println(Arrays.toString(Array));
 	}
 
-	private void sort(int[] nums) {
-		for (int i = 0; i < nums.length; i++) {
-			int j = findMinIndex(nums, i);
-			swap(nums, i, j);
+	private void sort(int[] Array) {
+		for (int i = 0; i < Array.length; i++) {
+			int j = findMinIndex(Array, i);
+			swap(Array, i, j);
 		}
 	}
 
-	private void swap(int[] nums, int i, int j) {
-		int tmp = nums[i];
-		nums[i] = nums[j];
-		nums[j] = tmp;
+	private void swap(int[] Array, int i, int j) {
+		int tmp = Array[i];
+		Array[i] = Array[j];
+		Array[j] = tmp;
 	}
 
-	private int findMinIndex(int[] nums, int i) {
+	private int findMinIndex(int[] Array, int i) {
 		int minIndexSoFar = i;
-		for (int j = i; j < nums.length; j++) {
-			if (nums[j] < nums[minIndexSoFar]) {
+		for (int j = i; j < Array.length; j++) {
+			if (Array[j] < Array[minIndexSoFar]) {
 				minIndexSoFar = j;
 			}
 		}
