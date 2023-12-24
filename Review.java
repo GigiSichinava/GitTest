@@ -20,7 +20,7 @@ public class Review extends ConsoleProgram{
 		for(int i = 0; i < array.length; i++){
 			int j = findMinIndex(array , i);
 			swap(array, i, j);
-			println(array);
+			println(Arrays.toString(array));
 		}
 		
 	}
