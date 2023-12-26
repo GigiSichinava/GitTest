@@ -22,7 +22,7 @@ public class Review extends ConsoleProgram{
 			}
 			
 			for(int j = 0; j < string1.length; j++){
-				if(string1[j] == string2[string2.length - 1 -j]){
+				if(string1[j] == string2[string2.length - j]){
 					return true;
 				}
 			}
