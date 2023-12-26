@@ -1,4 +1,8 @@
+import acm.program.ConsoleProgram;
 
-public class Problem63 {
+public class Problem63 extends ConsoleProgram{
+	public void run(){
+		
+	}
 
 }
