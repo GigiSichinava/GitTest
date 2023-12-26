@@ -3,10 +3,13 @@ import acm.program.ConsoleProgram;
 public class Review extends ConsoleProgram{
 	public void run(){
 		
-		String str1= readLine();
-		String str2 = readLine();
-		println(isAnagram(str1, str2));
-	}
+		while(true){
+			String str1= readLine();
+			String str2 = readLine();
+			println(isAnagram(str1, str2));
+			}
+		}
+		
 	
 		private boolean isAnagram (String str1, String str2){
 			
