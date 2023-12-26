@@ -14,7 +14,12 @@ public class Review extends ConsoleProgram{
 			int[] string2 = new int[str2.length()];
 			
 			for(int i = 0; i < string1.length; i++){
-				if(string1[i] == string2[string2.length - 1]){
+				string1[i] = str1.charAt(i);
+				string2[i] = str2.charAt(i);
+			}
+			
+			for(int j = 0; j < string1.length; j++){
+				if(string1[j] == string2[string2.length - j]){
 					return true;
 				}
 			}
