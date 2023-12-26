@@ -5,7 +5,7 @@ public class Review extends ConsoleProgram{
 		
 		String str1= readLine();
 		String str2 = readLine();
-		isAnagram(str1, str2);
+		println(isAnagram(str1, str2));
 	}
 	
 		private boolean isAnagram (String str1, String str2){
