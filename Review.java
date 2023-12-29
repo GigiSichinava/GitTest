@@ -12,6 +12,7 @@ public class Review extends GraphicsProgram{
 	private static final int NUM_ROWS = 5;
 	private static final int NUM_COLS = 5;
 	private GOval oval;
+	private int ovalWidth, ovalHeight;
 	
 	public void init(){
 		JButton right = new JButton("Move right");
@@ -43,6 +44,15 @@ public class Review extends GraphicsProgram{
 	
 	@Override
 	public void actionPerformed(ActionEvent e){
-		
+		String temp = e.getActionCommand();
+		if(temp.equals("Move right")){
+			oval.move(ovalWidth, 0);
+		}else if(temp.equals("Move left")){
+			oval.move(-ovalWidth, 0);
+		}else if(temp.equals("Move down")){
+			oval.move(0, ovalHeight);
+		}else if(temp.equals("Move up")){
+			oval.move(0, -ovalHeight);
+		}
 	}
 }
