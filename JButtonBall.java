@@ -30,12 +30,12 @@ public class JButtonBall extends GraphicsProgram {
 	}
 
 	public void run() {
-
 		int height = getHeight() / NUM_ROWS;
 		int width = getWidth() / NUM_COLS;
 		for (int i = 0; i < NUM_ROWS; i++) {
 			for (int j = 0; j < NUM_COLS; j++) {
 				GRect rect = new GRect(width, height);
+				rect.setFilled(true);
 				add(rect, i * width, j * height);
 			}
 		}
