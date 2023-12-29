@@ -36,8 +36,8 @@ public class Review extends GraphicsProgram{
 				add(rect, i * width, j * height);
 			}
 		}
-		int ovalHeight = height;
-		int ovalWidth = width;
+		ovalHeight = height;
+		ovalWidth = width;
 		oval = new GOval(ovalWidth, ovalHeight);
 		add(oval, getWidth() / 2 - ovalWidth / 2, getHeight() / 2 - ovalHeight / 2);
 	}
