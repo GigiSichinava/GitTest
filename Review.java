@@ -4,7 +4,7 @@ import acm.program.GraphicsProgram;
 
 public class Review extends GraphicsProgram{
 	
-	public void inti(){
+	public void init(){
 		JButton right = new JButton("Move right");
 		add(right, EAST);
 		JButton left = new JButton("Move left");
