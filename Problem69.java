@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
@@ -17,11 +18,14 @@ public class Problem69 extends GraphicsProgram implements ComponentListener{
 	}
 	
 	public void run(){
+		rectColors = new Color[GRID_NUM][GRID_NUM];
+		
 		draw();
 	}
 	
 	private static final int GRID_NUM = 8;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
+	private Color[][] rectColors;
 	
 	private void draw(){
 		removeAll();
@@ -31,6 +35,9 @@ public class Problem69 extends GraphicsProgram implements ComponentListener{
 			for(int j = 0; j < GRID_NUM; j++){
 				GRect rect = new GRect(i * width, j * height, width, height);
 				rect.setFilled(true);
+				if(rectColors[i][j] == null){
+					rectColors[i][j] = rgen.nextColor();
+				}
 				rect.setColor(rgen.nextColor());
 				add(rect);
 			}
