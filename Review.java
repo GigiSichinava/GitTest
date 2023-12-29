@@ -53,6 +53,7 @@ public class Review extends GraphicsProgram{
 		}else if(temp.equals("Move left")){
 			if(oval.getX() < 1 * ovalWidth /2 ){
 				return;
+			}
 			oval.move(-ovalWidth, 0);
 		}else if(temp.equals("Move down")){
 			oval.move(0, ovalHeight);
