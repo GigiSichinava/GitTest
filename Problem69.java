@@ -32,6 +32,7 @@ public class Problem69 extends GraphicsProgram implements ComponentListener{
 				GRect rect = new GRect(i * width, j * height, width, height);
 				rect.setFilled(true);
 				rect.setColor(rgen.nextColor());
+				add(rect);
 			}
 		}
 	}
