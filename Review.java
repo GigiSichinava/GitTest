@@ -22,11 +22,11 @@ public class Review extends GraphicsProgram{
 	
 	public void run(){
 		
-		int height = getHeight() / NUM_ROWS;
-		int width = getWidth() / NUM_COLS;
+		double height = (double)getHeight() / NUM_ROWS;
+		double width = (double)getWidth() / NUM_COLS;
 		for(int i = 0; i < NUM_ROWS; i++){
 			for(int j = 0; j < NUM_COLS; j++){
-				GRect rect = new GRect(height, width);
+				GRect rect = new GRect(width, height);
 				add(rect, i * width, j * height);
 			}
 		}
