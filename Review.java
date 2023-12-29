@@ -12,7 +12,7 @@ public class Review extends GraphicsProgram{
 		JButton down = new JButton("Move down");
 		add(down, SOUTH);
 		JButton up = new JButton("Move up");
-		add(down, NORTH);
+		add(up, NORTH);
 	}
 	
 	public void run(){
