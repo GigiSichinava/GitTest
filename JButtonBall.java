@@ -6,9 +6,11 @@ import javax.swing.JButton;
 import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
 public class JButtonBall extends GraphicsProgram {
 
+	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int NUM_ROWS = 5;
 	private static final int NUM_COLS = 5;
 	private GOval oval;
@@ -46,6 +48,8 @@ public class JButtonBall extends GraphicsProgram {
 	public void actionPerformed(ActionEvent e) {
 		String temp = e.getActionCommand();
 		if (temp.equals("Move right")) {
+			oval.setFilled(true);
+			oval.setColor(rgen.nextColor());
 			if (oval.getX() > 4 * ovalWidth) {
 				return;
 			} else {
@@ -53,6 +57,8 @@ public class JButtonBall extends GraphicsProgram {
 
 			}
 		} else if (temp.equals("Move left")) {
+			oval.setFilled(true);
+			oval.setColor(rgen.nextColor());
 			if (oval.getX() < ovalWidth / 2) {
 				return;
 			} else {
@@ -60,6 +66,8 @@ public class JButtonBall extends GraphicsProgram {
 
 			}
 		} else if (temp.equals("Move down")) {
+			oval.setFilled(true);
+			oval.setColor(rgen.nextColor());
 			if (oval.getY() > 4 * ovalHeight) {
 				return;
 			} else {
@@ -67,6 +75,8 @@ public class JButtonBall extends GraphicsProgram {
 
 			}
 		} else if (temp.equals("Move up")) {
+			oval.setFilled(true);
+			oval.setColor(rgen.nextColor());
 			if (oval.getY() < ovalHeight / 2) {
 				return;
 			} else {
