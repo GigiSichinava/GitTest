@@ -9,7 +9,6 @@ public class Review extends GraphicsProgram{
 	private static final int NUM_ROWS = 5;
 	private static final int NUM_COLS = 5;
 	private GOval oval;
-	private static final int R = height / 2;
 	
 	public void init(){
 		JButton right = new JButton("Move right");
