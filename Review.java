@@ -42,7 +42,6 @@ public class Review extends GraphicsProgram{
 		add(oval, getWidth() / 2 - ovalWidth / 2, getHeight() / 2 - ovalHeight / 2);
 	}
 	
-	@Override
 	public void actionPerformed(ActionEvent e){
 		String temp = e.getActionCommand();
 		if(temp.equals("Move right")){
