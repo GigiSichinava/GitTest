@@ -27,7 +27,7 @@ public class Review extends GraphicsProgram{
 		for(int i = 0; i < NUM_ROWS; i++){
 			for(int j = 0; j < NUM_COLS; j++){
 				GRect rect = new GRect(height, width);
-				add(rect, i + height, j + width);
+				add(rect, j + height, i + width);
 			}
 		}
 	}
