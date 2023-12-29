@@ -36,7 +36,7 @@ public class JButtonBall extends GraphicsProgram {
 			for (int j = 0; j < NUM_COLS; j++) {
 				GRect rect = new GRect(width, height);
 				rect.setFilled(true);
-				rect.setColor(Color.lightGray);
+				rect.setFillColor(Color.lightGray);
 				add(rect, i * width, j * height);
 			}
 		}
