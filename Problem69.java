@@ -15,6 +15,8 @@ public class Problem69 extends GraphicsProgram implements ComponentListener{
 
 	public void init(){
 		addComponentListener(this);
+		add(new JButton("		Recolor		"), SOUTH);
+		addActionListeners();
 	}
 	
 	public void run(){
