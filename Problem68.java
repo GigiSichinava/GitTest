@@ -40,6 +40,7 @@ public class Problem68 extends GraphicsProgram{
 		}else{
 			GLabel newLabel = new GLabel(text);
 			add(newLabel, 0, lastLabel.getY() + newLabel.getAscent());
+			lastLabel = newLabel;
 			
 		}
 	}
