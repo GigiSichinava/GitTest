@@ -19,7 +19,6 @@ public class Problem69 extends GraphicsProgram implements ComponentListener{
 	
 	public void run(){
 		rectColors = new Color[GRID_NUM][GRID_NUM];
-		
 		draw();
 	}
 	
@@ -38,7 +37,7 @@ public class Problem69 extends GraphicsProgram implements ComponentListener{
 				if(rectColors[i][j] == null){
 					rectColors[i][j] = rgen.nextColor();
 				}
-				rect.setColor(rgen.nextColor());
+				rect.setColor(rectColors[i][j]);
 				add(rect);
 			}
 		}
