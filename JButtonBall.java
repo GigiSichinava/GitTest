@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
@@ -7,7 +8,6 @@ import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
-import javafx.scene.paint.Color;
 
 public class JButtonBall extends GraphicsProgram {
 
@@ -35,6 +35,8 @@ public class JButtonBall extends GraphicsProgram {
 		for (int i = 0; i < NUM_ROWS; i++) {
 			for (int j = 0; j < NUM_COLS; j++) {
 				GRect rect = new GRect(width, height);
+				rect.setFilled(true);
+				rect.setColor(Color.lightGray);
 				add(rect, i * width, j * height);
 			}
 		}
