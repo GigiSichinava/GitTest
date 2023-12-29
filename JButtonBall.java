@@ -53,6 +53,8 @@ public class JButtonBall extends GraphicsProgram {
 			if (oval.getX() > 4 * ovalWidth) {
 				return;
 			} else {
+				oval.setFilled(true);
+				oval.setColor(rgen.nextColor());
 				oval.move(ovalWidth, 0);
 
 			}
@@ -62,6 +64,8 @@ public class JButtonBall extends GraphicsProgram {
 			if (oval.getX() < ovalWidth / 2) {
 				return;
 			} else {
+				oval.setFilled(true);
+				oval.setColor(rgen.nextColor());
 				oval.move(-ovalWidth, 0);
 
 			}
@@ -71,15 +75,17 @@ public class JButtonBall extends GraphicsProgram {
 			if (oval.getY() > 4 * ovalHeight) {
 				return;
 			} else {
+				oval.setFilled(true);
+				oval.setColor(rgen.nextColor());
 				oval.move(0, ovalHeight);
 
 			}
 		} else if (temp.equals("Move up")) {
-			oval.setFilled(true);
-			oval.setColor(rgen.nextColor());
 			if (oval.getY() < ovalHeight / 2) {
 				return;
 			} else {
+				oval.setFilled(true);
+				oval.setColor(rgen.nextColor());
 				oval.move(0, -ovalHeight);
 
 			}
