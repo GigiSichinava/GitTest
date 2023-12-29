@@ -44,7 +44,7 @@ public class JButtonBall extends GraphicsProgram {
 		ovalWidth = width;
 		oval = new GOval(ovalWidth, ovalHeight);
 		oval.setFilled(true);
-		oval.setFillColor(Color.GREEN);
+		oval.setColor(Color.GREEN);
 		add(oval, getWidth() / 2 - ovalWidth / 2, getHeight() / 2 - ovalHeight / 2);
 	}
 
