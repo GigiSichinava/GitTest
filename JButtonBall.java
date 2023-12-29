@@ -1,4 +1,4 @@
-import java.awt.Color;
+
 import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
@@ -7,6 +7,7 @@ import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
+import javafx.scene.paint.Color;
 
 public class JButtonBall extends GraphicsProgram {
 
@@ -34,18 +35,13 @@ public class JButtonBall extends GraphicsProgram {
 		for (int i = 0; i < NUM_ROWS; i++) {
 			for (int j = 0; j < NUM_COLS; j++) {
 				GRect rect = new GRect(width, height);
-				// Set a slightly transparent color for the grid
-				rect.setFilled(true);
-				rect.setColor(rgen.nextColor());  // Set a random color for the grid
 				add(rect, i * width, j * height);
 			}
 		}
 		ovalHeight = height;
 		ovalWidth = width;
 		oval = new GOval(ovalWidth, ovalHeight);
-		// Start the first oval from a green color
 		oval.setFilled(true);
-		oval.setColor(Color.GREEN);
 		add(oval, getWidth() / 2 - ovalWidth / 2, getHeight() / 2 - ovalHeight / 2);
 	}
 
@@ -61,12 +57,14 @@ public class JButtonBall extends GraphicsProgram {
 				oval.move(ovalWidth, 0);
 			}
 		} else if (temp.equals("Move left")) {
+
 			if (oval.getX() < ovalWidth / 2) {
 				return;
 			} else {
 				oval.setFilled(true);
 				oval.setColor(rgen.nextColor());
 				oval.move(-ovalWidth, 0);
+
 			}
 		} else if (temp.equals("Move down")) {
 			if (oval.getY() > 4 * ovalHeight) {
@@ -83,6 +81,7 @@ public class JButtonBall extends GraphicsProgram {
 				oval.setFilled(true);
 				oval.setColor(rgen.nextColor());
 				oval.move(0, -ovalHeight);
+
 			}
 		}
 	}
