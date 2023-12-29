@@ -1,27 +1,21 @@
-import java.util.ArrayList;
+import javax.swing.JButton;
 
-import acm.program.ConsoleProgram;
+import acm.program.GraphicsProgram;
 
-public class Review extends ConsoleProgram {
-
-	private static final int SENETINEL = -1;
-
-	public void run() {
-		ArrayList<Integer> myList = new ArrayList<Integer>();
-		while (true) {
-			int n = readInt();
-			if (n == SENETINEL) {
-				break;
-			}
-			myList.add(n);
-		}
-		printReversedOrder(myList);
-
+public class Review extends GraphicsProgram{
+	
+	public void inti(){
+		JButton right = new JButton("Move right");
+		add(right, EAST);
+		JButton left = new JButton("Move left");
+		add(left, WEST);
+		JButton down = new JButton("Move down");
+		add(down, SOUTH);
+		JButton up = new JButton("Move up");
+		add(down, NORTH);
 	}
-
-	private void printReversedOrder(ArrayList<Integer> myList) {
-		for (int i = myList.size() - 1; i >= 0; i--) {
-			println(myList.get(i));
-		}
+	
+	public void run(){
+		
 	}
 }
