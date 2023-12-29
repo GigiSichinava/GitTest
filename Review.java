@@ -5,8 +5,8 @@ import acm.program.GraphicsProgram;
 
 public class Review extends GraphicsProgram{
 	
-	private static final int NUM_ROWS = 6;
-	private static final int NUM_COLS = 6;
+	private static final int NUM_ROWS = 5;
+	private static final int NUM_COLS = 5;
 	
 	
 	public void init(){
