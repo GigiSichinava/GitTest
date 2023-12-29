@@ -61,7 +61,7 @@ public class Review extends GraphicsProgram{
 			}
 			oval.move(0, ovalHeight);
 		}else if(temp.equals("Move up")){
-			if(oval.getX() < ovalHeight / 2){
+			if(oval.getY() < ovalHeight / 2){
 				return;
 			}
 			oval.move(0, -ovalHeight);
