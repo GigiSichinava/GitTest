@@ -46,6 +46,9 @@ public class Review extends GraphicsProgram{
 	public void actionPerformed(ActionEvent e){
 		String temp = e.getActionCommand();
 		if(temp.equals("Move right")){
+			if(oval.getX() > 4 * ovalHeight){
+				return;
+			}
 			oval.move(ovalWidth, 0);
 		}else if(temp.equals("Move left")){
 			oval.move(-ovalWidth, 0);

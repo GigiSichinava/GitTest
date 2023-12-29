@@ -1,43 +1,27 @@
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
+import acm.program.ConsoleProgram;
 
-import acm.graphics.GOval;
-import acm.program.GraphicsProgram;
+public class Practice extends ConsoleProgram {
+    public void run() {
+        int n = readInt("Size of the Array: ");
+        int[] array = new int[n];
 
-// its just an example of responsive canvas
-public class Practice extends GraphicsProgram implements ComponentListener{
-	GOval oval;
-	public void init() {
-		oval = new GOval(getWidth()/ 2, getHeight()/2);
-		add(oval);
-		addComponentListener(this);
-	}
-	
+        for (int i = 0; i < array.length; i++) {
+            array[i] = readInt("Enter element " + (i + 1) + ": ");
+        }
+        println("Array is sorted: " + isSorted(array));
+    }
 
-	
-	
-	@Override
-	public void componentResized(ComponentEvent e) {
-		oval.setSize(getWidth()/ 2, getHeight()/2);
-		
-	}
+    private boolean isSorted(int[] array) {
+        // Check if the array has less than 2 elements
+        if (array.length < 2) {
+            return true;
+        }
 
-	@Override
-	public void componentMoved(ComponentEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void componentShown(ComponentEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void componentHidden(ComponentEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
+        for (int j = 0; j < array.length - 1; j++) {
+            if (array[j] > array[j + 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
