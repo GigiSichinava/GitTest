@@ -19,6 +19,15 @@ public class Problem69 extends GraphicsProgram implements ComponentListener{
 		addActionListeners();
 	}
 	
+	public void actionPerformed(ActionEvent e){
+		for(int i = 0; i < rectColors.length; i++){
+			for(int j = 0; j < rectColors[i].length; j++){
+				rectColors[i][j] = null;
+			}
+		}
+		draw();
+	}
+	
 	public void run(){
 		rectColors = new Color[GRID_NUM][GRID_NUM];
 		draw();
