@@ -22,8 +22,8 @@ public class Review extends GraphicsProgram{
 	}
 	
 	public void run(){
-		int width = getX() / COL_NUM;
-		int height = getY() / ROW_NUM;
+		int width = getWidth() / COL_NUM;
+		int height = getHeight() / ROW_NUM;
 		for(int i = 0; i < ROW_NUM; i++){
 			for(int j = 0; j < COL_NUM; j++){
 				GRect rect = new GRect(width, height);
