@@ -72,7 +72,6 @@ public class JButtonBall extends GraphicsProgram implements ComponentListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		removeAll();
 		String temp = e.getActionCommand();
 		if (temp.equals("Move right")) {
 			if (oval.getX() > 4 * ovalWidth) {
