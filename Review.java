@@ -34,6 +34,7 @@ public class Review extends GraphicsProgram{
 		ovalWidth = width;
 		ovalHeight = height;
 		GOval oval = new GOval(ovalWidth, ovalHeight);
+		oval.setFilled(true);
 		add(oval, getWidth() / 2 - ovalWidth / 2, getHeight() / 2 - ovalHeight / 2);
 	}
 }
