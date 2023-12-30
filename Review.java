@@ -5,6 +5,10 @@ import acm.program.GraphicsProgram;
 
 public class Review extends GraphicsProgram{
 	
+	private static final int ROW_NUM = 5;
+	private static final int COL_NUM = 5;
+
+	
 	public void init(){
 		JButton down = new JButton ("Move down");
 		add(down, SOUTH);
@@ -17,6 +21,6 @@ public class Review extends GraphicsProgram{
 	}
 	
 	public void run(){
-	
+		
 	}
 }
