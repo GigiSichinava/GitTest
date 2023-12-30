@@ -36,32 +36,63 @@ public class Review extends GraphicsProgram implements ComponentListener {
     }
 
     private void updateGrid() {
-        removeAll(); // Remove all existing elements
+    	int height = getHeight() / NUM_ROWS;
+		int width = getWidth() / NUM_COLS;
+		for (int i = 0; i < NUM_ROWS; i++) {
+			for (int j = 0; j < NUM_COLS; j++) {
+				GRect rect = new GRect(width, height);
+				rect.setFilled(true);
+				rect.setFillColor(Color.white);
+				add(rect, i * width, j * height);
+			}
+		}
+		ovalHeight = height;
+		ovalWidth = width;
+		oval = new GOval(ovalWidth, ovalHeight);
+		oval.setFilled(true);
+		add(oval, getWidth() / 2 - ovalWidth / 2, getHeight() / 2 - ovalHeight / 2);
+	}
 
-        int height = getHeight() / NUM_ROWS;
-        int width = getWidth() / NUM_COLS;
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String temp = e.getActionCommand();
+		if (temp.equals("Move right")) {
+			if (oval.getX() > 4 * ovalWidth) {
+				return;
+			} else {
+				oval.setFilled(true);
+				oval.setColor(rgen.nextColor());
+				oval.move(ovalWidth, 0);
+			}
+		} else if (temp.equals("Move left")) {
 
-        for (int i = 0; i < NUM_ROWS; i++) {
-            for (int j = 0; j < NUM_COLS; j++) {
-                GRect rect = new GRect(width, height);
-                rect.setFilled(true);
-                rect.setFillColor(Color.white);
-                add(rect, i * width, j * height);
-            }
-        }
+			if (oval.getX() < ovalWidth / 2) {
+				return;
+			} else {
+				oval.setFilled(true);
+				oval.setColor(rgen.nextColor());
+				oval.move(-ovalWidth, 0);
 
-        ovalWidth = width;
-        ovalHeight = height;
+			}
+		} else if (temp.equals("Move down")) {
+			if (oval.getY() > 4 * ovalHeight) {
+				return;
+			} else {
+				oval.setFilled(true);
+				oval.setColor(rgen.nextColor());
+				oval.move(0, ovalHeight);
+			}
+		} else if (temp.equals("Move up")) {
+			if (oval.getY() < ovalHeight / 2) {
+				return;
+			} else {
+				oval.setFilled(true);
+				oval.setColor(rgen.nextColor());
+				oval.move(0, -ovalHeight);
 
-        if (oval == null) {
-            oval = new GOval(ovalWidth, ovalHeight);
-            oval.setFilled(true);
-            add(oval, getWidth() / 2 - ovalWidth / 2, getHeight() / 2 - ovalHeight / 2);
-        } else {
-            oval.setSize(ovalWidth, ovalHeight);
-            // Optionally, reposition the oval as needed
-        }
-    }
+			}
+		}
+	}
 
     @Override
     public void componentMoved(ComponentEvent e) {
