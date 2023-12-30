@@ -1,6 +1,8 @@
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 
 import javax.swing.JButton;
 
@@ -9,7 +11,7 @@ import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class JButtonBall extends GraphicsProgram {
+public class JButtonBall extends GraphicsProgram implements ComponentListener{
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int NUM_ROWS = 5;
@@ -27,6 +29,7 @@ public class JButtonBall extends GraphicsProgram {
 		JButton up = new JButton("Move up");
 		add(up, NORTH);
 		addActionListeners();
+        this.addComponentListener(this);
 	}
 
 	public void run() {
@@ -86,5 +89,56 @@ public class JButtonBall extends GraphicsProgram {
 
 			}
 		}
+	}
+
+	@Override
+	public void componentHidden(ComponentEvent arg0) {
+		removeAll(); // Remove all existing elements
+
+        int height = getHeight() / NUM_ROWS;
+        int width = getWidth() / NUM_COLS;
+
+        for (int i = 0; i < NUM_ROWS; i++) {
+            for (int j = 0; j < NUM_COLS; j++) {
+                GRect rect = new GRect(width, height);
+                rect.setFilled(true);
+                rect.setFillColor(Color.white);
+                add(rect, i * width, j * height);
+            }
+        }
+
+        ovalWidth = width;
+        ovalHeight = height;
+
+        if (oval == null) {
+            oval = new GOval(ovalWidth, ovalHeight);
+            oval.setFilled(true);
+            add(oval, getWidth() / 2 - ovalWidth / 2, getHeight() / 2 - ovalHeight / 2);
+        } else {
+            oval.setSize(ovalWidth, ovalHeight);
+            // Optionally, reposition the oval as needed
+        }
+	}
+
+	@Override
+	public void componentMoved(ComponentEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void componentResized(ComponentEvent arg0) {
+		 updateGrid();		
+	}
+
+	private void updateGrid() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void componentShown(ComponentEvent arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 }
