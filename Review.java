@@ -1,16 +1,14 @@
 import java.awt.Color;
 import java.awt.event.ActionEvent;
+import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
-
 import javax.swing.JButton;
-
 import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class Review extends GraphicsProgram implements ComponentListener {
+public class Review extends GraphicsProgram {
 
     private RandomGenerator rgen = RandomGenerator.getInstance();
     private static final int NUM_ROWS = 5;
@@ -19,92 +17,66 @@ public class Review extends GraphicsProgram implements ComponentListener {
     private int ovalWidth, ovalHeight;
 
     public void init() {
-        // Your existing initialization code
+        JButton right = new JButton("Move right");
+        add(right, EAST);
+        JButton left = new JButton("Move left");
+        add(left, WEST);
+        JButton down = new JButton("Move down");
+        add(down, SOUTH);
+        JButton up = new JButton("Move up");
+        add(up, NORTH);
+        addActionListeners();
 
-        // Register component listener
-        this.addComponentListener(this);
+        // Add component listener for window resize
+        addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                updateGridAndOval();
+            }
+        });
     }
 
     public void run() {
-        // Your existing run method
+        updateGridAndOval();
     }
 
-    // Component Listener methods
-    @Override
-    public void componentResized(ComponentEvent e) {
-        updateGrid();
-    }
+    private void updateGridAndOval() {
+        removeAll(); // Clear the canvas
 
-    private void updateGrid() {
-    	int height = getHeight() / NUM_ROWS;
-		int width = getWidth() / NUM_COLS;
-		for (int i = 0; i < NUM_ROWS; i++) {
-			for (int j = 0; j < NUM_COLS; j++) {
-				GRect rect = new GRect(width, height);
-				rect.setFilled(true);
-				rect.setFillColor(Color.white);
-				add(rect, i * width, j * height);
-			}
-		}
-		ovalHeight = height;
-		ovalWidth = width;
-		oval = new GOval(ovalWidth, ovalHeight);
-		oval.setFilled(true);
-		add(oval, getWidth() / 2 - ovalWidth / 2, getHeight() / 2 - ovalHeight / 2);
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		String temp = e.getActionCommand();
-		if (temp.equals("Move right")) {
-			if (oval.getX() > 4 * ovalWidth) {
-				return;
-			} else {
-				oval.setFilled(true);
-				oval.setColor(rgen.nextColor());
-				oval.move(ovalWidth, 0);
-			}
-		} else if (temp.equals("Move left")) {
-
-			if (oval.getX() < ovalWidth / 2) {
-				return;
-			} else {
-				oval.setFilled(true);
-				oval.setColor(rgen.nextColor());
-				oval.move(-ovalWidth, 0);
-
-			}
-		} else if (temp.equals("Move down")) {
-			if (oval.getY() > 4 * ovalHeight) {
-				return;
-			} else {
-				oval.setFilled(true);
-				oval.setColor(rgen.nextColor());
-				oval.move(0, ovalHeight);
-			}
-		} else if (temp.equals("Move up")) {
-			if (oval.getY() < ovalHeight / 2) {
-				return;
-			} else {
-				oval.setFilled(true);
-				oval.setColor(rgen.nextColor());
-				oval.move(0, -ovalHeight);
-
-			}
-		}
-	}
-
-    @Override
-    public void componentMoved(ComponentEvent e) {
+        int height = getHeight() / NUM_ROWS;
+        int width = getWidth() / NUM_COLS;
+        for (int i = 0; i < NUM_ROWS; i++) {
+            for (int j = 0; j < NUM_COLS; j++) {
+                GRect rect = new GRect(width, height);
+                rect.setFilled(true);
+                rect.setFillColor(Color.white);
+                add(rect, i * width, j * height);
+            }
+        }
+        ovalHeight = height;
+        ovalWidth = width;
+        oval = new GOval(ovalWidth, ovalHeight);
+        oval.setFilled(true);
+        add(oval, getWidth() / 2 - ovalWidth / 2, getHeight() / 2 - ovalHeight / 2);
     }
 
     @Override
-    public void componentShown(ComponentEvent e) {
+    public void actionPerformed(ActionEvent e) {
+        String command = e.getActionCommand();
+        moveOval(command);
     }
 
-    @Override
-    public void componentHidden(ComponentEvent e) {
+    private void moveOval(String direction) {
+        if (direction.equals("Move right") && oval.getX() + ovalWidth <= getWidth() - ovalWidth) {
+            oval.move(ovalWidth, 0);
+        } else if (direction.equals("Move left") && oval.getX() >= ovalWidth) {
+            oval.move(-ovalWidth, 0);
+        } else if (direction.equals("Move down") && oval.getY() + ovalHeight <= getHeight() - ovalHeight) {
+            oval.move(0, ovalHeight);
+        } else if (direction.equals("Move up") && oval.getY() >= ovalHeight) {
+            oval.move(0, -ovalHeight);
+        }
+        oval.setFilled(true);
+        oval.setColor(rgen.nextColor());
     }
-
-    // Your existing actionPerformed and other methods
 }
