@@ -1,6 +1,7 @@
 import javax.swing.JButton;
 
 import acm.graphics.GLabel;
+import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 public class Review extends GraphicsProgram{
@@ -21,6 +22,13 @@ public class Review extends GraphicsProgram{
 	}
 	
 	public void run(){
-		
+		int width = getX() / COL_NUM;
+		int height = getY() / ROW_NUM;
+		for(int i = 0; i < ROW_NUM; i++){
+			for(int j = 0; j < COL_NUM; j++){
+				GRect rect = new GRect(width, height);
+				add(rect, width * i, height * j);
+			}
+		}
 	}
 }
