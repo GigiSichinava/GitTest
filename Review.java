@@ -10,6 +10,8 @@ public class Review extends GraphicsProgram{
 		add(down, SOUTH);
 		JButton up = new JButton ("Move up");
 		add(up, NORTH);
+		JButton right = new JButton ("Move right");
+		add(right, EAST);
 	}
 	
 	public void run(){
