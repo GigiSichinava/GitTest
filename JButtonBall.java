@@ -92,42 +92,19 @@ public class JButtonBall extends GraphicsProgram implements ComponentListener{
 	}
 
 	@Override
-	public void componentHidden(ComponentEvent arg0) {
-		removeAll(); // Remove all existing elements
-
-        int height = getHeight() / NUM_ROWS;
-        int width = getWidth() / NUM_COLS;
-
-        for (int i = 0; i < NUM_ROWS; i++) {
-            for (int j = 0; j < NUM_COLS; j++) {
-                GRect rect = new GRect(width, height);
-                rect.setFilled(true);
-                rect.setFillColor(Color.white);
-                add(rect, i * width, j * height);
-            }
-        }
-
-        ovalWidth = width;
-        ovalHeight = height;
-
-        if (oval == null) {
-            oval = new GOval(ovalWidth, ovalHeight);
-            oval.setFilled(true);
-            add(oval, getWidth() / 2 - ovalWidth / 2, getHeight() / 2 - ovalHeight / 2);
-        } else {
-            oval.setSize(ovalWidth, ovalHeight);
-            // Optionally, reposition the oval as needed
-        }
-	}
-
-	@Override
-	public void componentMoved(ComponentEvent arg0) {
+	public void componentHidden(ComponentEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void componentResized(ComponentEvent arg0) {
+	public void componentMoved(ComponentEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void componentResized(ComponentEvent e) {
 		 updateGrid();		
 	}
 
@@ -137,7 +114,7 @@ public class JButtonBall extends GraphicsProgram implements ComponentListener{
 	}
 
 	@Override
-	public void componentShown(ComponentEvent arg0) {
+	public void componentShown(ComponentEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
