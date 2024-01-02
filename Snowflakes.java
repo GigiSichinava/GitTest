@@ -20,10 +20,14 @@ public class Snowflakes extends GraphicsProgram{
 			int y = rgen.nextInt(-FLAKES_R, getHeight() - (2 * FLAKES_R));
 			snowFlakes[i].setLocation(x, y);
 			add(snowFlakes[i]);
+			
+			while(snowFlakes[i].getY() < getHeight()){
+				snowFlakes[i].move(0, 10);
+				pause(100);
+			}
 		} 
 		
 		for(int j = 0; j < NUM_FLAKES; j++){
-			
 		}
 		
 	}
