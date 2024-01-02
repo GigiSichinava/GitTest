@@ -17,7 +17,7 @@ public class Review extends GraphicsProgram {
             snowflakes[i] = new GOval(R, R);
             snowflakes[i].setFilled(true);
             int startX = rgen.nextInt(0, getWidth() - R);
-            int startY = rgen.nextInt(0, getHeight() - R);
+            int startY = rgen.nextInt(0, -R);
             snowflakes[i].setLocation(startX, startY);
             add(snowflakes[i]);
         }
