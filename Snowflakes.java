@@ -18,7 +18,7 @@ public class Snowflakes extends GraphicsProgram {
 		for (int i = 0; i < NUM; i++) {
 			snowFlakes[i] = new GOval(D, D);
 			snowFlakes[i].setFilled(true);
-			snowFlakes[i].setColor(Color.CYAN);
+			snowFlakes[i].setColor(Color.cyan);
 			int startX = rgen.nextInt(0, getWidth() - D);
 			int startY = rgen.nextInt(0, getHeight() - D);
 			snowFlakes[i].setLocation(startX, startY);
