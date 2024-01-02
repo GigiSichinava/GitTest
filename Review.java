@@ -17,7 +17,12 @@ public class Review extends GraphicsProgram {
 			ovalArray[i] = new GOval(2 * R, 2 * R);
 			ovalArray[i].setFilled(true);
 			add(ovalArray[i], rgen.nextInt(R, getWidth() - R), -2 * R);
-
+			
+			while(ovalArray[i].getY() < getHeight()){
+				ovalArray[i].move(0, 10);
+				pause(100);
+			}
 		}
+		
 	}
 }
