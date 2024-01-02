@@ -4,7 +4,7 @@ import acm.program.GraphicsProgram;
 
 public class Review extends GraphicsProgram{
 	public void run(){
-		GOval oval = new GOval(20,20,10,10);
+		GOval oval = new GOval(20,20,20,20);
 		oval.setFilled(true);
 		add(oval);
 		while(oval.getY() < getHeight()){
