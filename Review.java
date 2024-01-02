@@ -17,16 +17,15 @@ public class Review extends GraphicsProgram {
             snowflakes[i] = new GOval(R, R);
             snowflakes[i].setFilled(true);
             int startX = rgen.nextInt(0, getWidth() - R);
-            int startY = rgen.nextInt(0, -R);
+            int startY = rgen.nextInt(0, getHeight() - R);
             snowflakes[i].setLocation(startX, startY);
             add(snowflakes[i]);
         }
 
         while (true) {
             for (int i = 0; i < NUM; i++) {
-                snowflakes[i].move(0, rgen.nextInt(1, 5)); // Move down randomly
+                snowflakes[i].move(0, rgen.nextInt(1, 5)); 
 
-                // Reset to top if it goes off the screen
                 if (snowflakes[i].getY() > getHeight()) {
                     snowflakes[i].setLocation(rgen.nextInt(0, getWidth() - R), - R);
                 }
@@ -35,7 +34,5 @@ public class Review extends GraphicsProgram {
         }
     }
 
-    public static void main(String[] args) {
-        new Review().start(args);
-    }
+   
 }
