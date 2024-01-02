@@ -1,17 +1,19 @@
 import acm.graphics.GOval;
 import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
 public class Review extends GraphicsProgram {
 
 	private static final int R = 20;
 	private static final int NUM_OVAlS = 10;
 	private GOval oval;
-
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+	
 	public void run() {
 
 		GOval[] ovalArray = new GOval[NUM_OVAlS];
-		oval = new GOval(R, R);
+		oval = new GOval(2 * R, 2 * R);
 		oval.setFilled(true);
 
 		for (int i = 0; i < NUM_OVAlS; i++) {
@@ -19,7 +21,7 @@ public class Review extends GraphicsProgram {
 		}
 
 		for (int j = 0; j < ovalArray.length; j++) {
-			add(ovalArray[j], 10, 10);
+			add(ovalArray[j], rgen.nextInt(R, getWidth() - R), rgen.nextInt(R, getWidth() - R));
 		}
 	}
 }
