@@ -24,7 +24,7 @@ public class Snowflakes extends GraphicsProgram {
 		while (true) {
 			for (int j = 0; j < NUM_FLAKES; j++) {
 				snowFlakes[j].move(0, rgen.nextInt(1, 5));
-				pause(100);
+				pause(10);
 				if (snowFlakes[j].getY() > getHeight()) {
 					snowFlakes[j].setLocation(rgen.nextInt(0, getWidth() - (2 * FLAKES_R)),
 							rgen.nextInt(-FLAKES_R, getHeight() - (2 * FLAKES_R)));
