@@ -38,6 +38,6 @@ public class Review extends GraphicsProgram {
     }
 
     public static void main(String[] args) {
-        new SnowAnimation().start(args);
+        new Review().start(args);
     }
 }
