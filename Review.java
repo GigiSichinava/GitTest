@@ -4,31 +4,40 @@ import acm.util.RandomGenerator;
 
 public class Review extends GraphicsProgram {
 
-    private static final int R = 5;
-    private static final int NUM_OVALS = 20;
+    private static final int NUM_SNOWFLAKES = 100; // Total number of snowflakes
+    private static final int SNOWFLAKE_SIZE = 5;   // Size of each snowflake
+    private static final int DELAY = 50;           // Animation delay in milliseconds
+
     private RandomGenerator rgen = RandomGenerator.getInstance();
 
     public void run() {
-        GOval[] ovalArray = new GOval[NUM_OVALS];
+        GOval[] snowflakes = new GOval[NUM_SNOWFLAKES];
 
-        // Create and add all GOvals
-        for (int i = 0; i < NUM_OVALS; i++) {
-            ovalArray[i] = new GOval(2 * R, 2 * R);
-            ovalArray[i].setFilled(true);
-            add(ovalArray[i], rgen.nextInt(R, getWidth() - R), -2 * R);
+        // Create and add snowflakes to the screen
+        for (int i = 0; i < NUM_SNOWFLAKES; i++) {
+            snowflakes[i] = new GOval(SNOWFLAKE_SIZE, SNOWFLAKE_SIZE);
+            snowflakes[i].setFilled(true);
+            int startX = rgen.nextInt(0, getWidth() - SNOWFLAKE_SIZE);
+            int startY = rgen.nextInt(0, getHeight() - SNOWFLAKE_SIZE);
+            snowflakes[i].setLocation(startX, startY);
+            add(snowflakes[i]);
         }
 
-        // Move all GOvals
-        boolean ovalsMoving = true;
-        while (ovalsMoving) {
-            ovalsMoving = false;
-            for (int i = 0; i < NUM_OVALS; i++) {
-                if (ovalArray[i].getY() < getHeight()) {
-                    ovalArray[i].move(0, 10);
-                    ovalsMoving = true;
+        // Animate snowflakes
+        while (true) {
+            for (int i = 0; i < NUM_SNOWFLAKES; i++) {
+                snowflakes[i].move(0, rgen.nextInt(1, 5)); // Move down randomly
+
+                // Reset to top if it goes off the screen
+                if (snowflakes[i].getY() > getHeight()) {
+                    snowflakes[i].setLocation(rgen.nextInt(0, getWidth() - SNOWFLAKE_SIZE), -SNOWFLAKE_SIZE);
                 }
             }
-            pause(100);
+            pause(DELAY);
         }
+    }
+
+    public static void main(String[] args) {
+        new SnowAnimation().start(args);
     }
 }
