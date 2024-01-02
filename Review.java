@@ -14,11 +14,12 @@ public class Review extends GraphicsProgram {
 		GOval[] ovalArray = new GOval[NUM_OVAlS];
 
 		for (int i = 0; i < NUM_OVAlS; i++) {
+			while(ovalArray[i].getY() < getHeight()){
+
 			ovalArray[i] = new GOval(2 * R, 2 * R);
 			ovalArray[i].setFilled(true);
 			add(ovalArray[i], rgen.nextInt(R, getWidth() - R), -2 * R);
 			
-			while(ovalArray[i].getY() < getHeight()){
 				ovalArray[i].move(0, 10);
 				pause(100);
 			}
