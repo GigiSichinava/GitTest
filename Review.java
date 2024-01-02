@@ -9,6 +9,7 @@ public class Review extends GraphicsProgram{
 		add(oval);
 		while(oval.getY() < getHeight()){
 			oval.move(0, 10);
+			pause(100);
 		}
 	}
 	
