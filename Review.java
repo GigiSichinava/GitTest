@@ -5,7 +5,7 @@ import acm.util.RandomGenerator;
 
 public class Review extends GraphicsProgram {
 
-	private static final int R = 20;
+	private static final int R = 10;
 	private static final int NUM_OVAlS = 10;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
