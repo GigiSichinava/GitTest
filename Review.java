@@ -7,25 +7,19 @@ public class Review extends GraphicsProgram {
 
 	private static final int R = 20;
 	private static final int NUM_OVAlS = 10;
-	private GOval oval;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {
 
 		GOval[] ovalArray = new GOval[NUM_OVAlS];
-		oval = new GOval(2 * R, 2 * R);
-		oval.setFilled(true);
-
+		
 		for (int i = 0; i < NUM_OVAlS; i++) {
-			ovalArray[i] = oval;
+			ovalArray[i] = new GOval(2 * R, 2 * R);
+			ovalArray[i].setFilled(true);
 		}
 
 		for (int j = 0; j < ovalArray.length; j++) {
-			while (oval.getY() < getHeight() - 20) {
-				oval.move(0, 10);
-				pause(100);
-				add(ovalArray[j], rgen.nextInt(R, getWidth() - R), rgen.nextInt(R, getWidth() - R));
-			}
+			add(ovalArray[j], rgen.nextInt(R, getWidth() - R), rgen.nextInt(R, getWidth() - R));
 		}
 	}
 }
