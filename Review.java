@@ -5,6 +5,7 @@ import acm.program.GraphicsProgram;
 public class Review extends GraphicsProgram{
 	public void run(){
 		GOval oval = new GOval(10,10,10,10);
+		oval.setFilled(true);
 		add(oval);
 		while(oval.getY() < getHeight()){
 			oval.move(0, 10);
