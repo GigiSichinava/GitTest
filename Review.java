@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 import acm.program.ConsoleProgram;
 
-public class TicTacToe extends ConsoleProgram{
+public class Review extends ConsoleProgram{
 
     private static char[][] board = {
             {' ', ' ', ' '},
