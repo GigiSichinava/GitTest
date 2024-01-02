@@ -7,7 +7,7 @@ public class Review extends GraphicsProgram{
 		GOval oval = new GOval(20,20,20,20);
 		oval.setFilled(true);
 		add(oval);
-		while(oval.getY() < getHeight()){
+		while(oval.getY() < getHeight() - 20){
 			oval.move(0, 10);
 			pause(100);
 		}
