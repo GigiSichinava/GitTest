@@ -11,6 +11,9 @@ public class Practice extends ConsoleProgram {
 	}
 
 	private boolean isPrime(int x) {
+		if (x == 1) {
+			println("1 is not prime, nor complex number.");
+		}
 		int checkBefore = (int) Math.sqrt(x);
 		for (int i = 2; i <= checkBefore; i++) {
 			if (x % i == 0) {
