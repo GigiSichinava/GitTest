@@ -1,11 +1,9 @@
-
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
 import java.util.StringTokenizer;
-
 import acm.program.ConsoleProgram;
 
 public class Problem63 extends ConsoleProgram {
