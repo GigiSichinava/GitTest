@@ -7,6 +7,9 @@ import acm.program.GraphicsProgram;
 
 public class Practice extends GraphicsProgram{
 
+	private JButton button;
+	private JTextField textField;
+	
 	@Override
 	public void init(){
 		JButton button = new JButton("Enter");
@@ -17,8 +20,12 @@ public class Practice extends GraphicsProgram{
 		textField.addActionListener(this);
 	}
 	
+	
 	public void actionPerformed(ActionEvent e){
-		String line = e.getActionCommand();
-		println(line);
+		String line = textField.getText();
+		if(line.isEmpty()){
+			return;
+		}
+		
 	}
 }
