@@ -29,8 +29,9 @@ public class Review extends GraphicsProgram {
 				if (flakes[j].getY() > getHeight()) {
 					flakes[j].setLocation(rgen.nextInt(0, getWidth() - 2 * R), -2 * R);
 				}
-			pause(PAUSE);
 			}
 		}
+		pause(PAUSE);
+
 	}
 }
