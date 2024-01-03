@@ -4,7 +4,7 @@ public class Practice extends ConsoleProgram{
 	public void run(){
 		
 		int x = readInt("Check if number is prime: ");
-		isPrime(x);
+		println(isPrime(x));
 	}
 
 	private boolean isPrime(int x) {
