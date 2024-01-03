@@ -9,7 +9,7 @@ public class Practice extends ConsoleProgram{
 
 	private boolean isPrime(int x) {
 		int checkBefore = (int)Math.sqrt(x);
-		for(int i = 0; i <= checkBefore; i++){
+		for(int i = 2; i <= checkBefore; i++){
 			if(x % i == 0){
 				return false;
 			}
