@@ -26,6 +26,7 @@ public class Practice extends GraphicsProgram{
 		if(line.isEmpty()){
 			return;
 		}
+		textField.setText("");
 		
 	}
 }
