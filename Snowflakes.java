@@ -6,7 +6,7 @@ import acm.util.RandomGenerator;
 
 public class Snowflakes extends GraphicsProgram {
 
-	private static final int NUM = 200;
+	private static final int NUM = 300;
 	private static final int D = 5;
 	private static final int DELAY = 50;
 
