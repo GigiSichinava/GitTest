@@ -23,7 +23,7 @@ public class Review extends GraphicsProgram{
 			flakes[i].setLocation(rgen.nextInt(0, getWidth() - 2 * R), rgen.nextInt(0, getHeight() - 2 * R));
 		}
 	
-		for(int j = 0; j < NUM; j++){
+		for(int j = 0; j < flakes.length; j++){
 			flakes[j].move(0, rgen.nextInt(1, 5));
 			pause(PAUSE);
 		}
