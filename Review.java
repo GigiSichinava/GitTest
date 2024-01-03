@@ -11,14 +11,17 @@ public class Review extends ConsoleProgram {
 		HashMap<String, Integer> myMap = new HashMap<String, Integer>();
 		
 		while (true) {
-			String name = readLine("Enter name");
+			String name = readLine("Enter name: ");
 			if (name.equals(SENTINEL)) {
 				break;
 			}
 			if(!myMap.containsKey(name)){
 				myMap.put(name, 1);
 			}
+			int newCount = myMap.get(name);
+			myMap.put(name, newCount);
 
 		}
+		println(myMap);
 	}
 }
