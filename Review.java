@@ -11,7 +11,7 @@ public class Review extends ConsoleProgram{
 		HashMap<String, Integer> myMap = new HashMap<String, Integer>();
 		
 		while(true){
-			String name = readLine("Enter your name: ");
+			String name = readLine();
 			if(name.equals(SENTINEL)){
 				break;
 			}
@@ -21,6 +21,6 @@ public class Review extends ConsoleProgram{
 			int newCount = myMap.get(name) + 1;
 			myMap.put(name, newCount);
 		}
-	println(myMap);
+		println(myMap);
 	}
 }
