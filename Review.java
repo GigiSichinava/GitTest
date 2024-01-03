@@ -16,9 +16,9 @@ public class Review extends ConsoleProgram {
 				break;
 			}
 			if(!myMap.containsKey(name)){
-				myMap.put(name, 1);
+				myMap.put(name, 0);
 			}
-			int newCount = myMap.get(name);
+			int newCount = myMap.get(name) + 1;
 			myMap.put(name, newCount);
 
 		}
