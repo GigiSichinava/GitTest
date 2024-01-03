@@ -10,21 +10,21 @@ public class Problem63 extends ConsoleProgram {
 
 	public void run() {
 
-		Map<String, Collection<String>> map = new HashMap<String, Collection<String>>();
+		Map<String, Collection<String>> myMap = new HashMap<String, Collection<String>>();
 
 		while (true) {
-			String line = readLine();
+			String line = readLine("Enter friends (use space between) : ");
 			if (line.isEmpty()) {
 				break;
 			}
-			StringTokenizer tokenizer = new StringTokenizer(line);
-			String a = tokenizer.nextToken();
-			String b = tokenizer.nextToken();
-			map.putIfAbsent(b, new HashSet<String>());
-			map.get(b).add(a);
+			StringTokenizer tkn = new StringTokenizer(line);
+			String a = tkn.nextToken();
+			String b = tkn.nextToken();
+			myMap.putIfAbsent(b, new HashSet<String>());
+			myMap.get(b).add(a);
 		}
 
-		println(map);
+		println(myMap);
 
 	}
 }
