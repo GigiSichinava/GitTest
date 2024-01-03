@@ -1,32 +1,31 @@
+
+import java.util.HashMap;
+import java.util.Map;
+
 import acm.program.ConsoleProgram;
 
-public class Practice extends ConsoleProgram {
+public class Practice extends ConsoleProgram{
+	private static final String SENTINEL = "";
 	public void run() {
-
-		while (true) {
-			int x = readInt("Check if number is prime: ");
-			println(isPrime(x));
-		}
-
-	}
-
-	private boolean isPrime(int x) {
-		if (x == 1) {
-			println(x + " is not prime, nor complex number.");
-			return false;
-		}
+		Map<String, Integer> myMap = 
+				new HashMap<String, Integer>();
 		
-		if (x == 0) {
-			return true;
-		}
-		
-		int checkBefore = (int) Math.sqrt(x);
-		for (int i = 2; i <= checkBefore; i++) {
-			if (x % i == 0) {
-				return false;
+		while(true) {
+			String name = readLine("Enter name: ");
+			if(name.equals(SENTINEL)) {
+				break;
 			}
+			
+			if(!myMap.containsKey(name)) {
+				myMap.put(name, 0);
+			}
+			
+			int newCount = myMap.get(name) + 1;
+			myMap.put(name, newCount);
 		}
-
-		return true;
+		
+		println(myMap);
+		
 	}
+
 }
