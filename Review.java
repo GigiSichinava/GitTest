@@ -9,7 +9,7 @@ public class Review extends GraphicsProgram{
 	private static final int NUM = 100;
 	private static final int R = 5;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	
+	private static final int PAUSE = 50;
 	
 	public void run(){
 		
@@ -23,6 +23,10 @@ public class Review extends GraphicsProgram{
 			flakes[i].setLocation(rgen.nextInt(0, getWidth() - 2 * R), rgen.nextInt(0, getHeight() - 2 * R));
 		}
 	
+		for(int j = 0; j < NUM; j++){
+			flakes[j].move(0, rgen.nextInt(1, 5));
+			pause(PAUSE);
+		}
 		
 	}
 }
