@@ -7,7 +7,6 @@ import acm.program.GraphicsProgram;
 import acm.util.ErrorException;
 
 public class Problem67 extends GraphicsProgram {
-
 	public void init() {
 		JTextField textField = new JTextField(30);
 		add(textField, SOUTH);
@@ -20,7 +19,7 @@ public class Problem67 extends GraphicsProgram {
 			GImage image = new GImage(adress);
 			add(image);
 		} catch (ErrorException fix) {
-			println("No Image Found!");
+			println("No image found!");
 		}
 	}
 }
