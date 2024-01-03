@@ -30,8 +30,7 @@ public class Review extends GraphicsProgram {
 					flakes[j].setLocation(rgen.nextInt(0, getWidth() - 2 * R), -2 * R);
 				}
 			}
-		}
 		pause(PAUSE);
-
+		}
 	}
 }
