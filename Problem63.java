@@ -1,24 +1,19 @@
-import java.util.ArrayList;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.SortedMap;
+
 import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
 
 public class Problem63 extends ConsoleProgram {
-	
+
 	public void run() {
-	
-		Map <String, Collection<String>> map =
-				new HashMap<String,Collection<String>>();
-		
+
+		Map<String, Collection<String>> map = new HashMap<String, Collection<String>>();
+
 		while (true) {
 			String line = readLine();
 			if (line.isEmpty()) {
@@ -30,8 +25,8 @@ public class Problem63 extends ConsoleProgram {
 			map.putIfAbsent(b, new HashSet<String>());
 			map.get(b).add(a);
 		}
-		
+
 		println(map);
-		
+
 	}
 }
