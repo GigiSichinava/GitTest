@@ -9,11 +9,9 @@ public class Review extends ConsoleProgram{
 		println(line);
 		
 		int result = 0;
-	
+	 
 		StringTokenizer tokenizer = new StringTokenizer(line, " ");
-		while(tokenizer.hasMoreTokens()){
-			String part = tokenizer.nextToken();
-			println(part);
-		}
+		String part = tokenizer.nextToken();
+		println(part);
 	}
 }
