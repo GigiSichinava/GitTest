@@ -4,6 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import acm.graphics.GLabel;
 import acm.program.GraphicsProgram;
 
 public class Review extends GraphicsProgram{
@@ -14,6 +15,8 @@ public class Review extends GraphicsProgram{
 	private JLabel label2;
 	private JButton button1;
 	private JButton button2;
+	
+	private GLabel text1;
 	
 	public void init(){
 		label1 = new JLabel("User 1");
@@ -39,16 +42,12 @@ public class Review extends GraphicsProgram{
 		addActionListeners();
 	}
 	
-	public void actionPerformed(ActionEvent e) {
-	    String temp = e.getActionCommand();
-	    if (e.getSource() == field1 || e.getSource() == button1) {
-	        println("User 1: " + field1.getText());
-	        field1.setText(""); // Optional: Clear the text field after action
-	    } else if (e.getSource() == field2 || e.getSource() == button2) {
-	        println("User 2: " + field2.getText());
-	        field2.setText(""); // Optional: Clear the text field after action
-	    }
+	public void actionPerformed(ActionEvent e){
+		String temp = e.getActionCommand();
+		if(e.getSource() == field1 || e.getSource() == button1){
+			text1 = new GLabel (field1.getText());
+			add(text1);
+		}
 	}
-
 	
 }
