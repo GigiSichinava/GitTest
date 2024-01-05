@@ -10,9 +10,9 @@ public class Review extends ConsoleProgram {
 
 		int result = 0;
 		int currentNumber = 0;
-		char opperation = '.';
+		char opperation = '+';
 
-		StringTokenizer tokenizer = new StringTokenizer(line, " +-");
+		StringTokenizer tokenizer = new StringTokenizer(line, " ");
 
 		while (tokenizer.hasMoreTokens()) {
 			String part = tokenizer.nextToken();
