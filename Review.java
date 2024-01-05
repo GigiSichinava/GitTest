@@ -5,7 +5,7 @@ import acm.program.ConsoleProgram;
 public class Review extends ConsoleProgram {
 	public void run() {
 
-		String line = "10 + 2 - 5";
+		String line = "55 + 0";
 		println(line);
 
 		int result = 0;
