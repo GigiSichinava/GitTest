@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
@@ -16,7 +17,7 @@ public class Review extends ConsoleProgram{
 		String part = tokenizer.nextToken();
 		for(int i = 0; i < line.length(); i++){
 			myArray[i] = part;
-			System.out.println(myArray.toString());
+			println(Arrays.toString(myArray));
 			}
 		}
 	}
