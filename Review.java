@@ -41,7 +41,7 @@ public class Review extends GraphicsProgram{
 	
 	public void ActionPerformed(ActionEvent e){
 		String temp = e.getActionCommand();
-		if(e.getSource() == field1 || e.getSource() == button1){
+		if(e.getSource() == field1 || e.getSource() == "Send"){
 			println(field1.getText());
 		}
 	}
