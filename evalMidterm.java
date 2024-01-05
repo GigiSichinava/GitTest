@@ -6,7 +6,7 @@ public class evalMidterm extends ConsoleProgram{
 	public void run(){
 		
 		String line = "27 + 3 - 20";
-		println(line);
+		println("Your equasion is: " + line);
 		
 		int result = 0;
 		int currentNum = 0;
@@ -28,6 +28,6 @@ public class evalMidterm extends ConsoleProgram{
 				}
 			}
 		}
-		println(result);
+		println("Your final result is: " + result);
 	}
 }
