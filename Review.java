@@ -17,6 +17,7 @@ public class Review extends GraphicsProgram{
 	private JButton button2;
 	
 	private GLabel text1;
+	private GLabel text2;
 	
 	public void init(){
 		label1 = new JLabel("User 1");
@@ -45,8 +46,11 @@ public class Review extends GraphicsProgram{
 	public void actionPerformed(ActionEvent e){
 		String temp = e.getActionCommand();
 		if(e.getSource() == field1 || e.getSource() == button1){
-			text1 = new GLabel (field1.getText());
+			text1 = new GLabel(field1.getText());
 			add(text1, 0, 10);
+		}else if(e.getSource() == field2 || e.getSource() == button2){
+			text2 = new GLabel(field2.getText());
+			add(text2, 0, getWidth() - text2.getWidth());
 		}
 	}
 	
