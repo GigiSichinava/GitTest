@@ -10,14 +10,12 @@ public class Review extends ConsoleProgram{
 		
 		int result = 0;
 	
-		StringTokenizer tokenizer = new StringTokenizer(line, "+ - ");
+		StringTokenizer tokenizer = new StringTokenizer(line, " ");
 		while(tokenizer.hasMoreTokens()){
 			String part = tokenizer.nextToken();
 			int a = Integer.parseInt(part);
 			result += a;
 			println(a);
-			println(result);
-
 		}
 	}
 }
