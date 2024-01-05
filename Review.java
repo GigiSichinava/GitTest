@@ -1,24 +1,32 @@
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.StringTokenizer;
-
 import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram {
-	public void run() {
+    public void run() {
+        String line = "10 + 2 - 5";
+        println("Expression: " + line);
 
-		String line = "10 + 2 - 5";
-		println(line);
-		ArrayList<String> myArray = new ArrayList<String>();
+        StringTokenizer tokenizer = new StringTokenizer(line, " ");
+        int result = 0;
+        int currentNumber = 0;
+        char operation = '+';
 
-		
-		StringTokenizer tokenizer = new StringTokenizer(line, " ");
-		while (tokenizer.hasMoreTokens()) {
-			String part = tokenizer.nextToken();
-			myArray.add(part);
-		}
-		
-		
-		println(myArray);
-	}
+        while (tokenizer.hasMoreTokens()) {
+            String part = tokenizer.nextToken();
+
+            if (part.equals("+") || part.equals("-")) {
+                operation = part.charAt(0);
+            } else {
+                currentNumber = Integer.parseInt(part);
+
+                if (operation == '+') {
+                    result += currentNumber;
+                } else if (operation == '-') {
+                    result -= currentNumber;
+                }
+            }
+        }
+
+        println("Result: " + result);
+    }
 }
