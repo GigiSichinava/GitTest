@@ -10,7 +10,7 @@ public class Review extends ConsoleProgram {
 
 		int result = 0;
 		int currentNumber = 0;
-		char opperation = (Character) null;
+		char opperation = '+';
 
 		StringTokenizer tokenizer = new StringTokenizer(line, " +-");
 
