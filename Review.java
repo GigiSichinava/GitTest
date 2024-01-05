@@ -4,20 +4,18 @@ import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
 
-public class Review extends ConsoleProgram{
-	public void run(){
+public class Review extends ConsoleProgram {
+	public void run() {
 
 		String line = "10 + 2 - 5";
-		ArrayList<String> myArray = new ArrayList<String>();
 		println(line);
+		ArrayList<String> myArray = new ArrayList<String>();
+
 		
-		int result = 0;
-	 
 		StringTokenizer tokenizer = new StringTokenizer(line, " ");
-		while(tokenizer.hasMoreTokens()){
-		String part = tokenizer.nextToken();
+		while (tokenizer.hasMoreTokens()) {
+			String part = tokenizer.nextToken();
 			myArray.add(part);
-			
 		}
 		println(myArray);
 	}
