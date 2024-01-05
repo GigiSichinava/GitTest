@@ -8,10 +8,12 @@ public class Review extends ConsoleProgram{
 		String line = "10 + 2 - 5";
 		println(line);
 		
+		int result = 0;
+	
 		StringTokenizer tokenizer = new StringTokenizer(line, " ");
 		while(tokenizer.hasMoreTokens()){
-		String a = tokenizer.nextToken(line);
-		println(a);
+			String part = tokenizer.nextToken();
+			println(part);
 		}
 	}
 }
