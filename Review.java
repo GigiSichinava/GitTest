@@ -12,8 +12,8 @@ public class Review extends ConsoleProgram{
 	
 		StringTokenizer tokenizer = new StringTokenizer(line, "+ - ");
 		while(tokenizer.hasMoreTokens()){
-		String part = tokenizer.nextToken();
-		println(part);
+			String part = tokenizer.nextToken();
+			println(part);
 		}
 	}
 }
