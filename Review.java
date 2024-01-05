@@ -39,11 +39,16 @@ public class Review extends GraphicsProgram{
 		addActionListeners();
 	}
 	
-	public void actionPerformed(ActionEvent e){
-		String temp = e.getActionCommand();
-		if(e.getSource() == field1 || e.getSource() == button1){
-			println(field1.getText());
-		}
+	public void actionPerformed(ActionEvent e) {
+	    String temp = e.getActionCommand();
+	    if (e.getSource() == field1 || e.getSource() == button1) {
+	        println("User 1: " + field1.getText());
+	        field1.setText(""); // Optional: Clear the text field after action
+	    } else if (e.getSource() == field2 || e.getSource() == button2) {
+	        println("User 2: " + field2.getText());
+	        field2.setText(""); // Optional: Clear the text field after action
+	    }
 	}
+
 	
 }
