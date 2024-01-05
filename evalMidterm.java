@@ -5,7 +5,7 @@ import acm.program.ConsoleProgram;
 public class evalMidterm extends ConsoleProgram{
 	public void run(){
 		
-		String line = "50 + 14 - 67";
+		String line = "55 + 14 - 67";
 		println(line);
 		
 		int result = 0;
