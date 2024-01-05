@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
@@ -7,7 +8,7 @@ public class Review extends ConsoleProgram{
 	public void run(){
 
 		String line = "10 + 2 - 5";
-		String[] myArray = new String[line.length()];
+		ArrayList<String> myArray = new ArrayList<String>();
 		println(line);
 		
 		int result = 0;
@@ -15,10 +16,8 @@ public class Review extends ConsoleProgram{
 		StringTokenizer tokenizer = new StringTokenizer(line, " ");
 		while(tokenizer.hasMoreTokens()){
 		String part = tokenizer.nextToken();
-		for(int i = 0; i < line.length(); i++){
-			myArray[i] = part;
-			println(Arrays.toString(myArray));
-			}
+			myArray.add(part);
+			println(myArray);
 		}
 	}
 }
