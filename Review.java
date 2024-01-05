@@ -16,7 +16,7 @@ public class Review extends ConsoleProgram{
 		String part = tokenizer.nextToken();
 		for(int i = 0; i < line.length(); i++){
 			myArray[i] = part;
-			println(myArray.toString());
+			System.out.println(myArray);
 			}
 		}
 	}
