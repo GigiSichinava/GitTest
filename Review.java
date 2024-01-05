@@ -14,6 +14,7 @@ public class Review extends ConsoleProgram{
 		while(tokenizer.hasMoreTokens()){
 			String part = tokenizer.nextToken();
 			int a = Integer.parseInt(part);
+			result += a;
 			println(a);
 		}
 	}
