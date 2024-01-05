@@ -16,18 +16,21 @@ public class Review extends GraphicsProgram{
 	public void init(){
 		field1 = new JTextField(10);
 		add(field1, WEST);
+		label1 = new JLabel("User 1");
+		add(label1, WEST);
+		button1 = new JButton("Send");
+		add(button1, WEST);
+		
 		
 		field2 = new JTextField(10);
 		add(field2, EAST);
 		
-		label1 = new JLabel("User 1");
-		add(label1, WEST);
+		
 		
 		label2 = new JLabel("User 2");
 		add(label2, EAST);
 		
-		button1 = new JButton("Send");
-		add(button1, WEST);
+		
 		
 		button2 = new JButton("Send");
 		add(button2, EAST);
