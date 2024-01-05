@@ -12,6 +12,7 @@ public class Review extends ConsoleProgram{
 	
 		StringTokenizer tokenizer = new StringTokenizer(line, "+ - ");
 		String part = tokenizer.nextToken();
+		String part2 = tokenizer.nextToken();
 		println(part);
 	}
 }
