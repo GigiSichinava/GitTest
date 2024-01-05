@@ -13,8 +13,6 @@ public class Review extends ConsoleProgram{
 		StringTokenizer tokenizer = new StringTokenizer(line, " ");
 		while(tokenizer.hasMoreTokens()){
 			String part = tokenizer.nextToken();
-			int a = Integer.parseInt(part);
-			result += a;
 			println(a);
 		}
 	}
