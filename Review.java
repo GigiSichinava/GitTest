@@ -3,7 +3,7 @@ import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram {
     public void run() {
-        String line = "10 + 2 - 5";
+        String line = "11 + 2 - 5";
         println("Expression: " + line);
 
         StringTokenizer tokenizer = new StringTokenizer(line, " ");
