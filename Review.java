@@ -16,6 +16,8 @@ public class Review extends ConsoleProgram{
 			int a = Integer.parseInt(part);
 			result += a;
 			println(a);
+			println(result);
+
 		}
 	}
 }
