@@ -59,7 +59,7 @@ public class Review extends GraphicsProgram{
 			text2 = new GLabel(field2.getText());
 			text2Y += text2.getAscent() * 2;
 			add(text2, getWidth() - text2.getWidth(), text2Y);
-			text2.setFont("Dialog-18");
+	//		text2.setFont("Dialog-18");
 			field2.setText("");
 		}
 	}
