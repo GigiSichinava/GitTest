@@ -15,6 +15,9 @@ public class Practice extends GraphicsProgram{
 		int rectWidth = getWidth() / N_COLS;
 		int rectHeight = getHeight() / N_ROWS;
 		
+		int ovalWidth = getWidth() / N_COLS - 2;
+		int ovalHeight = getHeight() / N_ROWS - 2;
+		
 		for(int i = 0; i < N_COLS; i++){
 			for(int j = 0; j < N_ROWS; j++){
 				
@@ -23,12 +26,12 @@ public class Practice extends GraphicsProgram{
 			}
 		}
 		
-		GOval oval1 = new GOval(rectWidth, rectHeight);
+		GOval oval1 = new GOval(ovalWidth, ovalHeight);
 		oval1.setFilled(true);
 		oval1.setColor(rgen.nextColor());
 		add(oval1);
 		
-		GOval oval2 = new GOval(rectWidth, rectHeight);
+		GOval oval2 = new GOval(ovalWidth, ovalHeight);
 		oval2.setFilled(true);
 		oval2.setColor(rgen.nextColor());
 		add(oval2, rectWidth, rectHeight);	
