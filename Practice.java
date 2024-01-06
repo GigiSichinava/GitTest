@@ -5,5 +5,10 @@ public class Practice extends ConsoleProgram{
 		
 		String line = "10 + 5 - 6";
 		println(line);
+		
+		int a = 5;
+		int b = 6;
+		int result = a + b;
+		println(result);
 	}
 }
