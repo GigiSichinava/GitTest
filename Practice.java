@@ -43,8 +43,7 @@ public class Practice extends GraphicsProgram {
     
     public void mouseClicked(MouseEvent e) {
         GObject obj = getElementAt(e.getX(), e.getY());
-        if (obj == oval1) {
-            if (!oval1Removed) {
+        if (obj == oval1 && !oval1Removed) {
                 remove(oval1);
                 oval1Removed = true;
             } else {
@@ -59,6 +58,5 @@ public class Practice extends GraphicsProgram {
 //                add(oval2, e.getX() - oval2.getWidth() / 2, e.getY() - oval2.getHeight() / 2);
 //                oval2Removed = false;
 //            }
-        }
     }
 }
