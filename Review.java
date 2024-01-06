@@ -1,3 +1,4 @@
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
@@ -50,13 +51,14 @@ public class Review extends GraphicsProgram{
 		if(e.getSource() == field1 || e.getSource() == button1){
 			text1 = new GLabel(field1.getText());
 			text1Y += text1.getAscent() * 2;
-			add(text1, 0, text1Y);
+			add(text1, 0, text1Y - text2.getAscent());
+			text1.setFont(new Font("SansSerif", Font.PLAIN, 12));
 			field1.setText("");
 		}
 		if(e.getSource() == field2 || e.getSource() == button2){
 			text2 = new GLabel(field2.getText());
 			text2Y += text2.getAscent() * 2;
-			add(text2, getWidth() - text2.getWidth(), text2Y - text2.getAscent());
+			add(text2, getWidth() - text2.getWidth(), text2Y);
 			field2.setText("");
 		}
 	}
