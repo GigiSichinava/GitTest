@@ -22,6 +22,9 @@ public class Review extends GraphicsProgram{
 	private int text1Y;
 	private int text2Y;
 	
+	private String friend1;
+	private String frind2;
+	
 	public void init(){
 		label1 = new JLabel("User 1");
 		field1 = new JTextField(10);	
