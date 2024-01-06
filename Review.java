@@ -46,7 +46,9 @@ public class Review extends GraphicsProgram{
 	public void actionPerformed(ActionEvent e){
 		if(e.getSource() == field1 || e.getSource() == button1){
 			text1 = new GLabel(field1.getText());
-			add(text1, 0, text1.getAscent());
+			int text1Y = 0;
+			text1Y += text1.getAscent();
+			add(text1, 0, text1Y);
 			field1.setText("");
 		}
 		if(e.getSource() == field2 || e.getSource() == button2){
