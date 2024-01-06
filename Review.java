@@ -20,6 +20,7 @@ public class Review extends GraphicsProgram{
 	private GLabel text2;
 	
 	private int text1Y;
+	private int text2Y;
 	
 	public void init(){
 		label1 = new JLabel("User 1");
@@ -54,6 +55,7 @@ public class Review extends GraphicsProgram{
 		}
 		if(e.getSource() == field2 || e.getSource() == button2){
 			text2 = new GLabel(field2.getText());
+			text2Y += text2.getAscent() * 2;
 			add(text2, getWidth() - text2.getWidth(), text2.getAscent() * 2);
 			field2.setText("");
 		}
