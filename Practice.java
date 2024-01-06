@@ -23,11 +23,14 @@ public class Practice extends GraphicsProgram {
 		for (int i = 0; i < NUM; i++) {
 			while (true) {
 				myArray[i].move(0, 3);
-				pause(50);
 				if(myArray[i].getY() > getHeight()){
 					add(myArray[i], rgen.nextInt(0, getWidth() - 2 * R), rgen.nextInt(0, getHeight() - 2 * R));
 				}
+				pause(50);
+
 			}
+			
+			
 		}
 	}
 
