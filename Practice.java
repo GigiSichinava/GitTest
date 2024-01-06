@@ -11,7 +11,7 @@ public class Practice extends GraphicsProgram {
     private static final int N_COLS = 9;
     private static final int N_ROWS = 9;
     
-    private boolean isRemoved = true;
+    private boolean isRemoved = false;
     
     private GOval oval1;
     private GOval oval2;
@@ -45,7 +45,7 @@ public class Practice extends GraphicsProgram {
         GObject obj = getElementAt(e.getX(), e.getY());
         if(obj == oval1 && !isRemoved){
         	remove(oval1);
-        	isRemoved = false;
+        	isRemoved = true;
         }else if(isRemoved){
         	add(oval1, e.getX() - oval1.getWidth() / 2,e.getY() - oval1.getHeight() / 2 );
         }
