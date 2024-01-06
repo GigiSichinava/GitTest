@@ -6,12 +6,12 @@ public class Practice extends GraphicsProgram{
 	
 	private static final int N_COLS = 9;
 	private static final int N_ROWS = 9;
-	int rectWidth = getWidth() / N_COLS;
-	int rectHeight = getHeight() / N_ROWS;
 	
 	public void run(){
 		
 		setSize(500, 500);
+		int rectWidth = getWidth() / N_COLS;
+		int rectHeight = getHeight() / N_ROWS;
 		
 		for(int i = 0; i < N_COLS; i++){
 			for(int j = 0; j < N_ROWS; j++){
