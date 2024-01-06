@@ -46,9 +46,18 @@ public class Practice extends GraphicsProgram {
         if (obj == oval1 && !isRemoved) {
             remove(oval1);
             isRemoved = true;
-        }else if( obj != oval1){
-            add(oval1, e.getX() - oval1.getWidth()/2, e.getY() - oval1.getHeight() / 2); 
+        } else {
+            // Calculate the nearest grid position for the oval
+            int rectWidth = getWidth() / N_COLS;
+            int rectHeight = getHeight() / N_ROWS;
+            
+            int gridX = (e.getX() / rectWidth) * rectWidth;
+            int gridY = (e.getY() / rectHeight) * rectHeight;
+
+            // Add oval to the nearest grid position
+            add(oval1, gridX, gridY); 
             isRemoved = false;
         }
     }
+
 }
