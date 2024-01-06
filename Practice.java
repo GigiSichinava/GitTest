@@ -41,8 +41,8 @@ public class Practice extends GraphicsProgram {
     
     public void mouseClicked(MouseEvent e) {
         GObject obj = getElementAt(e.getX(), e.getY());
-        if (obj == oval1) {
-            remove(oval1);
+        if (obj == oval2) {
+            remove(oval2);
             add(oval1, e.getX() - oval1.getWidth()/2, e.getY() - oval1.getHeight()/2); // Center the oval on the cursor
         }
     }
