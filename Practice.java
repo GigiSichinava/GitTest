@@ -1,9 +1,11 @@
 import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
 public class Practice extends GraphicsProgram{
 	
+	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int N_COLS = 9;
 	private static final int N_ROWS = 9;
 	
@@ -21,7 +23,13 @@ public class Practice extends GraphicsProgram{
 			}
 		}
 		
-		GOval oval = new GOval(rectWidth, rectHeight);
-		add(oval);
-	}
+		GOval oval1 = new GOval(rectWidth, rectHeight);
+		oval1.setFilled(true);
+		oval1.setColor(rgen.nextColor());
+		add(oval1);
+		
+		GOval oval2 = new GOval(rectWidth * 3, rectHeight * 3);
+		oval1.setFilled(true);
+		oval1.setColor(rgen.nextColor());
+		add(oval2);	}
 }
