@@ -23,7 +23,7 @@ public class Practice extends GraphicsProgram {
         while (true) {
             for (int i = 0; i < NUM; i++) {
                 // Generate a small random horizontal movement
-                double dx = rgen.nextDouble(-1.5, 1.5);
+              //  double dx = rgen.nextDouble(-1.5, 1.5);
                 myArray[i].move(dx, 3);
                 
                 if (myArray[i].getY() > getHeight()) {
