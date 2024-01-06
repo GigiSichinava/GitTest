@@ -47,11 +47,11 @@ public class Review extends GraphicsProgram{
 		String temp = e.getActionCommand();
 		if(e.getSource() == field1 || e.getSource() == button1){
 			text1 = new GLabel(field1.getText());
-			add(text1, 0, 10);
+			add(text1, 0, text1.getAscent());
 		}
 		if(e.getSource() == field2 || e.getSource() == button2){
 			text2 = new GLabel(field2.getText());
-			add(text2, getWidth() - text2.getWidth(), 10);
+			add(text2, getWidth() - text2.getWidth(), text2.getAscent());
 		}
 	}
 	
