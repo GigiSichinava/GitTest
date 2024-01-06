@@ -57,7 +57,7 @@ public class Review extends GraphicsProgram{
 		if(e.getSource() == field2 || e.getSource() == button2){
 			text2 = new GLabel(field2.getText());
 			text2Y += text2.getAscent() * 2;
-			add(text2, getWidth() - text2.getWidth(), text2Y);
+			add(text2, getWidth() - text2.getWidth() * 2, text2Y);
             text2.setFont("Dialog-18");
 			field2.setText("");
 		}
