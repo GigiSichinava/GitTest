@@ -49,8 +49,8 @@ public class Practice extends GraphicsProgram {
 		} else {
 			add(oval1, e.getX() - oval1.getWidth() / 2, e.getY() - oval1.getHeight() / 2);
 			oval1Removed = false;
-		}
-		if (obj == oval2 && !oval2Removed) {
+		}else if (obj == oval2 && !oval2Removed) {
+		
 			if (!oval2Removed) {
 				remove(oval2);
 				oval2Removed = true;
