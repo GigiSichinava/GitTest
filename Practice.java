@@ -8,7 +8,7 @@ public class Practice extends GraphicsProgram {
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
-	private static final int R = 2;
+	private static final int R = 3;
 	private static final int NUM = 500;
 	private GOval oval;
 
