@@ -1,32 +1,22 @@
-import java.util.StringTokenizer;
+import acm.graphics.GOval;
+import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
-import acm.program.ConsoleProgram;
-
-public class Practice extends ConsoleProgram{
+public class Practice extends GraphicsProgram{
+	
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+	
+	private static final int R = 5;
+	private static final int NUM = 100;
+	private GOval oval;
+	
 	public void run(){
-		
-		String line = "2235 + 32 - 142";
-		println(line);
-		int result = 0;
-		int currentNumber = 0;
-		char opperation = '+';
-		
-		StringTokenizer tokenizer = new StringTokenizer(line ," ");
-		while(tokenizer.hasMoreTokens()){
-			String part = tokenizer.nextToken();
-			if(part.equals("+") || part.equals("-")){
-				opperation = part.charAt(0);
-			}else{
-				currentNumber = Integer.parseInt(part);
-				
-				if(opperation == '+'){
-					result += currentNumber;
-				}else if(opperation == '-'){
-					result -= currentNumber;
-				}
-			}
+		GOval[] myArray = new GOval[NUM];
+		for(int i = 0; i < NUM; i++){
+			myArray[i] = new GOval(2 * R, 2 * R);
+			myArray[i].setFilled(true);
+			add(myArray[i],(rgen.nextInt(0, getWidth() - 2 * R)), 0);
 		}
-		println(result);
 		
 	}
 }
