@@ -1,44 +1,32 @@
-import acm.graphics.GOval;
-import acm.program.GraphicsProgram;
-import java.awt.Color;
-import java.awt.event.KeyEvent;
+import java.util.StringTokenizer;
 
-public class Practice extends GraphicsProgram {
+import acm.program.ConsoleProgram;
 
-    private static final int DIAMETER = 30;
-    private GOval player;
-
-    public void run() {
-        setUpGame();
-        addKeyListeners();
-    }
-
-    private void setUpGame() {
-        player = new GOval(DIAMETER, DIAMETER);
-        player.setFilled(true);
-        player.setColor(Color.BLUE);
-        add(player, getWidth() / 2 - DIAMETER / 2, getHeight() / 2 - DIAMETER / 2);
-    }
-
-    public void keyPressed(KeyEvent e) {
-        int keyCode = e.getKeyCode();
-        switch (keyCode) {
-            case KeyEvent.VK_UP:
-                movePlayer(0, -5);
-                break;
-            case KeyEvent.VK_DOWN:
-                movePlayer(0, 5);
-                break;
-            case KeyEvent.VK_LEFT:
-                movePlayer(-5, 0);
-                break;
-            case KeyEvent.VK_RIGHT:
-                movePlayer(5, 0);
-                break;
-        }
-    }
-
-    private void movePlayer(int dx, int dy) {
-        player.move(dx, dy);
-    }
+public class Practice extends ConsoleProgram{
+	public void run(){
+		
+		String line = "2235 + 32 - 142";
+		println(line);
+		int result = 0;
+		int currentNumber = 0;
+		char opperation = '+';
+		
+		StringTokenizer tokenizer = new StringTokenizer(line ," ");
+		while(tokenizer.hasMoreTokens()){
+			String part = tokenizer.nextToken();
+			if(part.equals("+") || part.equals("-")){
+				opperation = part.charAt(0);
+			}else{
+				currentNumber = Integer.parseInt(part);
+				
+				if(opperation == '+'){
+					result += currentNumber;
+				}else if(opperation == '-'){
+					result -= currentNumber;
+				}
+			}
+		}
+		println(result);
+		
+	}
 }
