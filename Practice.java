@@ -14,6 +14,8 @@ public class Practice extends GraphicsProgram {
     private GOval oval1;
     private GOval oval2;
     
+    private boolean isRemoved = false;
+    
     public void run() {
         setSize(500, 500);
         int rectWidth = getWidth() / N_COLS;
@@ -41,9 +43,12 @@ public class Practice extends GraphicsProgram {
     
     public void mouseClicked(MouseEvent e) {
         GObject obj = getElementAt(e.getX(), e.getY());
-        if (obj == oval1) {
+        if (obj == oval1 && !isRemoved) {
             remove(oval1);
-            add(oval1, e.getX() - oval1.getWidth()/2, e.getY() - oval1.getHeight()/2); // Center the oval on the cursor
+            isRemoved = true;
+        }else if( obj != oval1){
+            add(oval1, e.getX() - oval1.getWidth()/2, e.getY() - oval1.getHeight() / 2); 
+            isRemoved = false;
         }
     }
 }
