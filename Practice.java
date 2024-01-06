@@ -16,7 +16,7 @@ public class Practice extends GraphicsProgram {
 	private boolean isRemoved = false;
 
 	public void run() {
-		setSize(500, 480);
+		setSize(400, 400);
 		int rectWidth = getWidth() / N_COLS;
 		int rectHeight = getHeight() / N_ROWS;
 
