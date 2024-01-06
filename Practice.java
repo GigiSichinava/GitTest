@@ -13,11 +13,13 @@ public class Practice extends GraphicsProgram {
 	private GOval oval;
 
 	public void run() {
+		
+		setBackground(Color.CYAN);
 		GOval[] myArray = new GOval[NUM];
 		for (int i = 0; i < NUM; i++) {
 			myArray[i] = new GOval(2 * R, 2 * R);
 			myArray[i].setFilled(true);
-			myArray[i].setColor(Color.MAGENTA);
+			myArray[i].setColor(Color.WHITE);
 			add(myArray[i], (rgen.nextInt(0, getWidth() - 2 * R)), rgen.nextInt(0, getHeight() - 2 * R));
 		}
 
