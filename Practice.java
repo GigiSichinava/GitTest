@@ -28,8 +28,9 @@ public class Practice extends GraphicsProgram{
 		oval1.setColor(rgen.nextColor());
 		add(oval1);
 		
-		GOval oval2 = new GOval(rectWidth * 3, rectHeight * 3);
+		GOval oval2 = new GOval(rectWidth, rectHeight);
 		oval1.setFilled(true);
 		oval1.setColor(rgen.nextColor());
-		add(oval2);	}
+		add(oval2, rectWidth, rectHeight);	
+	}
 }
