@@ -43,7 +43,7 @@ public class Practice extends GraphicsProgram {
     
     public void mouseClicked(MouseEvent e) {
         GObject obj = getElementAt(e.getX(), e.getY());
-        if(obj == oval1){
+        if(obj == oval1 && !isRemoved){
         	remove(oval1);
         }else if(isRemoved){
         	add(oval1, e.getX() - oval1.getWidth() / 2,e.getY() - oval1.getHeight() / 2 );
