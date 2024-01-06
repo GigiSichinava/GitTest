@@ -10,8 +10,8 @@ public class Practice extends GraphicsProgram{
 		
 		setSize(500, 500);
 		
-		for(int i = 1; i < N_COLS; i++){
-			for(int j =0; j < N_ROWS; j++){
+		for(int i = 0; i < N_COLS; i++){
+			for(int j = 0; j < N_ROWS; j++){
 				int rectWidth = getWidth() / N_COLS;
 				int rectHeight = getHeight() / N_ROWS;
 				GRect rect = new GRect(rectWidth, rectHeight);
