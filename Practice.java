@@ -3,8 +3,8 @@ import acm.program.GraphicsProgram;
 
 public class Practice extends GraphicsProgram{
 	
-	private static final int N_COLS = 5;
-	private static final int N_ROWS = 8;
+	private static final int N_COLS = 9;
+	private static final int N_ROWS = 9;
 	
 	public void run(){
 		
