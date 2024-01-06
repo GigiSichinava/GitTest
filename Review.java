@@ -48,14 +48,14 @@ public class Review extends GraphicsProgram{
 	
 	public void actionPerformed(ActionEvent e){
 		if(e.getSource() == field1 || e.getSource() == button1){
-			text1 = new GLabel("User 1" + field1.getText());
-			add(text1, text1.getWidth(), text1.getAscent() + text1Y);
+			text1 = new GLabel("User 1: " + field1.getText());
+			add(text1, 0, text1.getAscent() + text1Y);
 			text1Y += text1.getAscent() * 2;
             text1.setFont("Dialog-18");
 			field1.setText("");
 		}
 		if(e.getSource() == field2 || e.getSource() == button2){
-			text2 = new GLabel("User 2" + field2.getText());
+			text2 = new GLabel("User 2: " + field2.getText());
 			text2Y += text2.getAscent() * 2;
 			add(text2, getWidth() - text2.getWidth() * 1.5, text2Y);
             text2.setFont("Dialog-18");
