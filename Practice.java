@@ -5,7 +5,7 @@ import acm.program.ConsoleProgram;
 public class Practice extends ConsoleProgram{
 	public void run(){
 		
-		String line = "1 + 4 - 2";
+		String line = "2235 + 32 - 142";
 		println(line);
 		int result = 0;
 		int currentNumber = 0;
