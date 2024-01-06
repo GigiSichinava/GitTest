@@ -42,11 +42,13 @@ public class Practice extends GraphicsProgram{
 		addMouseListeners();
 	}
 	
-	public void mouseClicked(MouseEvent e){
-		GObject obj = getElementAt(e.getX(), e.getY());
+	public void mouseClicked1(MouseEvent e1){
+		GObject obj = getElementAt(e1.getX(), e1.getY());
 		if(obj == oval1){
 			remove(oval1);
-			add(oval1, e.getX(), e.getY());
 		}
+	}
+	public void mouseClicked2(MouseEvent e2){
+		add(oval1, e2.getX(), e2.getY());
 	}
 }
