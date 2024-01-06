@@ -27,7 +27,7 @@ public class Review extends GraphicsProgram{
 	
 	public void init(){
 		label1 = new JLabel("User 1");
-		field1 = new JTextField(10);	
+		field1 = new JTextField(20);	
 		field1.addActionListener(this);
 		button1 = new JButton("Send");
 	
@@ -38,7 +38,7 @@ public class Review extends GraphicsProgram{
 		
 
 		label2 = new JLabel("User 2");
-		field2 = new JTextField(10);
+		field2 = new JTextField(20);
 		field2.addActionListener(this);
 		button2 = new JButton("Send");
 		
