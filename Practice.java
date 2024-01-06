@@ -45,6 +45,7 @@ public class Practice extends GraphicsProgram {
         GObject obj = getElementAt(e.getX(), e.getY());
         if(obj == oval1 && !isRemoved){
         	remove(oval1);
+        	isRemoved = false;
         }else if(isRemoved){
         	add(oval1, e.getX() - oval1.getWidth() / 2,e.getY() - oval1.getHeight() / 2 );
         }
