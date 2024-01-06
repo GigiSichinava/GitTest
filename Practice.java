@@ -13,14 +13,14 @@ public class Practice extends GraphicsProgram {
     
     private GOval oval1;
     private GOval oval2;
-    private GObject lastSelected; // Track the last selected object
+    private boolean oval1Removed = false;
+    private boolean oval2Removed = false;
     
     public void run() {
         setSize(500, 500);
         int rectWidth = getWidth() / N_COLS;
         int rectHeight = getHeight() / N_ROWS;
         
-        // Create the grid
         for (int i = 0; i < N_COLS; i++) {
             for (int j = 0; j < N_ROWS; j++) {
                 GRect rect = new GRect(rectWidth, rectHeight);
@@ -28,7 +28,6 @@ public class Practice extends GraphicsProgram {
             }
         }
         
-        // Create and add ovals
         oval1 = new GOval(rectWidth, rectHeight);
         oval1.setFilled(true);
         oval1.setColor(rgen.nextColor());
@@ -39,24 +38,27 @@ public class Practice extends GraphicsProgram {
         oval2.setColor(rgen.nextColor());
         add(oval2, rectWidth, rectHeight);
         
-        // Add mouse listeners
         addMouseListeners();
     }
     
     public void mouseClicked(MouseEvent e) {
         GObject obj = getElementAt(e.getX(), e.getY());
-        if (obj == oval1 || obj == oval2) {
-            lastSelected = obj; // Set the last selected object
+        if (obj == oval1) {
+            if (!oval1Removed) {
+                remove(oval1);
+                oval1Removed = true;
+            } else {
+                add(oval1, e.getX() - oval1.getWidth() / 2, e.getY() - oval1.getHeight() / 2);
+                oval1Removed = false;
+            }
+        } else if (obj == oval2) {
+            if (!oval2Removed) {
+                remove(oval2);
+                oval2Removed = true;
+            } else {
+                add(oval2, e.getX() - oval2.getWidth() / 2, e.getY() - oval2.getHeight() / 2);
+                oval2Removed = false;
+            }
         }
-    }
-
-    public void mouseDragged(MouseEvent e) {
-        if (lastSelected != null) {
-            lastSelected.setLocation(e.getX() - lastSelected.getWidth() / 2, e.getY() - lastSelected.getHeight() / 2);
-        }
-    }
-
-    public void mouseReleased(MouseEvent e) {
-        lastSelected = null; // Clear the selection once released
     }
 }
