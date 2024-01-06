@@ -51,14 +51,14 @@ public class Practice extends GraphicsProgram {
                 add(oval1, e.getX() - oval1.getWidth() / 2, e.getY() - oval1.getHeight() / 2);
                 oval1Removed = false;
             }
-        } else if (obj == oval2) {
-            if (!oval2Removed) {
-                remove(oval2);
-                oval2Removed = true;
-            } else {
-                add(oval2, e.getX() - oval2.getWidth() / 2, e.getY() - oval2.getHeight() / 2);
-                oval2Removed = false;
-            }
+//        } else if (obj == oval2) {
+//            if (!oval2Removed) {
+//                remove(oval2);
+//                oval2Removed = true;
+//            } else {
+//                add(oval2, e.getX() - oval2.getWidth() / 2, e.getY() - oval2.getHeight() / 2);
+//                oval2Removed = false;
+//            }
         }
     }
 }
