@@ -48,10 +48,12 @@ public class Review extends GraphicsProgram{
 		if(e.getSource() == field1 || e.getSource() == button1){
 			text1 = new GLabel(field1.getText());
 			add(text1, 0, text1.getAscent());
+			field1.setText("");
 		}
 		if(e.getSource() == field2 || e.getSource() == button2){
 			text2 = new GLabel(field2.getText());
 			add(text2, getWidth() - text2.getWidth(), text2.getAscent());
+			field2.setText("");
 		}
 	}
 	
