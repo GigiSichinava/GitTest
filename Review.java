@@ -44,7 +44,6 @@ public class Review extends GraphicsProgram{
 	}
 	
 	public void actionPerformed(ActionEvent e){
-		String temp = e.getActionCommand();
 		if(e.getSource() == field1 || e.getSource() == button1){
 			text1 = new GLabel(field1.getText());
 			add(text1, 0, text1.getAscent());
@@ -52,7 +51,7 @@ public class Review extends GraphicsProgram{
 		}
 		if(e.getSource() == field2 || e.getSource() == button2){
 			text2 = new GLabel(field2.getText());
-			add(text2, getWidth() - text2.getWidth(), text2.getAscent());
+			add(text2, getWidth() - text2.getWidth(), text2.getAscent() * 2);
 			field2.setText("");
 		}
 	}
