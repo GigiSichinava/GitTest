@@ -13,6 +13,7 @@ public class Practice extends GraphicsProgram {
     
     private GOval oval1;
     private GOval oval2;
+    private boolean oval1Removed = false;
     
     public void run() {
         setSize(500, 500);
@@ -41,8 +42,12 @@ public class Practice extends GraphicsProgram {
     
     public void mouseClicked(MouseEvent e) {
         GObject obj = getElementAt(e.getX(), e.getY());
-        if (obj == oval1) {
-            oval1.setLocation(e.getX() - oval1.getWidth() / 2, e.getY() - oval1.getHeight() / 2);
+        if (obj == oval1 && !oval1Removed) {
+            remove(oval1);
+            oval1Removed = true;
+        } else if (oval1Removed) {
+            add(oval1, e.getX() - oval1.getWidth() / 2, e.getY() - oval1.getHeight() / 2);
+            oval1Removed = false;
         }
     }
 }
