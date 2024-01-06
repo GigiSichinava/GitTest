@@ -26,14 +26,14 @@ public class Practice extends GraphicsProgram {
             }
         }
         
-        oval1 = new GOval(rectWidth, rectHeight);
+        oval1 = new GOval(rectWidth, rectHeight); // use the class-level variable
         oval1.setFilled(true);
-        oval1.setColor(rgen.nextColor());
+        oval1.setFillColor(rgen.nextColor());
         add(oval1);
         
-        oval2 = new GOval(rectWidth, rectHeight);
+        oval2 = new GOval(rectWidth, rectHeight); // use the class-level variable
         oval2.setFilled(true);
-        oval2.setColor(rgen.nextColor());
+        oval2.setFillColor(rgen.nextColor());
         add(oval2, rectWidth, rectHeight);
         
         addMouseListeners();
@@ -42,7 +42,8 @@ public class Practice extends GraphicsProgram {
     public void mouseClicked(MouseEvent e) {
         GObject obj = getElementAt(e.getX(), e.getY());
         if (obj == oval1) {
-            oval1.setLocation(e.getX() - oval1.getWidth() / 2, e.getY() - oval1.getHeight() / 2);
+            remove(oval1);
+            add(oval1, e.getX() - oval1.getWidth()/2, e.getY() - oval1.getHeight()/2); // Center the oval on the cursor
         }
     }
 }
