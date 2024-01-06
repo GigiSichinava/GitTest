@@ -1,3 +1,6 @@
+import java.awt.event.MouseEvent;
+
+import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
@@ -8,6 +11,9 @@ public class Practice extends GraphicsProgram{
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int N_COLS = 9;
 	private static final int N_ROWS = 9;
+	
+	private GOval oval1;
+	private GOval oval2;
 	
 	public void run(){
 		
@@ -32,5 +38,15 @@ public class Practice extends GraphicsProgram{
 		oval2.setFilled(true);
 		oval2.setColor(rgen.nextColor());
 		add(oval2, rectWidth, rectHeight);	
+	
+		addMouseListeners();
+	}
+	
+	public void mouseClicked(MouseEvent e){
+		GObject obj = getElementAt(e.getX(), e.getY());
+		if(obj == oval1){
+			remove(oval1);
+			add(oval1, e.getX(), e.getY());
+		}
 	}
 }
