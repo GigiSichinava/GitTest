@@ -52,7 +52,7 @@ public class Review extends GraphicsProgram{
 			text1 = new GLabel(field1.getText());
 			text1Y += text1.getAscent() * 2;
 			add(text1, 0, text1Y - text2.getAscent());
-			text1.setFont(new Font("SansSerif", Font.PLAIN, 12));
+			text1.setFont("Dialog");
 			field1.setText("");
 		}
 		if(e.getSource() == field2 || e.getSource() == button2){
