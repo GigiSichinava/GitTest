@@ -51,7 +51,7 @@ public class Review extends GraphicsProgram{
 		}
 		if(e.getSource() == field2 || e.getSource() == button2){
 			text2 = new GLabel(field2.getText());
-			add(text2, getWidth() - text2.getWidth(), 0);
+			add(text2, getWidth() - text2.getWidth(), 10);
 		}
 	}
 	
