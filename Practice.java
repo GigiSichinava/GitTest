@@ -14,7 +14,7 @@ public class Practice extends GraphicsProgram {
 
 	public void run() {
 		
-		setBackground(Color.CYAN);
+		setBackground(Color.cyan);
 		GOval[] myArray = new GOval[NUM];
 		for (int i = 0; i < NUM; i++) {
 			myArray[i] = new GOval(2 * R, 2 * R);
