@@ -33,10 +33,6 @@ public class Practice extends GraphicsProgram {
         oval1.setFillColor(rgen.nextColor());
         add(oval1);
         
-        oval2 = new GOval(rectWidth, rectHeight); // use the class-level variable
-        oval2.setFilled(true);
-        oval2.setFillColor(rgen.nextColor());
-        add(oval2, rectWidth, rectHeight);
         
         addMouseListeners();
     }
