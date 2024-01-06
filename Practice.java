@@ -8,7 +8,7 @@ public class Practice extends GraphicsProgram{
 	
 	public void run(){
 		
-		setSize(300, 500);
+		setSize(500, 500);
 		
 		for(int i = 0; i < N_COLS; i++){
 			for(int j =0; j < N_ROWS; j++){
