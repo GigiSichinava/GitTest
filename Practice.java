@@ -8,8 +8,8 @@ import acm.util.RandomGenerator;
 public class Practice extends GraphicsProgram {
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private static final int N_COLS = 9;
-	private static final int N_ROWS = 9;
+	private static final int N_COLS = 3;
+	private static final int N_ROWS = 3;
 
 	private GOval oval1;
 
