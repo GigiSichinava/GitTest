@@ -25,7 +25,7 @@ public class Practice extends GraphicsProgram {
 
 		while (true) {
 			for (int i = 0; i < NUM; i++) {
-				myArray[i].move(0, 3);
+				myArray[i].move(rgen.nextInt(1, 2), 3);
 				if (myArray[i].getY() > getHeight()) {
 					add(myArray[i], rgen.nextInt(0, getWidth() - 2 * R), -2 * R);
 				}
