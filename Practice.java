@@ -15,7 +15,7 @@ public class Practice extends ConsoleProgram{
 		    for (int j = 0; j < myMatrix[i].length; j++) { // Iterate over columns
 		        println(myMatrix[i][j] + " ");    // Print each element followed by a space
 		    }
-		    println(myMatrix);                       // New line after each row
+		                   // New line after each row
 		}
 
 	}
