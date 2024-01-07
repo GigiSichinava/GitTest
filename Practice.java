@@ -12,7 +12,7 @@ public class Practice extends ConsoleProgram{
 		
 		for(int i = 0; i < myMatrix.length; i++){
 			for(int j = 0; j < myMatrix[i].length; j++){
-				println(myMatrix[i][j] + " ");
+				print(myMatrix[i][j] + " ");
 
 			}
 		println();
@@ -20,3 +20,5 @@ public class Practice extends ConsoleProgram{
 		
 	}
 }
+
+
