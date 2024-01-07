@@ -27,8 +27,8 @@ public class Practice extends GraphicsProgram {
 			}
 		}
 
-		oval1 = new GOval(rectWidth, rectHeight); // use the class-level
-													// variable
+		oval1 = new GOval(rectWidth, rectHeight); 
+													
 		oval1.setFilled(true);
 		oval1.setFillColor(rgen.nextColor());
 		add(oval1);
