@@ -6,14 +6,14 @@ public class Practice extends GraphicsProgram{
 
 	private static final int R = 5;
 	private  static final int NUM = 100;
-	private GOval oval;
+;
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	public void  run(){
 		GOval[] ovals = new GOval[NUM];
 		for(int i = 0; i < NUM; i++){
-			ovals[i] = oval;
+			ovals[i] = new GOval(R, R);
 			ovals[i].setFilled(true);
 			add(ovals[i], 0, rgen.nextInt(0,getWidth()));
 		}
