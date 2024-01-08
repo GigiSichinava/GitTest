@@ -26,6 +26,7 @@ public class Practice extends GraphicsProgram{
 			
 			GLabel label = new GLabel("Happy new Year!");
 			label.setColor(Color.RED);
+			label.setFont("SansSerif-20");
 			add(label, getWidth() / 2 - label.getWidth() / 2, getHeight() / 2 - label.getAscent() / 2);
 			
 		}
