@@ -16,12 +16,14 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private GOval[] ovals = new GOval[NUM];
 	private GLabel label;
+	private GLabel shadowLabel;
 
 	public void run() {
 		setBackground(Color.BLUE);
 		addComponentListener(this);
 		drawOvals();
 		drawLabel();
+		drawShadowLabel();
 
 		while (true) {
 			moveOvals();
@@ -43,6 +45,13 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 		label.setColor(Color.RED);
 		label.setFont("SansSerif-50");
 		add(label, getWidth() / 2 - label.getWidth() / 2, getHeight() / 2 - label.getAscent() / 2);
+	}
+	
+	private void drawShadowLabel(){
+		shadowLabel = new GLabel("Happy new 2024 Year!");
+		label.setColor(Color.BLACK);
+		label.setFont("SansSerif-50");
+		add(label, getWidth() / 2 - label.getWidth() / 2 + 10, getHeight() / 2 - label.getAscent() / 2 - 10) ;
 	}
 
 	private void moveOvals() {
