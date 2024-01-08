@@ -28,7 +28,6 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 		drawOvals();
 		drawShadowLabel();
 		drawLabel();
-		addImage();
 		
 		while (true) {
 			moveOvals();
@@ -36,10 +35,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 		}
 	}
 
-	private void addImage() {
-		image = new GImage("C:/Users/Gigi/OneDrive/Desktop/background.jpg");
-		add(image, 100, 100);
-	}
+	
 
 	private void drawOvals() {
 		for (int i = 0; i < NUM; i++) {
@@ -92,7 +88,6 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 		drawOvals();
 		drawShadowLabel();
 		drawLabel();
-		addImage();
 	}
 
 	@Override
