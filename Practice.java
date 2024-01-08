@@ -18,7 +18,7 @@ public class Practice extends GraphicsProgram{
 			ovals[i] = new GOval(R, R);
 			ovals[i].setFilled(true);
 			ovals[i].setColor(Color.CYAN);
-			add(ovals[i], rgen.nextInt(0,getWidth()), 0);
+			add(ovals[i], rgen.nextInt(0,getWidth()), rgen.nextInt(0, getHeight()));
 		}
 		
 		while(true){
