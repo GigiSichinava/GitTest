@@ -51,7 +51,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 	    shadowLabel = new GLabel("Happy new 2024 Year!");
 	    shadowLabel.setColor(Color.BLACK);
 	    shadowLabel.setFont("SansSerif-50");
-	    add(shadowLabel, getWidth() / 2 - shadowLabel.getWidth() / 2 + 5, getHeight() / 2 - shadowLabel.getAscent() / 2 + 10);
+	    add(shadowLabel, getWidth() / 2 - shadowLabel.getWidth() / 2 + 5, getHeight() / 2 - shadowLabel.getAscent() / 2 + 5);
 	}
 
 
