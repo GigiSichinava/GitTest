@@ -4,9 +4,7 @@ import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram{
 	public void run(){
-		
 		ArrayList<Integer> list = new ArrayList<Integer>();
-		
 		while(true){
 			int x = readInt();
 			if(x == -1){
