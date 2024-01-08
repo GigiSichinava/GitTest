@@ -19,7 +19,6 @@ public class Practice extends GraphicsProgram implements ComponentListener {
     private GOval[] ovals = new GOval[NUM];
     private GLabel label;
     private GLabel shadowLabel;
-    private GImage image;
 
     public void run() {
         setBackground(Color.BLUE);
