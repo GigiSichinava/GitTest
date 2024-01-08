@@ -1,20 +1,28 @@
-import java.util.ArrayList;
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 
-import acm.program.ConsoleProgram;
+import javax.swing.JTextField;
 
-public class Practice extends ConsoleProgram{
-	public void run(){
-		ArrayList<Integer> list = new ArrayList<Integer>();
-		while(true){
-			int x = readInt();
-			if(x == -1){
-				break;
-			}
-			list.add(x);
-		}
+import acm.graphics.GImage;
+import acm.program.GraphicsProgram;
+import acm.util.ErrorException;
+
+public class Practice extends GraphicsProgram{
+	public void init(){
 		
-		for(int i = list.size() - 1; i >= 0; i--){
-			println(list.get(i));
+		JTextField txtfield = new JTextField(30);
+		add(txtfield, SOUTH);
+		txtfield.addActionListener(this);
+	}
+	
+	public void actionPerformed(ActionEvent e){
+		String adress = e.getActionCommand();
+		
+		try{
+			GImage image = new GImage(adress);
+			add(image);
+		}catch(ErrorException fix){
+			println("Error");
 		}
 	}
 }
