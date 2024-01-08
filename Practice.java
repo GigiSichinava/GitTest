@@ -1,28 +1,38 @@
-import java.awt.event.ActionEvent;
-import java.io.IOException;
+import acm.program.ConsoleProgram;
 
-import javax.swing.JTextField;
+public class Practice extends ConsoleProgram{
+    public  void run(){
+        int[] array = {64, 34, 25, 12, 22, 11, 90};
 
-import acm.graphics.GImage;
-import acm.program.GraphicsProgram;
-import acm.util.ErrorException;
+        System.out.println("Original array: ");
+        printArray(array);
 
-public class Practice extends GraphicsProgram{
-	public void init(){
-		
-		JTextField txtfield = new JTextField(30);
-		add(txtfield, SOUTH);
-		txtfield.addActionListener(this);
-	}
-	
-	public void actionPerformed(ActionEvent e){
-		String adress = e.getActionCommand();
-		
-		try{
-			GImage image = new GImage(adress);
-			add(image);
-		}catch(ErrorException fix){
-			println("Error");
-		}
-	}
+        bubbleSort(array);
+
+        System.out.println("\nSorted array: ");
+        printArray(array);
+    }
+
+    // Bubble Sort implementation
+    static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Swap arr[j] and arr[j+1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    // Utility method to print an array
+    static void printArray(int[] arr) {
+        for (int value : arr) {
+            System.out.print(value + " ");
+        }
+        System.out.println();
+    }
 }
