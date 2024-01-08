@@ -36,6 +36,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 	}
 
 	
+	
 
 	private void drawOvals() {
 		for (int i = 0; i < NUM; i++) {
