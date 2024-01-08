@@ -28,14 +28,17 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 		drawOvals();
 		drawShadowLabel();
 		drawLabel();
-
-		image = new GImage("xmas.jpg");
-		add(image, 10 ,10);
+		addImage();
 		
 		while (true) {
 			moveOvals();
 			pause(DELAY);
 		}
+	}
+
+	private void addImage() {
+		image = new GImage("C:/Users/Gigi/OneDrive/Desktop");
+		add(image, 10, 10);
 	}
 
 	private void drawOvals() {
