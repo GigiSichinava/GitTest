@@ -37,7 +37,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 	}
 
 	private void addImage() {
-		image = new GImage("C:/Users/Gigi/OneDrive/Desktop");
+		image = new GImage("C:/Users/Gigi/OneDrive/Desktop/background.jpg");
 		add(image, 100, 100);
 	}
 
