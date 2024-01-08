@@ -11,7 +11,7 @@ public class Practice extends ConsoleProgram{
 		for(int i = 0; i < myArray.length; i++){
 			myArray[i] = readInt();
 		}
-		println(myArray.toString());
+		println(Arrays.toString(myArray));
 		
 		Arrays.sort(myArray);
 		println(Arrays.toString(myArray));
