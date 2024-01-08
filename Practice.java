@@ -8,17 +8,17 @@ public class Practice extends ConsoleProgram{
 	public void run(){
 		
 		try{
-			BufferedReader rd = new BufferedReader(new FileReader("Practice.java"));
+			BufferedReader bf = new BufferedReader(new FileReader("Practice.java"));
 			while(true){
-				String line = rd.readLine();
+				String line = bf.readLine();
 				if(line == null){
 					break;
 				}
 				println(line);
 			}
-			rd.close();
+			bf.close();
 		}catch(IOException e){
-			e.printStackTrace();
+			e.getStackTrace();
 		}
 	}
 }
