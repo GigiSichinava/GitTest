@@ -6,7 +6,7 @@ import acm.util.RandomGenerator;
 
 public class Practice extends GraphicsProgram{
 
-	private static final int R = 3;
+	private static final int R = 5;
 	private  static final int NUM = 500;
 ;
 	
