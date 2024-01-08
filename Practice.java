@@ -22,8 +22,8 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 		setBackground(Color.BLUE);
 		addComponentListener(this);
 		drawOvals();
-		drawLabel();
 		drawShadowLabel();
+		drawLabel();
 
 		while (true) {
 			moveOvals();
@@ -51,7 +51,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 		shadowLabel = new GLabel("Happy new 2024 Year!");
 		label.setColor(Color.BLACK);
 		label.setFont("SansSerif-50");
-		add(label, getWidth() / 2 - label.getWidth() / 2 + 10, getHeight() / 2 - label.getAscent() / 2 - 10) ;
+		add(label, getWidth() / 2 - label.getWidth() / 2 + 100, getHeight() / 2 - label.getAscent() / 2 - 10) ;
 	}
 
 	private void moveOvals() {
