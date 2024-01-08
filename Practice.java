@@ -68,8 +68,6 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 
 	@Override
 	public void componentResized(ComponentEvent arg0) {
-		 setBackground(Color.BLUE);
-	    	addComponentListener(this);
 	        drawOvals();
 	        drawLabel();
 	}
