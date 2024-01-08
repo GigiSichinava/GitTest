@@ -34,10 +34,6 @@ public class Practice extends GraphicsProgram implements ComponentListener {
         }
     }
 
-    private void addImage(String imagePath) {
-        image = new GImage(imagePath);
-        add(image, getWidth() / 2 - image.getWidth() / 2, getHeight() / 2 - image.getHeight() / 2);
-    }
 
     private void drawOvals() {
         for (int i = 0; i < NUM; i++) {
