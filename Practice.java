@@ -68,8 +68,10 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 
 	@Override
 	public void componentResized(ComponentEvent arg0) {
-		// TODO Auto-generated method stub
-		
+		 setBackground(Color.BLUE);
+	    	addComponentListener(this);
+	        drawOvals();
+	        drawLabel();
 	}
 
 	@Override
