@@ -27,7 +27,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
         drawOvals();
         drawShadowLabel();
         drawLabel();
-        addImage("path/to/your/image.jpg");
+        addImage("‪C:/UsersGigi/OneDrive/Desktop/xmas.jpg");
 
         while (true) {
             moveOvals();
@@ -89,7 +89,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
         drawOvals();
         drawShadowLabel();
         drawLabel();
-        addImage("path/to/your/image.jpg");
+        addImage("‪C:/Users/Gigi/OneDrive/Desktop/xmas.jpg");
     }
 
     @Override
