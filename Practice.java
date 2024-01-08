@@ -47,12 +47,13 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 		add(label, getWidth() / 2 - label.getWidth() / 2, getHeight() / 2 - label.getAscent() / 2);
 	}
 	
-	private void drawShadowLabel(){
-		shadowLabel = new GLabel("Happy new 2024 Year!");
-		label.setColor(Color.BLACK);
-		label.setFont("SansSerif-50");
-		add(label, getWidth() / 2 - label.getWidth() / 2 + 100, getHeight() / 2 - label.getAscent() / 2 - 10) ;
+	private void drawShadowLabel() {
+	    shadowLabel = new GLabel("Happy new 2024 Year!");
+	    shadowLabel.setColor(Color.CYAN);
+	    shadowLabel.setFont("SansSerif-50");
+	    add(shadowLabel, getWidth() / 2 - shadowLabel.getWidth() / 2 + 100, getHeight() / 2 - shadowLabel.getAscent() / 2 - 10);
 	}
+
 
 	private void moveOvals() {
 		for (int i = 0; i < NUM; i++) {
