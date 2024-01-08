@@ -1,22 +1,24 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram{
 	public void run(){
 		
-		int[][]myMatrix = new int[5][5];
-		
-		for(int i = 0 ; i < myMatrix.length; i++){
-			for(int j = 0; j < myMatrix[i].length; j++){
-				myMatrix[i][j] = 3;
+		try{
+			BufferedReader rd = new BufferedReader(new FileReader("Practice.java"));
+			while(true){
+				String line = rd.readLine();
+				if(line.isEmpty()){
+					break;
+				}
+				println(line);
 			}
+			rd.close();
+		}catch(IOException e){
+			e.printStackTrace();
 		}
-		for(int i = 0; i < myMatrix.length; i++){
-			for(int j = 0; j < myMatrix[i].length; j++){
-				print(myMatrix[i][j] + " ");
-				
-			}
-		println();
-		}
-		
 	}
 }
