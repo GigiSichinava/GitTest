@@ -9,8 +9,8 @@ import acm.util.RandomGenerator;
 
 public class Practice extends GraphicsProgram implements ComponentListener {
 
-    private static final int R = 4;
-    private static final int NUM = 500;
+    private static final int R = 30;
+    private static final int NUM = 100;
 
     private RandomGenerator rgen = RandomGenerator.getInstance();
     private GOval[] ovals = new GOval[NUM];
