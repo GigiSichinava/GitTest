@@ -17,7 +17,8 @@ public class Practice extends GraphicsProgram implements ComponentListener {
     private GLabel label;
 
     public void run() {
-        addComponentListener(this);
+        setBackground(Color.BLUE);
+    	addComponentListener(this);
         drawOvals();
         drawLabel();
 
