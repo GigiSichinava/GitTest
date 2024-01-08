@@ -33,9 +33,9 @@ public class Practice extends GraphicsProgram{
 		
 		while(true){
 			for(int i = 0; i < NUM; i++){
-				ovals[i].move(0, 5);
+				ovals[i].move(rgen.nextInt(-2, 2), 5);
 				if(ovals[i].getY() > getHeight()){
-					add(ovals[i], rgen.nextInt(rgen.nextInt(-2, 2),getWidth()), - 2 * R );
+					add(ovals[i], rgen.nextInt(0,getWidth()), - 2 * R );
 				}
 			}
 			pause(50);
