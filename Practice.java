@@ -11,7 +11,7 @@ public class Practice extends ConsoleProgram{
 			BufferedReader rd = new BufferedReader(new FileReader("Practice.java"));
 			while(true){
 				String line = rd.readLine();
-				if(line.isEmpty()){
+				if(line == null){
 					break;
 				}
 				println(line);
