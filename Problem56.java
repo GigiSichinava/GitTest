@@ -22,12 +22,6 @@ public class Problem56 extends ConsoleProgram {
 		}
 	}
 
-	private void swap(int[] Array, int i, int j) {
-		int tmp = Array[i];
-		Array[i] = Array[j];
-		Array[j] = tmp;
-	}
-
 	private int findMinIndex(int[] Array, int i) {
 		int minIndexSoFar = i;
 		for (int j = i; j < Array.length; j++) {
@@ -37,4 +31,11 @@ public class Problem56 extends ConsoleProgram {
 		}
 		return minIndexSoFar;
 	}
+	
+	private void swap(int[] Array, int i, int j) {
+		int tmp = Array[i];
+		Array[i] = Array[j];
+		Array[j] = tmp;
+	}
+
 }
