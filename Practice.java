@@ -37,8 +37,8 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 	}
 
 	private void addImage() {
-		image = new GImage("C:/Users/Gigi/OneDrive/Desktop");
-		add(image, 10, 10);
+		image = new GImage("C:/Users/Gigi/OneDrive/Desktop", 100, 100);
+		add(image, 100, 100);
 	}
 
 	private void drawOvals() {
