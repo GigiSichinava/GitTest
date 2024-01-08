@@ -49,7 +49,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 	
 	private void drawShadowLabel(){
 		shadowLabel = new GLabel("Happy new 2024 Year!");
-		label.setColor(Color.CYAN);
+		label.setColor(Color.BLACK);
 		label.setFont("SansSerif-50");
 		add(label, getWidth() / 2 - label.getWidth() / 2 + 100, getHeight() / 2 - label.getAscent() / 2 - 10) ;
 	}
@@ -79,6 +79,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 	public void componentResized(ComponentEvent arg0) {
 		removeAll();
 		drawOvals();
+		drawShadowLabel();
 		drawLabel();
 	}
 
