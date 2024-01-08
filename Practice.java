@@ -1,24 +1,28 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.util.ArrayList;
 
 import acm.program.ConsoleProgram;
 
 public class Practice extends ConsoleProgram{
+	
+	private static final int SENTINEL = -1;
+	
 	public void run(){
 		
-		try{
-			BufferedReader bf = new BufferedReader(new FileReader("Practice.java"));
-			while(true){
-				String line = bf.readLine();
-				if(line == null){
-					break;
-				}
-				println(line);
+		ArrayList<Integer> myArrayList = new ArrayList<Integer>();
+		
+		while(true){
+			int n = readInt();
+			if(n == SENTINEL){
+				break;
 			}
-			bf.close();
-		}catch(IOException e){
-			e.getStackTrace();
+			myArrayList.add(n);
+		}
+		printInReversedOrder(myArrayList);
+	}
+
+	private void printInReversedOrder(ArrayList<Integer> myArrayList) {
+		for(int i = myArrayList.size() - 1; i >= 0; i-- ){
+			println(myArrayList.get(i));
 		}
 	}
 }
