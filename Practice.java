@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 
+import acm.graphics.GImage;
 import acm.graphics.GLabel;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
@@ -19,6 +20,8 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 	private GLabel label;
 	private GLabel shadowLabel;
 
+	private GImage image;
+	
 	public void run() {
 		setBackground(Color.BLUE);
 		addComponentListener(this);
@@ -26,6 +29,9 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 		drawShadowLabel();
 		drawLabel();
 
+		image = new GImage("xmas.jpg");
+		add(image, 10 ,10);
+		
 		while (true) {
 			moveOvals();
 			pause(DELAY);
