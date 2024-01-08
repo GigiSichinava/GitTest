@@ -12,7 +12,8 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 	private static final int R = 3;
 	private static final int NUM = 500;
 	private static final int DELAY = 50;
-
+	private static final int SHADOW_GAP = 5;
+	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private GOval[] ovals = new GOval[NUM];
 	private GLabel label;
@@ -51,7 +52,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 	    shadowLabel = new GLabel("Happy new 2024 Year!");
 	    shadowLabel.setColor(Color.BLACK);
 	    shadowLabel.setFont("SansSerif-50");
-	    add(shadowLabel, getWidth() / 2 - shadowLabel.getWidth() / 2 + 6, getHeight() / 2 - shadowLabel.getAscent() / 2 + 6);
+	    add(shadowLabel, getWidth() / 2 - shadowLabel.getWidth() / 2 + SHADOW_GAP, getHeight() / 2 - shadowLabel.getAscent() / 2 + SHADOW_GAP);
 	}
 
 
