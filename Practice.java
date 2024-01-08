@@ -20,7 +20,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 	private GLabel shadowLabel;
 
 	public void run() {
-		setBackground(Color.CYAN);
+		setBackground(Color.BLUE);
 		addComponentListener(this);
 		drawOvals();
 		drawShadowLabel();
