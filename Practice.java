@@ -4,12 +4,12 @@ public class Practice extends ConsoleProgram{
     public  void run(){
         int[] array = {64, 34, 25, 12, 22, 11, 90};
 
-        System.out.println("Original array: ");
+        println("Original array: ");
         printArray(array);
 
         bubbleSort(array);
 
-        System.out.println("\nSorted array: ");
+        println("\nSorted array: ");
         printArray(array);
     }
 
