@@ -9,7 +9,7 @@ import acm.util.RandomGenerator;
 
 public class Practice extends GraphicsProgram implements ComponentListener {
 
-	private static final int R = 3;
+	private static final int R = 5;
 	private static final int NUM = 500;
 	private static final int DELAY = 50;
 	private static final int SHADOW_GAP = 5;
