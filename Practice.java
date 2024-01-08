@@ -1,19 +1,21 @@
-import java.util.Arrays;
+import acm.graphics.GOval;
+import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
-import acm.program.ConsoleProgram;
+public class Practice extends GraphicsProgram{
 
-public class Practice extends ConsoleProgram{
-	public void run(){
-		
-		int n = readInt();
-		int[] myArray = new int[n];
+	private static final int R = 5;
+	private  static final int NUM = 100;
+	private GOval oval;
 	
-		for(int i = 0; i < myArray.length; i++){
-			myArray[i] = readInt();
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+	
+	public void  run(){
+		GOval[] ovals = new GOval[NUM];
+		for(int i = 0; i < NUM; i++){
+			ovals[i] = oval;
+			ovals[i].setFilled(true);
+			add(ovals[i], 0, rgen.nextInt(0,getWidth()));
 		}
-		println(Arrays.toString(myArray));
-		
-		Arrays.sort(myArray);
-		println(Arrays.toString(myArray));
 	}
 }
