@@ -68,9 +68,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 
 	@Override
 	public void componentResized(ComponentEvent arg0) {
-		removeAll(); 
-		
-	    	addComponentListener(this);
+			removeAll(); 
 	        drawOvals();
 	        drawLabel();
 	}
