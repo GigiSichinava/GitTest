@@ -11,7 +11,8 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 
     private static final int R = 3;
     private static final int NUM = 500;
-
+    private static final int DELAY = 50;
+    
     private RandomGenerator rgen = RandomGenerator.getInstance();
     private GOval[] ovals = new GOval[NUM];
     private GLabel label;
@@ -24,7 +25,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 
         while (true) {
             moveOvals();
-            pause(50);
+            pause(DELAY);
         }
     }
 
@@ -33,7 +34,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
             ovals[i] = new GOval(R, R);
             ovals[i].setFilled(true);
             ovals[i].setColor(Color.WHITE);
-            add(ovals[i], rgen.nextInt(0, getWidth()), rgen.nextInt(0, getHeight()));
+            add(ovals[i], rgen.nextInt(0, getWidth() - 2 * R), rgen.nextInt(0, getHeight()));
         }
     }
 
@@ -46,32 +47,36 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 
     private void moveOvals() {
         for (int i = 0; i < NUM; i++) {
-            ovals[i].move(rgen.nextInt(-2, 2), 5);
+            ovals[i].move(rgen.nextDouble(-1.5, 1.5), 4);
             if (ovals[i].getY() > getHeight()) {
-                add(ovals[i], rgen.nextInt(0, getWidth()), -2 * R);
+                add(ovals[i], rgen.nextInt(0, getWidth() - 2 * R), -2 * R);
             }
         }
     }
 
-    @Override
-    public void componentResized(ComponentEvent e) {
-        removeAll();
-        drawOvals();
-        drawLabel();
-    }
+	@Override
+	public void componentHidden(ComponentEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 
-    @Override
-    public void componentMoved(ComponentEvent e) {
-        // Do nothing
-    }
+	@Override
+	public void componentMoved(ComponentEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 
-    @Override
-    public void componentShown(ComponentEvent e) {
-        // Do nothing
-    }
+	@Override
+	public void componentResized(ComponentEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 
-    @Override
-    public void componentHidden(ComponentEvent e) {
-        // Do nothing
-    }
+	@Override
+	public void componentShown(ComponentEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+  
 }
