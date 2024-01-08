@@ -7,7 +7,7 @@ import acm.util.RandomGenerator;
 public class Practice extends GraphicsProgram{
 
 	private static final int R = 3;
-	private  static final int NUM = 300;
+	private  static final int NUM = 500;
 ;
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
