@@ -24,7 +24,7 @@ public class Practice extends GraphicsProgram{
 			add(ovals[i], rgen.nextInt(0,getWidth()), rgen.nextInt(0, getHeight()));
 			
 			
-			GLabel label = new GLabel("Happy new Year!");
+			GLabel label = new GLabel("Happy new 2024 Year!");
 			label.setColor(Color.RED);
 			label.setFont("SansSerif-50");
 			add(label, getWidth() / 2 - label.getWidth() / 2, getHeight() / 2 - label.getAscent() / 2);
