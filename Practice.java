@@ -14,6 +14,6 @@ public class Practice extends ConsoleProgram{
 		println(myArray.toString());
 		
 		Arrays.sort(myArray);
-		println(myArray);
+		println(Arrays.toString(myArray));
 	}
 }
