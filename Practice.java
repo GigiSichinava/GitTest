@@ -92,6 +92,7 @@ public class Practice extends GraphicsProgram implements ComponentListener {
 		drawOvals();
 		drawShadowLabel();
 		drawLabel();
+		addImage();
 	}
 
 	@Override
