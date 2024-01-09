@@ -5,8 +5,8 @@ import acm.program.ConsoleProgram;
 public class Practice extends ConsoleProgram{
 	public void run(){
 		
-		int[] firstNum = {1, 2, 3};
-		int[] secondNum = {9, 9, 9,0};
+		int[] firstNum = {9, 9, 9, 5};
+		int[] secondNum = {1, 2, 3};
 		addBigInteger(firstNum, secondNum);
 		
 	}
@@ -20,9 +20,11 @@ public class Practice extends ConsoleProgram{
 		int y = Integer.parseInt(b);
 		
 		int res = x + y;
-		int resSize = 
+		int resSize = 0;
+	
+		for(int i = 0; i < )
 		
-		int[] result = new int[];
+		
 		
 		
 		
