@@ -7,11 +7,10 @@ public class Practice extends ConsoleProgram{
 		
 		int[] firstNum = {9, 9, 9, 5};
 		int[] secondNum = {1, 2, 3};
-		addBigInteger(firstNum, secondNum);
+//		addBigInteger(firstNum, secondNum);
 		
-	}
+	
 
-	private void addBigInteger(int[] firstNum, int[] secondNum) {
 		  
 		String a = Arrays.toString(firstNum);
 		String b = Arrays.toString(secondNum);
@@ -32,6 +31,6 @@ public class Practice extends ConsoleProgram{
 //			resSize ++;
 //		}
 //		println(resSize);
-		
-	}
+	}	
+	
 }
