@@ -20,7 +20,9 @@ public class Practice extends ConsoleProgram{
 		int y = Integer.parseInt(b);
 		
 		int res = x + y;
-		String res2 = Integer.to
+		String res2 = Integer.toString(res);
+		int size = res2.length();
+		println(size);
 		
 		
 //		int resSize = 0;
