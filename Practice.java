@@ -29,10 +29,5 @@ public class Practice extends ConsoleProgram{
 		}
 		println(resSize);
 		
-		
-		
-		
-		
-		
 	}
 }
