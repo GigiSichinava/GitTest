@@ -21,8 +21,8 @@ public class Practice extends ConsoleProgram{
 		
 		int res = x + y;
 		String res2 = Integer.toString(res);
-		int size = res2.length();
-		println(size);
+		String result[] = res2.split("");
+		println(result);
 		
 		
 //		int resSize = 0;
