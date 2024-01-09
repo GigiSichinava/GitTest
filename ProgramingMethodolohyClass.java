@@ -27,7 +27,10 @@ public class ProgramingMethodolohyClass {
 		return studentScores.get(student);
 	}
 	
-	public void getScore(double score){
-		
+	public void getScore(String student, double score){
+		if(!studentScores.containsKey(student)){
+			System.out.println("no student");
+			return;
 	}
+		studentScores.put(student, )
 }
