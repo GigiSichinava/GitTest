@@ -20,9 +20,15 @@ public class Practice extends ConsoleProgram{
 		int y = Integer.parseInt(b);
 		
 		int res = x + y;
+		
 		int resSize = 0;
-	
-		for(int i = 0; i < )
+		while(res != 0){
+			
+			res /= 10;
+			resSize ++;
+		}
+		println(resSize);
+		
 		
 		
 		
