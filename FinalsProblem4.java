@@ -28,7 +28,6 @@ public class FinalsProblem4 extends ConsoleProgram {
 
 			}
 		}
-		String result = new String(chars);
-		println(result);
+		println(Arrays.toString(chars));
 	}
 }
