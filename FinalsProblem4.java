@@ -7,7 +7,11 @@ public class FinalsProblem4 extends ConsoleProgram{
 		String result = "";
 		
 		for(int i = 0; i < line.length(); i++){
-			result += Character.toString(line.charAt(line.length() - i - 1));
+			if(Character.isAlphabetic(line.charAt(i))){
+				result += Character.toString(line.charAt(line.length() - i - 1));
+			}else{
+				result += line.charAt(line.length() - 1);
+			}
 		}
 		println("Result: " + result);
 	}
