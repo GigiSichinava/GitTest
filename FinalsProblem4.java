@@ -7,7 +7,7 @@ public class FinalsProblem4 extends ConsoleProgram{
 		char[] chars = line.toCharArray();
 		
 		int left = 0;
-		int right = line.length() - 1;
+		int right = chars.length - 1;
 		
 		while(left < right){
 			if(!Character.isAlphabetic(chars[left])){
@@ -24,5 +24,9 @@ public class FinalsProblem4 extends ConsoleProgram{
 		}
 		String result = new String(chars);
 		println(result);
+		
+		if(line.length() == chars.length){
+			println("ki");
+		}
 	}
 }
