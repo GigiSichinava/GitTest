@@ -36,6 +36,8 @@ public class FinalsProblem1 extends ConsoleProgram{
 			SUM /= 10;
 		}
 		
+		println(Arrays.toString(result));
+		
 	}
 
 	private String transformToString(int[] firstNumber) {
