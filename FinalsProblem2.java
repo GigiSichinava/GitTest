@@ -21,6 +21,8 @@ public class FinalsProblem2 extends GraphicsProgram{
 	
 	public void init(){
 		
+		rectangles = new ArrayList<>();
+		
 		JLabel width = new JLabel("width:");
 		add(width, SOUTH);
 		
