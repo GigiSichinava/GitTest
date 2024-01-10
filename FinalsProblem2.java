@@ -67,7 +67,7 @@ public class FinalsProblem2 extends GraphicsProgram{
 				if(curRect.getWidth() <= Integer.parseInt(widthField.getText()) && curRect.getHeight() <= Integer.parseInt(heightField.getText())){
 					filteredRects.add(curRect);
 				}else{
-					rectangles.remove(curRect);
+					remove(curRect);
 				}
 				rectangles = filteredRects;
 			}
