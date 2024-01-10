@@ -6,7 +6,6 @@ public class FinalsProblem4 extends ConsoleProgram {
 	public void run() {
 
 		String line = readLine();
-		String result = "";
 
 		char[] chars = line.toCharArray();
 
@@ -29,6 +28,7 @@ public class FinalsProblem4 extends ConsoleProgram {
 
 			}
 		}
-		println(Arrays.toString(chars));
+		String result = new String(chars);
+		println(result);
 	}
 }
