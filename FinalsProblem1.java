@@ -36,7 +36,7 @@ public class FinalsProblem1 extends ConsoleProgram {
 
 	private int getIntegerSize(int sum) {
 		int size = 0;
-		while (sum >= 0) {
+		while (sum > 0) {
 			size++;
 			sum /= 10;
 		}
