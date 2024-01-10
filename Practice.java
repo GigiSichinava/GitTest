@@ -2,21 +2,30 @@
 //თქვენი მიზანია დაწეროთ School კლასი, რომლის საშუალებითაც შევძლებთ
 //უნივერსიტეტის მართვას. კლასს უნდა ჰქონდეს კონსტრუქტორი და 5 public მეთოდი.
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 
 public class Practice {
 //	
 //	კონსტრუქტორს არაფერი არ გადაეცემა. აქ შეგიძლიათ ინიციალიზაცია გაუკეთოთ
 //	თქვენთვის საჭირო ცვლადებს.
+	private HashMap<String, String> school; // maswavlebeli - sagani
+	private ArrayList<String> teachers;
+	private ArrayList<String> subjects;
+	private HashMap<String, String> school2; // moswavle - sagani
+	
 	public Practice() {
-		
+		school = new HashMap<String, String>();
+		teachers = new ArrayList<String>();
+		subjects = new ArrayList<String>();
 	}
 	
 //	addTeacher მეთოდის საშუალებით შეგიძლიათ სკოლას დაამატოთ ახალი
 //	მასწავლებელი. მეთოდს გადაეცემა მასწავლებლის სახელი. შეგიძლიათ ჩათვალოთ,
 //	რომ მასწავლებლის სახელი უნიკალურია.
 	public void addTeacher(String teacher) {
-		// TIP:	you can use System.out.println() to print your structures for testing 
+		school.put(teacher, null);
 	}
 	
 //	addSubject მეთოდის საშუალებით შეგიძლიათ მასწავლებელს დაუმატოთ საგანი.
@@ -27,13 +36,17 @@ public class Practice {
 //	თუკი teacher სახელის მქონე მასწავლებელი არ არის აქამდე დამატებული, მაშინ
 //	მეთოდმა არაფერი არ უნდა გააკეთოს.
 	public void addSubject(String teacher, String subject) {
-		// TIP:	you can use System.out.println() to print your structures for testing
+		if(!school.containsKey(teacher)){
+			school.put(teacher, subject);
+		}
 	}
 	
 //	addPupil მეთოდის საშუალებით შეგიძლიათ საგანზე დაამატოთ მოსწავლე. ერთი და
 //	იგივე მოსწავლე შეიძლება ერთ ან რამდენიმე საგანს სწავლობდეს.
 	public void addPupil(String pupil, String subject) {
-		// TIP:	you can use System.out.println() to print your structures for testing
+		if(!school2.containsKey(pupil)){
+			school2.put(pupil, null);
+		}
 	}
 	
 //	getTeachers მეთოდს გადაეცემა მოსწავლის სახელი და მან უნდა დააბრუნოს ამ

@@ -4,7 +4,7 @@ import acm.program.ConsoleProgram;
 
 public class Review extends ConsoleProgram {
 	public void run() {
-		School school = new School();
+		Practice school = new Practice();
 		school.addTeacher("mari");
 		school.addTeacher("nino");
 
