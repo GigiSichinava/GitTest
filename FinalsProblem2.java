@@ -61,8 +61,8 @@ public class FinalsProblem2 extends GraphicsProgram {
 				} else {
 					remove(curRect);
 				}
-				rects = filteredRects;
 			}
+			rects = filteredRects;
 		}
 
 	}
