@@ -62,10 +62,14 @@ public class FinalsProblem2 extends GraphicsProgram{
 		}
 		
 		if(e.getActionCommand().equals("Filter")){
+			ArrayList<GRect> filteredRects = new ArrayList<>();
 			for(GRect curRect : rectangles){
-				if(curRect.getWidth() > Integer.parseInt(widthField.getText()) || curRect.getHeight() > Integer.parseInt(heightField.getText())){
+				if(curRect.getWidth() <= Integer.parseInt(widthField.getText()) && curRect.getHeight() <= Integer.parseInt(heightField.getText())){
+					filteredRects.add(curRect);
+				}else{
 					rectangles.remove(curRect);
 				}
+				rectangles = filteredRects;
 			}
 		}
 	}
