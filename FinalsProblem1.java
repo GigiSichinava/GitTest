@@ -36,7 +36,7 @@ public class FinalsProblem1 extends ConsoleProgram {
 
 	private int getIntegerSize(int sum) {
 		int size = 0;
-		while (sum > 0) {
+		while (sum >= 0) {
 			size++;
 			sum /= 10;
 		}
@@ -46,7 +46,7 @@ public class FinalsProblem1 extends ConsoleProgram {
 	private int transferToInteger(int[] number) {
 		int result = 0;
 		for (int i = number.length - 1; i >= 0; i--) {
-			result += i * Math.pow(10, number.length - 1 - i);
+			result += number[i] * Math.pow(10, number.length - 1 - i);
 		}
 		return result;
 	}
