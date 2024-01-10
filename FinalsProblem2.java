@@ -11,7 +11,6 @@ import acm.util.RandomGenerator;
 
 public class FinalsProblem2 extends GraphicsProgram {
 
-	private GRect rect;
 	private ArrayList<GRect> rects;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
@@ -36,7 +35,6 @@ public class FinalsProblem2 extends GraphicsProgram {
 
 		JButton add = new JButton("Add");
 		add(add, SOUTH);
-		add.addActionListener(this);
 
 		JButton filter = new JButton("Filter");
 		add(filter, SOUTH);
@@ -49,7 +47,7 @@ public class FinalsProblem2 extends GraphicsProgram {
 		int height = Integer.parseInt(heightField.getText());
 
 		if (e.getActionCommand().equals("Add")) {
-			rect = new GRect(width, height);
+			GRect rect = new GRect(width, height);
 			add(rect, rgen.nextInt(0, getWidth() - width), rgen.nextInt(0, getHeight() - height));
 			rects.add(rect);
 		}
