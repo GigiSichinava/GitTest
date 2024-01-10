@@ -40,16 +40,22 @@ public class FinalsProblem2 extends GraphicsProgram{
 	}
 	
 	public void actionPerformed(ActionEvent e){
+		
+		int width = Integer.parseInt(widthField.getText());
+		int height = Integer.parseInt(heightField.getText());
+		
 		if(e.getActionCommand().equals("Add")){
-			int width = Integer.parseInt(widthField.getText());
-			int height = Integer.parseInt(heightField.getText());
 			
 			GRect rect = new GRect(width, height);
 			add(rect, rgen.nextInt(0, getWidth() - width), rgen.nextInt(getHeight() - height));
 		}
 		
-//		if(e.getActionCommand().isEmpty()){
-//			return;
-//		}
+		if(e.getActionCommand().isEmpty()){
+			return;
+		}
+		
+		if(e.getActionCommand().equals("Filter")){
+			
+		}
 	}
 }
