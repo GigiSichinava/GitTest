@@ -46,7 +46,10 @@ public class FinalsProblem2 extends GraphicsProgram{
 			
 			GRect rect = new GRect(width, height);
 			add(rect, rgen.nextInt(0, getWidth() - width), rgen.nextInt(getHeight() - height));
-			
+		}
+		
+		if(e.getActionCommand().isEmpty()){
+			return;
 		}
 	}
 }
