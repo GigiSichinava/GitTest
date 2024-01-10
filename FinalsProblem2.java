@@ -36,6 +36,7 @@ public class FinalsProblem2 extends GraphicsProgram {
 
 		JButton add = new JButton("Add");
 		add(add, SOUTH);
+		add.addActionListener(this);
 
 		JButton filter = new JButton("Filter");
 		add(filter, SOUTH);
