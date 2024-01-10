@@ -10,7 +10,7 @@ public class FinalsProblem3 extends ConsoleProgram {
 
 		for (int i = 0; i < line.length() - 1; i++) {
 			if (Character.isDigit(line.charAt(i))) {
-				for (int j = 0; j < Integer.parseInt(Character.toString(line.charAt(j))); j++) {
+				for (int j = 0; j < Integer.parseInt(Character.toString(line.charAt(i))); j++) {
 					temp += Character.toString(line.charAt(i + 1));
 				}
 			}else{
