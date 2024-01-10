@@ -8,9 +8,7 @@ public class FinalsProblem4 extends ConsoleProgram{
 		
 		for(int i = 0; i < line.length(); i++){
 			if(Character.isAlphabetic(line.charAt(i))){
-				if(!Character.isAlphabetic(line.charAt(line.length() - i - 1))){
 				result += Character.toString(line.charAt(line.length() - i - 1));
-				}
 			}else{
 				result += line.charAt(line.length() - i);
 			}
