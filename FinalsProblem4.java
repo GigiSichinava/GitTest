@@ -10,7 +10,7 @@ public class FinalsProblem4 extends ConsoleProgram{
 			if(Character.isAlphabetic(line.charAt(i))){
 				result += Character.toString(line.charAt(line.length() - i - 1));
 			}else{
-				result += line.charAt(line.length() - 1);
+				result += line.charAt(line.length() - i);
 			}
 		}
 		println("Result: " + result);
