@@ -48,8 +48,8 @@ public class FinalsProblem2 extends GraphicsProgram{
 			add(rect, rgen.nextInt(0, getWidth() - width), rgen.nextInt(getHeight() - height));
 		}
 		
-		if(e.getActionCommand().isEmpty()){
-			return;
-		}
+//		if(e.getActionCommand().isEmpty()){
+//			return;
+//		}
 	}
 }
