@@ -14,7 +14,7 @@ public class FinalsProblem1 extends ConsoleProgram {
 		int firstInteger = transferToInteger(firstNum);
 
 		// Create second Array
-		int b = readInt("Size of the second number :");
+		int b = readInt("Size of the second number: ");
 		int[] secondNum = new int[b];
 		for (int j = 0; j < secondNum.length; j++) {
 			secondNum[j] = readInt();
