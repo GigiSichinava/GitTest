@@ -21,6 +21,7 @@ public class FinalsProblem2 extends GraphicsProgram {
 
 		rects = new ArrayList<>();
 
+	// Add J components in "void init()"	
 		JLabel width = new JLabel("width:");
 		add(width, SOUTH);
 
@@ -42,6 +43,7 @@ public class FinalsProblem2 extends GraphicsProgram {
 		addActionListeners();
 	}
 
+	// Look for the actions to happen 
 	public void actionPerformed(ActionEvent e) {
 		int width = Integer.parseInt(widthField.getText());
 		int height = Integer.parseInt(heightField.getText());
@@ -59,7 +61,8 @@ public class FinalsProblem2 extends GraphicsProgram {
 						&& curRect.getHeight() <= Integer.parseInt(heightField.getText())) {
 					filteredRects.add(curRect);
 				} else {
-					remove(curRect);
+					remove(curRect);  // This removes from canvas
+//					rects.remove(curRect);  This removes from ArrayList
 				}
 			}
 			rects = filteredRects;
