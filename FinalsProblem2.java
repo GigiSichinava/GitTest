@@ -10,13 +10,13 @@ public class FinalsProblem2 extends GraphicsProgram{
 		JLabel width = new JLabel("width:");
 		add(width, SOUTH);
 		
-		JTextField widthField = new JTextField(30);
+		JTextField widthField = new JTextField(10);
 		add(widthField, SOUTH);
 		
 		JLabel height = new JLabel("height");
 		add(height, SOUTH);
 		
-		JTextField heightField = new JTextField(30);
+		JTextField heightField = new JTextField(10);
 		add(heightField, SOUTH);
 		
 		JButton add = new JButton("Add");
