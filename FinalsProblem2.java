@@ -42,7 +42,7 @@ public class FinalsProblem2 extends GraphicsProgram {
 		addActionListeners();
 	}
 
-	public void ActionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) {
 		int width = Integer.parseInt(widthField.getText());
 		int height = Integer.parseInt(heightField.getText());
 
