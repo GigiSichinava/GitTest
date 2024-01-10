@@ -8,6 +8,7 @@ public class FinalsProblem3 extends ConsoleProgram {
 		String line = readLine("Enter string: ");
 		String temp = "";
 
+		// Use for loop to iterate over the whole String except the last one
 		for (int i = 0; i < line.length() - 1; i++) {
 			if (Character.isDigit(line.charAt(i))) {
 				for (int j = 0; j < Integer.parseInt(Character.toString(line.charAt(i))); j++) {
@@ -17,6 +18,8 @@ public class FinalsProblem3 extends ConsoleProgram {
 				temp += Character.toString(line.charAt(i));
 			}
 		}
+		
+		// Add last character as a string to main string
 		temp += Character.toString(line.charAt(line.length() - 1));
 
 		println(temp);
