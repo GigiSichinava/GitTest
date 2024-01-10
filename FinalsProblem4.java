@@ -6,8 +6,8 @@ public class FinalsProblem4 extends ConsoleProgram{
 		String line = readLine();
 		String result = "";
 		
-		for(int i = 0; i < line.length() - 1; i++){
-			result += Character.toString(line.charAt(line.length() - i));
+		for(int i = 0; i < line.length(); i++){
+			result += Character.toString(line.charAt(line.length() - i -1 ));
 		}
 		println(result);
 	}
