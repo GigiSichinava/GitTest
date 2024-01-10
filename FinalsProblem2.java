@@ -10,6 +10,7 @@ import acm.util.RandomGenerator;
 
 public class FinalsProblem2 extends GraphicsProgram{
 	
+	private GRect rect;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	private JTextField widthField;
@@ -46,7 +47,7 @@ public class FinalsProblem2 extends GraphicsProgram{
 		
 		if(e.getActionCommand().equals("Add")){
 			
-			GRect rect = new GRect(width, height);
+			rect = new GRect(width, height);
 			add(rect, rgen.nextInt(0, getWidth() - width), rgen.nextInt(getHeight() - height));
 		}
 		
@@ -55,7 +56,11 @@ public class FinalsProblem2 extends GraphicsProgram{
 		}
 		
 		if(e.getActionCommand().equals("Filter")){
-			
+			int curWidth = Integer.parseInt(widthField.getText());
+			int currHeight = Integer.parseInt(heightField.getText());
+			if(curWidth < width){
+				
+			}
 		}
 	}
 }
