@@ -3,40 +3,39 @@ import java.util.Set;
 
 import acm.program.ConsoleProgram;
 
-public class FinalsProblem6 extends ConsoleProgram{
-	public void run(){
-		
-		String line = readLine();
-        Set<String> uniqueSubstrings = new HashSet<>();
+public class FinalsProblem6 extends ConsoleProgram {
+	public void run() {
 
-		
-		for(int i = 0; i < line.length(); i++){
-			for(int j = i + 1; j <= line.length(); j++){
+		String line = readLine();
+		Set<String> uniqueStrings = new HashSet<>();
+
+		for (int i = 0; i < line.length(); i++) {
+			for (int j = 1; j <= line.length(); j++) {
 				String part = line.substring(i, j);
-				if(hasSameAmount(part)){
-					uniqueSubstrings.add(part);
-					
+				if (countsAreSame(part)) {
+					uniqueStrings.add(part);
 				}
 			}
 		}
 		
-		
+		println(uniqueStrings.size());
 	}
 
-	private boolean hasSameAmount(String part) {
+	private boolean countsAreSame(String part) {
+
 		int countA = 0;
 		int countB = 0;
 		
-		for(int i = 0; i < part.length(); i++){
+		for (int i = 0; i < part.length(); i++) {
 			char ch = part.charAt(i);
-			if(ch == 'a'){
+
+			if (ch == 'a') {
 				countA++;
 			}
 			if(ch == 'b'){
 				countB++;
 			}
 		}
-		return countA == countB  ;
+		return countA == countB;
 	}
 }
-
