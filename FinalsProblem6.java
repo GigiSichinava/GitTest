@@ -35,11 +35,8 @@ public class FinalsProblem6 extends ConsoleProgram{
 			
 			
 			}
-		if(countA == countB){
-			return true;
-			
-		}
-		return false;
+		
+		return countA == countB;
 	}
 	
 
