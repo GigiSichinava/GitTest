@@ -9,7 +9,7 @@ import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class FinalsProblem2 extends GraphicsProgram {
+public class FinalsProblem02 extends GraphicsProgram {
 
 	private ArrayList<GRect> rects;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
