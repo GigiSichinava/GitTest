@@ -5,7 +5,7 @@ import acm.program.ConsoleProgram;
 public class FinalsProblem11 extends ConsoleProgram {
 	public void run() {
 
-		String line = "hElLo WORld";
+		String line = readLine();
 		String finalResult = "";
 
 		StringTokenizer tokenizer = new StringTokenizer(line, " ");
