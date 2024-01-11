@@ -20,7 +20,8 @@ public class FinalsProblem11 extends ConsoleProgram {
 				result += Character.toString(firstChar) + lastChars + " ";
 			}
 			finalResult += result;
+			println(finalResult);
 		}
-		println(finalResult);
+		
 	}
 }
