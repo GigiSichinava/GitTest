@@ -6,7 +6,7 @@ public class FinalsProblem6 extends ConsoleProgram {
         int count = 0;
 
         for (int i = 0; i < line.length(); i++) {
-            for (int j = i + 1; j <= line.length(); j++) {
+            for (int j = i + 2; j <= line.length(); j += 2) { // j starts from i+2 and increments by 2
                 String substring = line.substring(i, j);
                 if (hasEqualAandB(substring)) {
                     count++;
@@ -22,14 +22,10 @@ public class FinalsProblem6 extends ConsoleProgram {
         int countB = 0;
 
         for (int i = 0; i < substring.length(); i++) {
-            char ch = substring.charAt(i);
-            if (ch == 'a') {
+            if (substring.charAt(i) == 'a') {
                 countA++;
-            } else if (ch == 'b') {
+            } else if (substring.charAt(i) == 'b') {
                 countB++;
-            } else {
-                // If there is any character other than 'a' or 'b', return false
-                return false;
             }
         }
 
