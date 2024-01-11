@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 import acm.program.ConsoleProgram;
 
-public class FinalsProblem1 extends ConsoleProgram {
+public class FinalsProblem01 extends ConsoleProgram {
 	public void run() {
 
 		// Create first Array
