@@ -21,5 +21,6 @@ public class FinalsProblem11 extends ConsoleProgram {
 			}
 			finalResult += result;
 		}
+		println(finalResult);
 	}
 }
