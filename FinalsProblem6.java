@@ -19,12 +19,6 @@ public class FinalsProblem6 extends ConsoleProgram{
 		
 		println(count);
 		
-		int y = readInt();
-		int[] x = new int[y];
-		for(int i = 0 ; i < x.length; i++){
-			x[i] = 3;
-		}
-		println(Arrays.toString(x));
 	}
 
 	private boolean hasEquallAandB(String substring) {
