@@ -1,6 +1,6 @@
 import acm.program.ConsoleProgram;
 
-public class FinalsProblem4 extends ConsoleProgram {
+public class FinalsProblem04 extends ConsoleProgram {
 	public void run() {
 
 		String line = readLine();
