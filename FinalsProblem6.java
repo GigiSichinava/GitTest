@@ -22,10 +22,14 @@ public class FinalsProblem6 extends ConsoleProgram {
         int countB = 0;
 
         for (int i = 0; i < substring.length(); i++) {
-            if (substring.charAt(i) == 'a') {
+            char ch = substring.charAt(i);
+            if (ch == 'a') {
                 countA++;
-            } else if (substring.charAt(i) == 'b') {
+            } else if (ch == 'b') {
                 countB++;
+            } else {
+                // If there is any character other than 'a' or 'b', return false
+                return false;
             }
         }
 
