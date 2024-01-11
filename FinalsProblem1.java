@@ -27,7 +27,7 @@ public class FinalsProblem1 extends ConsoleProgram {
 
 		// Put integer into array
 		int[] finalArray = new int[size];
-		for (int i = finalArray.length - 1; i >= 0; i--) {
+		for (int i = finalArray.length ; i > 0; i--) {
 			finalArray[i] = SUM % 10;
 			SUM /= 10;
 		}
