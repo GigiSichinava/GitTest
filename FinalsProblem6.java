@@ -28,9 +28,9 @@ public class FinalsProblem6 extends ConsoleProgram{
 		for(int i = 0; i < substring.length(); i++){
 			if(substring.charAt(i) == 'a'){
 				countA++;
-			}
-			if(substring.charAt(i) == 'b'){
+			}else if(substring.charAt(i) == 'b'){
 				countB++;
+			
 			}
 			
 			
