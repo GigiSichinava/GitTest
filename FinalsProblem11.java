@@ -6,7 +6,6 @@ public class FinalsProblem11 extends ConsoleProgram {
 	public void run() {
 
 		String line = "hElLo WORld";
-		
 		String finalResult = "";
 
 		StringTokenizer tokenizer = new StringTokenizer(line, " ");
@@ -14,15 +13,15 @@ public class FinalsProblem11 extends ConsoleProgram {
 			String part = tokenizer.nextToken();
 
 			String result = "";
-			
-				char firstChar = Character.toUpperCase(part.charAt(0));
-				String lastChars = part.substring(1, part.length()).toLowerCase();
 
-				result += Character.toString(firstChar) + lastChars + " ";
-			
+			char firstChar = Character.toUpperCase(part.charAt(0));
+			String lastChars = part.substring(1, part.length()).toLowerCase();
+
+			result += Character.toString(firstChar) + lastChars + " ";
+
 			finalResult += result;
 		}
-		
+
 		println(finalResult);
 	}
 }
