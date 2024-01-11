@@ -34,8 +34,8 @@ public class FinalsProblem6 extends ConsoleProgram {
 
 			if (ch == 'a') {
 				countA++;
-			}
-			if (ch == 'b') {
+			}else if (ch == 'b') {
+			
 				countB++;
 			}
 			if(countA == countB){
