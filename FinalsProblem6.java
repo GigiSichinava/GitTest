@@ -6,8 +6,8 @@ import acm.program.ConsoleProgram;
 public class FinalsProblem6 extends ConsoleProgram {
 	public void run() {
 
-		String line = readLine();	
-		
+		String line = readLine();
+
 		// Set of Strings only collects unique Strings
 		Set<String> uniqueStrings = new HashSet<>();
 
@@ -34,14 +34,11 @@ public class FinalsProblem6 extends ConsoleProgram {
 
 			if (ch == 'a') {
 				countA++;
-			}else if (ch == 'b') {
-			
+			}
+			if (ch == 'b') {
 				countB++;
 			}
-			if(countA == countB){
-				return true;
-			}
 		}
-		return false;
+		return countA == countB;
 	}
 }
