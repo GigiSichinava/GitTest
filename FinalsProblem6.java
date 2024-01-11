@@ -10,14 +10,14 @@ public class FinalsProblem6 extends ConsoleProgram {
 		Set<String> uniqueStrings = new HashSet<>();
 
 		for (int i = 0; i < line.length(); i++) {
-			for (int j = 1; j <= line.length(); j++) {
+			for (int j = i + 1; j <= line.length(); j++) {
 				String part = line.substring(i, j);
 				if (countsAreSame(part)) {
 					uniqueStrings.add(part);
 				}
 			}
 		}
-		
+
 		println(uniqueStrings.size());
 	}
 
@@ -25,14 +25,14 @@ public class FinalsProblem6 extends ConsoleProgram {
 
 		int countA = 0;
 		int countB = 0;
-		
+
 		for (int i = 0; i < part.length(); i++) {
 			char ch = part.charAt(i);
 
 			if (ch == 'a') {
 				countA++;
 			}
-			if(ch == 'b'){
+			if (ch == 'b') {
 				countB++;
 			}
 		}
