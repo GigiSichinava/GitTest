@@ -6,12 +6,15 @@ import acm.program.ConsoleProgram;
 public class FinalsProblem6 extends ConsoleProgram {
 	public void run() {
 
-		String line = readLine();
+		String line = readLine();	
+		
+		// Set of Strings only collects unique Strings
 		Set<String> uniqueStrings = new HashSet<>();
 
 		for (int i = 0; i < line.length(); i++) {
 			for (int j = i + 1; j <= line.length(); j++) {
 				String part = line.substring(i, j);
+				// If substrings contains same amount of a's and b's, add it to HashSet
 				if (countsAreSame(part)) {
 					uniqueStrings.add(part);
 				}
@@ -35,7 +38,10 @@ public class FinalsProblem6 extends ConsoleProgram {
 			if (ch == 'b') {
 				countB++;
 			}
+			if(countA == countB){
+				return true;
+			}
 		}
-		return countA == countB;
+		return false;
 	}
 }
