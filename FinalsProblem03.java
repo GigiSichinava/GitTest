@@ -2,7 +2,7 @@ import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
 
-public class FinalsProblem3 extends ConsoleProgram {
+public class FinalsProblem03 extends ConsoleProgram {
 	public void run() {
 
 		String line = readLine("Enter string: ");
