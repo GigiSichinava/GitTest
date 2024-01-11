@@ -14,6 +14,8 @@ public class FinalsProblem6 extends ConsoleProgram{
 				}
 			}
 		}
+		
+		println(count);
 	}
 
 	private boolean hasEquallAandB(String substring) {
