@@ -6,6 +6,7 @@ public class Finalsproblem14 extends ConsoleProgram{
 	public void run(){
 		
 		String line = readLine();
+		String result = "";
 		
 		StringTokenizer tokenizer = new StringTokenizer(line, " ");
 		while(tokenizer.hasMoreTokens()){
@@ -17,7 +18,7 @@ public class Finalsproblem14 extends ConsoleProgram{
 				maxLength = curLength;
 			}
 			
-			String result = "";
+			
 			for(int i = 0; i < part.length(); i++){
 				char ch1 = part.charAt(i);
 				for(int j = 1; j < part.length(); j++){
