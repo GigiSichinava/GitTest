@@ -28,7 +28,7 @@ public class FinalsProblem05 extends ConsoleProgram {
 						size++;
 					}
 					
-					// We can also use this: maxPlusSize = Math.max(size, maxPlusSize);
+					// We can also use: maxPlusSize = Math.max(size, maxPlusSize);
 					if(size >= maxPlusSize){
 						maxPlusSize = size;
 						size = 0;
