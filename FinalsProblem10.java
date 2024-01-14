@@ -9,8 +9,6 @@ public class FinalsProblem10 extends GraphicsProgram{
 	
 	private static final int N_ROWS = 8;
 	private static final int N_COLS = 8;
-	private int width = getWidth() / N_COLS;
-	private int height = getHeight() / N_ROWS;
 	
 	public void init(){
 		setSize(600,600);
@@ -26,13 +24,14 @@ public class FinalsProblem10 extends GraphicsProgram{
 	public void run(){
 		for(int i = 0; i < N_ROWS; i++){
 			for(int j = 0; j < N_COLS; j++){
-				GRect rect = new GRect(width, height);
-				add(rect, i * width, j * height);
+				int rectWidth  = getWidth() / N_COLS;
+				int rectHeight = getHeight() / N_ROWS;
+				GRect rect = new GRect(rectWidth, rectHeight);
+				add(rect, i * rectWidth, j * rectHeight);
 			}
 		}
 		
 		GOval oval = new GOval(width, height);
-		add(oval, 5 * width, 5 * height);
 	}
 
 }
