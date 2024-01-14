@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
@@ -34,7 +36,9 @@ public class FinalsProblem10 extends GraphicsProgram {
 		int ovalWidth = getWidth() / N_COLS;
 		int ovalHeight = getHeight() / N_ROWS;
 		GOval oval = new GOval(ovalWidth, ovalHeight);
-		add(oval, 5 * ovalWidth, 5 * ovalHeight);
+		oval.setFilled(true);
+		oval.setColor(Color.RED);
+		add(oval, 4 * ovalWidth, 4 * ovalHeight);
 		
 	}
 
