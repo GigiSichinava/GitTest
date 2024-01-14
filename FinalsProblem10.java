@@ -45,7 +45,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 		GRect stone = new GRect(stoneWidth, stoneHeight);
 		stone.setFilled(true);
 		stone.setColor(Color.GREEN);
-		add(stone, 4 * ovalWidth + 5, 4 * ovalHeight + 5);
+		add(stone, 4 * ovalWidth + 10, 4 * ovalHeight + 10);
 		
 	}
 
