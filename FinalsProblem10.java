@@ -30,7 +30,12 @@ public class FinalsProblem10 extends GraphicsProgram {
 				add(rect, j * rectWidth, i * rectHeight);
 			}
 		}
-
+		
+		int ovalWidth = getWidth() / N_COLS;
+		int ovalHeight = getHeight() / N_ROWS;
+		GOval oval = new GOval(ovalWidth, ovalHeight);
+		add(oval, 5 * ovalWidth, 5 * ovalHeight);
+		
 	}
 
 }
