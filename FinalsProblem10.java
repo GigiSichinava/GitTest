@@ -71,12 +71,12 @@ public class FinalsProblem10 extends GraphicsProgram {
 			}
 			oval.move(-Width, 0);
 		} else if (line.equals("up")) {
-			if (oval.getX() < Height) {
+			if (oval.getY() < Height) {
 				return;
 			}
 			oval.move(0, -Height);
 		} else if (line.equals("down")) {
-			if (oval.getX() > 6 * Height) {
+			if (oval.getY() > 6 * Height) {
 				return;
 			}
 			oval.move(0, Height);
