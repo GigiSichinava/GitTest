@@ -65,15 +65,27 @@ public class FinalsProblem10 extends GraphicsProgram {
 		
 		String line = e.getActionCommand();
 		if(line.equals("right")){
+			if(oval.getX() > 7 * Width){
+				return;
+			}
 			oval.move(Width, 0);
 		}
 		if(line.equals("left")){
+			if(oval.getX() < Width){
+				return;
+			}
 			oval.move(-Width, 0);
 		}
 		if(line.equals("up")){
+			if(oval.getX() < Height){
+				return;
+			}
 			oval.move(0, -Height);
 		}
 		if(line.equals("down")){
+			if(oval.getX() > 7 * Height){
+				return;
+			}
 			oval.move(0, Height);
 		}
 	}
