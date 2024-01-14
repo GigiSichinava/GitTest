@@ -71,10 +71,10 @@ public class FinalsProblem10 extends GraphicsProgram {
 			oval.move(-Width, 0);
 		}
 		if(line.equals("up")){
-			oval.move(0, Height);
+			oval.move(0, -Height);
 		}
 		if(line.equals("down")){
-			oval.move(0, -Height);
+			oval.move(0, Height);
 		}
 	}
 
