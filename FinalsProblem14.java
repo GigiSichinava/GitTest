@@ -28,10 +28,10 @@ public class FinalsProblem14 extends ConsoleProgram {
 				char ch1 = part.charAt(i);
 				char ch2 = part.charAt(j);
 				if (ch1 == ch2) {
-					return true;
+					return false;
 				}
 			}
 		}
-		return false;
+		return true;
 	}
 }
