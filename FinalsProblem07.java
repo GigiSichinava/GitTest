@@ -12,8 +12,8 @@ public class FinalsProblem07 extends ConsoleProgram {
         };
         
         int rows = myMatrix.length;
-        int cols = myMatrix.length;
-        int maxPlusSize = 0;
+        int cols = myMatrix[0].length;
+        int maxXSize = 0;
         
         for(int i = 0; i < rows; i++){
         	for(int j = 0; j < cols; j++){
@@ -25,13 +25,13 @@ public class FinalsProblem07 extends ConsoleProgram {
 						size++;
 					}
         		}
-        			if(size >= maxPlusSize){
-						maxPlusSize = size;
+        			if(size >= maxXSize){
+						maxXSize = size;
 						size = 0;
 					}
 				}
 			}
-        println(maxPlusSize);
+        println(maxXSize);
 		}
 	}
 
