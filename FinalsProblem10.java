@@ -17,7 +17,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 	private GOval oval;
 
 	public void init() {
-		setSize(600, 600);
+//		setSize(600, 600);
 		JLabel label = new JLabel("Move");
 		add(label, SOUTH);
 		JTextField textField = new JTextField(10);
