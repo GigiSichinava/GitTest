@@ -31,6 +31,6 @@ public class FinalsProblem05 extends ConsoleProgram {
 			}
 		}
 		
-		println(maxPlusSize - 1);
+		println(maxPlusSize);
 	}
 }
