@@ -22,18 +22,17 @@ public class FinalsProblem07 extends ConsoleProgram {
         		if(myMatrix[i][j] == 1){
         			size = 1;
         			
-        			while(size <= i && size <= j && size <= cols - 1 - j && size <= rows - 1 - i && myMatrix[i - size][j - size] == 1 && myMatrix[i + size][j + size] == 1 && myMatrix[i - size][j + size] == 1 && myMatrix[i + size][j - size] == 1){
-						size++;
+        			while (size <= i && size <= j && size <= cols - 1 - j && size <= rows - 1 - i
+							&& myMatrix[i - size][j - size] == 1 && myMatrix[i + size][j + size] == 1
+							&& myMatrix[i - size][j + size] == 1 && myMatrix[i + size][j - size] == 1) {
+        				size++;
 					}
         		}
-        			if(size >= maxXSize){
-						maxXSize = size;
-						size = 0;
-					}
-				}
+        			maxXSize = Math.max(maxXSize, size);
 			}
-        println(maxXSize);
 		}
-	}
+        println(maxXSize);
+    }
+}
 
 
