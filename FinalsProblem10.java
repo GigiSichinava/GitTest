@@ -44,19 +44,29 @@ public class FinalsProblem10 extends GraphicsProgram {
 		oval.setColor(Color.RED);
 		add(oval, 4 * ovalWidth, 4 * ovalHeight);
 		
+		/*
 		double stoneWidth = (getWidth() / N_COLS) * 0.7;
 		double stoneHeight = (getHeight() / N_ROWS) * 0.7;
 		GRect stone = new GRect(stoneWidth, stoneHeight);
 		stone.setFilled(true);
 		stone.setColor(Color.GREEN);
 		add(stone, 4 * ovalWidth + 10, 4 * ovalHeight + 10);
-		
+		*/
 	}
 	
 	public void actionPerformed(ActionEvent e){
 		String line = e.getActionCommand();
 		if(line.equals("right")){
 			oval.move(Width, 0);
+		}
+		if(line.equals("left")){
+			oval.move(-Width, 0);
+		}
+		if(line.equals("up")){
+			oval.move(0, Height);
+		}
+		if(line.equals("down")){
+			oval.move(0, -Height);
 		}
 	}
 
