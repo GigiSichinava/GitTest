@@ -1,6 +1,8 @@
-public class FinalsProblem05 {
+import acm.program.ConsoleProgram;
 
-    public static void main(String[] args) {
+public class FinalsProblem05 extends ConsoleProgram{
+
+    public  void run (){
         int[][] matrix = {
             {0, 0, 0, 0, 0, 1, 0, 0},
             {0, 0, 0, 0, 1, 1, 1, 0},
@@ -31,4 +33,7 @@ public class FinalsProblem05 {
                 }
             }
         }
+		return maxPlusSize - 1;
 
+    }
+}
