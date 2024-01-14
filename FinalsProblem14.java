@@ -1,33 +1,37 @@
-import acm.program.ConsoleProgram;
 import java.util.StringTokenizer;
 
+import acm.program.ConsoleProgram;
+
 public class FinalsProblem14 extends ConsoleProgram {
-    public void run() {
-        String line = readLine();
-        String longestUniqueWord = "";
-        int maxLength = 0;
+	public void run() {
 
-        StringTokenizer tokenizer = new StringTokenizer(line, " ");
-        while (tokenizer.hasMoreTokens()) {
-            String word = tokenizer.nextToken();
+		String line = readLine();
+		String result = "";
+		int maxLength = 0;
 
-            if (isUnique(word) && word.length() > maxLength) {
-                maxLength = word.length();
-                longestUniqueWord = word;
-            }
-        }
+		StringTokenizer tokenizer = new StringTokenizer(line, " ");
 
-        println("Longest unique word: " + longestUniqueWord);
-    }
+		while (tokenizer.hasMoreTokens()) {
+			String part = tokenizer.nextToken();
+			if (isUnique(part) && part.length() > maxLength) {
+				maxLength = part.length();
 
-    private boolean isUnique(String word) {
-        for (int i = 0; i < word.length(); i++) {
-            for (int j = i + 1; j < word.length(); j++) {
-                if (word.charAt(i) == word.charAt(j)) {
-                    return false; // Found a duplicate character, so word is not unique
-                }
-            }
-        }
-        return true; // No duplicate characters found
-    }
+				result = part;
+			}
+		}
+		println(result);
+	}
+
+	private boolean isUnique(String part) {
+		for (int i = 0; i < part.length(); i++) {
+			for (int j = i + 1; j < part.length(); j++) {
+				char ch1 = part.charAt(i);
+				char ch2 = part.charAt(j);
+				if (ch1 == ch2) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 }
