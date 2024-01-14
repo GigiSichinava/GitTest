@@ -81,7 +81,5 @@ public class FinalsProblem10 extends GraphicsProgram {
 			}
 			oval.move(0, Height);
 		}
-
 	}
-
 }
