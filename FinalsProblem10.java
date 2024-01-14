@@ -12,6 +12,8 @@ public class FinalsProblem10 extends GraphicsProgram {
 
 	private static final int N_ROWS = 8;
 	private static final int N_COLS = 8;
+	int Width = 600 / N_COLS;
+	int Height = 600 / N_ROWS;
 	private GOval oval;
 
 	public void init() {
@@ -54,7 +56,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 	public void actionPerformed(ActionEvent e){
 		String line = e.getActionCommand();
 		if(line.equals("right")){
-			oval.setLocation(oval.getX() / );
+			oval.move(Width, 0);
 		}
 	}
 
