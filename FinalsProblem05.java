@@ -1,39 +1,31 @@
 import acm.program.ConsoleProgram;
 
-public class FinalsProblem05 extends ConsoleProgram{
+public class FinalsProblem05 extends ConsoleProgram {
+	public void run(){
+		int[][] myMatrix = {
+			    {0b00000100},
+			    {0b00001110},
+			    {0b00100100},
+			    {0b01111111},
+			    {0b00100110},
+			    {0b00100100}
+		};
 
-    public  void run (){
-        int[][] matrix = {
-            {0, 0, 0, 0, 0, 1, 0, 0},
-            {0, 0, 0, 0, 1, 1, 1, 0},
-            {0, 0, 1, 0, 0, 1, 0, 0},
-            {0, 1, 1, 1, 1, 1, 1, 1},
-            {0, 0, 1, 0, 0, 1, 1, 0},
-            {0, 0, 1, 0, 0, 1, 0, 0}
-        };
-
-        System.out.println("Largest '+' size: " + findLargestPlus(matrix));
-    }
-
-    private static int findLargestPlus(int[][] matrix) {
-        int maxPlusSize = 0;
-        int rows = matrix.length;
-        int cols = matrix[0].length;
-
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                if (matrix[i][j] == 1) {
-                    int size = 1;
-                    while (size <= i && size <= j && size <= rows - 1 - i && size <= cols - 1 - j
-                           && matrix[i - size][j] == 1 && matrix[i + size][j] == 1
-                           && matrix[i][j - size] == 1 && matrix[i][j + size] == 1) {
-                        size++;
-                    }
-                    maxPlusSize = Math.max(maxPlusSize, size);
-                }
-            }
-        }
-		return maxPlusSize ;
-
-    }
+		int rows = myMatrix.length;
+		int cols = myMatrix[0].length;
+		int size = 0;
+		
+		for(int i = 0; i < rows; i++){
+			for(int j = 0; j < cols; j++){
+				if(myMatrix[i][j] == 1){
+					size = 1;
+					while(size <= i && size <= j && size <= cols - 1 - j && size <= rows - 1 - i && myMatrix[i - size][j] == 1 && myMatrix[i + size][j] == 1 && myMatrix[i][j - size] == 1 && myMatrix[i][j + size] == 1){
+						size++;
+					}
+				}
+			}
+		}
+		
+		println(size);
+	}
 }
