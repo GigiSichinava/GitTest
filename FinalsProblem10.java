@@ -26,10 +26,10 @@ public class FinalsProblem10 extends GraphicsProgram{
 	public void run(){
 		for(int i = 0; i < N_ROWS; i++){
 			for(int j = 0; j < N_COLS; j++){
-				int rectWidth  = getWidth() / N_COLS;
-				int rectHeight = getHeight() / N_ROWS;
+//				int rectWidth  = getWidth() / N_COLS;
+//				int rectHeight = getHeight() / N_ROWS;
 				GRect rect = new GRect(width, height);
-				add(rect, i * rectWidth, j * rectHeight);
+				add(rect, i * width, j * height);
 			}
 		}
 		
