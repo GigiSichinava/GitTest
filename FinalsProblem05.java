@@ -27,5 +27,6 @@ public class FinalsProblem05 extends ConsoleProgram {
 				}
 			}
 		}
+		println(maxPluses);
 	}
 }
