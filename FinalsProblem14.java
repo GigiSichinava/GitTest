@@ -13,15 +13,16 @@ public class FinalsProblem14 extends ConsoleProgram {
 
 		while (tokenizer.hasMoreTokens()) {
 			String part = tokenizer.nextToken();
+			// Check if the word is unique and if its length is maximum
 			if (isUnique(part) && part.length() > maxLength) {
 				maxLength = part.length();
-
 				result = part;
 			}
 		}
 		println(result);
 	}
 
+	// Check if the word is made up with unique characters
 	private boolean isUnique(String part) {
 		for (int i = 0; i < part.length(); i++) {
 			for (int j = i + 1; j < part.length(); j++) {
