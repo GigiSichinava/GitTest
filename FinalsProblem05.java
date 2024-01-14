@@ -1,15 +1,15 @@
 import acm.program.ConsoleProgram;
 
 public class FinalsProblem05 extends ConsoleProgram {
-	public void run(){
-		int[][] myMatrix = {
-			    {0b00000100},
-			    {0b00001110},
-			    {0b00100100},
-			    {0b01111111},
-			    {0b00100110},
-			    {0b00100100}
-		};
+    public void run() {
+        int[][] myMatrix = {
+            {0, 0, 0, 0, 0, 1, 0, 0},
+            {0, 0, 0, 0, 1, 1, 1, 0},
+            {0, 0, 1, 0, 0, 1, 0, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1},
+            {0, 0, 1, 0, 0, 1, 1, 0},
+            {0, 0, 1, 0, 0, 1, 0, 0}
+        };
 
 		int rows = myMatrix.length;
 		int cols = myMatrix[0].length;
