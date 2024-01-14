@@ -40,8 +40,8 @@ public class FinalsProblem10 extends GraphicsProgram {
 		oval.setColor(Color.RED);
 		add(oval, 4 * ovalWidth, 4 * ovalHeight);
 		
-		double stoneWidth = (getWidth() / N_COLS) * 0.8;
-		double stoneHeight = (getHeight() / N_ROWS) * 0.8;
+		double stoneWidth = (getWidth() / N_COLS) * 0.6;
+		double stoneHeight = (getHeight() / N_ROWS) * 0.6;
 		GRect stone = new GRect(stoneWidth, stoneHeight);
 		stone.setFilled(true);
 		stone.setColor(Color.GREEN);
