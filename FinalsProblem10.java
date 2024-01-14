@@ -31,7 +31,6 @@ public class FinalsProblem10 extends GraphicsProgram{
 			}
 		}
 		
-		GOval oval = new GOval(width, height);
 	}
 
 }
