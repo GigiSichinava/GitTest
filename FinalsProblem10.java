@@ -12,12 +12,13 @@ public class FinalsProblem10 extends GraphicsProgram {
 
 	private static final int N_ROWS = 8;
 	private static final int N_COLS = 8;
-	int Width = 600 / N_COLS;
-	int Height = 600 / N_ROWS;
+	
+	int Width = getHeight() / N_COLS;
+	int Height = getHeight() / N_ROWS;
+
 	private GOval oval;
 
 	public void init() {
-//		setSize(600, 600);
 		JLabel label = new JLabel("Move");
 		add(label, SOUTH);
 		JTextField textField = new JTextField(10);
@@ -30,14 +31,14 @@ public class FinalsProblem10 extends GraphicsProgram {
 	public void run() {
 		for (int i = 0; i < N_ROWS; i++) {
 			for (int j = 0; j < N_COLS; j++) {
-				int rectWidth = getWidth() / N_COLS;
+				int rectWidth = getHeight() / N_COLS;
 				int rectHeight = getHeight() / N_ROWS;
 				GRect rect = new GRect(rectWidth, rectHeight);
 				add(rect, j * rectWidth, i * rectHeight);
 			}
 		}
 		
-		int ovalWidth = getWidth() / N_COLS;
+		int ovalWidth = getHeight() / N_COLS;
 		int ovalHeight = getHeight() / N_ROWS;
 		oval = new GOval(ovalWidth, ovalHeight);
 		oval.setFilled(true);
