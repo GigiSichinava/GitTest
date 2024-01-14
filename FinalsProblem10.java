@@ -4,7 +4,7 @@ import javax.swing.JTextField;
 import acm.program.GraphicsProgram;
 
 public class FinalsProblem10 extends GraphicsProgram{
-	public void inti(){
+	public void init(){
 		JLabel label = new JLabel ("Move");
 		add(label, SOUTH);
 		JTextField textField = new JTextField(10);
