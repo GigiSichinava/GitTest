@@ -59,6 +59,10 @@ public class FinalsProblem10 extends GraphicsProgram {
 	}
 	
 	public void actionPerformed(ActionEvent e){
+		int Width = getHeight() / N_COLS;
+		int Height = getHeight() / N_ROWS;
+		
+		
 		String line = e.getActionCommand();
 		if(line.equals("right")){
 			oval.move(Width, 0);
