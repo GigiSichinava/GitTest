@@ -5,7 +5,7 @@ import acm.program.GraphicsProgram;
 
 public class FinalsProblem10 extends GraphicsProgram{
 	public void init(){
-		setSize(600,800);
+		setSize(600,600);
 		JLabel label = new JLabel ("Move");
 		add(label, SOUTH);
 		JTextField textField = new JTextField(10);
