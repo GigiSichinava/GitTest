@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.event.ActionEvent;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -11,6 +12,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 
 	private static final int N_ROWS = 8;
 	private static final int N_COLS = 8;
+	private GOval oval;
 
 	public void init() {
 		setSize(600, 600);
@@ -35,7 +37,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 		
 		int ovalWidth = getWidth() / N_COLS;
 		int ovalHeight = getHeight() / N_ROWS;
-		GOval oval = new GOval(ovalWidth, ovalHeight);
+		oval = new GOval(ovalWidth, ovalHeight);
 		oval.setFilled(true);
 		oval.setColor(Color.RED);
 		add(oval, 4 * ovalWidth, 4 * ovalHeight);
@@ -45,8 +47,15 @@ public class FinalsProblem10 extends GraphicsProgram {
 		GRect stone = new GRect(stoneWidth, stoneHeight);
 		stone.setFilled(true);
 		stone.setColor(Color.GREEN);
-		add(stone, 4 * ovalWidth + 10, 4 * ovalHeight + 9);
+		add(stone, 4 * ovalWidth + 10, 4 * ovalHeight + 10);
 		
+	}
+	
+	public void actionPerformed(ActionEvent e){
+		String line = e.getActionCommand();
+		if(line.equals("right")){
+			oval.setLocation(oval.getX() / );
+		}
 	}
 
 }
