@@ -9,6 +9,8 @@ public class FinalsProblem10 extends GraphicsProgram{
 	
 	private static final int N_ROWS = 8;
 	private static final int N_COLS = 8;
+	private int width = getWidth() / N_COLS;
+	private int height = getHeight() / N_ROWS;
 	
 	public void init(){
 		setSize(600,600);
