@@ -32,6 +32,7 @@ public class FinalsProblem10 extends GraphicsProgram implements ComponentListene
 		add(textField, SOUTH);
 		textField.addActionListener(this);
 
+		addComponentListener(this);
 		addActionListeners();
 		addMouseListeners();
 	}
