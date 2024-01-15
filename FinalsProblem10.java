@@ -129,7 +129,34 @@ public class FinalsProblem10 extends GraphicsProgram implements ComponentListene
 
 	@Override
 	public void componentResized(ComponentEvent e) {
-		removeAll();
+	    // Calculate new dimensions based on the resized window
+	    int width = getHeight() / N_COLS;
+	    int height = getHeight() / N_ROWS;
+
+	    // Clear all existing elements
+	    removeAll();
+
+	    // Redraw grid
+	    for (int i = 0; i < N_ROWS; i++) {
+	        for (int j = 0; j < N_COLS; j++) {
+	            rect = new GRect(j * width, i * height, width, height);
+	            add(rect);
+	        }
+	    }
+
+	    // Redraw oval
+	    oval = new GOval(4 * width, 4 * height, width, height);
+	    oval.setFilled(true);
+	    oval.setColor(Color.RED);
+	    add(oval);
+
+	    // Redraw stone
+	    double stoneWidth = width * 0.7;
+	    double stoneHeight = height * 0.7;
+	    stone = new GRect(4 * width + 8, 4 * height + 8, stoneWidth, stoneHeight);
+	    stone.setFilled(true);
+	    stone.setColor(Color.GREEN);
+	    add(stone);
 	}
 
 	@Override
