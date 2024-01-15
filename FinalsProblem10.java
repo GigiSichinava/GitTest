@@ -1,5 +1,7 @@
 import java.awt.Color;
 import java.awt.event.ActionEvent;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JLabel;
@@ -10,7 +12,7 @@ import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
-public class FinalsProblem10 extends GraphicsProgram {
+public class FinalsProblem10 extends GraphicsProgram implements ComponentListener{
 
 	private static final int N_ROWS = 8;
 	private static final int N_COLS = 8;
@@ -111,5 +113,28 @@ public class FinalsProblem10 extends GraphicsProgram {
 			add(oval, gridX, gridY);
 			add(stone, gridX + 8,gridY + 8);
 		}
+	}
+
+	@Override
+	public void componentHidden(ComponentEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void componentMoved(ComponentEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void componentResized(ComponentEvent e) {
+		removeAll();
+	}
+
+	@Override
+	public void componentShown(ComponentEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
