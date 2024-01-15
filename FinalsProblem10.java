@@ -130,7 +130,8 @@ public class FinalsProblem10 extends GraphicsProgram implements ComponentListene
 
 	@Override
 	public void componentResized(ComponentEvent e) {
-	    // Calculate new dimensions based on the resized window
+	   
+		// Calculate new dimensions based on the resized window
 	    int width = getHeight() / N_COLS;
 	    int height = getHeight() / N_ROWS;
 
@@ -154,7 +155,7 @@ public class FinalsProblem10 extends GraphicsProgram implements ComponentListene
 	    // Redraw stone
 	    double stoneWidth = width * 0.7;
 	    double stoneHeight = height * 0.7;
-	    stone = new GRect(4 * width + 8, 4 * height + 8, stoneWidth, stoneHeight);
+	    stone = new GRect(4 * width + width * 0.2, 4 * height + width * 0.2, stoneWidth, stoneHeight);
 	    stone.setFilled(true);
 	    stone.setColor(Color.GREEN);
 	    add(stone);
