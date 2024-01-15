@@ -18,6 +18,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 
 	private JTextField textField;
 	private GOval oval;
+	private GRect stone;
 
 	public void init() {
 		JLabel label = new JLabel("Move");
@@ -47,12 +48,14 @@ public class FinalsProblem10 extends GraphicsProgram {
 		oval.setColor(Color.RED);
 		add(oval, 4 * ovalWidth, 4 * ovalHeight);
 
-		/*
-		 * double stoneWidth = (getWidth() / N_COLS) * 0.7; double stoneHeight =
-		 * (getHeight() / N_ROWS) * 0.7; GRect stone = new GRect(stoneWidth,
-		 * stoneHeight); stone.setFilled(true); stone.setColor(Color.GREEN);
-		 * add(stone, 4 * ovalWidth + 10, 4 * ovalHeight + 10);
-		 */
+		
+		 double stoneWidth = (getWidth() / N_COLS) * 0.7;
+		 double stoneHeight = (getHeight() / N_ROWS) * 0.7; 
+		 stone = new GRect(stoneWidth,  stoneHeight);
+		 stone.setFilled(true); 
+		 stone.setColor(Color.GREEN);
+		 add(stone, 4 * ovalWidth + 10, 4 * ovalHeight + 10);
+		 
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -65,21 +68,25 @@ public class FinalsProblem10 extends GraphicsProgram {
 				return;
 			}
 			oval.move(Width, 0);
+			stone.move(Width,  0);
 		} else if (line.equals("left")) {
 			if (oval.getX() < Width) {
 				return;
 			}
 			oval.move(-Width, 0);
+			stone.move(-Width, 0);
 		} else if (line.equals("up")) {
 			if (oval.getY() < Height) {
 				return;
 			}
 			oval.move(0, -Height);
+			stone.move(0, -Height);
 		} else if (line.equals("down")) {
 			if (oval.getY() > 6 * Height) {
 				return;
 			}
 			oval.move(0, Height);
+			stone.move(0, Height);
 		}
 	}
 }
