@@ -23,6 +23,8 @@ public class FinalsProblem10 extends GraphicsProgram {
 	private GRect stone;
 	private GRect rect;
 	
+	private boolean isRemoved = false;
+	
 	public void init() {
 		JLabel label = new JLabel("Move");
 		add(label, SOUTH);
@@ -96,21 +98,22 @@ public class FinalsProblem10 extends GraphicsProgram {
 	
 	
 	public void mouseClicked(MouseEvent e) {
-	    GObject obj = getElementAt(e.getX(), e.getY());
-	    int curX = (e.getX() / Width) * Width;
-	    int curY = (e.getY() / Height) * Height;
+		GObject obj = getElementAt(e.getX(), e.getY());
+		if (obj == oval || obj == stone && !isRemoved) {
+			remove(oval);
+			remove(stone);
+			isRemoved = true;
+		} else {
 
-	    if (obj == oval || obj == stone) {
-	        // Calculate the new positions, aligning to the center of the grid cell
-	        double newOvalX = curX + Width / 2 - oval.getWidth() / 2;
-	        double newOvalY = curY + Height / 2 - oval.getHeight() / 2;
+			int rectWidth = getHeight() / N_COLS;
+			int rectHeight = getHeight() / N_ROWS;
 
-	        double newStoneX = curX + Width / 2 - stone.getWidth() / 2;
-	        double newStoneY = curY + Height / 2 - stone.getHeight() / 2;
+			int gridX = (e.getX() / rectWidth) * rectWidth;
+			int gridY = (e.getY() / rectHeight) * rectHeight;
 
-	        // Set the new locations
-	        oval.setLocation(newOvalX, newOvalY);
-	        stone.setLocation(newStoneX, newStoneY);
-	    }
+			add(oval, gridX, gridY);
+			add(stone, gridX, gridY);
+			isRemoved = false;
+		}
 	}
 }
