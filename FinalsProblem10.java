@@ -99,10 +99,10 @@ public class FinalsProblem10 extends GraphicsProgram {
 	
 	public void mouseClicked(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
-		if (obj == oval || obj == stone && !isRemoved) {
+		if (obj == oval || obj == stone ) {
 			remove(oval);
 			remove(stone);
-			isRemoved = true;
+//			isRemoved = true;
 		} else {
 
 			int rectWidth = getHeight() / N_COLS;
@@ -113,7 +113,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 
 			add(oval, gridX, gridY);
 			add(stone, gridX, gridY);
-			isRemoved = false;
+//			isRemoved = false;
 		}
 	}
 }
