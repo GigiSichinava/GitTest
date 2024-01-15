@@ -104,7 +104,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 			remove(stone);
 			
 			add(oval, curX, curY);
-			add(stone, curX, curY);a
+			add(stone, curX, curY);
 			
 		}
 	}
