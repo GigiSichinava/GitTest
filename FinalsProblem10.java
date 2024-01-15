@@ -21,6 +21,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 	private JTextField textField;
 	private GOval oval;
 	private GRect stone;
+	private GRect rect;
 	
 	public void init() {
 		JLabel label = new JLabel("Move");
@@ -39,7 +40,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 			for (int j = 0; j < N_COLS; j++) {
 				int rectWidth = getHeight() / N_COLS;
 				int rectHeight = getHeight() / N_ROWS;
-				GRect rect = new GRect(rectWidth, rectHeight);
+				rect = new GRect(rectWidth, rectHeight);
 				add(rect, j * rectWidth, i * rectHeight);
 			}
 		}
@@ -99,7 +100,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 		int curX = (e.getX() / Width) * Width;
 		int curY = (e.getY() / Height) * Height;
 		
-		if(obj == stone || obj == oval){
+		if(obj == rect){
 			
 			
 			 oval.setLocation(curX, curY);
