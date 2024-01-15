@@ -21,6 +21,8 @@ public class FinalsProblem10 extends GraphicsProgram {
 	private JTextField textField;
 	private GOval oval;
 	private GRect stone;
+	
+	private boolean isRemoved = false;
 
 	public void init() {
 		JLabel label = new JLabel("Move");
@@ -93,9 +95,13 @@ public class FinalsProblem10 extends GraphicsProgram {
 		}
 	}
 	
+	
 	public void mouseClicked(MouseEvent e){
 		GObject obj = getElementAt(e.getX(), e.getY());
-		
+		if (obj == oval || obj == stone && !isRemoved) {
+			remove(oval);
+			isRemoved = true;
+		} else {
 		int curX = (e.getX() / Width) * Width;
 		int curY = (e.getY() / Height) * Height;
 		
@@ -105,7 +111,9 @@ public class FinalsProblem10 extends GraphicsProgram {
 			
 			add(oval, curX, curY);
 			add(stone, curX, curY);
-			
+			isRemoved = false;
+
 		}
 	}
-}
+	}
+	}
