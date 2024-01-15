@@ -105,8 +105,8 @@ public class FinalsProblem10 extends GraphicsProgram {
 			int rectWidth = getHeight() / N_COLS;
 			int rectHeight = getHeight() / N_ROWS;
 
-			int gridX = (e.getX() / Width) * Width;
-			int gridY = (e.getY() / Height) * Height;
+			int gridX = (e.getX() / rectWidth) * rectWidth;
+			int gridY = (e.getY() / rectHeight) * rectHeight;
 
 			add(oval, gridX, gridY);
 			add(stone, gridX, gridY);
