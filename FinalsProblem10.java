@@ -1,9 +1,11 @@
 import java.awt.Color;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
@@ -28,6 +30,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 		textField.addActionListener(this);
 
 		addActionListeners();
+		addMouseListeners();
 	}
 
 	public void run() {
@@ -87,6 +90,22 @@ public class FinalsProblem10 extends GraphicsProgram {
 			}
 			oval.move(0, Height);
 			stone.move(0, Height);
+		}
+	}
+	
+	public void mouseClicked(MouseEvent e){
+		GObject obj = getElementAt(e.getX(), e.getY());
+		
+		int curX = (e.getX() / Width) * Width;
+		int curY = (e.getY() / Height) * Height;
+		
+		if(obj == oval || obj == stone)	{
+			remove(oval);
+			remove(stone);
+			
+			add(oval, curX, curY);
+			add(stone, curX, curY);a
+			
 		}
 	}
 }
