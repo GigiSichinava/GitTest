@@ -109,7 +109,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 			int gridY = (e.getY() / rectHeight) * rectHeight;
 
 			add(oval, gridX, gridY);
-			add(stone, gridX, gridY);
+			add(stone, gridX + 8,gridY + 8);
 		}
 	}
 }
