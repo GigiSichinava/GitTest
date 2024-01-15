@@ -102,11 +102,11 @@ public class FinalsProblem10 extends GraphicsProgram {
 			remove(stone);
 		} else {
 
-			int rectWidth = getHeight() / N_COLS;
-			int rectHeight = getHeight() / N_ROWS;
+			int width = getHeight() / N_COLS;
+			int height = getHeight() / N_ROWS;
 
-			int gridX = (e.getX() / rectWidth) * rectWidth;
-			int gridY = (e.getY() / rectHeight) * rectHeight;
+			int gridX = (e.getX() / width) * width;
+			int gridY = (e.getY() / height) * height;
 
 			add(oval, gridX, gridY);
 			add(stone, gridX + 8,gridY + 8);
