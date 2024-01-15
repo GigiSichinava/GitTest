@@ -95,14 +95,22 @@ public class FinalsProblem10 extends GraphicsProgram {
 	}
 	
 	
-	public void mouseClicked(MouseEvent e){
-		GObject obj = getElementAt(e.getX(), e.getY());
-		int curX = (e.getX() / Width) * Width;
-		int curY = (e.getY() / Height) * Height;
-		
-		if(obj == rect){
-		 oval.setLocation(curX, curY);
-	     stone.setLocation(curX, curY);
-		}
+	public void mouseClicked(MouseEvent e) {
+	    GObject obj = getElementAt(e.getX(), e.getY());
+	    int curX = (e.getX() / Width) * Width;
+	    int curY = (e.getY() / Height) * Height;
+
+	    if (obj == oval || obj == stone) {
+	        // Calculate the new positions, aligning to the center of the grid cell
+	        double newOvalX = curX + Width / 2 - oval.getWidth() / 2;
+	        double newOvalY = curY + Height / 2 - oval.getHeight() / 2;
+
+	        double newStoneX = curX + Width / 2 - stone.getWidth() / 2;
+	        double newStoneY = curY + Height / 2 - stone.getHeight() / 2;
+
+	        // Set the new locations
+	        oval.setLocation(newOvalX, newOvalY);
+	        stone.setLocation(newStoneX, newStoneY);
+	    }
 	}
 }
