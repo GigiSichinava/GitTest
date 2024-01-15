@@ -101,10 +101,8 @@ public class FinalsProblem10 extends GraphicsProgram {
 		int curY = (e.getY() / Height) * Height;
 		
 		if(obj == rect){
-			
-			
-			 oval.setLocation(curX, curY);
-		     stone.setLocation(curX, curY);
+		 oval.setLocation(curX, curY);
+	     stone.setLocation(curX, curY);
 		}
 	}
 }
