@@ -49,7 +49,7 @@ public class FinalsProblem10 extends GraphicsProgram {
 		add(oval, 4 * ovalWidth, 4 * ovalHeight);
 
 		
-		 double stoneWidth = (getWidth() / N_COLS) * 0.7;
+		 double stoneWidth = (getHeight() / N_COLS) * 0.7;
 		 double stoneHeight = (getHeight() / N_ROWS) * 0.7; 
 		 stone = new GRect(stoneWidth,  stoneHeight);
 		 stone.setFilled(true); 
