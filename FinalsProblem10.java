@@ -155,7 +155,7 @@ public class FinalsProblem10 extends GraphicsProgram implements ComponentListene
 	    // Redraw stone
 	    double stoneWidth = width * 0.7;
 	    double stoneHeight = height * 0.7;
-	    stone = new GRect(4 * width + width * 0.2, 4 * height + width * 0.2, stoneWidth, stoneHeight);
+	    stone = new GRect(4 * width + width * 0.15, 4 * height + width * 0.15, stoneWidth, stoneHeight);
 	    stone.setFilled(true);
 	    stone.setColor(Color.GREEN);
 	    add(stone);
