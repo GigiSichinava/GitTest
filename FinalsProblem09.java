@@ -19,8 +19,9 @@ public class FinalsProblem09 extends ConsoleProgram{
 				if(myMatrix[j][i] >= currInt){
 					currInt = myMatrix[i][j];
 				}
-				myMatrix[cols -1 ][rows - 1] = currInt;
 			}
+			myMatrix[cols -1 ][rows - 1] = currInt;
+
 			
 		}
 		
