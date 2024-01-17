@@ -14,13 +14,15 @@ public class FinalsProblem09 extends ConsoleProgram{
 		int rows = myMatrix.length;
 		
 		for(int i = 0; i < cols; i++){
-			int currInt = myMatrix[0][i];
 			for(int j = 0; j < rows; j++){
+				int currInt = myMatrix[0][i];
+
 				if(myMatrix[j][i] >= currInt){
 					currInt = myMatrix[i][j];
 				}
+				myMatrix[cols -1 ][rows - 1] = currInt;
+
 			}
-			myMatrix[cols -1 ][rows - 1] = currInt;
 
 			
 		}
