@@ -11,7 +11,7 @@ public class Final2022Session1Compress extends ConsoleProgram{
 		String result = "";
 		
 		for(int i = 1; i < line.length(); i++){
-			char firstChar = line.charAt(0);
+			char firstChar = line.charAt(i);
 			int count = 1;
 			if(firstChar == line.charAt(i)){
 				count++;
@@ -20,6 +20,7 @@ public class Final2022Session1Compress extends ConsoleProgram{
 				result += count;
 				result += line.charAt(i);
 			}
+			
 			
 		}
 		
