@@ -23,6 +23,11 @@ public class FinalsProblem09 extends ConsoleProgram{
 			myMatrix[cols -1 ][rows - 1] = currInt;
 		}
 		
-		System.out.print(myMatrix);
+		 for (int[] row : myMatrix) {
+	            for (int value : row) {
+	                System.out.print(value + " ");
+	            }
+	            System.out.println();
+	        }
 	}
 }
