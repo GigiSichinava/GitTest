@@ -9,9 +9,9 @@ public class Final2022Session1Compress extends ConsoleProgram{
 		println(expected);
 		
 		String result = "";
-		
+		int count = 1;
+
 		for(int i = 1; i < line.length(); i++){
-			int count = 1;
 			if(line.charAt(i - 1) != line.charAt(i)){
 				result += line.charAt(i - 1);
 				result += count;
