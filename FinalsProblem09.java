@@ -14,16 +14,15 @@ public class FinalsProblem09 extends ConsoleProgram{
 		int rows = myMatrix.length;
 		
 		for(int i = 0; i < cols; i++){
+			int maxInColumn = myMatrix[0][i];
+
 			for(int j = 0; j < rows; j++){
-				int currInt = myMatrix[j][i];
 
-				if(myMatrix[j][i] >= currInt){
-					currInt = myMatrix[i][j];
+				if(myMatrix[j][i] >= maxInColumn){			
+					maxInColumn = myMatrix[i][j];
 				}
-				myMatrix[j ][cols - 1] = currInt;
-
 			}
-
+			myMatrix[rows - 1][i] = maxInColumn;
 			
 		}
 		
