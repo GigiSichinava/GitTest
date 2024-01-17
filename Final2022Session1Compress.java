@@ -16,7 +16,7 @@ public class Final2022Session1Compress extends ConsoleProgram{
 				result += line.charAt(i - 1);
 				result += count;
 
-			}else if(line.charAt(i - 1) == line.charAt(i)){
+			}else{
 				count++;
 			}
 			
