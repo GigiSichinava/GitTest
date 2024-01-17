@@ -14,13 +14,13 @@ public class Final2022Session1Compress extends ConsoleProgram{
 			char ch = line.charAt(0);
 			int count = 1;
 			if(ch != line.charAt(i)){
-				result += ch;
-				result += count;
+//				result += ch;
+//				result += count;
 
 			}else if(ch == line.charAt(i)){
 				count++;
-//				result += ch;
-//				result += count;
+				result += ch;
+				result += count;
 			}
 			ch = line.charAt(i);
 		}
