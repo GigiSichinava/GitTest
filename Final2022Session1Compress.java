@@ -22,7 +22,6 @@ public class Final2022Session1Compress extends ConsoleProgram{
 			}
 			
 	        result += line.charAt(line.length() - 1);
-	        result += count;
 
 			
 		}
