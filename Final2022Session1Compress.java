@@ -20,8 +20,8 @@ public class Final2022Session1Compress extends ConsoleProgram{
 			}else{
 				count++;
 			}
-			
-//	        result += line.charAt(line.length() - 1);
+			result += line.charAt(line.length() - 1);
+	        result += count;
 
 			
 		}
