@@ -16,7 +16,7 @@ public class FinalsProblem09 extends ConsoleProgram{
 		for(int i = 0; i < cols; i++){
 			int maxInColumn = myMatrix[0][i];
 
-			for(int j = 0; j < rows; j++){
+			for(int j = 1; j < rows - 1; j++){
 
 				if(myMatrix[j][i] >= maxInColumn){			
 					maxInColumn = myMatrix[i][j];
