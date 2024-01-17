@@ -26,6 +26,16 @@ public class FinalsProblem09 extends ConsoleProgram{
 			
 		}
 		
+		int lastRow = myMatrix.length - 1;
+		
+		for(int col = 0; col < cols; col++){
+			int curInt = myMatrix[lastRow][col];
+			if(myMatrix[lastRow][col] >= curInt){
+				curInt = myMatrix[lastRow][col];
+			}
+			myMatrix[lastRow][myMatrix[0].length - 1] = curInt;
+		}
+		
 		 for (int[] row : myMatrix) {
 	            for (int value : row) {
 	                System.out.print(value + " ");
