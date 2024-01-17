@@ -4,7 +4,7 @@ public class FinalsProblem09 extends ConsoleProgram {
 	public void run() {
 
 		int[][] myMatrix = {
-				{3, 5, 4, 0},
+				{3, 5, 9, 0},
 				{4, 6, 7, 0},
 				{1, 3, 8, 0},
 				{0, 0, 0, 0},
