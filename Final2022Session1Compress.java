@@ -11,18 +11,18 @@ public class Final2022Session1Compress extends ConsoleProgram{
 		String result = "";
 		
 		for(int i = 1; i < line.length(); i++){
-			char firstChar = line.charAt(i);
+			char ch = line.charAt(0);
 			int count = 1;
-			if(firstChar == line.charAt(i)){
-				count++;
-				
-			}else{
-				count = 1;
+			result += ch;
+			if(ch != line.charAt(i)){
 				result += count;
-				result += line.charAt(i);
+				result += ch;
+			}else if(ch == line.charAt(i)){
+				count++;
+				result += count;
+				result += ch;
 			}
-			
-			
+			ch = line.charAt(i);
 		}
 		
 		println(result);
