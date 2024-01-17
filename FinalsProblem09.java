@@ -15,7 +15,7 @@ public class FinalsProblem09 extends ConsoleProgram{
 		
 		for(int i = 0; i < cols; i++){
 			for(int j = 0; j < rows; j++){
-				int currInt = myMatrix[0][i];
+				int currInt = myMatrix[j][i];
 
 				if(myMatrix[j][i] >= currInt){
 					currInt = myMatrix[i][j];
