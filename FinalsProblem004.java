@@ -50,10 +50,10 @@ public class FinalsProblem004 extends GraphicsProgram{
 			int vx = RED_Vx;
 			int vy = RED_Vy;
 			
-			redOval.move(vx, vy);
+			blueOval.move(vx, vy);
 			pause(10);
 			
-			if(redOval.getX() + 2 * R < getWidth()){
+			if(blueOval.getX() + 2 * R < getWidth()){
 				vx = -vx;
 			}
 		}
