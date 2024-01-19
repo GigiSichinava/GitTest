@@ -47,9 +47,12 @@ public class FinalsProblem004 extends GraphicsProgram{
 	
 	public void run(){
 		while(true){
-			pause(50);
-			int vx = 10;
-			redOval.move(vx, RED_Vy);
+			int vx = RED_Vx;
+			int vy = RED_Vy;
+			
+			redOval.move(vx, vy);
+			pause(10);
+			
 			if(redOval.getX() + 2 * R > getWidth()){
 				vx = -vx;
 			}
