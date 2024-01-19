@@ -22,7 +22,7 @@ public class FinalsProblem004 extends GraphicsProgram{
 	private static final int RED_Vy = 0;
 	private static final int RED_Vx = 10;
 	private static final int BLUE_Vy = 10;
-	private static final int BLUE_Vx = 0;
+	private static final int c = 0;
 	
 	public void init(){
 		
@@ -46,8 +46,14 @@ public class FinalsProblem004 extends GraphicsProgram{
 	}
 	
 	public void run(){
-		pause(50);
-		redOval.move(RED_Vy, RED_Vx);
+		while(redOval.getY() < getHeight()){
+			pause(50);
+			redOval.move(RED_Vy, RED_Vx);
+		}
+		while(blueOval.getX() < getWidth()){
+			pause(50);
+			blueOval.move(BLUE_Vy, RED_Vx);
+		}
 	}
 	
 	public void actionPerformed(ActionEvent e){
