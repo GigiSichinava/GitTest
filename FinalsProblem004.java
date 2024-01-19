@@ -46,18 +46,11 @@ public class FinalsProblem004 extends GraphicsProgram{
 	}
 	
 	public void run(){
-		while(redOval.getX() < getWidth()){
-			pause(50);
-			redOval.move(RED_Vx, RED_Vy);
-			if(redOval.getX() + 2 * R > getWidth()){
+		while(true){
+			if(redOval.getX() + 2 * R < getWidth()){
+				redOval.move(RED_Vx, RED_Vy);
+			}else{
 				redOval.move(-RED_Vx, RED_Vy);
-			}
-		}
-		while(blueOval.getY() < getHeight()){
-			pause(50);
-			blueOval.move(BLUE_Vx, BLUE_Vy);
-			if(blueOval.getY() > getHeight()){
-				redOval.move(RED_Vx, -RED_Vy);
 			}
 		}
 		
