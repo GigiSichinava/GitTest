@@ -18,6 +18,9 @@ public class FinalsProblem004 extends GraphicsProgram{
 	private GOval redOval;
 	private GOval blueOval;
 	
+	private static final int RED_Vy = 0;
+	private static final int BLUE_Vx = 0;
+	
 	public void init(){
 		
 		buttonUp = new JButton("Up");
