@@ -46,7 +46,7 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		Add = new JButton("Add");
 		add(Add, SOUTH);
 		
-		addActionListeners();
+		addActionListeners(this);
 	}
 	
 	public void ActionPerformed(ActionEvent e){
