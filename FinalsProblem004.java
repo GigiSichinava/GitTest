@@ -1,8 +1,10 @@
 import java.awt.Color;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
 
+import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
@@ -18,6 +20,7 @@ public class FinalsProblem004 extends GraphicsProgram{
 	
 	private GOval redOval;
 	private GOval blueOval;
+	private GObject obj;
 	
 	private int RED_Vx = 2;
 	private int RED_Vy = 0;
@@ -42,7 +45,8 @@ public class FinalsProblem004 extends GraphicsProgram{
 		blueOval.setColor(Color.BLUE);
 		add(blueOval);
 		
-		addActionListeners();
+		addActionListeners(this);
+		addMouseListeners();
 	}
 	
 	public void run(){
@@ -72,6 +76,16 @@ public class FinalsProblem004 extends GraphicsProgram{
 	}
 	
 	public void actionPerformed(ActionEvent e){
-		
+		String line = e.getActionCommand();
+		if(line.equals("UP")){
+			
+		}
+	}
+	
+	public void mouseClicked(MouseEvent e){
+		obj = getElementAt(e.getX(), e.getY());
+		if(obj == redOval){
+			RED_Vx = -RED_Vx;
+		}
 	}
 }
