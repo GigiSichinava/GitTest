@@ -1,16 +1,20 @@
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
 import java.util.HashMap;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import acm.graphics.GObject;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 public class FinalsProblemRectangles extends GraphicsProgram{
 	
 	private HashMap<String, GRect> rectMap;
+	private GObject obj;
+	private GRect rect;
 	
 	private JLabel nameLabel;
 	private JTextField nameTextField;
@@ -50,6 +54,7 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		add(Add, SOUTH);
 		
 		addActionListeners(this);
+		addMouseListeners();
 		
 		rectMap = new HashMap<>();
 		
@@ -66,12 +71,15 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		
 		
 		if(line.equals("Add") && !rectMap.containsKey(name)){
-			GRect rect = new GRect(xCoordinate, yCoordinate, width, height);
+			rect = new GRect(xCoordinate, yCoordinate, width, height);
 			add(rect);
 			rectMap.put(name, rect);
 
 		}
-		
+	}
+	
+	public void mouseClicked(MouseEvent e){
+		obj = getElementAt(e.getX(), e.getY());
 		
 	}
 	
