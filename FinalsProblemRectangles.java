@@ -59,7 +59,7 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		String line = e.getActionCommand();
 		
 		int xCoordinate = Integer.parseInt(xTextField.getText());
-		int yCoordinate = Integer.parseInt(widthTextField.getText());
+		int yCoordinate = Integer.parseInt(yTextField.getText());
 		int width = Integer.parseInt(widthTextField.getText());
 		int height = Integer.parseInt(heightTextField.getText());
 		String name = nameTextField.getText();
