@@ -22,7 +22,7 @@ public class FinalsProblemRearrange extends ConsoleProgram{
 			int length = part.length();
 		
 			if(stringMap.containsKey(length)){
-				stringMap.put(length + 1, part);
+				stringMap.put(length, stringMap.get(length) + " " + part);
 			}else{
 				stringMap.put(length, part);
 			}
