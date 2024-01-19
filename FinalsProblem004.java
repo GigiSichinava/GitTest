@@ -19,10 +19,10 @@ public class FinalsProblem004 extends GraphicsProgram{
 	private GOval redOval;
 	private GOval blueOval;
 	
-	private static final int RED_Vy = 0;
 	private static final int RED_Vx = 10;
+	private static final int RED_Vy = 0;
+	private static final int BLUE_Vx = 0;
 	private static final int BLUE_Vy = 10;
-	private static final int c = 0;
 	
 	public void init(){
 		
@@ -46,13 +46,20 @@ public class FinalsProblem004 extends GraphicsProgram{
 	}
 	
 	public void run(){
-		while(redOval.getY() < getHeight()){
+		while(redOval.getX() < getWidth()){
 			pause(50);
-			redOval.move(RED_Vy, RED_Vx);
+			redOval.move(RED_Vx, RED_Vy);
+			if(redOval.getY() > getHeight()){
+				redOval.move(-RED_Vx, RED_Vy);
+			}
 		}
-		while(blueOval.getX() < getWidth()){
+		while(blueOval.getY() < getHeight()){
 			pause(50);
-			blueOval.move(BLUE_Vy, RED_Vx);
+			blueOval.move(BLUE_Vx, BLUE_Vy);
+			if(blueOval.getY() > getHeight()){
+				redOval.move(RED_Vx, -RED_Vy);
+			}
+		}
 		}
 	}
 	
