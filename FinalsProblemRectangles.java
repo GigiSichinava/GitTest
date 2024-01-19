@@ -49,7 +49,7 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		addActionListeners(this);
 	}
 	
-	public void ActionPerformed(ActionEvent e){
+	public void actionPerformed(ActionEvent e){
 		String line = e.getActionCommand();
 		
 		int xCoordinate = Integer.parseInt(xTextField.getText());
