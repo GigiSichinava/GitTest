@@ -14,7 +14,7 @@ public class FinalsProblem004 extends GraphicsProgram{
 	private JButton buttonUp;
 	private JButton buttonDown;
 	
-	private static final int R = 50;
+	private static final int R = 40;
 	
 	private GOval redOval;
 	private GOval blueOval;
