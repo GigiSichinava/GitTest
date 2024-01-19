@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
 
@@ -19,6 +20,8 @@ public class FinalsProblem004 extends GraphicsProgram{
 	private GOval blueOval;
 	
 	private static final int RED_Vy = 0;
+	private static final int RED_Vx = 10;
+	private static final int BLUE_Vy = 10;
 	private static final int BLUE_Vx = 0;
 	
 	public void init(){
@@ -38,5 +41,16 @@ public class FinalsProblem004 extends GraphicsProgram{
 		blueOval.setFilled(true);
 		blueOval.setColor(Color.BLUE);
 		add(blueOval);
+		
+		addActionListeners();
+	}
+	
+	public void run(){
+		pause(50);
+		redOval.move(RED_Vy, RED_Vx);
+	}
+	
+	public void actionPerformed(ActionEvent e){
+		
 	}
 }
