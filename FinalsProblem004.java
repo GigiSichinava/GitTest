@@ -78,16 +78,32 @@ public class FinalsProblem004 extends GraphicsProgram{
 	public void actionPerformed(ActionEvent e){
 		String line = e.getActionCommand();
 		if(line.equals("Up") && obj == redOval){
-			RED_Vx++;
+			if (RED_Vx > 0) {
+			    RED_Vx++;
+			} else {
+			    RED_Vx--;
+			}
 		}
 		if(line.equals("Up") && obj == blueOval){
-			BLUE_Vy++;
+			if (BLUE_Vy > 0) {
+				BLUE_Vy++;
+			} else {
+				BLUE_Vy--;
+			}		
 		}
 		if(line.equals("Down") && obj == redOval){
-			RED_Vx--;
+			if (RED_Vx > 0) {
+			    RED_Vx--;
+			} else {
+			    RED_Vx++;
+			}
 		}
 		if(line.equals("Down") && obj == blueOval){
-			BLUE_Vy--;
+			if (BLUE_Vy > 0) {
+				BLUE_Vy--;
+			} else {
+				BLUE_Vy++;
+			}	
 		}
 	}
 	
