@@ -1,4 +1,46 @@
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
-public class FinalsProblemRectangles {
+import acm.program.GraphicsProgram;
 
+public class FinalsProblemRectangles extends GraphicsProgram{
+	
+	private JLabel nameLabel;
+	private JTextField nameTextField;
+	private JLabel x;
+	private JTextField xTextField;
+	private JLabel y;
+	private JTextField yTextField;
+	private JLabel width;
+	private JTextField widthTextField;
+	private JLabel height;
+	private JTextField heightTextField;
+	private JButton Add;
+	
+	
+	public void init(){
+		nameLabel = new JLabel("Name: ");
+		add(nameLabel, SOUTH);
+		nameTextField = new JTextField(10);
+		add(nameTextField, SOUTH);
+		x = new JLabel("X: ");
+		add(x, SOUTH);
+		xTextField = new JTextField(10);
+		add(xTextField, SOUTH);
+		y = new JLabel("Y: ");
+		add(y, SOUTH);
+		yTextField = new JTextField(10);
+		add(yTextField, SOUTH);
+		width = new JLabel("Width: ");
+		add(width, SOUTH);
+		widthTextField = new JTextField(10);
+		add(widthTextField, SOUTH);
+		height = new JLabel("Height: ");
+		add(height, SOUTH);
+		heightTextField = new JTextField(10);
+		add(heightTextField, SOUTH);
+		Add = new JButton("Add");
+		add(Add, SOUTH);
+	}
 }
