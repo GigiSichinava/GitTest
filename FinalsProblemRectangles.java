@@ -61,13 +61,16 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		int height = Integer.parseInt(heightTextField.getText());
 		String name = nameTextField.getText();
 		
-		if(line.equals("Add")){
+		rectMap = new HashMap<>();
+		
+		if(line.equals("Add") && !rectMap.containsKey(name)){
 			GRect rect = new GRect(xCoordinate, yCoordinate, width, height);
 			add(rect);
-			
-			rectMap = new HashMap<>();
 			rectMap.put(name, rect);
+
 		}
+		
+		
 	}
 	
 	
