@@ -9,7 +9,7 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class FinalsProblem004 extends GraphicsProgram {
+public class FinalsProblemTwoBalls extends GraphicsProgram {
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
