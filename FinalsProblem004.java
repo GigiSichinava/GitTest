@@ -19,10 +19,10 @@ public class FinalsProblem004 extends GraphicsProgram{
 	private GOval redOval;
 	private GOval blueOval;
 	
-	private int RED_Vx = 5;
+	private int RED_Vx = 2;
 	private int RED_Vy = 0;
 	private int BLUE_Vx = 0;
-	private int BLUE_Vy = 5;
+	private int BLUE_Vy = 2;
 	
 	public void init(){
 		
@@ -52,7 +52,7 @@ public class FinalsProblem004 extends GraphicsProgram{
 			redOval.move(RED_Vx, RED_Vy);
 			blueOval.move(BLUE_Vx, BLUE_Vy);
 
-			pause(10);
+			pause(5);
 			
 			if(redOval.getX() + 2 * R > getWidth()){
 				RED_Vx = -RED_Vx;
