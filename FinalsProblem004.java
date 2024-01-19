@@ -33,7 +33,7 @@ public class FinalsProblem004 extends GraphicsProgram{
 		
 		redOval = new GOval(rgen.nextInt(0, getWidth() - 2 * R), rgen.nextInt(0, getHeight() - 2 * R), 2 * R, 2 * R);
 		redOval.setFilled(true);
-		redOval.setColor(Color.RED);
+		redOval.setColor(Color.BLUE);
 		add(redOval);
 	}
 }
