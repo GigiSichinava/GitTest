@@ -50,6 +50,9 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		add(Add, SOUTH);
 		
 		addActionListeners(this);
+		
+		rectMap = new HashMap<>();
+		
 	}
 	
 	public void actionPerformed(ActionEvent e){
@@ -61,7 +64,6 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		int height = Integer.parseInt(heightTextField.getText());
 		String name = nameTextField.getText();
 		
-		rectMap = new HashMap<>();
 		
 		if(line.equals("Add") && !rectMap.containsKey(name)){
 			GRect rect = new GRect(xCoordinate, yCoordinate, width, height);
