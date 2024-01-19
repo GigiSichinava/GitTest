@@ -52,7 +52,7 @@ public class FinalsProblem004 extends GraphicsProgram{
 			redOval.move(RED_Vx, RED_Vy);
 			pause(10);
 			
-			if(redOval.getX() + 2 * R < getWidth()){
+			if(redOval.getX() + 2 * R > getWidth()){
 				RED_Vx = -RED_Vx;
 			}
 		}
