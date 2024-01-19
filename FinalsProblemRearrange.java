@@ -29,11 +29,12 @@ public class FinalsProblemRearrange extends ConsoleProgram{
 				stringMap.put(length, part);
 			}
 		
-		for(String find : stringMap.values()){
-			result += find;
-		}
-		
-		}
+			for (String value : stringMap.values()) {
+	            if (!result.isEmpty()) {
+	                result += " ";
+	            }
+	            result += value;
+	        }
 		println(result);
 	}
 }
