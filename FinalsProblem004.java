@@ -24,7 +24,7 @@ public class FinalsProblem004 extends GraphicsProgram{
 		buttonDown = new JButton("Down");
 		add(buttonDown, SOUTH);
 		
-		redOval = new GOval(2 * R, 2 * R, rgen.nextInt(0, getWidth() - 2 * R), 10);
+		redOval = new GOval(rgen.nextInt(0, getWidth() - 2 * R), rgen.nextInt(0, getHeight() - 2 * R), 2 * R, 2 * R);
 		add(redOval);
 		
 		
