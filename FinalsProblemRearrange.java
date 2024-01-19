@@ -28,14 +28,13 @@ public class FinalsProblemRearrange extends ConsoleProgram{
 			}else{
 				stringMap.put(length, part);
 			}
-		
-			for (String value : stringMap.values()) {
-	            if (!result.isEmpty()) {
-	                result += " ";
-	            }
-	            result += value;
-	        }
 		}
+		
+		for(String find : stringMap.values()){
+			result += find;
+		}
+		
+		
 		println(result);
 	}
 }
