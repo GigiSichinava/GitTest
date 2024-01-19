@@ -1,4 +1,5 @@
 import java.awt.event.ActionEvent;
+import java.util.HashMap;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -8,6 +9,8 @@ import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 public class FinalsProblemRectangles extends GraphicsProgram{
+	
+	private HashMap<String, GRect> rectMap;
 	
 	private JLabel nameLabel;
 	private JTextField nameTextField;
@@ -59,8 +62,13 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		String name = nameTextField.getText();
 		
 		if(line.equals("Add")){
-			GRect x = new GRect(xCoordinate, yCoordinate, width, height);
-			add(x);
+			GRect rect = new GRect(xCoordinate, yCoordinate, width, height);
+			add(rect);
+			
+			rectMap = new HashMap<>();
+			rectMap.put(name, rect);
 		}
 	}
+	
+	
 }
