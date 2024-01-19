@@ -19,10 +19,10 @@ public class FinalsProblem004 extends GraphicsProgram{
 	private GOval redOval;
 	private GOval blueOval;
 	
-	private static final int RED_Vx = 10;
-	private static final int RED_Vy = 0;
-	private static final int BLUE_Vx = 0;
-	private static final int BLUE_Vy = 10;
+	private int RED_Vx = 10;
+	private int RED_Vy = 0;
+	private int BLUE_Vx = 0;
+	private int BLUE_Vy = 10;
 	
 	public void init(){
 		
