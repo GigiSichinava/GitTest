@@ -60,7 +60,7 @@ public class FinalsProblem004 extends GraphicsProgram{
 				redOval.move(RED_Vx, -RED_Vy);
 			}
 		}
-		}
+		
 	}
 	
 	public void actionPerformed(ActionEvent e){
