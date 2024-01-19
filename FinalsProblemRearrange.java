@@ -10,7 +10,9 @@ public class FinalsProblemRearrange extends ConsoleProgram{
 		
 		
 		String line = "keep calm and code on";
+		println(line);
 		String expected = "on and keep calm code" ;
+		println(expected);
 		String result = "";
 		
 		StringTokenizer tokenizer = new StringTokenizer(line, " ");
