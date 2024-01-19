@@ -35,6 +35,7 @@ public class FinalsProblemRearrange extends ConsoleProgram{
 	            }
 	            result += value;
 	        }
+		}
 		println(result);
 	}
 }
