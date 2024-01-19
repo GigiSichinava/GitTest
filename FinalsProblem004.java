@@ -55,8 +55,15 @@ public class FinalsProblem004 extends GraphicsProgram{
 			if(redOval.getX() + 2 * R > getWidth()){
 				RED_Vx = -RED_Vx;
 			}
-			if(redOval.getX() + 2 * R < 0){
+			if(redOval.getX() < 0){
 				RED_Vx = -RED_Vx;
+			}
+			
+			if(redOval.getY() + 2 * R > getHeight()){
+				BLUE_Vy = -BLUE_Vy;
+			}
+			if(redOval.getY() < 0){
+				BLUE_Vy = -BLUE_Vy;
 			}
 		}
 		
