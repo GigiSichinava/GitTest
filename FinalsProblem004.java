@@ -84,8 +84,8 @@ public class FinalsProblem004 extends GraphicsProgram{
 	
 	public void mouseClicked(MouseEvent e){
 		obj = getElementAt(e.getX(), e.getY());
-		if(obj == redOval){
-			RED_Vx = -RED_Vx;
+		if(obj == redOval || obj == blueOval){
+			obj.setColor(Color.YELLOW);
 		}
 	}
 }
