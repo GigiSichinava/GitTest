@@ -31,7 +31,7 @@ public class FinalsProblemRearrange extends ConsoleProgram{
 		}
 		
 		for(String find : stringMap.values()){
-			result += find;
+			result += find + " ";
 		}
 		
 		
