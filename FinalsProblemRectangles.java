@@ -10,13 +10,13 @@ import acm.graphics.GObject;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
-public class FinalsProblemRectangles extends GraphicsProgram{
-	
+public class FinalsProblemRectangles extends GraphicsProgram {
+
 	private HashMap<String, GRect> rectMap;
 	private GObject obj;
 	private GRect rect;
 	private String name;
-	
+
 	private JLabel nameLabel;
 	private JTextField nameTextField;
 	private JLabel x;
@@ -28,9 +28,8 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 	private JLabel height;
 	private JTextField heightTextField;
 	private JButton Add;
-	
-	
-	public void init(){
+
+	public void init() {
 		nameLabel = new JLabel("Name:");
 		add(nameLabel, SOUTH);
 		nameTextField = new JTextField(5);
@@ -53,33 +52,30 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		add(heightTextField, SOUTH);
 		Add = new JButton("Add");
 		add(Add, SOUTH);
-		
+
 		addActionListeners(this);
 		addMouseListeners();
-		
+
 		rectMap = new HashMap<>();
-		
+
 	}
-	
-	public void actionPerformed(ActionEvent e){
+
+	public void actionPerformed(ActionEvent e) {
 		String line = e.getActionCommand();
-		
+
 		int xCoordinate = Integer.parseInt(xTextField.getText());
 		int yCoordinate = Integer.parseInt(yTextField.getText());
 		int width = Integer.parseInt(widthTextField.getText());
 		int height = Integer.parseInt(heightTextField.getText());
 		name = nameTextField.getText();
-		
-		
-		if(line.equals("Add") && !rectMap.containsKey(name)){
+
+		// Only add rectangles with unique names	
+		if (line.equals("Add") && !rectMap.containsKey(name)) {
 			rect = new GRect(xCoordinate, yCoordinate, width, height);
 			add(rect);
 			rectMap.put(name, rect);
 
 		}
 	}
-	
-	
-	
-	
+
 }
