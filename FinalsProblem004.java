@@ -93,9 +93,9 @@ public class FinalsProblem004 extends GraphicsProgram{
 		}
 		if(line.equals("Down") && obj == redOval){
 			if (RED_Vx > 0) {
-			    RED_Vx--;
-			} else {
 			    RED_Vx++;
+			} else {
+			    RED_Vx--;
 			}
 		}
 		if(line.equals("Down") && obj == blueOval){
