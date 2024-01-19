@@ -28,7 +28,7 @@ public class FinalsProblem004 extends GraphicsProgram {
 	private int BLUE_Vy = 2;
 
 	public void init() {
-
+		// Add iterators to the canvas
 		buttonUp = new JButton("Up");
 		add(buttonUp, SOUTH);
 
@@ -52,6 +52,7 @@ public class FinalsProblem004 extends GraphicsProgram {
 	public void run() {
 		while (true) {
 
+			// Add movement of the ovals'
 			redOval.move(RED_Vx, RED_Vy);
 			blueOval.move(BLUE_Vx, BLUE_Vy);
 
@@ -76,6 +77,7 @@ public class FinalsProblem004 extends GraphicsProgram {
 
 	public void actionPerformed(ActionEvent e) {
 		String line = e.getActionCommand();
+		// Increase and decrease balls' velocity
 		if (line.equals("Up") && obj == redOval) {
 			if (RED_Vx > 0) {
 				RED_Vx++;
@@ -106,6 +108,7 @@ public class FinalsProblem004 extends GraphicsProgram {
 		}
 	}
 
+	// Change oval's color on the click
 	public void mouseClicked(MouseEvent e) {
 		obj = getElementAt(e.getX(), e.getY());
 		if (obj == redOval || obj == blueOval) {
