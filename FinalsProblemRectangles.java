@@ -15,6 +15,7 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 	private HashMap<String, GRect> rectMap;
 	private GObject obj;
 	private GRect rect;
+	private String name;
 	
 	private JLabel nameLabel;
 	private JTextField nameTextField;
@@ -67,7 +68,7 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		int yCoordinate = Integer.parseInt(yTextField.getText());
 		int width = Integer.parseInt(widthTextField.getText());
 		int height = Integer.parseInt(heightTextField.getText());
-		String name = nameTextField.getText();
+		name = nameTextField.getText();
 		
 		
 		if(line.equals("Add") && !rectMap.containsKey(name)){
@@ -78,10 +79,7 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		}
 	}
 	
-	public void mouseClicked(MouseEvent e){
-		obj = getElementAt(e.getX(), e.getY());
-		
-	}
+	
 	
 	
 }
