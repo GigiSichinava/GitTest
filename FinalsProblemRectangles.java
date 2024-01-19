@@ -1,7 +1,10 @@
+import java.awt.event.ActionEvent;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 public class FinalsProblemRectangles extends GraphicsProgram{
@@ -42,5 +45,22 @@ public class FinalsProblemRectangles extends GraphicsProgram{
 		add(heightTextField, SOUTH);
 		Add = new JButton("Add");
 		add(Add, SOUTH);
+		
+		addActionListeners();
+	}
+	
+	public void ActionPerformed(ActionEvent e){
+		String line = e.getActionCommand();
+		
+		int xCoordinate = Integer.parseInt(xTextField.getText());
+		int yCoordinate = Integer.parseInt(widthTextField.getText());
+		int width = Integer.parseInt(widthTextField.getText());
+		int height = Integer.parseInt(heightTextField.getText());
+		String name = nameTextField.getText();
+		
+		if(line.equals("Add")){
+			GRect x = new GRect(xCoordinate, yCoordinate, width, height);
+			add(x);
+		}
 	}
 }
