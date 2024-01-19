@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import javax.swing.JButton;
 
 import acm.graphics.GOval;
@@ -25,8 +27,13 @@ public class FinalsProblem004 extends GraphicsProgram{
 		add(buttonDown, SOUTH);
 		
 		redOval = new GOval(rgen.nextInt(0, getWidth() - 2 * R), rgen.nextInt(0, getHeight() - 2 * R), 2 * R, 2 * R);
+		redOval.setFilled(true);
+		redOval.setColor(Color.RED);
 		add(redOval);
 		
-		
+		redOval = new GOval(rgen.nextInt(0, getWidth() - 2 * R), rgen.nextInt(0, getHeight() - 2 * R), 2 * R, 2 * R);
+		redOval.setFilled(true);
+		redOval.setColor(Color.RED);
+		add(redOval);
 	}
 }
