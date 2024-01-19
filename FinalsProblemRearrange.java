@@ -28,7 +28,7 @@ public class FinalsProblemRearrange extends ConsoleProgram{
 		}
 		
 		for(String put : stringMap.values()){
-			result += put;
+			result += put + " ";
 		}
 		
 		println(result);
