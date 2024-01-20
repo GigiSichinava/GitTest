@@ -71,25 +71,28 @@ public class ovalInGrid extends GraphicsProgram implements ComponentListener{
 	@Override
 	public void componentResized(ComponentEvent arg0) {
 		removeAll();
-		setSize(400, 400);
+		
+		
 		int rectWidth = getWidth() / N_COLS;
-		int rectHeight = getHeight() / N_ROWS;
+	    int rectHeight = getHeight() / N_ROWS;
 
-		for (int i = 0; i < N_COLS; i++) {
-			for (int j = 0; j < N_ROWS; j++) {
-				GRect rect = new GRect(rectWidth, rectHeight);
-				add(rect, rectWidth * i, rectHeight * j);
-			}
-		}
+	    for (int i = 0; i < N_COLS; i++) {
+	        for (int j = 0; j < N_ROWS; j++) {
+	            GRect rect = new GRect(rectWidth, rectHeight);
+	            add(rect, rectWidth * i, rectHeight * j);
+	        }
+	    }
 
-		oval1 = new GOval(rectWidth, rectHeight); 
-													
-		oval1.setFilled(true);
-		oval1.setFillColor(rgen.nextColor());
-		add(oval1);
-
+	    int ovalX = (getWidth() - rectWidth) / 2;
+	    int ovalY = (getHeight() - rectHeight) / 2;
+	    oval1.setSize(rectWidth, rectHeight);
+	    oval1.setFillColor(rgen.nextColor());
+	    add(oval1, ovalX, ovalY);
+		
 		
 	}
+	
+	
 
 	@Override
 	public void componentShown(ComponentEvent arg0) {
