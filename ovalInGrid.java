@@ -42,25 +42,22 @@ public class ovalInGrid extends GraphicsProgram implements ComponentListener {
 	}
 
 	public void mouseClicked(MouseEvent e) {
-		GObject obj = getElementAt(e.getX(), e.getY());
-		if (obj == oval1 && !isRemoved) {
-			remove(oval1);
-			isRemoved = true;
-		} else {
+	    GObject obj = getElementAt(e.getX(), e.getY());
+	    if (obj == oval1 && !isRemoved) {
+	        remove(oval1);
+	        isRemoved = true;
+	    } else {
+	        int rectWidth = getWidth() / N_COLS;
+	        int rectHeight = getHeight() / N_ROWS;
 
-			int rectWidth = getWidth() / N_COLS;
-			int rectHeight = getHeight() / N_ROWS;
+	        gridX = (e.getX() / rectWidth) * rectWidth;
+	        gridY = (e.getY() / rectHeight) * rectHeight;
 
-			gridX = (e.getX() / rectWidth) * rectWidth;
-			gridY = (e.getY() / rectHeight) * rectHeight;
-
-			add(oval1, gridX, gridY);
-			isRemoved = false;
-
-			// curX = gridX;
-			// curY = gridY;
-		}
+	        add(oval1, gridX, gridY);
+	        isRemoved = false;
+	    }
 	}
+
 
 	@Override
 	public void componentHidden(ComponentEvent arg0) {
@@ -75,35 +72,28 @@ public class ovalInGrid extends GraphicsProgram implements ComponentListener {
 	}
 
 	public void componentResized(ComponentEvent arg0) {
-	    removeAll();
+		
+		
+		    removeAll();
 
-	    int rectWidth = getWidth() / N_COLS;
-	    int rectHeight = getHeight() / N_ROWS;
+		    int rectWidth = getWidth() / N_COLS;
+		    int rectHeight = getHeight() / N_ROWS;
 
-	    // Recreate the grid
-	    for (int i = 0; i < N_COLS; i++) {
-	        for (int j = 0; j < N_ROWS; j++) {
-	            GRect rect = new GRect(rectWidth, rectHeight);
-	            add(rect, rectWidth * i, rectHeight * j);
-	        }
-	    }
+		    for (int i = 0; i < N_COLS; i++) {
+		        for (int j = 0; j < N_ROWS; j++) {
+		            GRect rect = new GRect(rectWidth, rectHeight);
+		            add(rect, rectWidth * i, rectHeight * j);
+		        }
+		    }
 
-	    // Recreate the oval with the new size
-	    oval1 = new GOval(rectWidth, rectHeight);
-	    oval1.setFilled(true);
-	    oval1.setFillColor(rgen.nextColor());
+		    oval1 = new GOval(rectWidth, rectHeight);
+		    oval1.setFilled(true);
+		    oval1.setFillColor(rgen.nextColor());
+		    
+		    // Reposition the oval using stored gridX and gridY
+		    add(oval1, gridX, gridY);
+		}
 
-	    // Calculate the new position for the oval
-	    int newGridX = (gridX / rectWidth) * rectWidth;
-	    int newGridY = (gridY / rectHeight) * rectHeight;
-
-	    // Add the oval at the new position
-	    add(oval1, newGridX, newGridY);
-
-	    // Update gridX and gridY
-	    gridX = newGridX;
-	    gridY = newGridY;
-	}
 
 
 	@Override
