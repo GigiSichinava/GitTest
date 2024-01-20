@@ -86,6 +86,7 @@ public class ovalInGrid extends GraphicsProgram implements ComponentListener{
 	  
 	    oval1 = new GOval(rectWidth, rectHeight);
 	    oval1.setFilled(true);
+	    oval1.setFillColor(rgen.nextColor());
 	    add(oval1, (getWidth() - rectWidth) / 2, (getHeight() - rectHeight) / 2);
 	    
 	
