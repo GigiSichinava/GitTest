@@ -11,7 +11,12 @@ public class FinalsProblemCasino extends ConsoleProgram {
 
 	public void run() {
 
-		while (N_TRIES > 990) {
+		while (startingMoney > 0) {
+			
+			if(startingMoney < 100){
+				int lostMoney = 100 - startingMoney;
+			}
+			
 			int guess = readInt("Write your guess: ");
 			int moneyInput = readInt("Put money: ");
 			int spinResult = rgen.nextInt(MIN_NUM, MAX_NUM);
@@ -22,8 +27,8 @@ public class FinalsProblemCasino extends ConsoleProgram {
 			}else{
 				startingMoney -= moneyInput;
 			}
-			println(startingMoney);
 
+			
 		}
 		
 	
