@@ -1,5 +1,3 @@
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import acm.graphics.GObject;
 import acm.graphics.GOval;
@@ -7,15 +5,13 @@ import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-public class ovalInGrid extends GraphicsProgram implements ComponentListener {
+public class ovalInGrid extends GraphicsProgram {
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int N_COLS = 3;
 	private static final int N_ROWS = 3;
 
 	private GOval oval1;
-	private int gridX;
-	private int gridY;
 
 	private boolean isRemoved = false;
 
@@ -31,75 +27,31 @@ public class ovalInGrid extends GraphicsProgram implements ComponentListener {
 			}
 		}
 
-		oval1 = new GOval(rectWidth, rectHeight);
-
+		oval1 = new GOval(rectWidth, rectHeight); 
+													
 		oval1.setFilled(true);
 		oval1.setFillColor(rgen.nextColor());
 		add(oval1);
 
-		addComponentListener(this);
 		addMouseListeners();
 	}
 
 	public void mouseClicked(MouseEvent e) {
-	    GObject obj = getElementAt(e.getX(), e.getY());
-	    if (obj == oval1 && !isRemoved) {
-	        remove(oval1);
-	        isRemoved = true;
-	    } else {
-	        int rectWidth = getWidth() / N_COLS;
-	        int rectHeight = getHeight() / N_ROWS;
+		GObject obj = getElementAt(e.getX(), e.getY());
+		if (obj == oval1 && !isRemoved) {
+			remove(oval1);
+			isRemoved = true;
+		} else {
 
-	        gridX = (e.getX() / rectWidth) * rectWidth;
-	        gridY = (e.getY() / rectHeight) * rectHeight;
+			int rectWidth = getWidth() / N_COLS;
+			int rectHeight = getHeight() / N_ROWS;
 
-	        add(oval1, gridX, gridY);
-	        isRemoved = false;
-	    }
-	}
+			int gridX = (e.getX() / rectWidth) * rectWidth;
+			int gridY = (e.getY() / rectHeight) * rectHeight;
 
-
-	@Override
-	public void componentHidden(ComponentEvent arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void componentMoved(ComponentEvent arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void componentResized(ComponentEvent arg0) {
-		
-		
-		    removeAll();
-
-		    int rectWidth = getWidth() / N_COLS;
-		    int rectHeight = getHeight() / N_ROWS;
-
-		    for (int i = 0; i < N_COLS; i++) {
-		        for (int j = 0; j < N_ROWS; j++) {
-		            GRect rect = new GRect(rectWidth, rectHeight);
-		            add(rect, rectWidth * i, rectHeight * j);
-		        }
-		    }
-
-		    oval1 = new GOval(rectWidth, rectHeight);
-		    oval1.setFilled(true);
-		    oval1.setFillColor(rgen.nextColor());
-		    
-		    // Reposition the oval using stored gridX and gridY
-		    add(oval1, gridX, gridY);
+			add(oval1, gridX, gridY);
+			isRemoved = false;
 		}
-
-
-
-	@Override
-	public void componentShown(ComponentEvent arg0) {
-		// TODO Auto-generated method stub
-
 	}
 
 }
