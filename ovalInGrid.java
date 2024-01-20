@@ -35,7 +35,7 @@ public class ovalInGrid extends GraphicsProgram implements ComponentListener{
 		oval1.setFillColor(rgen.nextColor());
 		add(oval1);
 
-		addMouseListeners();
+		addMouseListeners(this);
 	}
 
 	public void mouseClicked(MouseEvent e) {
