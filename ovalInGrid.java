@@ -74,26 +74,37 @@ public class ovalInGrid extends GraphicsProgram implements ComponentListener {
 
 	}
 
-	@Override
 	public void componentResized(ComponentEvent arg0) {
-		removeAll();
+	    removeAll();
 
-		int rectWidth = getWidth() / N_COLS;
-		int rectHeight = getHeight() / N_ROWS;
+	    int rectWidth = getWidth() / N_COLS;
+	    int rectHeight = getHeight() / N_ROWS;
 
-		for (int i = 0; i < N_COLS; i++) {
-			for (int j = 0; j < N_ROWS; j++) {
-				GRect rect = new GRect(rectWidth, rectHeight);
-				add(rect, rectWidth * i, rectHeight * j);
-			}
-		}
+	    // Recreate the grid
+	    for (int i = 0; i < N_COLS; i++) {
+	        for (int j = 0; j < N_ROWS; j++) {
+	            GRect rect = new GRect(rectWidth, rectHeight);
+	            add(rect, rectWidth * i, rectHeight * j);
+	        }
+	    }
 
-		oval1 = new GOval(rectWidth, rectHeight);
-		oval1.setFilled(true);
-		oval1.setFillColor(rgen.nextColor());
-		add(oval1, gridX, gridY);
+	    // Recreate the oval with the new size
+	    oval1 = new GOval(rectWidth, rectHeight);
+	    oval1.setFilled(true);
+	    oval1.setFillColor(rgen.nextColor());
 
+	    // Calculate the new position for the oval
+	    int newGridX = (gridX / rectWidth) * rectWidth;
+	    int newGridY = (gridY / rectHeight) * rectHeight;
+
+	    // Add the oval at the new position
+	    add(oval1, newGridX, newGridY);
+
+	    // Update gridX and gridY
+	    gridX = newGridX;
+	    gridY = newGridY;
 	}
+
 
 	@Override
 	public void componentShown(ComponentEvent arg0) {
