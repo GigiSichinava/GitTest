@@ -14,7 +14,10 @@ public class ovalInGrid extends GraphicsProgram implements ComponentListener{
 	private static final int N_ROWS = 3;
 
 	private GOval oval1;
-
+	private int curX;
+	private int curY;
+	
+	
 	private boolean isRemoved = false;
 
 	public void run() {
@@ -54,6 +57,9 @@ public class ovalInGrid extends GraphicsProgram implements ComponentListener{
 
 			add(oval1, gridX, gridY);
 			isRemoved = false;
+			
+			curX = gridX;
+			curY = gridY;
 		}
 	}
 
@@ -88,7 +94,7 @@ public class ovalInGrid extends GraphicsProgram implements ComponentListener{
 	    oval1 = new GOval(rectWidth, rectHeight);
 	    oval1.setFilled(true);
 	    oval1.setFillColor(rgen.nextColor());
-	    add(oval1, (getWidth() - rectWidth) / 2, (getHeight() - rectHeight) / 2);
+	    add(oval1, curX, curY);
 	    
 	
 		
