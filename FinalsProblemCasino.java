@@ -15,6 +15,7 @@ public class FinalsProblemCasino extends ConsoleProgram {
 			int guess = readInt("Write your guess: ");
 			int moneyInput = readInt("Put money: ");
 			int spinResult = rgen.nextInt(MIN_NUM, MAX_NUM);
+			println("Casino's result is: " + spinResult);
 		
 			if(spinResult == guess ){
 				startingMoney += startingMoney * 36;
