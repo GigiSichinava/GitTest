@@ -4,8 +4,8 @@ public class Final2022Session1Compress extends ConsoleProgram {
 	public void run() {
 
 		// See what code we have to write
-		String line = "aabcccccaa";
-		String expected = "a2b1c5a2";
+		String line = "abc";
+		String expected = "a1b1c1";
 		println(line);
 		println(expected);
 
