@@ -11,15 +11,20 @@ public class FinalsProblemCasino extends ConsoleProgram {
 
 	public void run() {
 
-		while (N_TRIES > 0) {
+		while (N_TRIES > 990) {
 			int guess = readInt("Write your guess: ");
 			int moneyInput = readInt("Put money: ");
 			int spinResult = rgen.nextInt(MIN_NUM, MAX_NUM);
 		
 			if(spinResult == guess ){
 				startingMoney += startingMoney * 36;
+			}else{
+				startingMoney -= moneyInput;
 			}
+			println(startingMoney);
+
 		}
+		
 	
 	
 	}
