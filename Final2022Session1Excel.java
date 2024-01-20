@@ -87,8 +87,8 @@ public class Final2022Session1Excel extends GraphicsProgram {
 
 	private ArrayList<ArrayList<String>> filteredRows(String filterWrd) {
 		ArrayList<ArrayList<String>> filtered = new ArrayList<>();
-		for (ArrayList<String> row: rows) {
-			if(row.contains(filterWrd)) {
+		for (ArrayList<String> row : rows) {
+			if (row.contains(filterWrd)) {
 				filtered.add(row);
 			}
 		}
