@@ -1,4 +1,4 @@
-import java.awt.event.ActionListener;  
+import java.awt.event.ActionListener;
 
 import java.applet.Applet;
 import java.awt.Color;
@@ -41,24 +41,24 @@ public class FirstProject extends GraphicsProgram {
 	private Timer timer;
 	private int timeRemaining = 10;
 
-	 public void init() {
-	        addKeyListeners();
-	        timerLabel = new JLabel("Time: 10");
-	        add(timerLabel, NORTH);
+	public void init() {
+		addKeyListeners();
+		timerLabel = new JLabel("Time: 10");
+		add(timerLabel, NORTH);
 
-	        timer = new Timer(1000, new ActionListener() {
-	            public void actionPerformed(ActionEvent e) {
-	                timeRemaining--;
-	                timerLabel.setText("Time: " + timeRemaining);
-	                if (timeRemaining <= 0) {
-	                    timer.stop();
-	                    GLabel endMessage = new GLabel("Time's up! Game Over!", 0, 0);
-	                    endMessage.setLocation((getWidth() - endMessage.getWidth()) / 2, getHeight() / 2);
-	                    add(endMessage);
-	                }
-	            }
-	        });
-	    }
+		timer = new Timer(1000, new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				timeRemaining--;
+				timerLabel.setText("Time: " + timeRemaining);
+				if (timeRemaining <= 0) {
+					timer.stop();
+					GLabel endMessage = new GLabel("Time's up! Game Over!", 0, 0);
+					endMessage.setLocation((getWidth() - endMessage.getWidth()) / 2, getHeight() / 2);
+					add(endMessage);
+				}
+			}
+		});
+	}
 
 	public void run() {
 
