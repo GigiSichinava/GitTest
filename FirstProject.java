@@ -152,7 +152,7 @@ public class FirstProject extends GraphicsProgram {
 	// Private variables for the game
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
-	private static final int N_ROWS = 5;
+	private static final int N_ROWS = 7;
 	private static final int N_COLS = 10;
 
 	private int rectWidth;
