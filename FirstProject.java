@@ -110,10 +110,10 @@ public class FirstProject extends GraphicsProgram {
 
 		int hoePlacementX = (randomX / rectWidth) * rectWidth;
 		int hoePlacementY = (randomY / rectHeight) * rectHeight;
-
-		hoe = new GOval(hoeWidth, hoeHeight);
-		hoe.setFilled(true);
-		hoe.setColor(Color.RED);
+//
+//		hoe = new GOval(hoeWidth, hoeHeight);
+//		hoe.setFilled(true);
+//		hoe.setColor(Color.RED);
 		
 		switch (e.getKeyCode()) {
 		case KeyEvent.VK_UP:
@@ -131,8 +131,7 @@ public class FirstProject extends GraphicsProgram {
 		}
 
 		if (finishedBroski.getX() == hoe.getX() && finishedBroski.getY() == hoe.getY()) {
-			remove(hoe);
-			add(hoe, hoePlacementX, hoePlacementY);
+			hoe.setLocation(hoePlacementX, hoePlacementY);
 		}
 
 	}
