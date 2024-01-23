@@ -29,7 +29,7 @@ public class FirstProject extends GraphicsProgram {
 	private GOval hoe;
 
 	public void init() {
-		setSize(900, 950);
+		setSize(900, 900);
 		rectWidth = getWidth() / N_COLS;
 		rectHeight = getHeight() / N_ROWS;
 
