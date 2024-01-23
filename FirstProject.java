@@ -101,20 +101,21 @@ public class FirstProject extends GraphicsProgram {
 
 	public void keyPressed(KeyEvent e) {
 
-		int MOVE_SIZE = rectWidth;
+		int MOVE_SIZE_X = rectWidth;
+		int MOVE_SIZE_Y = rectHeight;
 
 		switch (e.getKeyCode()) {
 		case KeyEvent.VK_UP:
-			finishedBroski.move(0, -MOVE_SIZE);
+			finishedBroski.move(0, -MOVE_SIZE_Y);
 			break;
 		case KeyEvent.VK_DOWN:
-			finishedBroski.move(0, MOVE_SIZE);
+			finishedBroski.move(0, MOVE_SIZE_Y);
 			break;
 		case KeyEvent.VK_LEFT:
-			finishedBroski.move(-MOVE_SIZE, 0);
+			finishedBroski.move(-MOVE_SIZE_X, 0);
 			break;
 		case KeyEvent.VK_RIGHT:
-			finishedBroski.move(MOVE_SIZE, 0);
+			finishedBroski.move(MOVE_SIZE_X, 0);
 			break;
 		}
 
