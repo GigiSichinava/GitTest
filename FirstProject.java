@@ -11,8 +11,8 @@ public class FirstProject extends GraphicsProgram {
 	private static final int N_ROWS = 10;
 	private static final int N_COLS = 10;
 	
-	int rectWidth = getWidth() / N_COLS;
-	int rectHeight = getHeight() / N_ROWS;
+	private int rectWidth; 
+	private int rectHeight;
 
 	private GRect rect;
 	private GRect broski;
@@ -22,6 +22,8 @@ public class FirstProject extends GraphicsProgram {
 	}
 
 	public void run() {
+		rectWidth = getWidth() / N_COLS;
+		rectHeight = getHeight() / N_ROWS;
 		createGrid();
 		createBroski();
 		// createMovement();
