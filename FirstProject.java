@@ -1,5 +1,6 @@
 import java.awt.Color;
 
+import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
@@ -13,19 +14,25 @@ public class FirstProject extends GraphicsProgram {
 	
 	private int rectWidth; 
 	private int rectHeight;
+	
+	private int hoeWidth; 
+	private int hoeHeight;
 
 	private GRect rect;
 	private GRect broski;
+	private GOval hoe;
 
 	public void init() {
 		setSize(900, 900);
+		rectWidth = getWidth() / N_COLS;
+		rectHeight = getHeight() / N_ROWS;
+
 	}
 
 	public void run() {
-		rectWidth = getWidth() / N_COLS;
-		rectHeight = getHeight() / N_ROWS;
-		createGrid();
+				createGrid();
 		createBroski();
+		createHoe();
 		// createMovement();
 	}
 
@@ -53,5 +60,9 @@ public class FirstProject extends GraphicsProgram {
 		
 		add(broski, broskiPlacementX, broskiPlacementY);
 	
+	}
+	
+	private void createHoe(){
+		hoe = new GOval(rectWidth, rectHeight);
 	}
 }
