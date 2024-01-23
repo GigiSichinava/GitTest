@@ -11,8 +11,8 @@ public class FirstProject extends GraphicsProgram {
 	private static final int N_ROWS = 10;
 	private static final int N_COLS = 10;
 	
-	private int rectWidth = getWidth() / N_COLS;
-	private int rectHeight = getHeight() / N_ROWS;
+	int rectWidth = getWidth() / N_COLS;
+	int rectHeight = getHeight() / N_ROWS;
 
 	private GRect rect;
 	private GRect broski;
