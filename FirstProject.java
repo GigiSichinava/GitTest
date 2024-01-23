@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.event.KeyEvent;
+import java.util.Timer;
 
 import javax.swing.JLabel;
 
@@ -32,13 +33,15 @@ public class FirstProject extends GraphicsProgram {
 
 	private GOval hoe;
 	
-	private JLabel time;
+	private JLabel timerLabel;
+    private Timer timer;
+    private int timeRemaining = 10; 
 
 	public void init() {
 		// setSize(900, 900);
 		addKeyListeners();
-		time = new JLabel("Time: ");
-		add(time, NORTH);
+		timerLabel = new JLabel("Time: 10");
+        add(timerLabel, NORTH);
 
 	}
 
