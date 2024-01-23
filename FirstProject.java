@@ -31,7 +31,7 @@ public class FirstProject extends GraphicsProgram {
 	private GOval hoe;
 
 	public void init() {
-//		setSize(900, 900);
+		// setSize(900, 900);
 		addKeyListeners();
 
 	}
@@ -101,9 +101,20 @@ public class FirstProject extends GraphicsProgram {
 
 	public void keyPressed(KeyEvent e) {
 
+		
 		int MOVE_SIZE_X = rectWidth;
 		int MOVE_SIZE_Y = rectHeight;
 
+		int randomX = rgen.nextInt(0, getWidth() - rectWidth);
+		int randomY = rgen.nextInt(0, getHeight() - rectHeight);
+
+		int hoePlacementX = (randomX / rectWidth) * rectWidth;
+		int hoePlacementY = (randomY / rectHeight) * rectHeight;
+
+		hoe = new GOval(hoeWidth, hoeHeight);
+		hoe.setFilled(true);
+		hoe.setColor(Color.RED);
+		
 		switch (e.getKeyCode()) {
 		case KeyEvent.VK_UP:
 			finishedBroski.move(0, -MOVE_SIZE_Y);
@@ -121,7 +132,7 @@ public class FirstProject extends GraphicsProgram {
 
 		if (finishedBroski.getX() == hoe.getX() && finishedBroski.getY() == hoe.getY()) {
 			remove(hoe);
-			((GResizable) finishedBroski).setSize(2 * rectWidth, 2 * rectHeight);
+			add(hoe, hoePlacementX, hoePlacementY);
 		}
 	}
 }
