@@ -1,5 +1,7 @@
 import java.awt.Color;
 
+import acm.graphics.GCompound;
+import acm.graphics.GLabel;
 import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
@@ -19,7 +21,11 @@ public class FirstProject extends GraphicsProgram {
 	private int hoeHeight;
 
 	private GRect rect;
+	
 	private GRect broski;
+	private GLabel broskiLabel;
+	private GCompound finishedBroski;
+	
 	private GOval hoe;
 
 	public void init() {
@@ -59,6 +65,10 @@ public class FirstProject extends GraphicsProgram {
 		broski = new GRect(rectWidth, rectHeight);
 		broski.setFilled(true);
 		broski.setColor(Color.GREEN);
+		
+		broskiLabel = new GLabel("BROSKI");
+		
+		finishedBroski.add(rect);
 		
 		add(broski, broskiPlacementX, broskiPlacementY);
 	
