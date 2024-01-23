@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.event.KeyEvent;
 
 import acm.graphics.GCompound;
 import acm.graphics.GLabel;
@@ -27,13 +28,20 @@ public class FirstProject extends GraphicsProgram {
 	private GCompound finishedBroski;
 
 	private GOval hoe;
+	
+    private static final int MOVE_SIZE = 10; // Adjust this for movement speed
+
 
 	public void init() {
+		setSize(900, 900);
 		rectWidth = getWidth() / N_COLS;
 		rectHeight = getHeight() / N_ROWS;
 
 		hoeWidth = getWidth() / N_COLS;
 		hoeHeight = getHeight() / N_ROWS;
+
+        addKeyListeners();
+
 	}
 
 	public void run() {
@@ -92,4 +100,21 @@ public class FirstProject extends GraphicsProgram {
 
 		add(hoe, hoePlacementX, hoePlacementY);
 	}
+	
+	 public void keyPressed(KeyEvent e) {
+	        switch (e.getKeyCode()) {
+	            case KeyEvent.VK_UP:
+	                finishedBroski.move(0, -MOVE_SIZE);
+	                break;
+	            case KeyEvent.VK_DOWN:
+	                finishedBroski.move(0, MOVE_SIZE);
+	                break;
+	            case KeyEvent.VK_LEFT:
+	                finishedBroski.move(-MOVE_SIZE, 0);
+	                break;
+	            case KeyEvent.VK_RIGHT:
+	                finishedBroski.move(MOVE_SIZE, 0);
+	                break;
+	        }
+	    }
 }
