@@ -71,11 +71,11 @@ public class FirstProject extends GraphicsProgram {
 		double labelX = (rectWidth - broskiLabel.getWidth()) / 2;
 		double labelY = (rectHeight + broskiLabel.getAscent()) / 2;
 
-		finishedBroski = new GCompound(); // Initialize the GCompound
-	    finishedBroski.add(broski); // Add the rectangle to the compound
-	    finishedBroski.add(broskiLabel, labelX, labelY); // Add the label to the compound at calculated position
+		finishedBroski = new GCompound(); 
+	    finishedBroski.add(broski); 
+	    finishedBroski.add(broskiLabel, labelX, labelY); 
 
-	    add(finishedBroski, broskiPlacementX, broskiPlacementY); // Add the compound to the canvas
+	    add(finishedBroski, broskiPlacementX, broskiPlacementY); // 
 
 	}
 
