@@ -26,7 +26,9 @@ public class FirstProject extends GraphicsProgram {
 		setSize(900, 900);
 		rectWidth = getWidth() / N_COLS;
 		rectHeight = getHeight() / N_ROWS;
-
+		
+		hoeWidth = getWidth() / N_COLS;
+		hoeHeight = getHeight() / N_ROWS;
 	}
 
 	public void run() {
@@ -56,13 +58,24 @@ public class FirstProject extends GraphicsProgram {
 		
 		broski = new GRect(rectWidth, rectHeight);
 		broski.setFilled(true);
-		broski.setColor(Color.RED);
+		broski.setColor(Color.GREEN);
 		
 		add(broski, broskiPlacementX, broskiPlacementY);
 	
 	}
 	
 	private void createHoe(){
+		
+		int randomX = rgen.nextInt(0, getWidth() - rectWidth);
+		int randomY = rgen.nextInt(0, getHeight() - rectHeight);
+		
+		int hoePlacementX = (randomX / rectWidth) * rectWidth;
+		int hoePlacementY = (randomY / rectHeight) * rectHeight;
+		
 		hoe = new GOval(rectWidth, rectHeight);
+		hoe.setFilled(true);
+		hoe.setColor(Color.RED);
+		
+		add(hoe, hoePlacementX, hoePlacementY);
 	}
 }
