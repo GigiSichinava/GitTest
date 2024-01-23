@@ -1,4 +1,6 @@
+import java.applet.Applet;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.util.Timer;
 
@@ -32,18 +34,30 @@ public class FirstProject extends GraphicsProgram {
 	private GCompound finishedBroski;
 
 	private GOval hoe;
-	
+
 	private JLabel timerLabel;
-    private Timer timer;
-    private int timeRemaining = 10; 
+	private Timer timer;
+	private int timeRemaining = 10;
 
 	public void init() {
 		// setSize(900, 900);
-		addKeyListeners();
-		timerLabel = new JLabel("Time: 10");
-        add(timerLabel, NORTH);
+		 addKeyListeners();
+	        timerLabel = new JLabel("Time: 10");
+	        add(timerLabel, NORTH);
 
-	}
+	        timer = new Timer(1000, new ActionListener()){ 
+	            public void actionPerformed(ActionEvent e) {
+	                timeRemaining--;
+	                timerLabel.setText("Time: " + timeRemaining);
+	                if (timeRemaining <= 0) {
+	                    timer.stop(); // Correct way to stop the timer
+	                    GLabel endMessage = new GLabel("Time's up! Game Over!", getWidth() / 2, getHeight() / 2);
+	                    add(endMessage);
+	                }
+	            }
+	        });
+	    }
+
 
 	public void run() {
 
@@ -56,6 +70,9 @@ public class FirstProject extends GraphicsProgram {
 		createGrid();
 		createBroski();
 		createHoe();
+
+		timer.start();
+
 	}
 
 	private void createGrid() {
@@ -110,7 +127,6 @@ public class FirstProject extends GraphicsProgram {
 
 	public void keyPressed(KeyEvent e) {
 
-		
 		int MOVE_SIZE_X = rectWidth;
 		int MOVE_SIZE_Y = rectHeight;
 
@@ -120,28 +136,27 @@ public class FirstProject extends GraphicsProgram {
 		int hoePlacementX = (randomX / rectWidth) * rectWidth;
 		int hoePlacementY = (randomY / rectHeight) * rectHeight;
 
-		
 		switch (e.getKeyCode()) {
 		case KeyEvent.VK_UP:
-			if(finishedBroski.getY() < rectHeight / 2){
+			if (finishedBroski.getY() < rectHeight / 2) {
 				return;
 			}
 			finishedBroski.move(0, -MOVE_SIZE_Y);
 			break;
 		case KeyEvent.VK_DOWN:
-			if(finishedBroski.getY() > getHeight() - rectHeight * 1.5){
+			if (finishedBroski.getY() > getHeight() - rectHeight * 1.5) {
 				return;
 			}
 			finishedBroski.move(0, MOVE_SIZE_Y);
 			break;
 		case KeyEvent.VK_LEFT:
-			if(finishedBroski.getX() < rectWidth / 2){
+			if (finishedBroski.getX() < rectWidth / 2) {
 				return;
 			}
 			finishedBroski.move(-MOVE_SIZE_X, 0);
 			break;
 		case KeyEvent.VK_RIGHT:
-			if(finishedBroski.getX() > getWidth() - rectWidth * 1.5){
+			if (finishedBroski.getX() > getWidth() - rectWidth * 1.5) {
 				return;
 			}
 			finishedBroski.move(MOVE_SIZE_X, 0);
