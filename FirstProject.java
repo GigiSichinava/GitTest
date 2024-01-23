@@ -18,34 +18,7 @@ import acm.util.RandomGenerator;
 
 public class FirstProject extends GraphicsProgram {
 
-	private RandomGenerator rgen = RandomGenerator.getInstance();
-
-	private static final int N_ROWS = 10;
-	private static final int N_COLS = 10;
-
-	private int rectWidth;
-	private int rectHeight;
-
-	private int hoeWidth;
-	private int hoeHeight;
-
-	private GRect rect;
-
-	private GRect broski;
-	private GLabel broskiLabel;
-	private GCompound finishedBroski;
-
-	private GOval hoe;
-
-	private JLabel timerLabel;
-	private Timer timer;
-	private int timeRemaining = 10;
-
-	private int points = 0;
-	private JLabel pointsLabel;
-
-	private boolean firstMove = true;
-
+	
 	public void init() {
 		addKeyListeners();
 		timerLabel = new JLabel("Time: 10");
@@ -67,7 +40,6 @@ public class FirstProject extends GraphicsProgram {
 	}
 
 	public void run() {
-
 		rectWidth = getWidth() / N_COLS;
 		rectHeight = getHeight() / N_ROWS;
 
@@ -84,14 +56,12 @@ public class FirstProject extends GraphicsProgram {
 		for (int i = 0; i < N_ROWS; i++) {
 			for (int j = 0; j < N_COLS; j++) {
 				rect = new GRect(rectWidth, rectHeight);
-
 				add(rect, j * rectWidth, i * rectHeight);
 			}
 		}
 	}
 
 	private void createBroski() {
-
 		int randomX = rgen.nextInt(0, getWidth() - rectWidth);
 		int randomY = rgen.nextInt(0, getHeight() - rectHeight);
 
@@ -111,12 +81,11 @@ public class FirstProject extends GraphicsProgram {
 		finishedBroski.add(broski);
 		finishedBroski.add(broskiLabel, labelX, labelY);
 
-		add(finishedBroski, broskiPlacementX, broskiPlacementY); //
+		add(finishedBroski, broskiPlacementX, broskiPlacementY); 
 
 	}
 
 	private void createHoe() {
-
 		int randomX = rgen.nextInt(0, getWidth() - rectWidth);
 		int randomY = rgen.nextInt(0, getHeight() - rectHeight);
 
@@ -131,7 +100,6 @@ public class FirstProject extends GraphicsProgram {
 	}
 
 	public void keyPressed(KeyEvent e) {
-
 		if (firstMove) {
 			timer.start();
 			firstMove = false;
@@ -180,4 +148,35 @@ public class FirstProject extends GraphicsProgram {
 		}
 
 	}
+	
+	// Private variables for the game
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+
+	private static final int N_ROWS = 10;
+	private static final int N_COLS = 10;
+
+	private int rectWidth;
+	private int rectHeight;
+
+	private int hoeWidth;
+	private int hoeHeight;
+
+	private GRect rect;
+
+	private GRect broski;
+	private GLabel broskiLabel;
+	private GCompound finishedBroski;
+
+	// A long-handled gardening tool with a thin metal blade called 'TOXI'.
+	private GOval hoe;
+
+	private JLabel timerLabel;
+	private Timer timer;
+	private int timeRemaining = 10;
+
+	private int points = 0;
+	private JLabel pointsLabel;
+
+	private boolean firstMove = true;
+
 }
