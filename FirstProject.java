@@ -41,10 +41,16 @@ public class FirstProject extends GraphicsProgram {
 	private Timer timer;
 	private int timeRemaining = 10;
 
+	private int points = 0;
+	private JLabel pointsLabel;
+
 	public void init() {
 		addKeyListeners();
 		timerLabel = new JLabel("Time: 10");
 		add(timerLabel, NORTH);
+
+		pointsLabel = new JLabel("Points: 0");
+		add(pointsLabel, NORTH);
 
 		timer = new Timer(1000, new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
