@@ -120,6 +120,7 @@ public class FirstProject extends GraphicsProgram {
 		}
 
 		if (finishedBroski.getX() == hoe.getX() && finishedBroski.getY() == hoe.getY()) {
+			remove(hoe);
 			((GResizable) finishedBroski).setSize(2 * rectWidth, 2 * rectHeight);
 		}
 	}
