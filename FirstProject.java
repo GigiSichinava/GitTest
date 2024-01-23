@@ -114,7 +114,9 @@ public class FirstProject extends GraphicsProgram {
 		
 		switch (e.getKeyCode()) {
 		case KeyEvent.VK_UP:
-			
+			if(finishedBroski.getY() < rectHeight / 2){
+				return;
+			}
 			finishedBroski.move(0, -MOVE_SIZE_Y);
 			break;
 		case KeyEvent.VK_DOWN:
