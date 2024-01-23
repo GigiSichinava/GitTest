@@ -44,6 +44,8 @@ public class FirstProject extends GraphicsProgram {
 	private int points = 0;
 	private JLabel pointsLabel;
 
+	private boolean firstMove = true;
+
 	public void init() {
 		addKeyListeners();
 		timerLabel = new JLabel("Time: 10");
@@ -75,8 +77,6 @@ public class FirstProject extends GraphicsProgram {
 		createGrid();
 		createBroski();
 		createHoe();
-
-		timer.start();
 
 	}
 
@@ -132,6 +132,11 @@ public class FirstProject extends GraphicsProgram {
 
 	public void keyPressed(KeyEvent e) {
 
+		if (firstMove) {
+			timer.start();
+			firstMove = false;
+		}
+
 		int MOVE_SIZE_X = rectWidth;
 		int MOVE_SIZE_Y = rectHeight;
 
@@ -169,9 +174,9 @@ public class FirstProject extends GraphicsProgram {
 		}
 
 		if (finishedBroski.getX() == hoe.getX() && finishedBroski.getY() == hoe.getY()) {
-		    hoe.setLocation(hoePlacementX, hoePlacementY);
-		    points++; 
-		    pointsLabel.setText("Points: " + points); 
+			hoe.setLocation(hoePlacementX, hoePlacementY);
+			points++;
+			pointsLabel.setText("Points: " + points);
 		}
 
 	}
