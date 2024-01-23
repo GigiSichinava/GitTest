@@ -13,8 +13,8 @@ public class FirstProject extends GraphicsProgram{
 	
 	public void run(){
 		createGrid();
-		createBroski();
-		createMovement();
+//		createBroski();
+//		createMovement();
 	}
 
 	private void createGrid() {
