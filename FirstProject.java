@@ -53,7 +53,7 @@ public class FirstProject extends GraphicsProgram {
 			for (int j = 0; j < N_COLS; j++) {
 				rect = new GRect(rectWidth, rectHeight);
 
-				add(rect, j * rectWidth, i * rectHeight);
+				add(rect, i * rectWidth, j * rectHeight);
 			}
 		}
 	}
