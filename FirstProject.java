@@ -132,7 +132,7 @@ public class FirstProject extends GraphicsProgram {
 			finishedBroski.move(-MOVE_SIZE_X, 0);
 			break;
 		case KeyEvent.VK_RIGHT:
-			if(finishedBroski.getX() > getWidth() - rectHeight * 1.5){
+			if(finishedBroski.getX() > getWidth() - rectWidth * 1.5){
 				return;
 			}
 			finishedBroski.move(MOVE_SIZE_X, 0);
