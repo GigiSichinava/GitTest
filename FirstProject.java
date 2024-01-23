@@ -171,7 +171,9 @@ public class FirstProject extends GraphicsProgram {
 		}
 
 		if (finishedBroski.getX() == hoe.getX() && finishedBroski.getY() == hoe.getY()) {
-			hoe.setLocation(hoePlacementX, hoePlacementY);
+		    hoe.setLocation(hoePlacementX, hoePlacementY);
+		    points++; 
+		    pointsLabel.setText("Points: " + points); 
 		}
 
 	}
