@@ -132,7 +132,8 @@ public class FirstProject extends GraphicsProgram {
 
 		if (finishedBroski.getX() == hoe.getX() && finishedBroski.getY() == hoe.getY()) {
 			remove(hoe);
-			add(hoe, hoePlacementX, hoePlacementY);
 		}
+		add(hoe, hoePlacementX, hoePlacementY);
+
 	}
 }
