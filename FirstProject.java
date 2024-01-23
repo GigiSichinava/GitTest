@@ -58,9 +58,7 @@ public class FirstProject extends GraphicsProgram {
 				timerLabel.setText("Time: " + timeRemaining);
 				if (timeRemaining <= 0) {
 					timer.stop();
-					GLabel endMessage = new GLabel("Time's up! Game Over!", 0, 0);
-					endMessage.setLocation((getWidth() - endMessage.getWidth()) / 2, getHeight() / 2);
-					add(endMessage);
+					removeAll();
 				}
 			}
 		});
