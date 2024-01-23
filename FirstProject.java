@@ -1,6 +1,8 @@
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 
+import javax.swing.JLabel;
+
 import acm.graphics.GCompound;
 import acm.graphics.GLabel;
 import acm.graphics.GOval;
@@ -29,10 +31,14 @@ public class FirstProject extends GraphicsProgram {
 	private GCompound finishedBroski;
 
 	private GOval hoe;
+	
+	private JLabel time;
 
 	public void init() {
 		// setSize(900, 900);
 		addKeyListeners();
+		time = new JLabel("Time: ");
+		add(time, NORTH);
 
 	}
 
