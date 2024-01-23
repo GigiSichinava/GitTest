@@ -5,6 +5,7 @@ import acm.graphics.GCompound;
 import acm.graphics.GLabel;
 import acm.graphics.GOval;
 import acm.graphics.GRect;
+import acm.graphics.GResizable;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
@@ -30,23 +31,22 @@ public class FirstProject extends GraphicsProgram {
 	private GOval hoe;
 
 	public void init() {
-	
 		setSize(900, 900);
+		addKeyListeners();
+
+	}
+
+	public void run() {
+
 		rectWidth = getWidth() / N_COLS;
 		rectHeight = getHeight() / N_ROWS;
 
 		hoeWidth = getWidth() / N_COLS;
 		hoeHeight = getHeight() / N_ROWS;
 
-		addKeyListeners();
-
-	}
-
-	public void run() {
 		createGrid();
 		createBroski();
 		createHoe();
-		// createMovement();
 	}
 
 	private void createGrid() {
@@ -104,22 +104,22 @@ public class FirstProject extends GraphicsProgram {
 		int MOVE_SIZE = rectWidth;
 
 		switch (e.getKeyCode()) {
-			case KeyEvent.VK_UP:
-				finishedBroski.move(0, -MOVE_SIZE);
-				break;
-			case KeyEvent.VK_DOWN:
-				finishedBroski.move(0, MOVE_SIZE);
-				break;
-			case KeyEvent.VK_LEFT:
-				finishedBroski.move(-MOVE_SIZE, 0);
-				break;
-			case KeyEvent.VK_RIGHT:
-				finishedBroski.move(MOVE_SIZE, 0);
-				break;
+		case KeyEvent.VK_UP:
+			finishedBroski.move(0, -MOVE_SIZE);
+			break;
+		case KeyEvent.VK_DOWN:
+			finishedBroski.move(0, MOVE_SIZE);
+			break;
+		case KeyEvent.VK_LEFT:
+			finishedBroski.move(-MOVE_SIZE, 0);
+			break;
+		case KeyEvent.VK_RIGHT:
+			finishedBroski.move(MOVE_SIZE, 0);
+			break;
 		}
-		
-		if(broski.getX() == hoe.getX() && broski.getY() == hoe.getY()){
-			broski.setSize(2 * rectWidth, 2 * rectHeight);
+
+		if (finishedBroski.getX() == hoe.getX() && finishedBroski.getY() == hoe.getY()) {
+			((GResizable) finishedBroski).setSize(2 * rectWidth, 2 * rectHeight);
 		}
 	}
 }
