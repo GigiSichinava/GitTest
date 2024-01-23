@@ -28,9 +28,6 @@ public class FirstProject extends GraphicsProgram {
 	private GCompound finishedBroski;
 
 	private GOval hoe;
-	
-    private static final int MOVE_SIZE = 10; // Adjust this for movement speed
-
 
 	public void init() {
 		setSize(900, 900);
@@ -40,7 +37,7 @@ public class FirstProject extends GraphicsProgram {
 		hoeWidth = getWidth() / N_COLS;
 		hoeHeight = getHeight() / N_ROWS;
 
-        addKeyListeners();
+		addKeyListeners();
 
 	}
 
@@ -78,11 +75,11 @@ public class FirstProject extends GraphicsProgram {
 		double labelX = (rectWidth - broskiLabel.getWidth()) / 2;
 		double labelY = (rectHeight + broskiLabel.getAscent()) / 2;
 
-		finishedBroski = new GCompound(); 
-	    finishedBroski.add(broski); 
-	    finishedBroski.add(broskiLabel, labelX, labelY); 
+		finishedBroski = new GCompound();
+		finishedBroski.add(broski);
+		finishedBroski.add(broskiLabel, labelX, labelY);
 
-	    add(finishedBroski, broskiPlacementX, broskiPlacementY); // 
+		add(finishedBroski, broskiPlacementX, broskiPlacementY); //
 
 	}
 
@@ -100,21 +97,24 @@ public class FirstProject extends GraphicsProgram {
 
 		add(hoe, hoePlacementX, hoePlacementY);
 	}
-	
-	 public void keyPressed(KeyEvent e) {
-	        switch (e.getKeyCode()) {
-	            case KeyEvent.VK_UP:
-	                finishedBroski.move(0, -MOVE_SIZE);
-	                break;
-	            case KeyEvent.VK_DOWN:
-	                finishedBroski.move(0, MOVE_SIZE);
-	                break;
-	            case KeyEvent.VK_LEFT:
-	                finishedBroski.move(-MOVE_SIZE, 0);
-	                break;
-	            case KeyEvent.VK_RIGHT:
-	                finishedBroski.move(MOVE_SIZE, 0);
-	                break;
-	        }
-	    }
+
+	public void keyPressed(KeyEvent e) {
+
+		int MOVE_SIZE = rectWidth;
+
+		switch (e.getKeyCode()) {
+			case KeyEvent.VK_UP:
+				finishedBroski.move(0, -MOVE_SIZE);
+				break;
+			case KeyEvent.VK_DOWN:
+				finishedBroski.move(0, MOVE_SIZE);
+				break;
+			case KeyEvent.VK_LEFT:
+				finishedBroski.move(-MOVE_SIZE, 0);
+				break;
+			case KeyEvent.VK_RIGHT:
+				finishedBroski.move(MOVE_SIZE, 0);
+				break;
+		}
+	}
 }
