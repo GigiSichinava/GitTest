@@ -4,7 +4,7 @@ import acm.program.GraphicsProgram;
 public class FirstProject extends GraphicsProgram{
 	
 	private static final int N_ROWS = 10;
-	private static final int N_COLS = 10;
+	private static final int N_COLS = 11;
 	private GRect rect;
 	
 	public void init(){
