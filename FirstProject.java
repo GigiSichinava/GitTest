@@ -117,5 +117,9 @@ public class FirstProject extends GraphicsProgram {
 				finishedBroski.move(MOVE_SIZE, 0);
 				break;
 		}
+		
+		if(broski.getX() == hoe.getX() && broski.getY() == hoe.getY()){
+			broski.setSize(2 * rectWidth, 2 * rectHeight);
+		}
 	}
 }
