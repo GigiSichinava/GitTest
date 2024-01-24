@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import acm.program.ConsoleProgram;
 
@@ -7,21 +9,33 @@ public class HashMaps extends ConsoleProgram{
 	private static final String SENTINEL = "";
 	
 	public void run(){
-		HashMap<String, Integer> nameMap = new HashMap<>();
+		
+		Map<String, ArrayList<String>> friendList = new HashMap<>();
 		while(true){
-			String name = readLine();
-			if(name.equals(SENTINEL)){
+			String friend = readLine();
+			if(friend.equals(SENTINEL)){
 				break;
 			}
+			String person = readLine();
 			
-			if(!nameMap.containsKey(name)){
-				nameMap.put(name, 0);
+			if(!friendList.containsKey(person)){
+				friendList.put(person, new ArrayList<String>());
 			}
 			
-			int newCount = nameMap.get(name) + 1;
-			nameMap.put(name, newCount);
+			ArrayList<String> currFriends = friendList.get(person);
+			currFriends.add(friend);
+			
+			int maxFrineds = 0;
+			String popularPerson = null;
+			for(String Person : friendList.keySet()){
+				int friendCount = friendList.get(Person).size();
+				if(friendCount > maxFrineds){
+					maxFrineds = friendCount;
+					popularPerson = Person;
+				}
+			}
+			println(friendList);
+			println(popularPerson);
 		}
-		
-		println(nameMap);
 	}
 }
