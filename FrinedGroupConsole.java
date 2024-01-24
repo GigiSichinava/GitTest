@@ -1,4 +1,21 @@
+import acm.program.ConsoleProgram;
 
-public class FrinedGroupConsole {
+public class FrinedGroupConsole extends ConsoleProgram{
+	
+	private static final String SENTINEL = "";
+	
+	public void run(){
+	
+		FriendGroup myFrineds = new FriendGroup();
 
+		while(true){
+			String friend = readLine();
+			if(friend.equals(SENTINEL)){
+				break;
+			}
+			String person = readLine();
+			myFrineds.addFrined(person, friend);
+		}
+		System.out.println(myFrineds);
+	}
 }
