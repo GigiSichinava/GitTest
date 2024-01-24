@@ -20,7 +20,6 @@ public class FriendGroup {
 	}
 	
 	public String getPopularPerson(){
-		
 		int maxCount = 0;
 		String popularPerson = "";
 		
@@ -33,5 +32,16 @@ public class FriendGroup {
 		}
 		
 		return popularPerson;
+	}
+	
+	public String getFrinedsAsString(String person){
+		if(!friendMap.containsKey(person)){
+			return "No Frineds";
+		}
+		
+		ArrayList<String> friends = friendMap.get(person);
+		
+		
+		return friends.toString();
 	}
 }

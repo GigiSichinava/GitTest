@@ -19,5 +19,9 @@ public class FrinedGroupConsole extends ConsoleProgram{
 		System.out.println(myFrineds);
 		
 		println("Person with most frineds: " + myFrineds.getPopularPerson());
+		
+		
+		String popularPerson = myFrineds.getPopularPerson();
+		println(myFrineds.getFrinedsAsString(popularPerson));
 	}
 }
