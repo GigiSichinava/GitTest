@@ -34,8 +34,9 @@ public class HashMaps extends ConsoleProgram{
 					popularPerson = Person;
 				}
 			}
-			println(friendList);
-			println(popularPerson);
+			
 		}
+		println(friendList);
+		println(popularPerson);
 	}
 }
