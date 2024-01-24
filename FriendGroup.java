@@ -10,7 +10,7 @@ public class FriendGroup {
 		friendMap = new HashMap<>();
 	}
 	
-	public void addFrined(String person, String friend){
+	public void addFriend(String person, String friend){
 		if(!friendMap.containsKey(person)){
 			friendMap.put(person, new ArrayList<String>());
 		}
@@ -21,7 +21,7 @@ public class FriendGroup {
 	
 	public String getPopularPerson(){
 		int maxCount = 0;
-		String popularPerson = "";
+		String popularPerson = null;
 		
 		for(String person: friendMap.keySet()){
 			int friendCount = friendMap.get(person).size();

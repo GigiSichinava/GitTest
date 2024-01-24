@@ -22,6 +22,6 @@ public class FriendGroupConsole extends ConsoleProgram {
         println("Person with most friends: " + myFriends.getPopularPerson());
         
         String popularPerson = myFriends.getPopularPerson();
-        println("Friends of " + popularPerson + ": " + myFriends.getFriendsAsString(popularPerson));
+        println("Friends of " + popularPerson + ": " + myFriends.getFrinedsAsString(popularPerson));
     }
 }
