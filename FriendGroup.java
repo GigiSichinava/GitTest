@@ -4,18 +4,34 @@ import java.util.Map;
 
 public class FriendGroup {
 	
-	private Map<String, ArrayList<String>> frinedMap;
+	private Map<String, ArrayList<String>> friendMap;
 	
 	public FriendGroup(){
-		frinedMap = new HashMap<>();
+		friendMap = new HashMap<>();
 	}
 	
 	public void addFrined(String person, String friend){
-		if(!frinedMap.containsKey(person)){
-			frinedMap.put(person, new ArrayList<String>());
+		if(!friendMap.containsKey(person)){
+			friendMap.put(person, new ArrayList<String>());
 		}
 		
-		ArrayList<String> friends = frinedMap.get(person);
+		ArrayList<String> friends = friendMap.get(person);
 		friends.add(friend);
+	}
+	
+	public String getPopularPerson(){
+		
+		int maxCount = 0;
+		String popularPerson = "";
+		
+		for(String person: friendMap.keySet()){
+			int friendCount = friendMap.get(person).size();
+			if(friendCount > maxCount){
+				maxCount = friendCount;
+				popularPerson = person;
+			}
+		}
+		
+		return popularPerson;
 	}
 }
