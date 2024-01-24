@@ -24,7 +24,7 @@ public class HashMaps extends ConsoleProgram{
 			
 			ArrayList<String> currFriends = friendList.get(person);
 			currFriends.add(friend);
-			
+		}
 			int maxFrineds = 0;
 			String popularPerson = null;
 			for(String Person : friendList.keySet()){
@@ -34,9 +34,9 @@ public class HashMaps extends ConsoleProgram{
 					popularPerson = Person;
 				}
 			}
-			
-		}
+			println(popularPerson);
+
+		
 		println(friendList);
-		println(popularPerson);
 	}
 }
