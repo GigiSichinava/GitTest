@@ -28,6 +28,7 @@ public class School {
 	}
 	
 	private void printForTesting(){
+		System.out.println("_____________________");
 		System.out.println("teacherSubject: " + teacherSubject);
 		System.out.println("subjectPupil: " + subjectPupil);
 		System.out.println("subjectTeacher: " + subjectTeacher);
@@ -55,7 +56,17 @@ public class School {
 //	თუკი teacher სახელის მქონე მასწავლებელი არ არის აქამდე დამატებული, მაშინ
 //	მეთოდმა არაფერი არ უნდა გააკეთოს.
 	public void addSubject(String teacher, String subject) {
-			}
+		
+		if(teacherSubject.containsKey(teacher)){
+			return ;
+		}
+		teacherSubject.get(teacher).add(subject);
+		
+		subjectTeacher.putIfAbsent(subject, new HashSet<String>());
+		subjectTeacher.get(subject).add(teacher);
+		
+		printForTesting();
+	}
 	
 //	addPupil მეთოდის საშუალებით შეგიძლიათ საგანზე დაამატოთ მოსწავლე. ერთი და
 //	იგივე მოსწავლე შე)იძლება ერთ ან რამდენიმე საგანს სწავლობდეს.
