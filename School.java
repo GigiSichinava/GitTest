@@ -4,6 +4,7 @@
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 
 public class School {
@@ -11,15 +12,38 @@ public class School {
 //	კონსტრუქტორს არაფერი არ გადაეცემა. აქ შეგიძლიათ ინიციალიზაცია გაუკეთოთ
 //	თქვენთვის საჭირო ცვლადებს.
 	
+	// Create HashMaps
+	private HashMap<String, HashSet<String>> teacherSubject;
+	private HashMap<String, HashSet<String>> subjectPupil;
+	
+	// Create reversed HashMaps
+	private HashMap<String, HashSet<String>> subjectTeacher;
+	private HashMap<String, HashSet<String>> pupilSubject;
 	
 	public School() {
-		
+		teacherSubject = new HashMap<>();
+		subjectPupil = new HashMap<>();
+		subjectTeacher = new HashMap<>();
+		pupilSubject = new HashMap<>();
+	}
+	
+	private void printForTesting(){
+		System.out.println("teacherSubject: " + teacherSubject);
+		System.out.println("subjectPupil: " + subjectPupil);
+		System.out.println("subjectTeacher: " + subjectTeacher);
+		System.out.println("pupilSubject: " + pupilSubject);
+
 	}
 	
 //	addTeacher მეთოდის საშუალებით შეგიძლიათ სკოლას დაამატოთ ახალი
 //	მასწავლებელი. მეთოდს გადაეცემა მასწავლებლის სახელი. შეგიძლიათ ჩათვალოთ,
 //	რომ მასწავლებლის სახელი უნიკალურია.
 	public void addTeacher(String teacher) {
+		
+		if(!teacherSubject.containsKey(teacher)){
+			teacherSubject.put(teacher, new HashSet<String>());	
+		}
+	
 	}
 	
 //	addSubject მეთოდის საშუალებით შეგიძლიათ მასწავლებელს დაუმატოთ საგანი.
@@ -33,7 +57,7 @@ public class School {
 			}
 	
 //	addPupil მეთოდის საშუალებით შეგიძლიათ საგანზე დაამატოთ მოსწავლე. ერთი და
-//	იგივე მოსწავლე შეიძლება ერთ ან რამდენიმე საგანს სწავლობდეს.
+//	იგივე მოსწავლე შე)იძლება ერთ ან რამდენიმე საგანს სწავლობდეს.
 	public void addPupil(String pupil, String subject) {
 		
 	}
