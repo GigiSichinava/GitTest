@@ -72,6 +72,16 @@ public class School {
 //	იგივე მოსწავლე შე)იძლება ერთ ან რამდენიმე საგანს სწავლობდეს.
 	public void addPupil(String pupil, String subject) {
 		
+		if(!subjectTeacher.containsKey(subject)){
+			return;
+		}
+		subjectPupil.putIfAbsent(subject, new HashSet<String>());
+		subjectPupil.get(subject).add(pupil);
+		
+		pupilSubject.putIfAbsent(pupil, new HashSet<>());
+		pupilSubject.get(pupil).add(subject);
+		
+		printForTesting();
 	}
 	
 //	getTeachers მეთოდს გადაეცემა მოსწავლის სახელი და მან უნდა დააბრუნოს ამ
