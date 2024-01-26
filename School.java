@@ -57,7 +57,7 @@ public class School {
 //	მეთოდმა არაფერი არ უნდა გააკეთოს.
 	public void addSubject(String teacher, String subject) {
 		
-		if(teacherSubject.containsKey(teacher)){
+		if(!teacherSubject.containsKey(teacher)){
 			return ;
 		}
 		teacherSubject.get(teacher).add(subject);
