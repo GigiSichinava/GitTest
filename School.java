@@ -90,7 +90,18 @@ public class School {
 //	დამატებული(სწავლობს). თუკი pupil სახელის მოსწავლე არ გვყავს მაშინ მეთოდმა
 //	უნდა დააბრუნოს null.
 	public Iterator<String> getTeachers(String pupil){
-		return null;
+		
+		if(!pupilSubject.containsKey(pupil)){
+			return null;
+		}
+		HashSet<String> teachers = new HashSet<>();
+		for(String subject: pupilSubject.get(pupil)){
+			if(subjectTeacher.containsKey(subject)){
+			teachers.addAll(subjectTeacher.get(subject));
+			}
+		}
+		
+		return teachers.iterator();
 	}
 	
 //	getPupils მეთოდს გადაეცემა მასწავლებლის სახელი და მან უნდა დააბრუნოს ამ
@@ -98,14 +109,32 @@ public class School {
 //	სახელები, რომლებიც მის რომელიმე საგანს სწავლობენ. თუკი teacher სახელის მქონე
 //	ლექტორი არ გვყავს მაშინ მეთოდმა უნდა დააბრუნოს null.
 	public Iterator<String> getPupils(String teacher){
-		return null;
+		
+		if(!teacherSubject.containsKey(teacher)){
+			return null;
+		}
+		HashSet<String> pupils = new HashSet<>();
+		for(String subject : teacherSubject.get(teacher)){
+			if(subjectPupil.containsKey(subject)){
+			pupils.addAll(subjectPupil.get(subject));
+			}
+		}
+		
+		return pupils.iterator();
 	}
 	
 //	მეთოდმა უნდა წაშალოს მასწავლებლის შესახებ ყველა ინფორმაცია. ამ მეთოდის
 //	გამოძახების, შემდეგ getTeachers მეთოდმა არ უნდა დააბრუნოს teacher სახელი არც
 //	ერთი სტუდენტისთვის.
 	public void removeTeacher(String teacher) {
-		// TIP:	you can use System.out.println() to print your structures for testing
+		
+		teacherSubject.remove(teacher);
+		for(String subject : subjectTeacher.keySet()){
+			HashSet<String> teachers = subjectTeacher.get(subject);
+			teachers.remove(teacher);
+			
+		}
+		printForTesting();
 	}
 	
 }
