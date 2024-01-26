@@ -43,6 +43,7 @@ public class School {
 		if(!teacherSubject.containsKey(teacher)){
 			teacherSubject.put(teacher, new HashSet<String>());	
 		}
+		printForTesting();
 	
 	}
 	
