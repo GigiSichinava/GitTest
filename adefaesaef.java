@@ -1,11 +1,12 @@
 import javax.swing.*;
 
 import acm.program.ConsoleProgram;
+import acm.program.GraphicsProgram;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class adefaesaef extends ConsoleProgram{
+public class adefaesaef extends GraphicsProgram{
     public static void main(String[] args) {
         JFrame frame = new JFrame("Timer Example");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
